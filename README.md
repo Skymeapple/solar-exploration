@@ -7,11 +7,12 @@ The work follows a four-step plan:
 
 1. **Design and verification procedure** (done): design flow, pass/fail gates G0 to G7,
    and a fidelity ladder. See the project's procedure document.
-2. **Engine model** (this package): combustion chemistry, nozzle performance and the
+2. **Engine model** (done): combustion chemistry, nozzle performance and the
    full-flow staged combustion power balance, checked against public Raptor 2 figures.
-3. **AI design iteration**: an optimizer that proposes designs, runs them through the gates
-   and logs every result.
-4. **Vehicle and Mars mission check**: size a two-stage vehicle and check delta-v and transfers.
+3. **AI design iteration** (done): a Bayesian optimizer (Optuna TPE) proposes designs, runs them
+   through the gates and logs every result to `results/optimizer_log.csv`.
+4. **Vehicle and Mars mission check** (done): a Starship-class two-stage vehicle built around the
+   engine, Earth to Mars transfer, LEO refilling and the Mars return with propellant made on Mars.
 
 ## Quick start
 
@@ -19,7 +20,8 @@ RocketCEA compiles NASA CEA, so it needs a Fortran compiler (`gfortran`).
 
 ```bash
 pip install -e ".[dev]"
-python -m raptor_sim   # gate report for the reference design
+python -m raptor_sim          # gate report for the reference design
+python scripts/run_study.py   # optimizer + Mars study, writes results/
 pytest
 ```
 
@@ -34,7 +36,22 @@ pytest
 | Nozzle exit diameter | 1.36 m | about 1.3 m |
 | Propellant flow | 704 kg/s | 650 kg/s (low confidence) |
 
-Gates G1, G2, G3 and G7 pass. G0 and G4 to G6 need models from later steps.
+Gates G0, G1, G2, G3 and G7 pass. G4 to G6 (cooling, turbopump detail, engine mass) need
+higher-fidelity models.
+
+## Optimizer and Mars results
+
+Full tables are in [`results/summary.md`](results/summary.md).
+
+- Over 300 designs, the best one raises chamber pressure to 314 bar, lowers the mixture ratio to 3.46
+  and widens the nozzle to area ratio 37. It gains about 1 s of Isp at sea level and 2 s in vacuum.
+  The small gain says Raptor 2 already sits close to the best point under these limits.
+- What limits the design: the oxygen turbine runs out of power above about 315 bar at these
+  efficiencies, and the 1.40 m nozzle packaging limit caps the area ratio.
+- Mars: landing 100 t needs about 550 t of propellant refilled in LEO, which is 4 tanker launches
+  in the model. The return trip with 20 t needs about 640 t of propellant made on Mars.
+- The model puts 155 t into LEO, while SpaceX states about 100 t for Block 3. A ship dry mass near
+  150 t instead of 100 t closes that gap and raises the tanker count to 7.
 
 ## What the model does
 
@@ -44,7 +61,9 @@ Gates G1, G2, G3 and G7 pass. G0 and G4 to G6 need models from later steps.
 | `engine.py` | Throat sizing from required thrust, delivered Isp with c* and thrust-coefficient efficiencies, sea-level separation check |
 | `cycle.py` | Full-flow power balance: fuel-rich and oxygen-rich preburners, each turbine driving its own pump |
 | `gates.py` | Gates G1, G2, G3 and G7 with the pass criteria from the procedure |
-| `benchmarks.py` | Public Raptor 2 figures with their sources and confidence |
+| `benchmarks.py` | Public Raptor and Starship figures with their sources and confidence |
+| `optimize.py` | Design search with Optuna, gate constraints, and a per-trial log |
+| `mission.py` | Two-stage vehicle sizing, patched-conic Earth to Mars transfer, refilling and return |
 
 ## Known limits
 
@@ -55,9 +74,14 @@ Gates G1, G2, G3 and G7 pass. G0 and G4 to G6 need models from later steps.
   or pressure drops. Every such value sits in `CycleAssumptions`.
 - **Shafts are balanced separately.** The fuel pump also feeds the oxygen-rich preburner, which runs at a
   higher pressure in this model; a boost stage or a different split is needed and will be handled in G5.
+- The vacuum engine variant gives 362.7 s against the quoted 380 s (4.6% low), because the
+  efficiencies were calibrated on the sea-level engine.
+- Mission delta-v uses minimum-energy transfers with a 10% margin; landing (700 m/s) and Mars ascent
+  (4,100 m/s) are assumptions.
 - Propellant flow comes out 8% above the one quoted figure, which is itself of uncertain version.
 
 ## Sources
 
 - [SpaceX Raptor, Wikipedia](https://en.wikipedia.org/wiki/SpaceX_Raptor)
+- [SpaceX Starship, Wikipedia](https://en.wikipedia.org/wiki/SpaceX_Starship)
 - [Raptor 1 vs Raptor 2, Everyday Astronaut](https://everydayastronaut.com/spacex-raptor-engine-comparison/)

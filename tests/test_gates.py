@@ -14,7 +14,7 @@ def reference():
 def test_reference_design_passes_every_gate_that_runs(reference):
     _perf, _cycle, results = reference
     ran = [r for r in results if r.passed is not None]
-    assert [r.gate.split()[0] for r in ran] == ["G1", "G2", "G3", "G7"]
+    assert [r.gate.split()[0] for r in ran] == ["G0", "G1", "G2", "G3", "G7"]
     failed = [f"{r.gate}: {r.detail}" for r in ran if not r.passed]
     assert not failed, failed
 

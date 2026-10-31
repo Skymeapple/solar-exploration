@@ -1,6 +1,6 @@
-"""Verification gates G1, G2, G3 and G7 from the design procedure.
+"""Verification gates G0, G1, G2, G3 and G7 from the design procedure.
 
-G0 (requirements) and G4 to G6 (cooling, turbopump detail, engine system)
+G4 to G6 (cooling, turbopump detail, engine system)
 need models that come later in the project; they are reported as not run.
 """
 
@@ -103,12 +103,27 @@ def gate_g7(perf: EnginePerformance) -> GateResult:
     )
 
 
+def gate_g0(design: EngineDesign) -> GateResult:
+    """The Mars cargo requirement closes with this engine on a Starship-class vehicle."""
+    from .mission import MissionAssumptions, Vehicle, mars_mission
+
+    m = MissionAssumptions()
+    r = mars_mission(Vehicle(engine=design), m)
+    return GateResult(
+        "G0 Requirements",
+        r.meets_requirement,
+        f"{m.mars_cargo_requirement_t:.0f} t to Mars needs {r.propellant_needed_t:.0f} t of propellant in LEO "
+        f"({r.tanker_flights} tanker launches); return with {r.return_payload_t:.0f} t needs "
+        f"{r.isru_propellant_t:.0f} t made on Mars",
+    )
+
+
 def run_all_gates(design: EngineDesign | None = None, assumptions: CycleAssumptions | None = None):
     design = design or EngineDesign()
     perf = size_engine(design)
     cycle = solve_cycle(perf, assumptions)
     results = [
-        GateResult("G0 Requirements", None, "Mars mission requirements come in step 4"),
+        gate_g0(design),
         gate_g1(design),
         gate_g2(cycle),
         gate_g3(perf),

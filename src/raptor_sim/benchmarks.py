@@ -33,6 +33,16 @@ RAPTOR_2_SEA_LEVEL: dict[str, Benchmark] = {
     "mass": Benchmark("Engine dry mass", 1630.0, "kg", "low", "[W]; [E] gives 1,600"),
 }
 
+RAPTOR_VACUUM: dict[str, Benchmark] = {
+    "isp_vac": Benchmark("Vacuum specific impulse", 380.0, "s", "medium", "[W]"),
+    "eps": Benchmark("Nozzle area ratio", 80.0, "-", "low", "[W]"),
+}
+
+# Starship Block 3, from https://en.wikipedia.org/wiki/SpaceX_Starship (checked 2026-10-31)
+STARSHIP_BLOCK_3: dict[str, Benchmark] = {
+    "payload_to_leo_t": Benchmark("Reusable payload to LEO", 100.0, "t", "low", "stated target, not demonstrated"),
+}
+
 # G7 compares only these, at 5% tolerance.
 G7_KEYS = ("thrust_sl", "isp_sl", "isp_vac", "pc")
 G7_TOLERANCE = 0.05

@@ -12,6 +12,7 @@ dependencies = [
     "scipy>=1.10",
     "rocketcea>=1.2",
     "cantera>=3.0",
+    "optuna>=5.0",
 ]
 
 [project.optional-dependencies]
