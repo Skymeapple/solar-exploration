@@ -103,7 +103,7 @@ def run(out_dir: Path, n: int = 5000, seed: int = 2026, overrides: Path | None =
     rec_tm = forward_pass(rec_prog, rec_dur)
     fl = total_float(rec_prog, rec_dur, KEY_MILESTONES)
 
-    logs = {c.name: L.campaign(rec_prog, rec_tm, c) for c in (L.VEHICLE_MODEL, L.VEHICLE_CONSERVATIVE)}
+    logs = {c.name: L.campaign(rec_prog, rec_tm, c) for c in (L.VEHICLE_CAMPAIGN, L.VEHICLE_IDEAL)}
     tmx = transfer_matrix(rec_prog, rec_tm)
 
     # ---- files ----
@@ -120,7 +120,7 @@ def run(out_dir: Path, n: int = 5000, seed: int = 2026, overrides: Path | None =
                         s.cost[1], _yr(m["p10"]) if m else "", _yr(m["p50"]) if m else "", _yr(m["p90"]) if m else "",
                         f'{rec_mc.criticality.get(sid, 0):.2f}', s.owner, s.basis])
     for name, rows in logs.items():
-        fn = "logistics_model.csv" if name == L.VEHICLE_MODEL.name else "logistics_conservative.csv"
+        fn = "logistics_campaign.csv" if name == L.VEHICLE_CAMPAIGN.name else "logistics_ideal.csv"
         with open(out_dir / fn, "w", newline="") as f:
             keys = [k for k in asdict(rows[0]) if k != "notes"]
             w = csv.DictWriter(f, fieldnames=keys, extrasaction="ignore")
@@ -144,7 +144,7 @@ def run(out_dir: Path, n: int = 5000, seed: int = 2026, overrides: Path | None =
                         "driving_path_mars_crew": driving_path(rec_prog, rec_tm, "MARS-CREW-1"),
                         "driving_path_outer_crew": driving_path(rec_prog, rec_tm, "OUTER-CREW-1")},
         "options": options, "transfer": tmx, "float_months": fl,
-        "lunar_tankers": {c.name: L.lunar_tankers(c, L.LogisticsAssumptions()) for c in (L.VEHICLE_MODEL, L.VEHICLE_CONSERVATIVE)},
+        "lunar_tankers": {c.name: L.lunar_tankers(c, L.LogisticsAssumptions()) for c in (L.VEHICLE_CAMPAIGN, L.VEHICLE_IDEAL)},
         "isru_power_kw_per_ship": L.isru_power_kw(L.LogisticsAssumptions()),
         "logistics": {k: [asdict(r) for r in v] for k, v in logs.items()},
     }

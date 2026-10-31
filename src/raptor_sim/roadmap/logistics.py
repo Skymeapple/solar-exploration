@@ -27,9 +27,10 @@ class VehicleCase:
     mars_tankers: int
 
 
-# model: PR #1 results/summary.md (ship dry 100 t public figure vs 150 t that matches the stated 100 t payload)
-VEHICLE_MODEL = VehicleCase("Model vehicle (100 t dry, 155 t to LEO)", 155.0, 546.0, 4)
-VEHICLE_CONSERVATIVE = VehicleCase("Conservative (150 t dry, 108 t to LEO)", 108.0, 546.0 * 250 / 200, 7)
+# model: PR #12 campaign simulation gives 103 t to LEO (ascent losses, 14% booster return reserve)
+# and 9 tankers per Mars cargo ship; PR #1's ideal vehicle gave 155 t and 4 tankers.
+VEHICLE_CAMPAIGN = VehicleCase("Campaign vehicle (PR #12: 103 t to LEO, 9 tankers)", 103.0, 9 * 103.0 + 30.0, 9)
+VEHICLE_IDEAL = VehicleCase("Ideal vehicle (PR #1: 155 t to LEO, 4 tankers)", 155.0, 546.0, 4)
 
 
 @dataclass(frozen=True)
@@ -50,7 +51,7 @@ class LogisticsAssumptions:
     engines_ship: int = 6
     isru_kwh_per_kg: float = 8.17        # model: PR #6 Mars Sabatier chain, 8.17 MWh per t (ideal 3.1)
     isru_return_prop_t: float = 642.0    # model: PR #1, return with 20 t
-    isru_months: float = 18.0            # production time available per ship
+    isru_months: float = 12.6            # model: PR #12 makes return propellant in 383 days
     isru_duty: float = 0.9
 
 
@@ -124,7 +125,7 @@ def _mars_windows_in(start: float, finish: float) -> list[float]:
     return out
 
 
-def campaign(prog: Program, timing: dict[str, Timing], v: VehicleCase = VEHICLE_MODEL,
+def campaign(prog: Program, timing: dict[str, Timing], v: VehicleCase = VEHICLE_CAMPAIGN,
              a: LogisticsAssumptions | None = None, end_year: int = 2060) -> list[YearLog]:
     a = a or LogisticsAssumptions()
     years: dict[int, YearLog] = {}

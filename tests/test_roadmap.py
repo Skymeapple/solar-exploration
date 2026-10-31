@@ -89,12 +89,12 @@ def test_sample_run_cost_at_least_low_bound():
 
 def test_logistics():
     a = L.LogisticsAssumptions()
-    assert L.lunar_tankers(L.VEHICLE_MODEL, a) >= L.VEHICLE_MODEL.mars_tankers  # Moon landing needs more dv from LEO
-    assert 300 < L.isru_power_kw(a) < 800  # PR #6 energy, 18 months
+    assert L.lunar_tankers(L.VEHICLE_CAMPAIGN, a) >= L.VEHICLE_CAMPAIGN.mars_tankers  # Moon landing needs more dv from LEO
+    assert 400 < L.isru_power_kw(a) < 1200  # PR #6 energy, PR #12 383 days; PR #12 sizes about 1 MW
     prog = build_program(apply(RECOMMENDED))
     tm = forward_pass(prog, mode_plan(prog)[0])
     rows = L.campaign(prog, tm)
     assert sum(r.mars_ships for r in rows) > 0
     assert all(r.pads_needed >= 1 for r in rows)
-    cons = L.campaign(prog, tm, L.VEHICLE_CONSERVATIVE)
-    assert sum(r.launches for r in cons) > sum(r.launches for r in rows)
+    ideal = L.campaign(prog, tm, L.VEHICLE_IDEAL)
+    assert sum(r.launches for r in ideal) < sum(r.launches for r in rows)

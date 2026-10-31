@@ -20,7 +20,7 @@ def isru_with_first_cargo(steps: list[Step]) -> list[Step]:
     """Send the ISRU pilot in the same window as the first cargo ships.
     Risk: it lands before Mars entry is proven, so its landing odds drop to the cargo ship's."""
     steps = _edit(steps, "MARS-CARGO-2", needs=("isru_plant", "mars_power", "prop_transfer", "cadence",
-                                                "hypersonic_edl", "depot"), p_success=0.75)
+                                                "hypersonic_edl", "depot", "mars_ship"), p_success=0.8)
     return steps
 
 
