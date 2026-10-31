@@ -132,7 +132,7 @@ program model (standard library only, runs in seconds):
 
 | Module | Content |
 | --- | --- |
-| `catalog.py` | 42 steps from engine development to a crewed Jupiter-system mission: duration and cost ranges, TRL, launch windows, the capabilities each step needs and proves |
+| `catalog.py` | 50 steps from engine development to a crewed Jupiter-system mission: duration and cost ranges, TRL, launch windows, the capabilities each step needs and proves |
 | `schedule.py` | Network forward pass with Mars, Mars-return and Jupiter launch windows; driving path; float |
 | `montecarlo.py` | Correlated schedule and cost risk, development failures by TRL gap, mission failures that re-fly at the next window |
 | `options.py` | Acceleration options for the first crewed Mars landing, compared by Monte Carlo |
