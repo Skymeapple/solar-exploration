@@ -19,5 +19,5 @@ node render.js && node orbit.js
 node build.js ../Solar_Exploration_Project_Summary.pptx
 ```
 
-Version 1 (2026-10-31): engine, component, vehicle and business results are final. The mission,
+Version 1 (2026-10-31): engine, component, vehicle, business and sample return (PR #4) results are in. The remaining mission,
 base, settlement and roadmap studies are placeholders and will be filled in as they finish.
