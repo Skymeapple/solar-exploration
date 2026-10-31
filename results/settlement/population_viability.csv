@@ -1,0 +1,19 @@
+scenario,founders,runs,extinction_probability,heterozygosity_kept,inbreeding_F,founder_alleles_kept,final_population_mean,ne_estimate
+closed colony,20,20,0.1,0.703593,0.187164,0.1757,65.8,21.831306
+closed colony,50,20,0.0,0.908602,0.086611,0.184415,136.25,54.838654
+closed colony,100,20,0.0,0.95169,0.045928,0.177498,281.6,112.870019
+closed colony,160,20,0.0,0.972575,0.026194,0.18682,454.25,184.743228
+closed colony,500,20,0.0,0.991092,0.00854,0.184398,1459.25,558.627197
+closed colony,2000,4,0.0,0.997757,0.002061,0.182611,5471.75,2152.257486
+"closed, 1%/yr catastrophe risk",20,20,0.35,0.486297,0.171523,0.101263,22.1,16.768654
+"closed, 1%/yr catastrophe risk",50,20,0.05,0.758459,0.157931,0.087925,54.2,20.140761
+"closed, 1%/yr catastrophe risk",100,20,0.0,0.931513,0.060764,0.14009,201.4,82.015318
+"closed, 1%/yr catastrophe risk",160,20,0.0,0.949643,0.044916,0.127239,214.9,115.47696
+"closed, 1%/yr catastrophe risk",500,20,0.0,0.984799,0.012888,0.123854,848.5,371.11
+"closed, 1%/yr catastrophe risk",2000,4,0.0,0.997251,0.002475,0.153607,4464.25,1811.176932
+"closed, plus frozen gamete bank for 10% of births",20,20,0.2,0.67588,0.106216,0.130575,61.8,42.013303
+"closed, plus frozen gamete bank for 10% of births",50,20,0.0,0.937874,0.056005,0.141365,127.2,87.075021
+"closed, plus frozen gamete bank for 10% of births",100,20,0.0,0.970689,0.026812,0.147242,298.05,193.838372
+"closed, plus frozen gamete bank for 10% of births",160,20,0.0,0.983168,0.016165,0.155991,462.45,319.96893
+"closed, plus frozen gamete bank for 10% of births",500,20,0.0,0.99473,0.005008,0.152192,1453.2,978.530316
+"closed, plus frozen gamete bank for 10% of births",2000,4,0.0,0.99866,0.001249,0.147723,5597.0,3828.206663

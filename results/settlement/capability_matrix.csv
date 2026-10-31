@@ -1,0 +1,16 @@
+capability,Mars,Moon (south pole),Ceres,Callisto,Titan,Free-space station
+"Closed-loop ECLSS (water 98%, O2 from CO2)",same,same,same,same,same,same
+Bioregenerative crops,same,adapt,adapt,adapt,adapt,same
+Pressurised habitat modules,same,same,same,same,same,same
+Regolith radiation shielding,same,same,same,same,adapt,new
+Thermal control,same,adapt,same,adapt,new,same
+Fission power (40 kWe class),same,same,same,same,same,same
+Solar power with storage,same,adapt,adapt,new,new,same
+Water-ice mining,same,same,same,same,same,new
+CH4/LOX propellant plant,same,new,adapt,adapt,adapt,new
+Raptor-class engine and Starship-class ship,same,same,same,same,same,adapt
+Landing and ascent,same,adapt,adapt,adapt,adapt,new
+On-site rocket assembly and refurbishment,same,same,same,same,same,adapt
+Medical bay and telemedicine,adapt,same,adapt,adapt,adapt,same
+Partial-gravity health countermeasures,same,adapt,adapt,adapt,adapt,new
+Governance and social model,same,same,same,same,same,same
