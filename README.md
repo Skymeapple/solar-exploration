@@ -124,3 +124,24 @@ scaling rules and allowances are marked *estimate*.
 per-flight and per-mission costs, and runs a 2027-2041 plan with bear/base/bull scenarios, a sensitivity
 tornado and a financing plan. Assumptions, with cited/model/estimate tags and source links, are in
 `src/raptor_sim/econ/inputs.py` and `plan.py`; results go to `results/business/`. Standard library only.
+
+## Master roadmap (integration of all studies)
+
+`src/raptor_sim/roadmap` joins the engine, vehicle, Mars, business and mission studies into one
+program model (standard library only, runs in seconds):
+
+| Module | Content |
+| --- | --- |
+| `catalog.py` | 53 steps from engine development to a crewed Jupiter-system mission: duration and cost ranges, TRL, launch windows, the capabilities each step needs and proves |
+| `schedule.py` | Network forward pass with Mars, Mars-return and Jupiter launch windows; driving path; float |
+| `montecarlo.py` | Correlated schedule and cost risk, development failures by TRL gap, mission failures that re-fly at the next window |
+| `options.py` | Acceleration options for the first crewed Mars landing, compared by Monte Carlo |
+| `logistics.py` | Launches, tankers, propellant, pads, fleet and engine production by year, Mars ISRU power |
+| `report.py` | Tables, capability transfer matrix, Gantt chart (`results/roadmap/`) |
+
+```bash
+python scripts/run_roadmap.py            # writes results/roadmap/summary.md, schedule.csv, gantt.svg, roadmap.json
+```
+
+When another study delivers numbers, put them in `src/raptor_sim/roadmap/overrides.json` (step id to
+field values) and re-run; the catalog estimate stays as the fallback.
