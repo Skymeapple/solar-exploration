@@ -117,3 +117,10 @@ report rebuilds in seconds; `--iterate` re-runs the whole iteration from the fir
 What the iteration changed and what is still open is summarised at the top of
 `results/components/verification.md`. Values derived from the models are marked *sized*;
 scaling rules and allowances are marked *estimate*.
+
+## Business case
+
+`python scripts/run_business_case.py` costs the engine from `results/components/bom.csv`, builds vehicle,
+per-flight and per-mission costs, and runs a 2027-2041 plan with bear/base/bull scenarios, a sensitivity
+tornado and a financing plan. Assumptions, with cited/model/estimate tags and source links, are in
+`src/raptor_sim/econ/inputs.py` and `plan.py`; results go to `results/business/`. Standard library only.
