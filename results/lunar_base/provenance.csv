@@ -77,8 +77,8 @@ orbits.NRHO->TEI,500,m/s,estimated,"half of the cited 1,000 m/s NRHO insertion p
 orbits.NRHO->LLO,705,m/s,cited,"NASA HLS STRIVES paper, NTRS 20230002566"
 orbits.LLO->NRHO,705,m/s,cited,"NASA HLS STRIVES paper, NTRS 20230002566"
 orbits.TLI->LLO,824,m/s,computed,patched conic capture into 100 km LLO
-orbits.LLO->surface,1870,m/s,estimated,placeholder until crewed_lunar descent sim; includes gravity loss
-orbits.surface->LLO,1850,m/s,estimated,placeholder until crewed_lunar ascent sim; includes gravity loss
+orbits.LLO->surface,1960,m/s,computed,"integrated descent/ascent sim, raptor_sim.crewed_lunar.landing (PR #10): 120 t-dry lander, braking on one Raptor plus terminal, no margin"
+orbits.surface->LLO,1830,m/s,computed,"integrated descent/ascent sim, raptor_sim.crewed_lunar.landing (PR #10): ascent to LLO, no margin"
 orbits.surface->NRHO (NASA),2610,m/s,cited,NASA NRHO overview https://www.nasa.gov/wp-content/uploads/2023/10/nrho-artemis-orbit.pdf (ascent)
 orbits.LLO->Earth perigee,824,m/s,computed,patched conic
 orbits.EML1->surface,2520,m/s,estimated,"commonly quoted EML1 to lunar surface value, about 2.5 km/s"

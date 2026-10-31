@@ -4,9 +4,10 @@ This is the shared set of lunar delta-v values for the project. The crewed
 lunar missions work (``raptor_sim.crewed_lunar``) imports from here, so change
 values here only, and keep each one tagged with where it came from.
 
-Legs between the lunar surface and low lunar orbit are placeholders until the
-integrated powered descent and ascent simulation in ``raptor_sim.crewed_lunar``
-replaces them.
+Legs between the lunar surface and low lunar orbit come from the integrated
+powered descent and ascent simulation in ``raptor_sim.crewed_lunar.landing``
+(PR #10). That simulation shows one Raptor cannot hover at touchdown, so the
+final ~150 m is flown on landing thrusters.
 
 Departures to Mars from a high orbit (NRHO or Earth-Moon L1) use a two-burn
 patched-conic sequence: a small burn drops perigee to 300 km altitude, then a
@@ -32,6 +33,7 @@ LEO_ALT = 300e3  # m, same as mission.MissionAssumptions
 LLO_ALT = 100e3  # m
 
 NTRS_HLS = "NASA HLS STRIVES paper, NTRS 20230002566"
+CREWED_LUNAR = "integrated descent/ascent sim, raptor_sim.crewed_lunar.landing (PR #10)"
 NASA_NRHO = "NASA NRHO overview https://www.nasa.gov/wp-content/uploads/2023/10/nrho-artemis-orbit.pdf"
 
 
@@ -98,8 +100,8 @@ LEGS: dict[str, Value] = {
     "NRHO->LLO": Value(705.0, "m/s", "cited", NTRS_HLS),
     "LLO->NRHO": Value(705.0, "m/s", "cited", NTRS_HLS),
     "TLI->LLO": Value(round(llo_capture()), "m/s", "computed", "patched conic capture into 100 km LLO"),
-    "LLO->surface": Value(1_870.0, "m/s", "estimated", "placeholder until crewed_lunar descent sim; includes gravity loss"),
-    "surface->LLO": Value(1_850.0, "m/s", "estimated", "placeholder until crewed_lunar ascent sim; includes gravity loss"),
+    "LLO->surface": Value(1_960.0, "m/s", "computed", CREWED_LUNAR + ": 120 t-dry lander, braking on one Raptor plus terminal, no margin"),
+    "surface->LLO": Value(1_830.0, "m/s", "computed", CREWED_LUNAR + ": ascent to LLO, no margin"),
     "surface->NRHO (NASA)": Value(2_610.0, "m/s", "cited", NASA_NRHO + " (ascent)"),
     "LLO->Earth perigee": Value(round(lunar_surface_to_earth_perigee()), "m/s", "computed", "patched conic"),
     "EML1->surface": Value(2_520.0, "m/s", "estimated", "commonly quoted EML1 to lunar surface value, about 2.5 km/s"),

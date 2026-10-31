@@ -3,7 +3,7 @@
   {
    "id": "L1",
    "name": "Surface to NRHO delta-v vs NASA",
-   "value": 2555.0,
+   "value": 2535.0,
    "target": "within 5% of 2610 m/s",
    "passed": true,
    "note": "LLO-staged sum of shared legs"
@@ -115,13 +115,13 @@
    },
    {
     "leg": "LLO->surface",
-    "dv": 1870.0,
-    "kind": "estimated"
+    "dv": 1960.0,
+    "kind": "computed"
    },
    {
     "leg": "surface->LLO",
-    "dv": 1850.0,
-    "kind": "estimated"
+    "dv": 1830.0,
+    "kind": "computed"
    },
    {
     "leg": "surface->NRHO (NASA)",
@@ -676,13 +676,13 @@
    {
     "name": "Methalox Starship-class tanker to NRHO",
     "isp_s": 348.0151379478614,
-    "dv_up": 2555.0,
-    "dv_down": 2575.0,
-    "delivered_t": 591.4627942664779,
-    "burned_t": 1008.5372057335221,
-    "gear_ratio": 0.36966424641654866,
-    "imported_fuel_burned_t": 219.24721863772223,
-    "imported_fuel_per_t_lunar_ox_delivered": 0.47365485459200113
+    "dv_up": 2535.0,
+    "dv_down": 2665.0,
+    "delivered_t": 590.5064325664118,
+    "burned_t": 1009.4935674335882,
+    "gear_ratio": 0.3690665203540074,
+    "imported_fuel_burned_t": 219.45512335512788,
+    "imported_fuel_per_t_lunar_ox_delivered": 0.4748718462285781
    },
    {
     "name": "Methalox Starship-class tanker to EML1",
@@ -698,11 +698,11 @@
    {
     "name": "Hydrolox tanker to NRHO (all lunar)",
     "isp_s": 442.9776859037321,
-    "dv_up": 2555.0,
-    "dv_down": 2575.0,
-    "delivered_t": 257.9954916942632,
-    "burned_t": 342.0045083057368,
-    "gear_ratio": 0.42999248615710534,
+    "dv_up": 2535.0,
+    "dv_down": 2665.0,
+    "delivered_t": 257.4147698377614,
+    "burned_t": 342.5852301622386,
+    "gear_ratio": 0.42902461639626904,
     "imported_fuel_burned_t": 0.0,
     "imported_fuel_per_t_lunar_ox_delivered": 0.0
    },
@@ -730,16 +730,16 @@
    },
    {
     "name": "B. NRHO departure, lunar LOX + Earth CH4 via the surface",
-    "earth_launches": 7.942035701964921,
-    "lunar_water_t": 316.5329100587828,
-    "lunar_oxygen_t": 281.1283131246475,
+    "earth_launches": 8.090402076244398,
+    "lunar_water_t": 317.045554689384,
+    "lunar_oxygen_t": 281.5836178201579,
     "notes": "352 t Earth propellant to reach NRHO, 133 t refilled at NRHO, 0.22 shuttle trips, 78 t CH4 landed on the Moon"
    },
    {
     "name": "C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4",
     "earth_launches": 1.7208538339133819,
-    "lunar_water_t": 1326.5724291769097,
-    "lunar_oxygen_t": 1178.1936645479075,
+    "lunar_water_t": 1329.4187414373612,
+    "lunar_oxygen_t": 1180.7216132665988,
     "notes": "403 t lunar LOX and 112 t Earth CH4 in LEO; 1.0 LEO tanker trips"
    }
   ],
@@ -753,40 +753,40 @@
    },
    {
     "name": "B. NRHO departure, lunar LOX + Earth CH4 via the surface",
-    "earth_launches": 15.354427040613405,
-    "lunar_water_t": 395.66613757347847,
-    "lunar_oxygen_t": 351.4103914058093,
+    "earth_launches": 15.694926465257772,
+    "lunar_water_t": 396.30694336173,
+    "lunar_oxygen_t": 351.9795222751973,
     "notes": "439 t Earth propellant to reach NRHO, 166 t refilled at NRHO, 0.28 shuttle trips, 98 t CH4 landed on the Moon"
    },
    {
     "name": "C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4",
     "earth_launches": 2.343681003137143,
-    "lunar_water_t": 1677.5144200037782,
-    "lunar_oxygen_t": 1489.8823602586986,
+    "lunar_water_t": 1681.1137182823527,
+    "lunar_oxygen_t": 1493.0790725793863,
     "notes": "510 t lunar LOX and 142 t Earth CH4 in LEO; 1.3 LEO tanker trips"
    }
   ],
   "sorties": [
    {
     "name": "Earth propellant only",
-    "earth_launches": 9.60401301785798,
+    "earth_launches": 9.802302023289728,
     "lunar_o2_t": 0.0,
-    "notes": "1368 t loaded in LEO"
+    "notes": "1399 t loaded in LEO"
    },
    {
     "name": "Lunar LOX on the surface, ascent CH4 carried down",
-    "earth_launches": 5.470639701148353,
-    "lunar_o2_t": 104.63034823885272,
-    "notes": "725 t in LEO, 134 t loaded on the Moon"
+    "earth_launches": 5.6104720072258525,
+    "lunar_o2_t": 103.47025012602381,
+    "notes": "747 t in LEO, 132 t loaded on the Moon"
    },
    {
     "name": "Full lunar methalox (needs lunar carbon, see isru)",
-    "earth_launches": 4.561347086235491,
-    "lunar_o2_t": 104.63034823885272,
-    "notes": "584 t in LEO"
+    "earth_launches": 4.682292965566216,
+    "lunar_o2_t": 103.47025012602381,
+    "notes": "602 t in LEO"
    }
   ],
-  "launches_per_t_to_lunar_surface": 0.06241489246273268
+  "launches_per_t_to_lunar_surface": 0.06421081069729788
  },
  "buildup": [
   {
@@ -800,7 +800,7 @@
    "power_t": 1.7380328848243347,
    "landed": 17.738032884824335,
    "landings": 1,
-   "launches": 1.107117415006727
+   "launches": 1.1389734717099
   },
   {
    "phase": "1. Outpost (4 crew, rotating)",
@@ -813,7 +813,7 @@
    "power_t": 13.904263078594678,
    "landed": 99.16623019377035,
    "landings": 1,
-   "launches": 6.189449593478771
+   "launches": 6.367544034536853
   },
   {
    "phase": "2. Propellant plant",
@@ -826,7 +826,7 @@
    "power_t": 60.046458536661774,
    "landed": 141.49257940971557,
    "landings": 2,
-   "launches": 8.831244128132061
+   "launches": 9.085353231549634
   },
   {
    "phase": "3. Transit spaceport",
@@ -839,7 +839,7 @@
    "power_t": 164.3001574489406,
    "landed": 610.9319413334047,
    "landings": 7,
-   "launches": 38.13125142037296
+   "launches": 39.22843523389194
   },
   {
    "phase": "4. Settlement (about 100 residents)",
@@ -852,7 +852,7 @@
    "power_t": 474.32887066647174,
    "landed": 1193.3851980597826,
    "landings": 12,
-   "launches": 74.48500880351827
+   "launches": 76.62823104157404
   }
  ],
  "reuse": [
@@ -985,7 +985,7 @@
  ],
  "provenance_counts": {
   "cited": 27,
-  "computed": 8,
-  "estimated": 75
+  "computed": 10,
+  "estimated": 73
  }
 }
