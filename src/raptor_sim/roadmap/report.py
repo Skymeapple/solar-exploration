@@ -52,11 +52,16 @@ def gantt_svg(prog: Program, timing, mc: MCResult | None, path: Path, y0: int = 
         y = top + i * row_h
         a, b = to_year(timing[sid].start), to_year(timing[sid].finish)
         out.append(f'<text x="{left - 6}" y="{y + 11}" text-anchor="end">{sid}  {s.name[:32]}</text>')
-        out.append(f'<rect x="{X(a):.1f}" y="{y + 3}" width="{max(2, X(b) - X(a)):.1f}" height="{row_h - 6}" fill="{colors[s.phase]}" rx="2"/>')
+        xb = min(X(b), X(y1))
+        out.append(f'<rect x="{X(a):.1f}" y="{y + 3}" width="{max(2, xb - X(a)):.1f}" height="{row_h - 6}" fill="{colors[s.phase]}" rx="2"/>')
+        if b > y1:
+            out.append(f'<text x="{X(y1) - 4:.1f}" y="{y + 11}" text-anchor="end" fill="white" font-size="9">to {b:.0f} &#8594;</text>')
         if mc and sid in mc.milestones:
             m = mc.milestones[sid]
-            out.append(f'<line x1="{X(m["p10"]):.1f}" y1="{y + 8}" x2="{X(m["p90"]):.1f}" y2="{y + 8}" stroke="#222"/>')
-            out.append(f'<circle cx="{X(m["p50"]):.1f}" cy="{y + 8}" r="3" fill="#222"/>')
+            if m["p10"] < y1:
+                out.append(f'<line x1="{X(m["p10"]):.1f}" y1="{y + 8}" x2="{X(min(m["p90"], y1)):.1f}" y2="{y + 8}" stroke="#222"/>')
+            if m["p50"] < y1:
+                out.append(f'<circle cx="{X(m["p50"]):.1f}" cy="{y + 8}" r="3" fill="#222"/>')
     lx = 10
     for ph, name in PHASES.items():
         out.append(f'<rect x="{lx}" y="{h - 22}" width="10" height="10" fill="{colors[ph]}"/>'
@@ -174,7 +179,7 @@ def summary_md(prog, tm, mc, base_prog, base_tm, base_mc, options, logs, tmx, fl
         if v >= 0.05:
             a(f"| {k} {prog.steps[k].name} | {v:.0%} |")
     a("\n## Cost\n")
-    a(f"Whole program to the first crewed Jupiter-system mission: P10 {mc.cost_total['p10']:,.0f}, "
+    a(f"Whole program, all steps including Earth-side cost to Mars self-sufficiency: P10 {mc.cost_total['p10']:,.0f}, "
       f"P50 {mc.cost_total['p50']:,.0f}, P90 {mc.cost_total['p90']:,.0f}.\n")
     a("| To reach | P10 | P50 | P90 |")
     a("| --- | ---: | ---: | ---: |")

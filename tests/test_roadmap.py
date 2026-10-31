@@ -21,7 +21,7 @@ def test_network_is_valid_and_every_capability_used_or_terminal():
     assert len(prog.order) == len(STEPS)
     used = {c for s in STEPS for c in s.needs + s.benefits}
     unused = set(prog.provider) - used
-    assert unused <= {"settlement"}
+    assert unused <= {"self_sufficiency"}
 
 
 def test_missing_capability_raises():

@@ -135,7 +135,7 @@ def run_monte_carlo(prog: Program, n: int = 5000, seed: int = 2026,
         xs = [sum(c for k, c in r.cost.items() if prog.steps[k].phase == ph) for r in runs]
         res.cost_by_phase[ph] = {"p10": pct(xs, 0.1), "p50": pct(xs, 0.5), "p90": pct(xs, 0.9)}
     # Cost to reach a milestone: the milestone and everything upstream of it
-    for m in ("ORBITAL-1", "LUNAR-CREW-1", "MARS-CREW-RETURN", "SETTLEMENT-100", "OUTER-CREW-1"):
+    for m in ("ORBITAL-1", "LUNAR-CREW-1", "MARS-CREW-RETURN", "SETTLEMENT-100", "OUTER-CREW-1", "MARS-SELF"):
         up = _upstream(prog, m)
         xs = [sum(r.cost[k] for k in up) for r in runs]
         res.cost_to[m] = {"p10": pct(xs, 0.1), "p50": pct(xs, 0.5), "p90": pct(xs, 0.9)}

@@ -251,10 +251,23 @@ STEPS: list[Step] = [
          owner="Research and simulate crewed missions and return",
          basis="model: PR #5 every Callisto case gives 1.6-3.9 Sv against a 600 mSv limit",
          note="Feasibility gate: crewed Jupiter missions may not close on radiation even with this step."),
-    Step("SETTLEMENT-100", "Mars settlement of 100 residents, local propellant and food", "P5", "build",
-         (60, 96, 144), (10000, 20000, 40000), needs=("mars_outpost", "crew_round_trip"),
-         provides=("settlement",), benefits=("transit_network", "lunar_oxygen_leo", "lunar_settlement"), owner="Plan human settlement on other planets"),
-
+    Step("REGOLITH-SHIELD", "Regolith shielding 3-5 m overhead for lifelong residents", "P5", "tech",
+         (24, 36, 60), (200, 400, 800), needs=("mars_outpost",), provides=("lifelong_shielding",), trl=(4, 7),
+         owner="Plan human settlement on other planets",
+         basis="model: PR #11 someone born on Mars needs 3-5 m of regolith to stay near 500-1,000 mSv lifetime"),
+    Step("SETTLEMENT-100", "Mars settlement reaches 1,000 residents", "P5", "build",
+         (96, 132, 180), (15000, 25000, 45000), needs=("mars_outpost", "crew_round_trip", "lifelong_shielding"),
+         provides=("settlement",), benefits=("transit_network", "lunar_oxygen_leo", "lunar_settlement"),
+         owner="Plan human settlement on other planets",
+         basis="model: PR #11 baseline reaches 1,000 people about 15 years after the first landing; 22 kW per "
+               "person, fission backbone; cost estimate"),
+    Step("MARS-SELF", "Mars settlement makes 98% of its needs, Earth supply optional", "P5", "ops",
+         (300, 456, 700), (5000, 10000, 20000), needs=("settlement",), provides=("self_sufficiency",),
+         owner="Plan human settlement on other planets",
+         basis="model: PR #11 baseline reaches 98% local production about 53 years after first landing and "
+               "1 million people at about 77; with slow industry it stalls near 18,000; cutting Earth supply "
+               "before 98% collapses it. Earth-side cost only, estimate",
+         note="Beyond the program horizon; shown so the dependency is explicit."),
     # ---------------- P6 Outer solar system ---------------------------------
     Step("OUTER-ROBOTIC-1", "Refuelled-ship robotic mission to the Jupiter system", "P6", "mission",
          (30, 36, 48), (800, 1200, 2000), needs=("depot", "cadence"),
@@ -275,7 +288,7 @@ STEPS: list[Step] = [
 KEY_MILESTONES = [
     "MSR-RETURN", "ORBITAL-1", "REUSE", "PROP-XFER", "CREW-LEO", "LUNAR-CARGO-1", "LUNAR-CREW-1",
     "MARS-CARGO-1", "MARS-CREW-1", "MARS-CREW-RETURN", "LUNAR-SPACEPORT",
-    "LUNAR-TANKER", "MARS-BASE-1", "TRANSIT-NET", "OUTER-ROBOTIC-1", "CERES-HUB", "LUNAR-SETTLE", "SETTLEMENT-100", "OUTER-CREW-1",
+    "LUNAR-TANKER", "MARS-BASE-1", "TRANSIT-NET", "OUTER-ROBOTIC-1", "CERES-HUB", "LUNAR-SETTLE", "SETTLEMENT-100", "OUTER-CREW-1", "MARS-SELF",
 ]
 
 
