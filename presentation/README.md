@@ -19,5 +19,5 @@ node render.js && node orbit.js
 node build.js ../Solar_Exploration_Project_Summary.pptx
 ```
 
-Version 1 (2026-10-31): engine, component, vehicle, business, sample return (PR #4), crewed missions (PR #5), transit bases (PR #6), the lunar base (PR #9) and crewed lunar missions (PR #10) are in. The remaining mission,
-base, settlement and roadmap studies are placeholders and will be filled in as they finish.
+Version 1 (2026-10-31): engine, component, vehicle, business, sample return (PR #4), crewed missions (PR #5), transit bases (PR #6), the lunar base (PR #9), crewed lunar missions (PR #10) and the master roadmap (PR #8) are in. The Mars launch campaign
+and settlement studies are placeholders and will be filled in as they finish.
