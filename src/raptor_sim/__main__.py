@@ -1,11 +1,11 @@
-"""Print the gate report for the Raptor 2 reference design: python -m raptor_sim"""
+"""Print the gate report for the selected design point: python -m raptor_sim"""
 
 from .gates import run_all_gates
 
 
 def main() -> None:
     perf, cycle, results = run_all_gates()
-    print("Reference design (Raptor 2 class, sea-level nozzle)")
+    print(f"Selected design (Raptor 2 class, sea-level nozzle, {perf.design.pc / 1e5:.0f} bar)")
     for key, value in perf.summary().items():
         print(f"  {key:<24} {value:10.3f}")
     print()

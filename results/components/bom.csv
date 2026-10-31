@@ -1,0 +1,43 @@
+part_number,name,assembly,material,quantity,unit_mass_kg,mass_kg,basis,note
+RC-110,"Combustion chamber and throat liner, milled coolant channels",100 Thrust chamber,GRCop-42,1,273.855,273.85,sized,"513 channels at the chamber, hot wall 0.96 mm"
+RC-120,Nozzle channel-wall liner,100 Thrust chamber,IN718,1,31.642,31.64,sized,from area ratio 32 to 34.7
+RC-130,Structural closeout jacket,100 Thrust chamber,IN718,1,70.804,70.80,sized,electroformed / brazed closeout over the channels
+RC-140,Coolant inlet manifold (nozzle exit),100 Thrust chamber,IN718,1,31.736,31.74,sized,
+RC-150,Coolant outlet manifold (chamber),100 Thrust chamber,IN718,1,9.229,9.23,sized,
+IN-210,Injector face plate,200 Main injector,IN718,1,3.709,3.71,sized,"3.0 mm, porous/transpiration cooling not modelled"
+IN-220,Coaxial element ox post,200 Main injector,OXSA,300,0.022,6.63,sized,"ID 7.63 mm, 80 mm long"
+IN-230,Oxygen-rich gas dome,200 Main injector,OXSA,1,15.111,15.11,sized,
+IN-240,Fuel-rich gas manifold ring and body,200 Main injector,IN718,1,13.808,13.81,estimate,body scaled from face and dome
+TP-301,Impellers and inducer,300 Fuel turbopump,Ti64,1,12.155,12.15,sized,turbopump masses +-50%
+TP-302,Turbine disc and blades,300 Fuel turbopump,IN718,1,8.200,8.20,sized,turbopump masses +-50%
+TP-303,Shaft,300 Fuel turbopump,IN718,1,11.971,11.97,sized,turbopump masses +-50%
+TP-304,Pump housing,300 Fuel turbopump,IN718,1,217.131,217.13,sized,turbopump masses +-50%
+TP-305,Turbine housing,300 Fuel turbopump,IN718,1,48.300,48.30,sized,turbopump masses +-50%
+TP-306,Bearings seals flanges,300 Fuel turbopump,various,1,119.103,119.10,estimate,turbopump masses +-50%
+TP-401,Impellers and inducer,400 Oxidizer turbopump,MonelK500,1,47.263,47.26,sized,turbopump masses +-50%
+TP-402,Turbine disc and blades,400 Oxidizer turbopump,OXSA,1,16.815,16.82,sized,turbopump masses +-50%
+TP-403,Shaft,400 Oxidizer turbopump,OXSA,1,29.309,29.31,sized,turbopump masses +-50%
+TP-404,Pump housing,400 Oxidizer turbopump,OXSA,1,256.645,256.64,sized,turbopump masses +-50%
+TP-405,Turbine housing,400 Oxidizer turbopump,OXSA,1,88.519,88.52,sized,turbopump masses +-50%
+TP-406,Kick stage,400 Oxidizer turbopump,MonelK500,1,5.815,5.81,sized,turbopump masses +-50%
+TP-407,Bearings seals flanges,400 Oxidizer turbopump,various,1,177.746,177.75,estimate,turbopump masses +-50%
+PB-510,Fuel-rich preburner,500 Preburners,IN718,1,12.446,12.45,sized,"143 mm dia x 215 mm, wall 6.6 mm"
+PB-520,Oxygen-rich preburner,500 Preburners,OXSA,1,13.740,13.74,sized,"149 mm dia x 223 mm, wall 7.6 mm"
+FL-601,"LOX inlet duct, vehicle interface to oxidizer pump",600 Lines and ducts,SS316L,1,7.341,7.34,sized,"ID 248 mm, wall 1.5 mm, 0.6 m (length estimated)"
+FL-602,"Methane inlet duct, vehicle interface to fuel pump",600 Lines and ducts,SS316L,1,6.363,6.36,sized,"ID 215 mm, wall 1.5 mm, 0.6 m (length estimated)"
+FL-603,Oxidizer pump discharge to oxygen-rich preburner,600 Lines and ducts,A286,1,18.613,18.61,sized,"ID 150 mm, wall 7.3 mm, 0.5 m (length estimated)"
+FL-604,Oxidizer pump discharge to fuel-rich preburner,600 Lines and ducts,A286,1,4.302,4.30,sized,"ID 46 mm, wall 2.3 mm, 1.2 m (length estimated)"
+FL-605,Fuel pump discharge to cooling-jacket inlet manifold,600 Lines and ducts,IN718,1,75.167,75.17,sized,"ID 132 mm, wall 7.4 mm, 2.2 m (length estimated)"
+FL-606,Cooling-jacket outlet to fuel-rich preburner,600 Lines and ducts,IN718,1,16.653,16.65,sized,"ID 115 mm, wall 5.2 mm, 0.8 m (length estimated)"
+FL-607,Fuel pump kick stage to oxygen-rich preburner,600 Lines and ducts,IN718,1,2.137,2.14,sized,"ID 34 mm, wall 1.5 mm, 1.2 m (length estimated)"
+FL-608,Oxidizer turbine exhaust to main injector (oxygen-rich gas),600 Lines and ducts,OXSA,1,19.785,19.78,sized,"ID 243 mm, wall 6.7 mm, 0.3 m (length estimated)"
+FL-609,Fuel turbine exhaust to main injector (fuel-rich gas),600 Lines and ducts,IN718,1,22.413,22.41,sized,"ID 195 mm, wall 5.6 mm, 0.6 m (length estimated)"
+VA-701,"Main oxidizer valve (MOV), oxygen-rich preburner LOX supply",700 Valves,MonelK500,1,51.253,51.25,estimate,"ball valve, electric actuator, 150 mm, 686 bar"
+VA-702,Fuel-rich preburner oxidizer valve (FPOV),700 Valves,MonelK500,1,8.458,8.46,estimate,"poppet / throttling valve, 46 mm, 713 bar"
+VA-703,"Main fuel valve (MFV), cooling-jacket supply",700 Valves,IN718,1,46.036,46.04,estimate,"ball valve, electric actuator, 132 mm, 921 bar"
+VA-704,Oxygen-rich preburner fuel valve (OPFV),700 Valves,IN718,1,6.394,6.39,estimate,"poppet / throttling valve, 34 mm, 670 bar"
+VA-705,"Coolant control valve (CCV), jacket outlet",700 Valves,IN718,1,32.683,32.68,estimate,"throttling valve, 115 mm, 732 bar"
+GM-810,Gimbal block and thrust structure,800 Engine systems,Ti64,1,45.000,45.00,estimate,
+EC-820,Engine controller and harness,800 Engine systems,various,1,35.000,35.00,estimate,
+IG-830,Spark-torch igniters (main chamber and preburners),800 Engine systems,IN718,3,2.000,6.00,estimate,
+SN-840,Pressure and temperature sensors,800 Engine systems,various,1,10.000,10.00,estimate,
