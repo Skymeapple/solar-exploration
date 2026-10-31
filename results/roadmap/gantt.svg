@@ -1,60 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="868" font-family="Helvetica,Arial,sans-serif" font-size="11">
-<rect width="1180" height="868" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="900" font-family="Helvetica,Arial,sans-serif" font-size="11">
+<rect width="1180" height="900" fill="white"/>
 <text x="10" y="20" font-size="14" font-weight="bold">Solar exploration master schedule</text>
 <text x="360" y="20" fill="#555">bar: most likely plan; line: Monte Carlo P10-P90 finish; red ticks: Mars launch windows</text>
-<line x1="360.0" y1="32" x2="360.0" y2="818" stroke="#eee"/>
-<text x="360.0" y="832" text-anchor="middle" fill="#555">2026</text>
-<line x1="407.1" y1="32" x2="407.1" y2="818" stroke="#eee"/>
-<text x="407.1" y="832" text-anchor="middle" fill="#555">2028</text>
-<line x1="454.1" y1="32" x2="454.1" y2="818" stroke="#eee"/>
-<text x="454.1" y="832" text-anchor="middle" fill="#555">2030</text>
-<line x1="501.2" y1="32" x2="501.2" y2="818" stroke="#eee"/>
-<text x="501.2" y="832" text-anchor="middle" fill="#555">2032</text>
-<line x1="548.2" y1="32" x2="548.2" y2="818" stroke="#eee"/>
-<text x="548.2" y="832" text-anchor="middle" fill="#555">2034</text>
-<line x1="595.3" y1="32" x2="595.3" y2="818" stroke="#eee"/>
-<text x="595.3" y="832" text-anchor="middle" fill="#555">2036</text>
-<line x1="642.4" y1="32" x2="642.4" y2="818" stroke="#eee"/>
-<text x="642.4" y="832" text-anchor="middle" fill="#555">2038</text>
-<line x1="689.4" y1="32" x2="689.4" y2="818" stroke="#eee"/>
-<text x="689.4" y="832" text-anchor="middle" fill="#555">2040</text>
-<line x1="736.5" y1="32" x2="736.5" y2="818" stroke="#eee"/>
-<text x="736.5" y="832" text-anchor="middle" fill="#555">2042</text>
-<line x1="783.5" y1="32" x2="783.5" y2="818" stroke="#eee"/>
-<text x="783.5" y="832" text-anchor="middle" fill="#555">2044</text>
-<line x1="830.6" y1="32" x2="830.6" y2="818" stroke="#eee"/>
-<text x="830.6" y="832" text-anchor="middle" fill="#555">2046</text>
-<line x1="877.6" y1="32" x2="877.6" y2="818" stroke="#eee"/>
-<text x="877.6" y="832" text-anchor="middle" fill="#555">2048</text>
-<line x1="924.7" y1="32" x2="924.7" y2="818" stroke="#eee"/>
-<text x="924.7" y="832" text-anchor="middle" fill="#555">2050</text>
-<line x1="971.8" y1="32" x2="971.8" y2="818" stroke="#eee"/>
-<text x="971.8" y="832" text-anchor="middle" fill="#555">2052</text>
-<line x1="1018.8" y1="32" x2="1018.8" y2="818" stroke="#eee"/>
-<text x="1018.8" y="832" text-anchor="middle" fill="#555">2054</text>
-<line x1="1065.9" y1="32" x2="1065.9" y2="818" stroke="#eee"/>
-<text x="1065.9" y="832" text-anchor="middle" fill="#555">2056</text>
-<line x1="1112.9" y1="32" x2="1112.9" y2="818" stroke="#eee"/>
-<text x="1112.9" y="832" text-anchor="middle" fill="#555">2058</text>
-<line x1="1160.0" y1="32" x2="1160.0" y2="818" stroke="#eee"/>
-<text x="1160.0" y="832" text-anchor="middle" fill="#555">2060</text>
-<line x1="377.3" y1="32" x2="377.3" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="427.6" y1="32" x2="427.6" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="477.8" y1="32" x2="477.8" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="528.0" y1="32" x2="528.0" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="578.3" y1="32" x2="578.3" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="628.5" y1="32" x2="628.5" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="678.8" y1="32" x2="678.8" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="729.0" y1="32" x2="729.0" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="779.3" y1="32" x2="779.3" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="829.5" y1="32" x2="829.5" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="879.8" y1="32" x2="879.8" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="930.0" y1="32" x2="930.0" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="980.3" y1="32" x2="980.3" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="1030.5" y1="32" x2="1030.5" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="1080.8" y1="32" x2="1080.8" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="1131.0" y1="32" x2="1131.0" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
-<line x1="1181.3" y1="32" x2="1181.3" y2="818" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="360.0" y1="32" x2="360.0" y2="850" stroke="#eee"/>
+<text x="360.0" y="864" text-anchor="middle" fill="#555">2026</text>
+<line x1="407.1" y1="32" x2="407.1" y2="850" stroke="#eee"/>
+<text x="407.1" y="864" text-anchor="middle" fill="#555">2028</text>
+<line x1="454.1" y1="32" x2="454.1" y2="850" stroke="#eee"/>
+<text x="454.1" y="864" text-anchor="middle" fill="#555">2030</text>
+<line x1="501.2" y1="32" x2="501.2" y2="850" stroke="#eee"/>
+<text x="501.2" y="864" text-anchor="middle" fill="#555">2032</text>
+<line x1="548.2" y1="32" x2="548.2" y2="850" stroke="#eee"/>
+<text x="548.2" y="864" text-anchor="middle" fill="#555">2034</text>
+<line x1="595.3" y1="32" x2="595.3" y2="850" stroke="#eee"/>
+<text x="595.3" y="864" text-anchor="middle" fill="#555">2036</text>
+<line x1="642.4" y1="32" x2="642.4" y2="850" stroke="#eee"/>
+<text x="642.4" y="864" text-anchor="middle" fill="#555">2038</text>
+<line x1="689.4" y1="32" x2="689.4" y2="850" stroke="#eee"/>
+<text x="689.4" y="864" text-anchor="middle" fill="#555">2040</text>
+<line x1="736.5" y1="32" x2="736.5" y2="850" stroke="#eee"/>
+<text x="736.5" y="864" text-anchor="middle" fill="#555">2042</text>
+<line x1="783.5" y1="32" x2="783.5" y2="850" stroke="#eee"/>
+<text x="783.5" y="864" text-anchor="middle" fill="#555">2044</text>
+<line x1="830.6" y1="32" x2="830.6" y2="850" stroke="#eee"/>
+<text x="830.6" y="864" text-anchor="middle" fill="#555">2046</text>
+<line x1="877.6" y1="32" x2="877.6" y2="850" stroke="#eee"/>
+<text x="877.6" y="864" text-anchor="middle" fill="#555">2048</text>
+<line x1="924.7" y1="32" x2="924.7" y2="850" stroke="#eee"/>
+<text x="924.7" y="864" text-anchor="middle" fill="#555">2050</text>
+<line x1="971.8" y1="32" x2="971.8" y2="850" stroke="#eee"/>
+<text x="971.8" y="864" text-anchor="middle" fill="#555">2052</text>
+<line x1="1018.8" y1="32" x2="1018.8" y2="850" stroke="#eee"/>
+<text x="1018.8" y="864" text-anchor="middle" fill="#555">2054</text>
+<line x1="1065.9" y1="32" x2="1065.9" y2="850" stroke="#eee"/>
+<text x="1065.9" y="864" text-anchor="middle" fill="#555">2056</text>
+<line x1="1112.9" y1="32" x2="1112.9" y2="850" stroke="#eee"/>
+<text x="1112.9" y="864" text-anchor="middle" fill="#555">2058</text>
+<line x1="1160.0" y1="32" x2="1160.0" y2="850" stroke="#eee"/>
+<text x="1160.0" y="864" text-anchor="middle" fill="#555">2060</text>
+<line x1="377.3" y1="32" x2="377.3" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="427.6" y1="32" x2="427.6" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="477.8" y1="32" x2="477.8" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="528.0" y1="32" x2="528.0" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="578.3" y1="32" x2="578.3" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="628.5" y1="32" x2="628.5" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="678.8" y1="32" x2="678.8" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="729.0" y1="32" x2="729.0" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="779.3" y1="32" x2="779.3" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="829.5" y1="32" x2="829.5" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="879.8" y1="32" x2="879.8" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="930.0" y1="32" x2="930.0" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="980.3" y1="32" x2="980.3" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="1030.5" y1="32" x2="1030.5" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="1080.8" y1="32" x2="1080.8" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="1131.0" y1="32" x2="1131.0" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
+<line x1="1181.3" y1="32" x2="1181.3" y2="850" stroke="#e15759" stroke-opacity="0.35"/>
 <text x="354" y="51" text-anchor="end">ENG-DEV  Raptor-class engine: component t</text>
 <rect x="379.6" y="43" width="47.1" height="10" fill="#4e79a7" rx="2"/>
 <text x="354" y="67" text-anchor="end">BOOSTER-DEV  Booster structure, avionics, gri</text>
@@ -77,16 +77,16 @@
 <rect x="450.2" y="187" width="70.6" height="10" fill="#59a14f" rx="2"/>
 <text x="354" y="211" text-anchor="end">ORBITAL-1  Integrated stack and first orbit</text>
 <rect x="454.9" y="203" width="17.6" height="10" fill="#59a14f" rx="2"/>
-<line x1="486.0" y1="208" x2="568.3" y2="208" stroke="#222"/>
-<circle cx="516.5" cy="208" r="3" fill="#222"/>
+<line x1="485.7" y1="208" x2="567.9" y2="208" stroke="#222"/>
+<circle cx="515.0" cy="208" r="3" fill="#222"/>
 <text x="354" y="227" text-anchor="end">REUSE  Booster catch and ship recovery,</text>
 <rect x="472.5" y="219" width="29.4" height="10" fill="#59a14f" rx="2"/>
-<line x1="517.5" y1="224" x2="606.5" y2="224" stroke="#222"/>
-<circle cx="552.2" cy="224" r="3" fill="#222"/>
+<line x1="517.3" y1="224" x2="607.4" y2="224" stroke="#222"/>
+<circle cx="552.0" cy="224" r="3" fill="#222"/>
 <text x="354" y="243" text-anchor="end">PROP-XFER  Ship-to-ship propellant transfer</text>
 <rect x="472.5" y="235" width="23.5" height="10" fill="#59a14f" rx="2"/>
-<line x1="513.3" y1="240" x2="601.9" y2="240" stroke="#222"/>
-<circle cx="547.6" cy="240" r="3" fill="#222"/>
+<line x1="512.8" y1="240" x2="601.2" y2="240" stroke="#222"/>
+<circle cx="547.4" cy="240" r="3" fill="#222"/>
 <text x="354" y="259" text-anchor="end">DEPOT  LEO depot with long-duration cry</text>
 <rect x="496.1" y="251" width="35.3" height="10" fill="#59a14f" rx="2"/>
 <text x="354" y="275" text-anchor="end">CADENCE  Second pad and weekly launch cad</text>
@@ -95,105 +95,109 @@
 <rect x="502.0" y="283" width="11.8" height="10" fill="#59a14f" rx="2"/>
 <text x="354" y="307" text-anchor="end">CREW-LEO  First crewed orbital flight</text>
 <rect x="520.8" y="299" width="5.9" height="10" fill="#59a14f" rx="2"/>
-<line x1="535.7" y1="304" x2="624.1" y2="304" stroke="#222"/>
-<circle cx="572.7" cy="304" r="3" fill="#222"/>
+<line x1="535.6" y1="304" x2="623.7" y2="304" stroke="#222"/>
+<circle cx="572.5" cy="304" r="3" fill="#222"/>
 <text x="354" y="323" text-anchor="end">LONG-DUR  Year-long crewed test of the Mar</text>
 <rect x="526.7" y="315" width="27.5" height="10" fill="#59a14f" rx="2"/>
-<text x="354" y="339" text-anchor="end">SURF-POWER  Surface fission power, 40 kWe cl</text>
-<rect x="379.6" y="331" width="94.1" height="10" fill="#9c755f" rx="2"/>
-<text x="354" y="355" text-anchor="end">HYDROLOX-ENG  Hydrogen-oxygen engine for all-l</text>
+<text x="354" y="339" text-anchor="end">LAND-THRUST  Lunar landing thrusters for the </text>
+<rect x="379.6" y="331" width="47.1" height="10" fill="#9c755f" rx="2"/>
+<text x="354" y="355" text-anchor="end">SURF-POWER  Surface fission power, 40 kWe cl</text>
 <rect x="379.6" y="347" width="94.1" height="10" fill="#9c755f" rx="2"/>
-<text x="354" y="371" text-anchor="end">LUNAR-LANDER  Lunar ship variant: landing engi</text>
-<rect x="450.2" y="363" width="47.1" height="10" fill="#9c755f" rx="2"/>
-<text x="354" y="387" text-anchor="end">LUNAR-CARGO-1  First lunar cargo landing</text>
-<rect x="525.5" y="379" width="3.9" height="10" fill="#9c755f" rx="2"/>
-<line x1="546.0" y1="384" x2="641.9" y2="384" stroke="#222"/>
-<circle cx="584.2" cy="384" r="3" fill="#222"/>
-<text x="354" y="403" text-anchor="end">LUNAR-CREW-1  First crewed lunar landing</text>
-<rect x="529.4" y="395" width="2.0" height="10" fill="#9c755f" rx="2"/>
-<line x1="553.8" y1="400" x2="646.8" y2="400" stroke="#222"/>
-<circle cx="592.1" cy="400" r="3" fill="#222"/>
-<text x="354" y="419" text-anchor="end">LUNAR-ISRU  Lunar ice mining and oxygen prod</text>
-<rect x="529.4" y="411" width="70.6" height="10" fill="#9c755f" rx="2"/>
-<text x="354" y="435" text-anchor="end">LUNAR-BASE-1  Lunar base phases 1-2: outpost f</text>
-<rect x="531.4" y="427" width="94.1" height="10" fill="#9c755f" rx="2"/>
-<text x="354" y="451" text-anchor="end">LUNAR-SPACEPORT  Lunar base phase 3: transit spac</text>
-<rect x="625.5" y="443" width="141.2" height="10" fill="#9c755f" rx="2"/>
-<line x1="770.3" y1="448" x2="926.6" y2="448" stroke="#222"/>
-<circle cx="839.6" cy="448" r="3" fill="#222"/>
-<text x="354" y="467" text-anchor="end">LUNAR-TANKER  Lunar oxygen to LEO by hydrogen-</text>
-<rect x="766.7" y="459" width="47.1" height="10" fill="#9c755f" rx="2"/>
-<line x1="814.9" y1="464" x2="984.4" y2="464" stroke="#222"/>
-<circle cx="890.4" cy="464" r="3" fill="#222"/>
-<text x="354" y="483" text-anchor="end">MARS-ISRU-DEV  Mars propellant plant: water min</text>
-<rect x="379.6" y="475" width="94.1" height="10" fill="#e15759" rx="2"/>
-<text x="354" y="499" text-anchor="end">MSR-MAV  Sample return lander, 335 kg asc</text>
-<rect x="379.6" y="491" width="43.1" height="10" fill="#e15759" rx="2"/>
-<text x="354" y="515" text-anchor="end">SR-CONTAIN  Sample receiving facility and br</text>
+<text x="354" y="371" text-anchor="end">HYDROLOX-ENG  Hydrogen-oxygen engine for all-l</text>
+<rect x="379.6" y="363" width="94.1" height="10" fill="#9c755f" rx="2"/>
+<text x="354" y="387" text-anchor="end">LUNAR-LANDER  Lunar ship variant: landing engi</text>
+<rect x="450.2" y="379" width="47.1" height="10" fill="#9c755f" rx="2"/>
+<text x="354" y="403" text-anchor="end">TPS-LUNAR  Heat shield qualified for crewed</text>
+<rect x="502.0" y="395" width="35.3" height="10" fill="#9c755f" rx="2"/>
+<text x="354" y="419" text-anchor="end">LUNAR-CARGO-1  First lunar cargo landing</text>
+<rect x="525.5" y="411" width="3.9" height="10" fill="#9c755f" rx="2"/>
+<line x1="545.3" y1="416" x2="640.6" y2="416" stroke="#222"/>
+<circle cx="584.1" cy="416" r="3" fill="#222"/>
+<text x="354" y="435" text-anchor="end">LUNAR-ISRU  Lunar ice mining and oxygen prod</text>
+<rect x="529.4" y="427" width="70.6" height="10" fill="#9c755f" rx="2"/>
+<text x="354" y="451" text-anchor="end">LUNAR-CREW-1  First crewed lunar landing</text>
+<rect x="537.3" y="443" width="2.0" height="10" fill="#9c755f" rx="2"/>
+<line x1="563.4" y1="448" x2="661.2" y2="448" stroke="#222"/>
+<circle cx="603.7" cy="448" r="3" fill="#222"/>
+<text x="354" y="467" text-anchor="end">LUNAR-BASE-1  Lunar base phases 1-2: outpost f</text>
+<rect x="539.2" y="459" width="94.1" height="10" fill="#9c755f" rx="2"/>
+<text x="354" y="483" text-anchor="end">LUNAR-SPACEPORT  Lunar base phase 3: transit spac</text>
+<rect x="633.3" y="475" width="141.2" height="10" fill="#9c755f" rx="2"/>
+<line x1="777.7" y1="480" x2="939.0" y2="480" stroke="#222"/>
+<circle cx="851.9" cy="480" r="3" fill="#222"/>
+<text x="354" y="499" text-anchor="end">LUNAR-TANKER  Lunar oxygen to LEO by hydrogen-</text>
+<rect x="774.5" y="491" width="47.1" height="10" fill="#9c755f" rx="2"/>
+<line x1="822.6" y1="496" x2="997.2" y2="496" stroke="#222"/>
+<circle cx="902.7" cy="496" r="3" fill="#222"/>
+<text x="354" y="515" text-anchor="end">MARS-ISRU-DEV  Mars propellant plant: water min</text>
 <rect x="379.6" y="507" width="94.1" height="10" fill="#e15759" rx="2"/>
-<text x="354" y="531" text-anchor="end">MSR-LAND  Sample return lander to Mars (la</text>
-<rect x="427.6" y="523" width="19.6" height="10" fill="#e15759" rx="2"/>
-<text x="354" y="547" text-anchor="end">MSR-COLLECT  Sample collection and ascent to </text>
-<rect x="447.2" y="539" width="11.8" height="10" fill="#e15759" rx="2"/>
-<text x="354" y="563" text-anchor="end">MARS-POWER  Mars surface power: lunar reacto</text>
-<rect x="473.7" y="555" width="47.1" height="10" fill="#e15759" rx="2"/>
-<text x="354" y="579" text-anchor="end">MSR-RETURN  Samples cruise to Earth and land</text>
-<rect x="473.7" y="571" width="21.2" height="10" fill="#e15759" rx="2"/>
-<line x1="492.0" y1="576" x2="592.6" y2="576" stroke="#222"/>
-<circle cx="542.2" cy="576" r="3" fill="#222"/>
-<text x="354" y="595" text-anchor="end">MARS-CARGO-1  First Mars cargo landings (2 shi</text>
-<rect x="528.1" y="587" width="13.7" height="10" fill="#e15759" rx="2"/>
-<line x1="591.4" y1="592" x2="694.0" y2="592" stroke="#222"/>
-<circle cx="641.8" cy="592" r="3" fill="#222"/>
-<text x="354" y="611" text-anchor="end">MARS-CARGO-2  Power and ISRU pilot plant to Ma</text>
-<rect x="528.1" y="603" width="13.7" height="10" fill="#e15759" rx="2"/>
-<text x="354" y="627" text-anchor="end">ISRU-RUN  ISRU pilot makes its first full </text>
-<rect x="541.8" y="619" width="35.3" height="10" fill="#e15759" rx="2"/>
-<text x="354" y="643" text-anchor="end">MARS-CREW-1  First crewed Mars landing (2 cre</text>
-<rect x="578.3" y="635" width="13.7" height="10" fill="#b07aa1" rx="2"/>
-<line x1="690.8" y1="640" x2="794.0" y2="640" stroke="#222"/>
-<circle cx="742.2" cy="640" r="3" fill="#222"/>
-<text x="354" y="659" text-anchor="end">MARS-STAY-1  First surface expedition (conjun</text>
-<rect x="592.1" y="651" width="27.5" height="10" fill="#b07aa1" rx="2"/>
-<text x="354" y="675" text-anchor="end">MARS-CREW-RETURN  First crew returns on Mars-made </text>
-<rect x="621.5" y="667" width="13.7" height="10" fill="#b07aa1" rx="2"/>
-<line x1="734.3" y1="672" x2="838.9" y2="672" stroke="#222"/>
-<circle cx="785.9" cy="672" r="3" fill="#222"/>
-<text x="354" y="691" text-anchor="end">TRANSIT-NET  Transit hubs at Mars (Arcadia) a</text>
-<rect x="577.1" y="683" width="94.1" height="10" fill="#f28e2b" rx="2"/>
-<line x1="716.2" y1="688" x2="864.0" y2="688" stroke="#222"/>
-<circle cx="779.4" cy="688" r="3" fill="#222"/>
-<text x="354" y="707" text-anchor="end">MARS-BASE-1  Mars outpost: permanent crew, gr</text>
-<rect x="625.5" y="699" width="94.1" height="10" fill="#f28e2b" rx="2"/>
-<line x1="771.4" y1="704" x2="923.2" y2="704" stroke="#222"/>
-<circle cx="838.7" cy="704" r="3" fill="#222"/>
-<text x="354" y="723" text-anchor="end">SETTLEMENT-100  Mars settlement of 100 residents</text>
-<rect x="719.6" y="715" width="188.2" height="10" fill="#f28e2b" rx="2"/>
-<line x1="938.0" y1="720" x2="1153.7" y2="720" stroke="#222"/>
-<circle cx="1034.2" cy="720" r="3" fill="#222"/>
-<text x="354" y="739" text-anchor="end">LUNAR-SETTLE  Lunar base phase 4: settlement o</text>
-<rect x="766.7" y="731" width="258.8" height="10" fill="#f28e2b" rx="2"/>
-<line x1="995.6" y1="736" x2="1238.0" y2="736" stroke="#222"/>
-<circle cx="1107.2" cy="736" r="3" fill="#222"/>
-<text x="354" y="755" text-anchor="end">DEEP-SHIELD  Shielding and health for multi-y</text>
-<rect x="497.3" y="747" width="188.2" height="10" fill="#76b7b2" rx="2"/>
-<text x="354" y="771" text-anchor="end">OUTER-ROBOTIC-1  Refuelled-ship robotic mission t</text>
-<rect x="538.3" y="763" width="70.6" height="10" fill="#76b7b2" rx="2"/>
-<line x1="638.8" y1="768" x2="773.5" y2="768" stroke="#222"/>
-<circle cx="689.4" cy="768" r="3" fill="#222"/>
-<text x="354" y="787" text-anchor="end">CERES-HUB  Ceres refuelling hub, gateway to</text>
-<rect x="671.2" y="779" width="164.7" height="10" fill="#76b7b2" rx="2"/>
-<line x1="865.9" y1="784" x2="1062.7" y2="784" stroke="#222"/>
-<circle cx="952.0" cy="784" r="3" fill="#222"/>
-<text x="354" y="803" text-anchor="end">OUTER-CREW-1  First crewed mission to the Jupi</text>
-<rect x="846.6" y="795" width="117.6" height="10" fill="#76b7b2" rx="2"/>
-<line x1="1002.7" y1="800" x2="1213.5" y2="800" stroke="#222"/>
-<circle cx="1093.9" cy="800" r="3" fill="#222"/>
-<rect x="10" y="846" width="10" height="10" fill="#4e79a7"/><text x="24" y="855">P0</text>
-<rect x="60" y="846" width="10" height="10" fill="#59a14f"/><text x="74" y="855">P1</text>
-<rect x="110" y="846" width="10" height="10" fill="#9c755f"/><text x="124" y="855">P2</text>
-<rect x="160" y="846" width="10" height="10" fill="#e15759"/><text x="174" y="855">P3</text>
-<rect x="210" y="846" width="10" height="10" fill="#b07aa1"/><text x="224" y="855">P4</text>
-<rect x="260" y="846" width="10" height="10" fill="#f28e2b"/><text x="274" y="855">P5</text>
-<rect x="310" y="846" width="10" height="10" fill="#76b7b2"/><text x="324" y="855">P6</text>
+<text x="354" y="531" text-anchor="end">MSR-MAV  Sample return lander, 335 kg asc</text>
+<rect x="379.6" y="523" width="43.1" height="10" fill="#e15759" rx="2"/>
+<text x="354" y="547" text-anchor="end">SR-CONTAIN  Sample receiving facility and br</text>
+<rect x="379.6" y="539" width="94.1" height="10" fill="#e15759" rx="2"/>
+<text x="354" y="563" text-anchor="end">MSR-LAND  Sample return lander to Mars (la</text>
+<rect x="427.6" y="555" width="19.6" height="10" fill="#e15759" rx="2"/>
+<text x="354" y="579" text-anchor="end">MSR-COLLECT  Sample collection and ascent to </text>
+<rect x="447.2" y="571" width="11.8" height="10" fill="#e15759" rx="2"/>
+<text x="354" y="595" text-anchor="end">MARS-POWER  Mars surface power: lunar reacto</text>
+<rect x="473.7" y="587" width="47.1" height="10" fill="#e15759" rx="2"/>
+<text x="354" y="611" text-anchor="end">MSR-RETURN  Samples cruise to Earth and land</text>
+<rect x="473.7" y="603" width="21.2" height="10" fill="#e15759" rx="2"/>
+<line x1="492.0" y1="608" x2="592.6" y2="608" stroke="#222"/>
+<circle cx="542.2" cy="608" r="3" fill="#222"/>
+<text x="354" y="627" text-anchor="end">MARS-CARGO-1  First Mars cargo landings (2 shi</text>
+<rect x="528.1" y="619" width="13.7" height="10" fill="#e15759" rx="2"/>
+<line x1="591.5" y1="624" x2="694.2" y2="624" stroke="#222"/>
+<circle cx="641.8" cy="624" r="3" fill="#222"/>
+<text x="354" y="643" text-anchor="end">MARS-CARGO-2  Power and ISRU pilot plant to Ma</text>
+<rect x="528.1" y="635" width="13.7" height="10" fill="#e15759" rx="2"/>
+<text x="354" y="659" text-anchor="end">ISRU-RUN  ISRU pilot makes its first full </text>
+<rect x="541.8" y="651" width="35.3" height="10" fill="#e15759" rx="2"/>
+<text x="354" y="675" text-anchor="end">MARS-CREW-1  First crewed Mars landing (2 cre</text>
+<rect x="578.3" y="667" width="13.7" height="10" fill="#b07aa1" rx="2"/>
+<line x1="691.0" y1="672" x2="794.0" y2="672" stroke="#222"/>
+<circle cx="742.2" cy="672" r="3" fill="#222"/>
+<text x="354" y="691" text-anchor="end">MARS-STAY-1  First surface expedition (conjun</text>
+<rect x="592.1" y="683" width="27.5" height="10" fill="#b07aa1" rx="2"/>
+<text x="354" y="707" text-anchor="end">MARS-CREW-RETURN  First crew returns on Mars-made </text>
+<rect x="621.5" y="699" width="13.7" height="10" fill="#b07aa1" rx="2"/>
+<line x1="734.4" y1="704" x2="838.8" y2="704" stroke="#222"/>
+<circle cx="785.9" cy="704" r="3" fill="#222"/>
+<text x="354" y="723" text-anchor="end">TRANSIT-NET  Transit hubs at Mars (Arcadia) a</text>
+<rect x="577.1" y="715" width="94.1" height="10" fill="#f28e2b" rx="2"/>
+<line x1="717.0" y1="720" x2="862.6" y2="720" stroke="#222"/>
+<circle cx="778.4" cy="720" r="3" fill="#222"/>
+<text x="354" y="739" text-anchor="end">MARS-BASE-1  Mars outpost: permanent crew, gr</text>
+<rect x="633.3" y="731" width="94.1" height="10" fill="#f28e2b" rx="2"/>
+<line x1="775.2" y1="736" x2="928.8" y2="736" stroke="#222"/>
+<circle cx="842.9" cy="736" r="3" fill="#222"/>
+<text x="354" y="755" text-anchor="end">SETTLEMENT-100  Mars settlement of 100 residents</text>
+<rect x="727.5" y="747" width="188.2" height="10" fill="#f28e2b" rx="2"/>
+<line x1="941.9" y1="752" x2="1159.5" y2="752" stroke="#222"/>
+<circle cx="1040.0" cy="752" r="3" fill="#222"/>
+<text x="354" y="771" text-anchor="end">LUNAR-SETTLE  Lunar base phase 4: settlement o</text>
+<rect x="774.5" y="763" width="258.8" height="10" fill="#f28e2b" rx="2"/>
+<line x1="1005.7" y1="768" x2="1254.2" y2="768" stroke="#222"/>
+<circle cx="1118.2" cy="768" r="3" fill="#222"/>
+<text x="354" y="787" text-anchor="end">DEEP-SHIELD  Shielding and health for multi-y</text>
+<rect x="497.3" y="779" width="188.2" height="10" fill="#76b7b2" rx="2"/>
+<text x="354" y="803" text-anchor="end">OUTER-ROBOTIC-1  Refuelled-ship robotic mission t</text>
+<rect x="538.3" y="795" width="70.6" height="10" fill="#76b7b2" rx="2"/>
+<line x1="640.3" y1="800" x2="772.4" y2="800" stroke="#222"/>
+<circle cx="689.3" cy="800" r="3" fill="#222"/>
+<text x="354" y="819" text-anchor="end">CERES-HUB  Ceres refuelling hub, gateway to</text>
+<rect x="671.2" y="811" width="164.7" height="10" fill="#76b7b2" rx="2"/>
+<line x1="868.0" y1="816" x2="1059.8" y2="816" stroke="#222"/>
+<circle cx="951.1" cy="816" r="3" fill="#222"/>
+<text x="354" y="835" text-anchor="end">OUTER-CREW-1  First crewed mission to the Jupi</text>
+<rect x="846.6" y="827" width="117.6" height="10" fill="#76b7b2" rx="2"/>
+<line x1="1005.0" y1="832" x2="1216.5" y2="832" stroke="#222"/>
+<circle cx="1093.2" cy="832" r="3" fill="#222"/>
+<rect x="10" y="878" width="10" height="10" fill="#4e79a7"/><text x="24" y="887">P0</text>
+<rect x="60" y="878" width="10" height="10" fill="#59a14f"/><text x="74" y="887">P1</text>
+<rect x="110" y="878" width="10" height="10" fill="#9c755f"/><text x="124" y="887">P2</text>
+<rect x="160" y="878" width="10" height="10" fill="#e15759"/><text x="174" y="887">P3</text>
+<rect x="210" y="878" width="10" height="10" fill="#b07aa1"/><text x="224" y="887">P4</text>
+<rect x="260" y="878" width="10" height="10" fill="#f28e2b"/><text x="274" y="887">P5</text>
+<rect x="310" y="878" width="10" height="10" fill="#76b7b2"/><text x="324" y="887">P6</text>
 </svg>
