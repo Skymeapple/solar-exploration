@@ -104,3 +104,11 @@ def test_capability_matrix(routes):
     m = capability_matrix(routes)
     assert all(m["ch4_engine"].values())
     assert m["hydrocarbon_handling"]["titan"] and sum(m["hydrocarbon_handling"].values()) == 1
+
+
+def test_oxygen_only_energy_matches_electrolysis_stoichiometry():
+    # 1 kg O2 needs 1.126 kg water, i.e. 0.126 kg H2 released: ~6.9 kWh/kg O2 at 55 kWh/kg H2
+    plan = isru_plan(SITES["europa"])
+    o2 = next(c for c in plan.options if c.name == "o2_water")
+    per_kg_o2 = o2.energy_kwh_per_t / 1.2 / (1000 * 3.6 / 4.6)
+    assert 6.9 < per_kg_o2 < 8.0

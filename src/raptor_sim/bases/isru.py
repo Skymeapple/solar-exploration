@@ -127,7 +127,7 @@ def isru_plan(site: Site, a: ISRUAssumptions = ISRUAssumptions()) -> ISRUPlan:
         o2_made = 2 * n_ch4 * M_O2
         extra_o2 = max(o2_need - o2_made, 0.0)
         extra_water = extra_o2 * M_H2O / (0.5 * M_O2)
-        e = (h2_gross + extra_water * 2 * M_H2 / M_H2O) * a.e_electrolysis_kwh_per_kg_h2
+        e = (h2_gross + extra_water * M_H2 / M_H2O) * a.e_electrolysis_kwh_per_kg_h2
         e += (water_net + extra_water) * e_w + n_ch4 * M_C * e_c + 1000 * e_liq
         feed_w = (water_net + extra_water) * w_feed / 1000
         feed_c = n_ch4 * M_C * c_feed_per_kg / 1000
@@ -140,7 +140,7 @@ def isru_plan(site: Site, a: ISRUAssumptions = ISRUAssumptions()) -> ISRUPlan:
     # --- Titan: native methane plus oxygen from ice
     if r.carbon_source == "native_ch4":
         water = o2_need * M_H2O / (0.5 * M_O2)
-        e = ch4 * a.e_pump_native_ch4_kwh_per_kg + water * (2 * M_H2 / M_H2O) * a.e_electrolysis_kwh_per_kg_h2
+        e = ch4 * a.e_pump_native_ch4_kwh_per_kg + water * (M_H2 / M_H2O) * a.e_electrolysis_kwh_per_kg_h2
         e += water * e_w + o2_need * e_liq
         feed = water * w_feed / 1000
         opts.append(Chain("native_ch4", 1.0, e * a.overhead, feed, practical=feed <= a.feed_limit_t_per_t))
@@ -158,7 +158,7 @@ def isru_plan(site: Site, a: ISRUAssumptions = ISRUAssumptions()) -> ISRUPlan:
     # --- Oxygen only
     if r.water_frac > 0:
         water = o2_need * M_H2O / (0.5 * M_O2)
-        e = water * (2 * M_H2 / M_H2O) * a.e_electrolysis_kwh_per_kg_h2 + water * e_w + o2_need * e_liq
+        e = water * (M_H2 / M_H2O) * a.e_electrolysis_kwh_per_kg_h2 + water * e_w + o2_need * e_liq
         feed = water * w_feed / 1000
         opts.append(Chain("o2_water", f_o2, e * a.overhead, feed, imported=f"CH4 {f_ch4:.3f} t/t",
                           practical=feed <= a.feed_limit_t_per_t))

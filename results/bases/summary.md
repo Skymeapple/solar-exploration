@@ -7,11 +7,11 @@ Full refuelling hubs (ISRU makes the whole methane/oxygen load): leo, mars_arcad
 
 | Site | Hub rank | P(top 3) | Rank at 150 t dry | Settlement rank |
 |---|---|---|---|---|
-| mars_arcadia | 1 | 1.00 | 3 | 2 |
-| phobos | 2 | 0.99 | 2 | 6 |
-| ceres | 3 | 0.95 | 1 | 4 |
-| deimos | 4 | 0.02 | 4 | 7 |
-| moon_south_pole | 5 | 0.04 | 5 | 5 |
+| mars_arcadia | 1 | 0.99 | 3 | 2 |
+| phobos | 2 | 0.98 | 2 | 6 |
+| ceres | 3 | 0.94 | 1 | 4 |
+| deimos | 4 | 0.01 | 4 | 7 |
+| moon_south_pole | 5 | 0.06 | 5 | 5 |
 | callisto | 6 | 0.00 | 6 | 9 |
 | ganymede | 7 | 0.00 | 7 | 11 |
 | europa | 8 | 0.00 | 8 | 12 |
@@ -41,16 +41,16 @@ Full refuelling hubs (ISRU makes the whole methane/oxygen load): leo, mars_arcad
 
 | Site | Chain | Local share | MWh per t | Feedstock t/t |
 |---|---|---|---|---|
-| moon_south_pole | o2_regolith | 0.783 | 12.35 | 2.0 |
+| moon_south_pole | o2_water | 0.783 | 9.39 | 15.7 |
 | mars_arcadia | sabatier | 1.0 | 8.17 | 1.0 |
 | phobos | sabatier | 1.0 | 12.24 | 24.4 |
 | deimos | sabatier | 1.0 | 12.24 | 24.4 |
 | ceres | sabatier | 1.0 | 9.79 | 3.3 |
 | callisto | sabatier | 1.0 | 9.46 | 17.5 |
-| ganymede | o2_regolith | 0.783 | 12.28 | 2.0 |
-| europa | o2_regolith | 0.783 | 12.25 | 2.0 |
-| titan | native_ch4 | 1.0 | 13.48 | 1.0 |
-| enceladus | o2_regolith | 0.783 | 12.25 | 2.0 |
+| ganymede | o2_water | 0.783 | 7.04 | 1.8 |
+| europa | o2_water | 0.783 | 6.96 | 0.9 |
+| titan | native_ch4 | 1.0 | 6.97 | 1.0 |
+| enceladus | o2_water | 0.783 | 6.96 | 0.9 |
 | venus_clouds | imported_h2 | 0.945 | 8.31 | 0.0 |
 | mercury_north_pole | sabatier | 1.0 | 11.51 | 8.1 |
 
@@ -58,16 +58,16 @@ Full refuelling hubs (ISRU makes the whole methane/oxygen load): leo, mars_arcad
 
 | Site | Onward to | Window days | Outpost MWe | Days to fill a ship | Meets window |
 |---|---|---|---|---|---|
-| moon_south_pole | leo | 365 | 2.71 | 404 | False |
+| moon_south_pole | leo | 365 | 2.08 | 404 | False |
 | mars_arcadia | leo | 780 | 1.82 | 404 | True |
 | phobos | ceres | 1161 | 2.69 | 404 | True |
 | deimos | leo | 780 | 2.69 | 404 | True |
 | ceres | callisto | 2747 | 2.16 | 404 | True |
 | callisto | leo | 399 | 2.09 | 404 | False |
-| ganymede | leo | 399 | 2.7 | 404 | False |
-| europa | leo | 399 | 2.69 | 366 | True |
-| titan | leo | 378 | 2.95 | 366 | True |
-| enceladus | leo | 378 | 2.69 | 366 | True |
+| ganymede | leo | 399 | 1.57 | 404 | False |
+| europa | leo | 399 | 1.56 | 366 | True |
+| titan | leo | 378 | 1.56 | 366 | True |
+| enceladus | leo | 378 | 1.56 | 366 | True |
 | venus_clouds | leo | 584 | 1.84 | 404 | True |
 | mercury_north_pole | leo | 116 | 2.53 | 404 | False |
 
@@ -75,9 +75,9 @@ Full refuelling hubs (ISRU makes the whole methane/oxygen load): leo, mars_arcad
 
 | Site | Phase | MWe | Imported t | Earth launches | Without hubs |
 |---|---|---|---|---|---|
-| moon_south_pole | outpost | 2.71 | 327 | 20 | 20 |
-| moon_south_pole | base | 17.33 | 1258 | 75 | 75 |
-| moon_south_pole | city | 102.89 | 8044 | 483 | 483 |
+| moon_south_pole | outpost | 2.08 | 308 | 18 | 18 |
+| moon_south_pole | base | 13.35 | 1172 | 70 | 70 |
+| moon_south_pole | city | 83.0 | 7474 | 448 | 448 |
 | mars_arcadia | outpost | 1.82 | 299 | 12 | 12 |
 | mars_arcadia | base | 11.72 | 1134 | 45 | 45 |
 | mars_arcadia | city | 74.85 | 7196 | 288 | 288 |
@@ -93,18 +93,18 @@ Full refuelling hubs (ISRU makes the whole methane/oxygen load): leo, mars_arcad
 | callisto | outpost | 2.09 | 308 | 24 | n/a |
 | callisto | base | 13.44 | 1174 | 90 | n/a |
 | callisto | city | 83.47 | 7502 | 576 | n/a |
-| ganymede | outpost | 2.7 | 327 | 25 | n/a |
-| ganymede | base | 17.23 | 1256 | 96 | n/a |
-| ganymede | city | 102.39 | 8053 | 618 | n/a |
-| europa | outpost | 2.69 | 326 | 25 | n/a |
-| europa | base | 17.19 | 1255 | 96 | n/a |
-| europa | city | 102.18 | 8068 | 619 | n/a |
-| titan | outpost | 2.95 | 314 | 19 | 48 |
-| titan | base | 18.84 | 1269 | 77 | 194 |
-| titan | city | 110.44 | 8303 | 507 | 1,266 |
-| enceladus | outpost | 2.69 | 326 | 60 | n/a |
-| enceladus | base | 17.19 | 1255 | 230 | n/a |
-| enceladus | city | 102.18 | 8075 | 1,479 | n/a |
+| ganymede | outpost | 1.57 | 291 | 22 | n/a |
+| ganymede | base | 10.2 | 1098 | 84 | n/a |
+| ganymede | city | 67.24 | 7007 | 538 | n/a |
+| europa | outpost | 1.56 | 290 | 22 | n/a |
+| europa | base | 10.1 | 1095 | 84 | n/a |
+| europa | city | 66.74 | 7016 | 539 | n/a |
+| titan | outpost | 1.56 | 270 | 16 | 41 |
+| titan | base | 10.1 | 1075 | 66 | 164 |
+| titan | city | 66.77 | 7001 | 427 | 1,067 |
+| enceladus | outpost | 1.56 | 290 | 53 | n/a |
+| enceladus | base | 10.1 | 1095 | 201 | n/a |
+| enceladus | city | 66.73 | 7023 | 1,286 | n/a |
 | venus_clouds | outpost | 1.84 | 280 | 9 | 9 |
 | venus_clouds | base | 11.9 | 1118 | 37 | 37 |
 | venus_clouds | city | 75.75 | 7271 | 242 | 242 |
@@ -119,21 +119,20 @@ Full refuelling hubs (ISRU makes the whole methane/oxygen load): leo, mars_arcad
 | Raptor-class methane/oxygen engine and reusable ship | transport | 12 |
 | Ship-to-ship propellant transfer | transport | 12 |
 | Fission surface power (FSP 40 kWe and up) | energy | 12 |
+| Water electrolysis | ISRU | 12 |
 | Additive manufacturing of spares (engine parts first) | industry | 12 |
 | Closed-loop life support | habitation | 12 |
 | Relay communications network | operations | 12 |
+| Ice mining and water extraction | ISRU | 11 |
 | Landing pad by regolith sintering / ice paving | construction | 11 |
 | On-site ship assembly and repair hangar | industry | 11 |
 | Habitat shielding with regolith or ice | construction | 10 |
 | Propulsive landing on airless bodies | transport | 9 |
 | Cryocoolers for zero boil-off storage | ISRU | 9 |
 | Autonomous operations (light time over 20 min) | operations | 9 |
-| Water electrolysis | ISRU | 8 |
-| Ice mining and water extraction | ISRU | 7 |
 | Sabatier methanation | ISRU | 7 |
 | Solar arrays with storage | energy | 5 |
 | Carbon from rock or ice (pyrolysis) | ISRU | 5 |
-| Oxygen from regolith (molten regolith electrolysis) | ISRU | 4 |
 | Methane supply chain from another hub | ISRU | 4 |
 | Building on ice below 120 K | construction | 4 |
 | Aerocapture and entry heat shield | transport | 3 |
@@ -146,3 +145,4 @@ Full refuelling hubs (ISRU makes the whole methane/oxygen load): leo, mars_arcad
 | Gravity assists or high-Isp (nuclear/electric) stages | transport | 1 |
 | Native hydrocarbon harvesting | ISRU | 1 |
 | Floating habitat and launch platform | construction | 1 |
+| Oxygen from regolith (molten regolith electrolysis) | ISRU | 0 |

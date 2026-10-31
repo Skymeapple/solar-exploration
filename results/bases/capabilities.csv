@@ -2,21 +2,20 @@ capability,group,first_proven_at,sites,moon_south_pole,mars_arcadia,phobos,deimo
 Raptor-class methane/oxygen engine and reusable ship,transport,PR #1/#2 engine model,12,x,x,x,x,x,x,x,x,x,x,x,x
 Ship-to-ship propellant transfer,transport,Earth LEO tanker campaign,12,x,x,x,x,x,x,x,x,x,x,x,x
 Fission surface power (FSP 40 kWe and up),energy,Moon (NASA FSP),12,x,x,x,x,x,x,x,x,x,x,x,x
+Water electrolysis,ISRU,Moon / Mars,12,x,x,x,x,x,x,x,x,x,x,x,x
 Additive manufacturing of spares (engine parts first),industry,PR #2 BOM,12,x,x,x,x,x,x,x,x,x,x,x,x
 Closed-loop life support,habitation,ISS / Moon,12,x,x,x,x,x,x,x,x,x,x,x,x
 Relay communications network,operations,Mars,12,x,x,x,x,x,x,x,x,x,x,x,x
+Ice mining and water extraction,ISRU,Moon / Mars,11,x,x,x,x,x,x,x,x,x,x,,x
 Landing pad by regolith sintering / ice paving,construction,Moon,11,x,x,x,x,x,x,x,x,x,x,,x
 On-site ship assembly and repair hangar,industry,Mars,11,x,x,x,x,x,x,x,x,x,x,,x
 Habitat shielding with regolith or ice,construction,Moon / Mars,10,x,x,x,x,x,x,x,x,,x,,x
 Propulsive landing on airless bodies,transport,Moon,9,x,,x,x,x,x,x,x,,x,,x
 Cryocoolers for zero boil-off storage,ISRU,Moon / Mars,9,x,x,x,x,x,x,x,,,,x,x
 Autonomous operations (light time over 20 min),operations,Mars,9,,x,x,x,x,x,x,x,x,x,,
-Water electrolysis,ISRU,Moon / Mars,8,,x,x,x,x,x,,,x,,x,x
-Ice mining and water extraction,ISRU,Moon / Mars,7,,x,x,x,x,x,,,x,,,x
 Sabatier methanation,ISRU,Mars,7,,x,x,x,x,x,,,,,x,x
 Solar arrays with storage,energy,Moon / Mars,5,,x,x,x,,,,,,,x,x
 Carbon from rock or ice (pyrolysis),ISRU,Ceres / Phobos,5,,,x,x,x,x,,,,,,x
-Oxygen from regolith (molten regolith electrolysis),ISRU,Moon,4,x,,,,,,x,x,,x,,
 Methane supply chain from another hub,ISRU,Moon,4,x,,,,,,x,x,,x,,
 Building on ice below 120 K,construction,Callisto,4,,,,,,,x,x,x,x,,
 Aerocapture and entry heat shield,transport,Earth return / Mars,3,,x,,,,,,,x,,x,
@@ -29,3 +28,4 @@ Deep burial for trapped-particle belts (>10 Sv/yr),construction,Ganymede / Europ
 Gravity assists or high-Isp (nuclear/electric) stages,transport,none yet,1,,,,,,,,,,,,x
 Native hydrocarbon harvesting,ISRU,Titan,1,,,,,,,,,x,,,
 Floating habitat and launch platform,construction,Venus,1,,,,,,,,,,,x,
+Oxygen from regolith (molten regolith electrolysis),ISRU,Moon,0,,,,,,,,,,,,
