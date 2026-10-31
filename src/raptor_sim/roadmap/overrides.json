@@ -1,0 +1,3 @@
+{
+  "_comment": "Numbers delivered by other project threads replace catalog estimates here. Keys are step ids; fields are any Step field (dur, cost, trl, p_success, basis, note). Leave a step out to keep the catalog estimate."
+}

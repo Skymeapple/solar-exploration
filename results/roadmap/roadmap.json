@@ -1,0 +1,2623 @@
+{
+ "start": "2026-11-01",
+ "n_runs": 5000,
+ "seed": 2026,
+ "mars_windows": [
+  "2026-11-15",
+  "2029-01-02",
+  "2031-02-21",
+  "2033-04-11",
+  "2035-05-31",
+  "2037-07-19",
+  "2039-09-07",
+  "2041-10-26",
+  "2043-12-15",
+  "2046-02-02",
+  "2048-03-23",
+  "2050-05-12"
+ ],
+ "baseline": {
+  "milestones": {
+   "ORBITAL-1": {
+    "p10": 2031.94602738883,
+    "p50": 2033.4537127599647,
+    "p90": 2035.7992009063323,
+    "mean": 2033.6968798542507
+   },
+   "REUSE": {
+    "p10": 2033.3234464724774,
+    "p50": 2035.0090454312244,
+    "p90": 2037.4308246578732,
+    "mean": 2035.2202153029066
+   },
+   "PROP-XFER": {
+    "p10": 2033.1026491358894,
+    "p50": 2034.8294135006768,
+    "p90": 2037.2435427541836,
+    "mean": 2035.0170430128924
+   },
+   "CREW-LEO": {
+    "p10": 2033.9428470822172,
+    "p50": 2035.6440129043854,
+    "p90": 2037.9370786864527,
+    "mean": 2035.813775696228
+   },
+   "LUNAR-CARGO-1": {
+    "p10": 2034.5325505859653,
+    "p50": 2036.37958545582,
+    "p90": 2038.8734113197227,
+    "mean": 2036.5631910743334
+   },
+   "LUNAR-CREW-1": {
+    "p10": 2034.8007368773642,
+    "p50": 2036.581365941688,
+    "p90": 2039.048876001104,
+    "mean": 2036.7837576658212
+   },
+   "MARS-CARGO-1": {
+    "p10": 2036.0497471712556,
+    "p50": 2038.2364985771405,
+    "p90": 2042.4341186294005,
+    "mean": 2039.2820421855863
+   },
+   "MSR-RETURN": {
+    "p10": 2040.2079275625788,
+    "p50": 2044.331783117007,
+    "p90": 2046.6463500137193,
+    "mean": 2044.0087876314278
+   },
+   "MARS-CREW-1": {
+    "p10": 2042.3817783642505,
+    "p50": 2044.563197831951,
+    "p90": 2048.8193873205555,
+    "mean": 2045.2664641961571
+   },
+   "MARS-CREW-RETURN": {
+    "p10": 2044.2294955463126,
+    "p50": 2046.443646613181,
+    "p90": 2050.7067231512324,
+    "mean": 2047.2533834744052
+   },
+   "LUNAR-SPACEPORT": {
+    "p10": 2041.0022480633825,
+    "p50": 2043.748679213431,
+    "p90": 2047.070764523491,
+    "mean": 2043.957697190559
+   },
+   "MARS-BASE-1": {
+    "p10": 2045.974979630199,
+    "p50": 2049.2730859521903,
+    "p90": 2053.644601989855,
+    "mean": 2049.6283526826905
+   },
+   "TRANSIT-NET": {
+    "p10": 2045.544651024483,
+    "p50": 2048.8663474603663,
+    "p90": 2052.8624856481206,
+    "mean": 2049.0720131539765
+   },
+   "OUTER-ROBOTIC-1": {
+    "p10": 2038.6693545549806,
+    "p50": 2040.9539014296402,
+    "p90": 2044.6045190948685,
+    "mean": 2041.3398781945507
+   },
+   "SETTLEMENT-100": {
+    "p10": 2053.258960549581,
+    "p50": 2057.803181393254,
+    "p90": 2063.250571653494,
+    "mean": 2058.057128899
+   },
+   "OUTER-CREW-1": {
+    "p10": 2051.553354770723,
+    "p50": 2054.9726863202104,
+    "p90": 2059.49956536802,
+    "mean": 2055.316351919679
+   }
+  },
+  "cost_total": {
+   "p10": 94404.6649977384,
+   "p50": 108041.81868220208,
+   "p90": 123933.80984428343,
+   "mean": 108973.89951770964
+  },
+  "cost_to": {
+   "ORBITAL-1": {
+    "p10": 5979.104406647503,
+    "p50": 6961.01135606006,
+    "p90": 8127.604199298136
+   },
+   "LUNAR-CREW-1": {
+    "p10": 11264.880378219097,
+    "p50": 12575.948550765923,
+    "p90": 14092.484296347538
+   },
+   "MARS-CREW-RETURN": {
+    "p10": 21662.430428759584,
+    "p50": 23525.348287524008,
+    "p90": 25784.3896758163
+   },
+   "SETTLEMENT-100": {
+    "p10": 49542.308857678865,
+    "p50": 58017.09997441515,
+    "p90": 68568.31814155831
+   },
+   "OUTER-CREW-1": {
+    "p10": 64235.88192245513,
+    "p50": 73655.244686522,
+    "p90": 85952.77155030296
+   }
+  },
+  "criticality": {
+   "ENG-DEV": 0.8786,
+   "ENG-QUAL": 0.063,
+   "VAC-ENG": 0.8156,
+   "BOOSTER-DEV": 0.0226,
+   "SHIP-DEV": 0.093,
+   "ORBITAL-1": 0.9942,
+   "REUSE": 0.1672,
+   "CADENCE": 0.1636,
+   "PROP-XFER": 0.827,
+   "DEPOT": 0.827,
+   "EDL-TEST": 0.0034,
+   "CREW-LEO": 0.0002,
+   "LONG-DUR": 0.0002,
+   "SURF-POWER": 0.0058,
+   "MARS-POWER": 0.0058,
+   "MARS-CARGO-1": 0.994,
+   "MARS-CARGO-2": 0.9998,
+   "ISRU-RUN": 0.9998,
+   "MARS-CREW-1": 1.0
+  },
+  "prob_by": {
+   "ORBITAL-1": {
+    "2030": 0.0072,
+    "2031": 0.1092,
+    "2032": 0.3646
+   },
+   "LUNAR-CREW-1": {
+    "2033": 0.0246,
+    "2034": 0.1324,
+    "2035": 0.3556,
+    "2036": 0.5958
+   },
+   "MARS-CARGO-1": {
+    "2034": 0.0028,
+    "2036": 0.1532,
+    "2038": 0.5464
+   },
+   "MARS-CREW-1": {
+    "2037": 0.0,
+    "2040": 0.0504,
+    "2042": 0.2638,
+    "2045": 0.5964
+   },
+   "SETTLEMENT-100": {
+    "2050": 0.022,
+    "2055": 0.3096,
+    "2060": 0.7892
+   },
+   "OUTER-CREW-1": {
+    "2050": 0.0668,
+    "2055": 0.627,
+    "2060": 0.9456
+   }
+  },
+  "mode_finish": {
+   "ORBITAL-1": "2031-08-01",
+   "REUSE": "2032-10-31",
+   "PROP-XFER": "2032-08-01",
+   "CREW-LEO": "2033-01-30",
+   "LUNAR-CARGO-1": "2033-12-31",
+   "LUNAR-CREW-1": "2034-01-31",
+   "MARS-CARGO-1": "2035-12-30",
+   "MSR-RETURN": "2040-02-18",
+   "MARS-CREW-1": "2040-04-07",
+   "MARS-CREW-RETURN": "2042-02-06",
+   "LUNAR-SPACEPORT": "2040-01-31",
+   "MARS-BASE-1": "2044-04-07",
+   "TRANSIT-NET": "2044-01-31",
+   "OUTER-ROBOTIC-1": "2037-09-01",
+   "SETTLEMENT-100": "2052-04-07",
+   "OUTER-CREW-1": "2049-07-01"
+  },
+  "driving_path_mars_crew": [
+   "ENG-DEV",
+   "VAC-ENG",
+   "ORBITAL-1",
+   "PROP-XFER",
+   "DEPOT",
+   "MARS-CARGO-1",
+   "MARS-CARGO-2",
+   "ISRU-RUN",
+   "MARS-CREW-1"
+  ]
+ },
+ "recommended": {
+  "options": [
+   "isru_with_first_cargo",
+   "no_depot_first_cargo",
+   "second_engine_stand"
+  ],
+  "milestones": {
+   "ORBITAL-1": {
+    "p10": 2031.3483122941057,
+    "p50": 2032.6147962393866,
+    "p90": 2034.8751059133203,
+    "mean": 2032.8971632018242
+   },
+   "REUSE": {
+    "p10": 2032.7185799115966,
+    "p50": 2034.1774603739955,
+    "p90": 2036.4770450633914,
+    "mean": 2034.4127049110468
+   },
+   "PROP-XFER": {
+    "p10": 2032.5016307146445,
+    "p50": 2033.962545147363,
+    "p90": 2036.2799023489933,
+    "mean": 2034.2105132976253
+   },
+   "CREW-LEO": {
+    "p10": 2033.4599028959888,
+    "p50": 2035.0509178813554,
+    "p90": 2037.200954441927,
+    "mean": 2035.2175481655784
+   },
+   "LUNAR-CARGO-1": {
+    "p10": 2033.9170712662624,
+    "p50": 2035.5717910974959,
+    "p90": 2037.9419818751983,
+    "mean": 2035.7731250946679
+   },
+   "LUNAR-CREW-1": {
+    "p10": 2034.237881238016,
+    "p50": 2035.8776942157388,
+    "p90": 2038.208294310853,
+    "mean": 2036.0736499551426
+   },
+   "MARS-CARGO-1": {
+    "p10": 2035.9661475572816,
+    "p50": 2038.1091932579802,
+    "p90": 2040.3305073970455,
+    "mean": 2037.7281890957615
+   },
+   "MSR-RETURN": {
+    "p10": 2040.0741525306028,
+    "p50": 2042.2542959639313,
+    "p90": 2046.4588728788349,
+    "mean": 2042.442199237641
+   },
+   "MARS-CREW-1": {
+    "p10": 2038.1720570926575,
+    "p50": 2042.3516210193352,
+    "p90": 2044.564463532892,
+    "mean": 2041.7306182298719
+   },
+   "MARS-CREW-RETURN": {
+    "p10": 2040.0555906536729,
+    "p50": 2044.205732716548,
+    "p90": 2046.4649079871563,
+    "mean": 2043.7085445261157
+   },
+   "LUNAR-SPACEPORT": {
+    "p10": 2040.4799657910671,
+    "p50": 2043.0390895478658,
+    "p90": 2046.3259003509957,
+    "mean": 2043.2519954842676
+   },
+   "MARS-BASE-1": {
+    "p10": 2043.1829966033858,
+    "p50": 2046.0440772102884,
+    "p90": 2049.6366958483604,
+    "mean": 2046.2138937002965
+   },
+   "TRANSIT-NET": {
+    "p10": 2044.406148158915,
+    "p50": 2047.4893541133451,
+    "p90": 2051.3552410307393,
+    "mean": 2047.7172370382025
+   },
+   "OUTER-ROBOTIC-1": {
+    "p10": 2037.8812655315558,
+    "p50": 2039.9956404937798,
+    "p90": 2043.5973750913586,
+    "mean": 2040.4885957500494
+   },
+   "SETTLEMENT-100": {
+    "p10": 2050.1842693282692,
+    "p50": 2054.413464347447,
+    "p90": 2059.24955909651,
+    "mean": 2054.5934042576755
+   },
+   "OUTER-CREW-1": {
+    "p10": 2050.2616882124553,
+    "p50": 2053.538817315053,
+    "p90": 2057.9861340218795,
+    "mean": 2053.8661018739604
+   }
+  },
+  "cost_total": {
+   "p10": 95038.37387881259,
+   "p50": 108053.25727959869,
+   "p90": 123792.9004004394,
+   "mean": 109112.67494362088
+  },
+  "cost_by_phase": {
+   "P0": {
+    "p10": 5834.8036569655915,
+    "p50": 6780.618463453115,
+    "p90": 7959.093494546422
+   },
+   "P1": {
+    "p10": 6143.375107823901,
+    "p50": 7044.461215323881,
+    "p90": 8120.262706810764
+   },
+   "P2": {
+    "p10": 9527.902362321689,
+    "p50": 11280.930088036694,
+    "p90": 13225.6291982088
+   },
+   "P3": {
+    "p10": 4780.853173704655,
+    "p50": 5571.735460878668,
+    "p90": 6733.063965696121
+   },
+   "P4": {
+    "p10": 2722.761715847733,
+    "p50": 3402.586109049278,
+    "p90": 4276.267537458199
+   },
+   "P5": {
+    "p10": 27620.498806919426,
+    "p50": 35888.405635693714,
+    "p90": 46355.104772751074
+   },
+   "P6": {
+    "p10": 28492.313519511586,
+    "p50": 36980.03644777573,
+    "p90": 48474.70806293224
+   }
+  },
+  "cost_to": {
+   "ORBITAL-1": {
+    "p10": 6344.884732082439,
+    "p50": 7336.880216602134,
+    "p90": 8569.801408605332
+   },
+   "LUNAR-CREW-1": {
+    "p10": 11622.29266527757,
+    "p50": 12954.396681762617,
+    "p90": 14584.580320232131
+   },
+   "MARS-CREW-RETURN": {
+    "p10": 21295.447066170313,
+    "p50": 23170.679799565827,
+    "p90": 25467.663262112976
+   },
+   "SETTLEMENT-100": {
+    "p10": 48567.65744131403,
+    "p50": 57366.976287864585,
+    "p90": 68257.31987518824
+   },
+   "OUTER-CREW-1": {
+    "p10": 64768.15470479605,
+    "p50": 74094.83302454387,
+    "p90": 86256.7143821878
+   }
+  },
+  "spend_by_year": {
+   "2026": {
+    "p10": 416.1380095506783,
+    "p50": 468.533860815824,
+    "p90": 532.8376429631139,
+    "mean": 472.4799749995349
+   },
+   "2027": {
+    "p10": 2496.8280573029338,
+    "p50": 2811.2031648936654,
+    "p90": 3197.0258577772297,
+    "mean": 2834.8798499959203
+   },
+   "2028": {
+    "p10": 2500.1449017765776,
+    "p50": 2819.1215473598504,
+    "p90": 3191.64546297183,
+    "mean": 2836.1420593303164
+   },
+   "2029": {
+    "p10": 2177.527763800726,
+    "p50": 2523.2056545709293,
+    "p90": 2870.2031710852143,
+    "mean": 2524.0345756621923
+   },
+   "2030": {
+    "p10": 1486.9362086450303,
+    "p50": 1995.871590358901,
+    "p90": 2479.815243611248,
+    "mean": 1989.4085528282437
+   },
+   "2031": {
+    "p10": 1249.8752726367438,
+    "p50": 1874.9190171067776,
+    "p90": 2508.9202280094487,
+    "mean": 1882.9217071078613
+   },
+   "2032": {
+    "p10": 1321.6328898658037,
+    "p50": 2000.7880755846304,
+    "p90": 2611.8121061597676,
+    "mean": 1990.8134639623795
+   },
+   "2033": {
+    "p10": 1360.4172430709589,
+    "p50": 2087.4994047316886,
+    "p90": 2908.8028641032743,
+    "mean": 2149.779698274139
+   },
+   "2034": {
+    "p10": 1400.9410466603695,
+    "p50": 2193.8938653868654,
+    "p90": 3472.4155300276043,
+    "mean": 2312.3608947739085
+   },
+   "2035": {
+    "p10": 1572.0630509619343,
+    "p50": 3062.759834654873,
+    "p90": 4592.23243608574,
+    "mean": 3053.8552074999893
+   },
+   "2036": {
+    "p10": 1659.5994014030457,
+    "p50": 2571.411297872585,
+    "p90": 3456.981046643022,
+    "mean": 2575.640520897556
+   },
+   "2037": {
+    "p10": 2028.109431385873,
+    "p50": 3262.967163285427,
+    "p90": 4514.763991868997,
+    "mean": 3270.551232986021
+   },
+   "2038": {
+    "p10": 1683.7965454065613,
+    "p50": 2595.0734404517852,
+    "p90": 3643.865270228167,
+    "mean": 2642.0309427320285
+   },
+   "2039": {
+    "p10": 1869.4319036925551,
+    "p50": 2941.0105838331233,
+    "p90": 4011.9850649036016,
+    "mean": 2954.664144386449
+   },
+   "2040": {
+    "p10": 1574.6282227709896,
+    "p50": 2971.3148089498586,
+    "p90": 4616.205811375616,
+    "mean": 3053.3380856672056
+   },
+   "2041": {
+    "p10": 1693.9685658248795,
+    "p50": 2692.905279577012,
+    "p90": 3880.441557687025,
+    "mean": 2757.0388904191304
+   },
+   "2042": {
+    "p10": 1909.8505676945601,
+    "p50": 3358.989633873231,
+    "p90": 5093.536700533726,
+    "mean": 3469.2650656247174
+   },
+   "2043": {
+    "p10": 1488.5951520691783,
+    "p50": 2870.1175192599308,
+    "p90": 4390.738506084408,
+    "mean": 2993.025587322449
+   },
+   "2044": {
+    "p10": 2230.6159424904267,
+    "p50": 3495.602191369236,
+    "p90": 5902.979220832036,
+    "mean": 3872.128444959852
+   },
+   "2045": {
+    "p10": 2067.6909567386406,
+    "p50": 3346.3555455145024,
+    "p90": 6910.729743983827,
+    "mean": 3954.5992402437455
+   },
+   "2046": {
+    "p10": 2449.7128693278955,
+    "p50": 4095.560035450479,
+    "p90": 8542.351243609377,
+    "mean": 4782.561464591032
+   },
+   "2047": {
+    "p10": 2460.3944895120385,
+    "p50": 4509.249831005943,
+    "p90": 9503.313689383413,
+    "mean": 5364.8644389335805
+   },
+   "2048": {
+    "p10": 2672.728872079777,
+    "p50": 5627.3034495023885,
+    "p90": 9894.1861532301,
+    "mean": 6012.306684992808
+   },
+   "2049": {
+    "p10": 2618.3742636905868,
+    "p50": 6760.2251635396915,
+    "p90": 10056.004472156807,
+    "mean": 6395.84533455542
+   },
+   "2050": {
+    "p10": 2316.4013722041145,
+    "p50": 6892.738946904177,
+    "p90": 10008.457291804714,
+    "mean": 6348.537440123299
+   },
+   "2051": {
+    "p10": 1272.2824996100621,
+    "p50": 6530.965203320235,
+    "p90": 9819.356443352715,
+    "mean": 5934.305367361473
+   },
+   "2052": {
+    "p10": 0.0,
+    "p50": 5594.59448244516,
+    "p90": 9496.731022794585,
+    "mean": 5173.5649231055695
+   },
+   "2053": {
+    "p10": 0.0,
+    "p50": 3748.5774296988156,
+    "p90": 9126.851748741079,
+    "mean": 4253.440946774604
+   },
+   "2054": {
+    "p10": 0.0,
+    "p50": 2317.1624899173303,
+    "p90": 8508.860042273098,
+    "mean": 3294.5507318513896
+   },
+   "2055": {
+    "p10": 0.0,
+    "p50": 201.83648789655774,
+    "p90": 7952.862347926639,
+    "mean": 2475.79025906316
+   },
+   "2056": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 6969.545255139535,
+    "mean": 1803.9125896802832
+   },
+   "2057": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 5187.38210030861,
+    "mean": 1289.5534724715776
+   },
+   "2058": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 3148.977981701412,
+    "mean": 875.4408389186315
+   },
+   "2059": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 1998.8243985889446,
+    "mean": 579.2477457892207
+   },
+   "2060": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 377.79047884160235
+   },
+   "2061": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 232.8564987636127
+   },
+   "2062": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 142.55973226187814
+   },
+   "2063": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 82.38145384319331
+   },
+   "2064": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 48.36803008519282
+   },
+   "2065": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 26.255096325675165
+   },
+   "2066": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 15.046288979051367
+   },
+   "2067": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 10.79491072987494
+   },
+   "2068": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 3.7420759050921317
+   }
+  },
+  "criticality": {
+   "ENG-DEV": 0.5328,
+   "ENG-QUAL": 0.1082,
+   "VAC-ENG": 0.4246,
+   "BOOSTER-DEV": 0.065,
+   "SHIP-DEV": 0.2268,
+   "LAUNCH-SITE": 0.0028,
+   "ORBITAL-1": 0.8014,
+   "REUSE": 0.7014,
+   "CADENCE": 0.676,
+   "PROP-XFER": 0.1,
+   "EDL-TEST": 0.1188,
+   "CREW-SHIP": 0.026,
+   "CREW-LEO": 0.0326,
+   "ECLSS-LD": 0.0002,
+   "LONG-DUR": 0.0326,
+   "LUNAR-CREW-1": 0.0002,
+   "SURF-POWER": 0.1684,
+   "MARS-ISRU-DEV": 0.004,
+   "MARS-POWER": 0.1684,
+   "MARS-CARGO-1": 0.1458,
+   "MARS-CARGO-2": 0.8214,
+   "ISRU-RUN": 0.8214,
+   "MARS-CREW-1": 1.0
+  },
+  "criticality_outer": {
+   "ENG-DEV": 0.5664,
+   "ENG-QUAL": 0.1196,
+   "VAC-ENG": 0.4468,
+   "BOOSTER-DEV": 0.073,
+   "SHIP-DEV": 0.3078,
+   "LAUNCH-SITE": 0.003,
+   "ORBITAL-1": 0.8202,
+   "REUSE": 0.7978,
+   "CADENCE": 0.7834,
+   "PROP-XFER": 0.0224,
+   "EDL-TEST": 0.0118,
+   "CREW-SHIP": 0.115,
+   "CREW-LEO": 0.1274,
+   "LONG-DUR": 0.0004,
+   "LUNAR-LANDER": 0.015,
+   "LUNAR-CARGO-1": 0.7496,
+   "LUNAR-CREW-1": 0.454,
+   "SURF-POWER": 0.0498,
+   "LUNAR-ISRU": 0.4232,
+   "LUNAR-BASE-1": 0.4544,
+   "LUNAR-SPACEPORT": 0.8776,
+   "MARS-POWER": 0.0202,
+   "MARS-CARGO-1": 0.0164,
+   "MARS-CARGO-2": 0.077,
+   "ISRU-RUN": 0.077,
+   "MARS-CREW-1": 0.0596,
+   "MARS-STAY-1": 0.0596,
+   "MARS-CREW-RETURN": 0.0596,
+   "TRANSIT-NET": 0.9118,
+   "NUC-PROP": 0.0286,
+   "OUTER-CREW-1": 1.0
+  },
+  "failure_rate": {
+   "ORBITAL-1": 0.3972,
+   "CREW-LEO": 0.1036,
+   "LONG-DUR": 0.1018,
+   "LUNAR-CARGO-1": 0.2116,
+   "LUNAR-CREW-1": 0.0516,
+   "MARS-CARGO-1": 0.2428,
+   "MARS-CARGO-2": 0.2532,
+   "MSR-LAND": 0.1572,
+   "MSR-RETURN": 0.0964,
+   "MARS-CREW-1": 0.0486,
+   "MARS-CREW-RETURN": 0.0474,
+   "OUTER-ROBOTIC-1": 0.1494,
+   "OUTER-CREW-1": 0.0462
+  },
+  "prob_by": {
+   "ORBITAL-1": {
+    "2030": 0.0402,
+    "2031": 0.2812,
+    "2032": 0.613
+   },
+   "LUNAR-CREW-1": {
+    "2033": 0.0642,
+    "2034": 0.2638,
+    "2035": 0.5328,
+    "2036": 0.7516
+   },
+   "MARS-CARGO-1": {
+    "2034": 0.0428,
+    "2036": 0.4426,
+    "2038": 0.7972
+   },
+   "MARS-CREW-1": {
+    "2037": 0.0074,
+    "2040": 0.4756,
+    "2042": 0.787,
+    "2045": 0.9354
+   },
+   "SETTLEMENT-100": {
+    "2050": 0.153,
+    "2055": 0.6772,
+    "2060": 0.9542
+   },
+   "OUTER-CREW-1": {
+    "2050": 0.1672,
+    "2055": 0.7772,
+    "2060": 0.9766
+   }
+  },
+  "mode_finish": {
+   "ORBITAL-1": "2030-10-13",
+   "REUSE": "2032-01-13",
+   "PROP-XFER": "2031-10-13",
+   "CREW-LEO": "2033-01-30",
+   "LUNAR-CARGO-1": "2033-03-14",
+   "LUNAR-CREW-1": "2033-04-13",
+   "MARS-CARGO-1": "2033-11-10",
+   "MSR-RETURN": "2037-12-30",
+   "MARS-CREW-1": "2035-12-30",
+   "MARS-CREW-RETURN": "2037-10-30",
+   "LUNAR-SPACEPORT": "2039-04-14",
+   "MARS-BASE-1": "2040-04-13",
+   "TRANSIT-NET": "2043-04-14",
+   "OUTER-ROBOTIC-1": "2036-07-30",
+   "SETTLEMENT-100": "2048-04-13",
+   "OUTER-CREW-1": "2048-05-28"
+  },
+  "driving_path_mars_crew": [
+   "ENG-DEV",
+   "VAC-ENG",
+   "ORBITAL-1",
+   "REUSE",
+   "CADENCE",
+   "MARS-CARGO-2",
+   "ISRU-RUN",
+   "MARS-CREW-1"
+  ],
+  "driving_path_outer_crew": [
+   "ENG-DEV",
+   "VAC-ENG",
+   "ORBITAL-1",
+   "REUSE",
+   "CADENCE",
+   "LUNAR-CARGO-1",
+   "LUNAR-CREW-1",
+   "LUNAR-BASE-1",
+   "LUNAR-SPACEPORT",
+   "TRANSIT-NET",
+   "OUTER-CREW-1"
+  ]
+ },
+ "options": [
+  {
+   "key": "baseline",
+   "label": "Baseline",
+   "cargo1_p50": 2038.2364985771405,
+   "crew_p10": 2042.3817783642505,
+   "crew_p50": 2044.563197831951,
+   "crew_p90": 2048.8193873205555,
+   "return_p50": 2046.443646613181,
+   "cost_to_return_p50": 23525.348287524008,
+   "p_crew_by_2040": 0.0504
+  },
+  {
+   "key": "isru_with_first_cargo",
+   "label": "ISRU pilot flies with the first cargo",
+   "cargo1_p50": 2038.2259305386992,
+   "crew_p10": 2040.2487450491847,
+   "crew_p50": 2042.4309472344412,
+   "crew_p90": 2046.6782062124646,
+   "return_p50": 2044.3130545442032,
+   "cost_to_return_p50": 23671.51714047123,
+   "p_crew_by_2040": 0.2524
+  },
+  {
+   "key": "no_depot_first_cargo",
+   "label": "First Mars cargo refilled without a depot",
+   "cargo1_p50": 2038.1665839947009,
+   "crew_p10": 2042.3311357368518,
+   "crew_p50": 2044.531355459038,
+   "crew_p90": 2048.7812123741433,
+   "return_p50": 2046.3891683390334,
+   "cost_to_return_p50": 22657.811250100844,
+   "p_crew_by_2040": 0.097
+  },
+  {
+   "key": "second_engine_stand",
+   "label": "Second engine test stand",
+   "cargo1_p50": 2038.165842892603,
+   "crew_p10": 2042.3255980171637,
+   "crew_p50": 2044.5288811911,
+   "crew_p90": 2048.773746002561,
+   "return_p50": 2046.3877188636438,
+   "cost_to_return_p50": 23910.64402721909,
+   "p_crew_by_2040": 0.099
+  },
+  {
+   "key": "crew_on_partial_isru",
+   "label": "Crew launches before ISRU makes a full load",
+   "cargo1_p50": 2038.2364985771405,
+   "crew_p10": 2040.2984704745393,
+   "crew_p50": 2044.494940562637,
+   "crew_p90": 2046.7133901143868,
+   "return_p50": 2046.353502704303,
+   "cost_to_return_p50": 23260.381801302905,
+   "p_crew_by_2040": 0.1238
+  },
+  {
+   "key": "recommended",
+   "label": "Recommended",
+   "cargo1_p50": 2038.1091932579802,
+   "crew_p10": 2038.1720570926575,
+   "crew_p50": 2042.3516210193352,
+   "crew_p90": 2044.564463532892,
+   "return_p50": 2044.205732716548,
+   "cost_to_return_p50": 23170.679799565827,
+   "p_crew_by_2040": 0.4756
+  }
+ ],
+ "transfer": [
+  {
+   "capability": "engine",
+   "proven_by": "ENG-DEV",
+   "proven": "2028-10-31",
+   "phase": "P0",
+   "needed_by": [
+    "ENG-QUAL",
+    "VAC-ENG"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "booster",
+   "proven_by": "BOOSTER-DEV",
+   "proven": "2029-05-02",
+   "phase": "P0",
+   "needed_by": [
+    "ORBITAL-1"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "launch_site",
+   "proven_by": "LAUNCH-SITE",
+   "proven": "2029-05-02",
+   "phase": "P0",
+   "needed_by": [
+    "ORBITAL-1"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "engine_production",
+   "proven_by": "ENG-QUAL",
+   "proven": "2029-10-31",
+   "phase": "P0",
+   "needed_by": [
+    "ORBITAL-1",
+    "LUNAR-LANDER"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "ship",
+   "proven_by": "SHIP-DEV",
+   "proven": "2029-10-31",
+   "phase": "P0",
+   "needed_by": [
+    "ORBITAL-1",
+    "CREW-SHIP",
+    "LUNAR-LANDER"
+   ],
+   "reused_by": [],
+   "uses": 3
+  },
+  {
+   "capability": "sample_ascent",
+   "proven_by": "MSR-MAV",
+   "proven": "2029-10-31",
+   "phase": "P3",
+   "needed_by": [
+    "MSR-LAND"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "vac_engine",
+   "proven_by": "VAC-ENG",
+   "proven": "2030-01-12",
+   "phase": "P0",
+   "needed_by": [
+    "ORBITAL-1"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "orbit",
+   "proven_by": "ORBITAL-1",
+   "proven": "2030-10-13",
+   "phase": "P1",
+   "needed_by": [
+    "REUSE",
+    "PROP-XFER"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "eclss_long",
+   "proven_by": "ECLSS-LD",
+   "proven": "2030-11-01",
+   "phase": "P1",
+   "needed_by": [
+    "LONG-DUR"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "rad_protection",
+   "proven_by": "RAD-HEALTH",
+   "proven": "2030-11-01",
+   "phase": "P1",
+   "needed_by": [
+    "MARS-CREW-1"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "surface_power",
+   "proven_by": "SURF-POWER",
+   "proven": "2030-11-01",
+   "phase": "P2",
+   "needed_by": [
+    "LUNAR-ISRU",
+    "LUNAR-BASE-1",
+    "MARS-POWER",
+    "NUC-PROP"
+   ],
+   "reused_by": [],
+   "uses": 4
+  },
+  {
+   "capability": "isru_plant",
+   "proven_by": "MARS-ISRU-DEV",
+   "proven": "2030-11-01",
+   "phase": "P3",
+   "needed_by": [
+    "MARS-CARGO-2"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "prop_transfer",
+   "proven_by": "PROP-XFER",
+   "proven": "2031-10-13",
+   "phase": "P1",
+   "needed_by": [
+    "DEPOT",
+    "EDL-TEST",
+    "LUNAR-CARGO-1",
+    "MARS-CARGO-1",
+    "MARS-CARGO-2"
+   ],
+   "reused_by": [],
+   "uses": 5
+  },
+  {
+   "capability": "lunar_lander",
+   "proven_by": "LUNAR-LANDER",
+   "proven": "2031-11-01",
+   "phase": "P2",
+   "needed_by": [
+    "LUNAR-CARGO-1"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "reuse",
+   "proven_by": "REUSE",
+   "proven": "2032-01-13",
+   "phase": "P1",
+   "needed_by": [
+    "CADENCE",
+    "EDL-TEST",
+    "CREW-LEO"
+   ],
+   "reused_by": [],
+   "uses": 3
+  },
+  {
+   "capability": "hypersonic_edl",
+   "proven_by": "EDL-TEST",
+   "proven": "2032-07-13",
+   "phase": "P1",
+   "needed_by": [
+    "MARS-CARGO-1",
+    "MARS-CARGO-2"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "crew_vehicle",
+   "proven_by": "CREW-SHIP",
+   "proven": "2032-10-31",
+   "phase": "P1",
+   "needed_by": [
+    "CREW-LEO"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "mars_power",
+   "proven_by": "MARS-POWER",
+   "proven": "2032-10-31",
+   "phase": "P3",
+   "needed_by": [
+    "MARS-CARGO-2"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "cadence",
+   "proven_by": "CADENCE",
+   "proven": "2033-01-12",
+   "phase": "P1",
+   "needed_by": [
+    "LUNAR-CARGO-1",
+    "MARS-CARGO-1",
+    "MARS-CARGO-2",
+    "OUTER-ROBOTIC-1"
+   ],
+   "reused_by": [],
+   "uses": 4
+  },
+  {
+   "capability": "crew_leo",
+   "proven_by": "CREW-LEO",
+   "proven": "2033-01-30",
+   "phase": "P1",
+   "needed_by": [
+    "LONG-DUR",
+    "LUNAR-CREW-1"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "lunar_landing",
+   "proven_by": "LUNAR-CARGO-1",
+   "proven": "2033-03-14",
+   "phase": "P2",
+   "needed_by": [
+    "LUNAR-CREW-1",
+    "LUNAR-ISRU",
+    "LUNAR-BASE-1"
+   ],
+   "reused_by": [
+    "MARS-CARGO-1"
+   ],
+   "uses": 4
+  },
+  {
+   "capability": "depot",
+   "proven_by": "DEPOT",
+   "proven": "2033-04-13",
+   "phase": "P1",
+   "needed_by": [
+    "LUNAR-SPACEPORT",
+    "TRANSIT-NET",
+    "OUTER-ROBOTIC-1"
+   ],
+   "reused_by": [],
+   "uses": 3
+  },
+  {
+   "capability": "deep_space_crew",
+   "proven_by": "LUNAR-CREW-1",
+   "proven": "2033-04-13",
+   "phase": "P2",
+   "needed_by": [
+    "LUNAR-BASE-1",
+    "MARS-CREW-1"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "mars_landing",
+   "proven_by": "MARS-CARGO-1",
+   "proven": "2033-11-10",
+   "phase": "P3",
+   "needed_by": [
+    "MSR-LAND",
+    "MARS-CREW-1"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "isru_delivered",
+   "proven_by": "MARS-CARGO-2",
+   "proven": "2033-11-10",
+   "phase": "P3",
+   "needed_by": [
+    "ISRU-RUN"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "crew_long_duration",
+   "proven_by": "LONG-DUR",
+   "proven": "2034-04-01",
+   "phase": "P1",
+   "needed_by": [
+    "MARS-CREW-1"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "isru_proven",
+   "proven_by": "ISRU-RUN",
+   "proven": "2035-05-12",
+   "phase": "P3",
+   "needed_by": [
+    "MARS-CREW-1",
+    "TRANSIT-NET"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "crew_mars",
+   "proven_by": "MARS-CREW-1",
+   "proven": "2035-12-30",
+   "phase": "P4",
+   "needed_by": [
+    "MARS-BASE-1"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "lunar_isru",
+   "proven_by": "LUNAR-ISRU",
+   "proven": "2036-03-14",
+   "phase": "P2",
+   "needed_by": [
+    "LUNAR-SPACEPORT"
+   ],
+   "reused_by": [
+    "MARS-BASE-1"
+   ],
+   "uses": 2
+  },
+  {
+   "capability": "surface_habitat",
+   "proven_by": "LUNAR-BASE-1",
+   "proven": "2036-04-13",
+   "phase": "P2",
+   "needed_by": [
+    "LUNAR-SPACEPORT",
+    "MARS-BASE-1"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "crew_round_trip",
+   "proven_by": "MARS-CREW-RETURN",
+   "proven": "2037-10-30",
+   "phase": "P4",
+   "needed_by": [
+    "SETTLEMENT-100",
+    "OUTER-CREW-1"
+   ],
+   "reused_by": [],
+   "uses": 2
+  },
+  {
+   "capability": "earth_return",
+   "proven_by": "MSR-RETURN",
+   "proven": "2037-12-30",
+   "phase": "P3",
+   "needed_by": [],
+   "reused_by": [
+    "MARS-CREW-RETURN"
+   ],
+   "uses": 1
+  },
+  {
+   "capability": "nuclear_propulsion",
+   "proven_by": "NUC-PROP",
+   "proven": "2038-11-01",
+   "phase": "P6",
+   "needed_by": [
+    "OUTER-CREW-1"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "lunar_propellant",
+   "proven_by": "LUNAR-SPACEPORT",
+   "proven": "2039-04-14",
+   "phase": "P2",
+   "needed_by": [
+    "TRANSIT-NET"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "mars_outpost",
+   "proven_by": "MARS-BASE-1",
+   "proven": "2040-04-13",
+   "phase": "P5",
+   "needed_by": [
+    "SETTLEMENT-100"
+   ],
+   "reused_by": [],
+   "uses": 1
+  },
+  {
+   "capability": "transit_network",
+   "proven_by": "TRANSIT-NET",
+   "proven": "2043-04-14",
+   "phase": "P5",
+   "needed_by": [
+    "OUTER-CREW-1"
+   ],
+   "reused_by": [
+    "SETTLEMENT-100"
+   ],
+   "uses": 2
+  },
+  {
+   "capability": "settlement",
+   "proven_by": "SETTLEMENT-100",
+   "proven": "2048-04-13",
+   "phase": "P5",
+   "needed_by": [],
+   "reused_by": [],
+   "uses": 0
+  }
+ ],
+ "float_months": {
+  "ENG-DEV": 0.0,
+  "ENG-QUAL": 2.0,
+  "VAC-ENG": 0.0,
+  "BOOSTER-DEV": 8.0,
+  "SHIP-DEV": 0.0,
+  "LAUNCH-SITE": 8.0,
+  "ORBITAL-1": 0.0,
+  "REUSE": 0.0,
+  "CADENCE": 0.0,
+  "PROP-XFER": 0.0,
+  "DEPOT": 3.0,
+  "EDL-TEST": 8.0,
+  "CREW-SHIP": 0.0,
+  "CREW-LEO": 0.0,
+  "ECLSS-LD": 40.0,
+  "LONG-DUR": 13.0,
+  "RAD-HEALTH": 54.0,
+  "LUNAR-LANDER": 14.0,
+  "LUNAR-CARGO-1": 0.0,
+  "LUNAR-CREW-1": 0.0,
+  "SURF-POWER": 5.0,
+  "LUNAR-ISRU": 1.0,
+  "LUNAR-BASE-1": 0.0,
+  "LUNAR-SPACEPORT": 0.0,
+  "MARS-ISRU-DEV": 29.0,
+  "MARS-POWER": 5.0,
+  "MARS-CARGO-1": 2.0,
+  "MARS-CARGO-2": 3.0,
+  "ISRU-RUN": 0.0,
+  "MSR-MAV": 60.0,
+  "MSR-LAND": 20.0,
+  "MSR-COLLECT": 9.0,
+  "MSR-RETURN": 9.0,
+  "MARS-CREW-1": 0.0,
+  "MARS-STAY-1": 1.0,
+  "MARS-CREW-RETURN": 1.0,
+  "MARS-BASE-1": 0.0,
+  "TRANSIT-NET": 0.0,
+  "SETTLEMENT-100": 0.0,
+  "OUTER-ROBOTIC-1": 3.0,
+  "NUC-PROP": 54.0,
+  "OUTER-CREW-1": 1.0
+ },
+ "lunar_tankers": {
+  "Model vehicle (100 t dry, 155 t to LEO)": 6,
+  "Conservative (150 t dry, 108 t to LEO)": 11
+ },
+ "isru_power_kw_per_ship": 542.5000633761756,
+ "logistics": {
+  "Model vehicle (100 t dry, 155 t to LEO)": [
+   {
+    "year": 2030,
+    "mars_ships": 0,
+    "lunar_landings": 0,
+    "tanker_launches": 0,
+    "commercial_leo": 2,
+    "crew_flights": 0,
+    "launches": 2,
+    "propellant_kt": 10.5,
+    "methane_kt": 2.2826086956521743,
+    "oxygen_kt": 8.217391304347826,
+    "ships_built": 1,
+    "boosters_built": 1,
+    "engines_built": 39,
+    "peak_launches_per_month": 0.16666666666666666,
+    "pads_needed": 1,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2031,
+    "mars_ships": 0,
+    "lunar_landings": 0,
+    "tanker_launches": 0,
+    "commercial_leo": 5,
+    "crew_flights": 0,
+    "launches": 5,
+    "propellant_kt": 26.25,
+    "methane_kt": 5.7065217391304355,
+    "oxygen_kt": 20.543478260869563,
+    "ships_built": 1,
+    "boosters_built": 1,
+    "engines_built": 39,
+    "peak_launches_per_month": 0.4166666666666667,
+    "pads_needed": 1,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2032,
+    "mars_ships": 0,
+    "lunar_landings": 0,
+    "tanker_launches": 0,
+    "commercial_leo": 9,
+    "crew_flights": 0,
+    "launches": 9,
+    "propellant_kt": 47.25,
+    "methane_kt": 10.271739130434783,
+    "oxygen_kt": 36.97826086956522,
+    "ships_built": 1,
+    "boosters_built": 1,
+    "engines_built": 39,
+    "peak_launches_per_month": 0.75,
+    "pads_needed": 1,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2033,
+    "mars_ships": 4,
+    "lunar_landings": 7,
+    "tanker_launches": 58,
+    "commercial_leo": 14,
+    "crew_flights": 1,
+    "launches": 83,
+    "propellant_kt": 435.75,
+    "methane_kt": 94.72826086956523,
+    "oxygen_kt": 341.02173913043475,
+    "ships_built": 15,
+    "boosters_built": 2,
+    "engines_built": 156,
+    "peak_launches_per_month": 10.25,
+    "pads_needed": 3,
+    "boiloff_t": 150.784,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2034,
+    "mars_ships": 0,
+    "lunar_landings": 5,
+    "tanker_launches": 30,
+    "commercial_leo": 19,
+    "crew_flights": 0,
+    "launches": 54,
+    "propellant_kt": 283.5,
+    "methane_kt": 61.6304347826087,
+    "oxygen_kt": 221.8695652173913,
+    "ships_built": 8,
+    "boosters_built": 2,
+    "engines_built": 114,
+    "peak_launches_per_month": 4.5,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2035,
+    "mars_ships": 6,
+    "lunar_landings": 5,
+    "tanker_launches": 54,
+    "commercial_leo": 24,
+    "crew_flights": 2,
+    "launches": 89,
+    "propellant_kt": 467.25,
+    "methane_kt": 101.57608695652175,
+    "oxygen_kt": 365.67391304347825,
+    "ships_built": 15,
+    "boosters_built": 2,
+    "engines_built": 156,
+    "peak_launches_per_month": 12.416666666666668,
+    "pads_needed": 4,
+    "boiloff_t": 226.176,
+    "mars_isru_kw": 1085.0001267523512,
+    "notes": []
+   },
+   {
+    "year": 2036,
+    "mars_ships": 0,
+    "lunar_landings": 9,
+    "tanker_launches": 54,
+    "commercial_leo": 29,
+    "crew_flights": 0,
+    "launches": 92,
+    "propellant_kt": 483.0,
+    "methane_kt": 105.00000000000001,
+    "oxygen_kt": 378.0,
+    "ships_built": 14,
+    "boosters_built": 2,
+    "engines_built": 150,
+    "peak_launches_per_month": 7.666666666666667,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2037,
+    "mars_ships": 8,
+    "lunar_landings": 4,
+    "tanker_launches": 56,
+    "commercial_leo": 34,
+    "crew_flights": 0,
+    "launches": 102,
+    "propellant_kt": 535.5,
+    "methane_kt": 116.41304347826087,
+    "oxygen_kt": 419.0869565217391,
+    "ships_built": 17,
+    "boosters_built": 3,
+    "engines_built": 201,
+    "peak_launches_per_month": 15.166666666666668,
+    "pads_needed": 4,
+    "boiloff_t": 301.568,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2038,
+    "mars_ships": 0,
+    "lunar_landings": 4,
+    "tanker_launches": 24,
+    "commercial_leo": 38,
+    "crew_flights": 0,
+    "launches": 66,
+    "propellant_kt": 346.5,
+    "methane_kt": 75.32608695652175,
+    "oxygen_kt": 271.17391304347825,
+    "ships_built": 8,
+    "boosters_built": 2,
+    "engines_built": 114,
+    "peak_launches_per_month": 5.5,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2039,
+    "mars_ships": 10,
+    "lunar_landings": 4,
+    "tanker_launches": 64,
+    "commercial_leo": 42,
+    "crew_flights": 0,
+    "launches": 120,
+    "propellant_kt": 630.0,
+    "methane_kt": 136.95652173913044,
+    "oxygen_kt": 493.04347826086956,
+    "ships_built": 20,
+    "boosters_built": 3,
+    "engines_built": 219,
+    "peak_launches_per_month": 18.333333333333332,
+    "pads_needed": 5,
+    "boiloff_t": 376.96,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2040,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2041,
+    "mars_ships": 17,
+    "lunar_landings": 6,
+    "tanker_launches": 86,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 154,
+    "propellant_kt": 808.5,
+    "methane_kt": 175.7608695652174,
+    "oxygen_kt": 632.7391304347826,
+    "ships_built": 30,
+    "boosters_built": 4,
+    "engines_built": 312,
+    "peak_launches_per_month": 27.0,
+    "pads_needed": 7,
+    "boiloff_t": 640.832,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2042,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2043,
+    "mars_ships": 17,
+    "lunar_landings": 6,
+    "tanker_launches": 86,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 154,
+    "propellant_kt": 808.5,
+    "methane_kt": 175.7608695652174,
+    "oxygen_kt": 632.7391304347826,
+    "ships_built": 30,
+    "boosters_built": 4,
+    "engines_built": 312,
+    "peak_launches_per_month": 27.0,
+    "pads_needed": 7,
+    "boiloff_t": 640.832,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2044,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2045,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2046,
+    "mars_ships": 18,
+    "lunar_landings": 6,
+    "tanker_launches": 90,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 159,
+    "propellant_kt": 834.75,
+    "methane_kt": 181.46739130434784,
+    "oxygen_kt": 653.2826086956521,
+    "ships_built": 31,
+    "boosters_built": 4,
+    "engines_built": 318,
+    "peak_launches_per_month": 28.25,
+    "pads_needed": 8,
+    "boiloff_t": 678.528,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2047,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2048,
+    "mars_ships": 18,
+    "lunar_landings": 6,
+    "tanker_launches": 90,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 159,
+    "propellant_kt": 834.75,
+    "methane_kt": 181.46739130434784,
+    "oxygen_kt": 653.2826086956521,
+    "ships_built": 31,
+    "boosters_built": 4,
+    "engines_built": 318,
+    "peak_launches_per_month": 28.25,
+    "pads_needed": 8,
+    "boiloff_t": 678.528,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2049,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2050,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 42,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 99,
+    "propellant_kt": 519.75,
+    "methane_kt": 112.98913043478262,
+    "oxygen_kt": 406.7608695652174,
+    "ships_built": 17,
+    "boosters_built": 2,
+    "engines_built": 168,
+    "peak_launches_per_month": 13.25,
+    "pads_needed": 4,
+    "boiloff_t": 226.176,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2051,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2052,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 42,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 99,
+    "propellant_kt": 519.75,
+    "methane_kt": 112.98913043478262,
+    "oxygen_kt": 406.7608695652174,
+    "ships_built": 17,
+    "boosters_built": 2,
+    "engines_built": 168,
+    "peak_launches_per_month": 13.25,
+    "pads_needed": 4,
+    "boiloff_t": 226.176,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2053,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2054,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 42,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 99,
+    "propellant_kt": 519.75,
+    "methane_kt": 112.98913043478262,
+    "oxygen_kt": 406.7608695652174,
+    "ships_built": 17,
+    "boosters_built": 2,
+    "engines_built": 168,
+    "peak_launches_per_month": 13.25,
+    "pads_needed": 4,
+    "boiloff_t": 226.176,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2055,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2056,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 42,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 99,
+    "propellant_kt": 519.75,
+    "methane_kt": 112.98913043478262,
+    "oxygen_kt": 406.7608695652174,
+    "ships_built": 17,
+    "boosters_built": 2,
+    "engines_built": 168,
+    "peak_launches_per_month": 13.25,
+    "pads_needed": 4,
+    "boiloff_t": 226.176,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2057,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2058,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 42,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 99,
+    "propellant_kt": 519.75,
+    "methane_kt": 112.98913043478262,
+    "oxygen_kt": 406.7608695652174,
+    "ships_built": 17,
+    "boosters_built": 2,
+    "engines_built": 168,
+    "peak_launches_per_month": 13.25,
+    "pads_needed": 4,
+    "boiloff_t": 226.176,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2059,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2060,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 18,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 69,
+    "propellant_kt": 362.25,
+    "methane_kt": 78.75000000000001,
+    "oxygen_kt": 283.5,
+    "ships_built": 10,
+    "boosters_built": 2,
+    "engines_built": 126,
+    "peak_launches_per_month": 5.75,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   }
+  ],
+  "Conservative (150 t dry, 108 t to LEO)": [
+   {
+    "year": 2030,
+    "mars_ships": 0,
+    "lunar_landings": 0,
+    "tanker_launches": 0,
+    "commercial_leo": 2,
+    "crew_flights": 0,
+    "launches": 2,
+    "propellant_kt": 10.5,
+    "methane_kt": 2.2826086956521743,
+    "oxygen_kt": 8.217391304347826,
+    "ships_built": 1,
+    "boosters_built": 1,
+    "engines_built": 39,
+    "peak_launches_per_month": 0.16666666666666666,
+    "pads_needed": 1,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2031,
+    "mars_ships": 0,
+    "lunar_landings": 0,
+    "tanker_launches": 0,
+    "commercial_leo": 5,
+    "crew_flights": 0,
+    "launches": 5,
+    "propellant_kt": 26.25,
+    "methane_kt": 5.7065217391304355,
+    "oxygen_kt": 20.543478260869563,
+    "ships_built": 1,
+    "boosters_built": 1,
+    "engines_built": 39,
+    "peak_launches_per_month": 0.4166666666666667,
+    "pads_needed": 1,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2032,
+    "mars_ships": 0,
+    "lunar_landings": 0,
+    "tanker_launches": 0,
+    "commercial_leo": 9,
+    "crew_flights": 0,
+    "launches": 9,
+    "propellant_kt": 47.25,
+    "methane_kt": 10.271739130434783,
+    "oxygen_kt": 36.97826086956522,
+    "ships_built": 1,
+    "boosters_built": 1,
+    "engines_built": 39,
+    "peak_launches_per_month": 0.75,
+    "pads_needed": 1,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2033,
+    "mars_ships": 4,
+    "lunar_landings": 7,
+    "tanker_launches": 105,
+    "commercial_leo": 14,
+    "crew_flights": 1,
+    "launches": 130,
+    "propellant_kt": 682.5,
+    "methane_kt": 148.3695652173913,
+    "oxygen_kt": 534.1304347826087,
+    "ships_built": 17,
+    "boosters_built": 3,
+    "engines_built": 201,
+    "peak_launches_per_month": 16.166666666666664,
+    "pads_needed": 5,
+    "boiloff_t": 183.8592,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2034,
+    "mars_ships": 0,
+    "lunar_landings": 5,
+    "tanker_launches": 55,
+    "commercial_leo": 19,
+    "crew_flights": 0,
+    "launches": 79,
+    "propellant_kt": 414.75,
+    "methane_kt": 90.16304347826087,
+    "oxygen_kt": 324.5869565217391,
+    "ships_built": 9,
+    "boosters_built": 2,
+    "engines_built": 120,
+    "peak_launches_per_month": 6.583333333333333,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2035,
+    "mars_ships": 6,
+    "lunar_landings": 5,
+    "tanker_launches": 97,
+    "commercial_leo": 24,
+    "crew_flights": 2,
+    "launches": 132,
+    "propellant_kt": 693.0,
+    "methane_kt": 150.6521739130435,
+    "oxygen_kt": 542.3478260869565,
+    "ships_built": 18,
+    "boosters_built": 3,
+    "engines_built": 207,
+    "peak_launches_per_month": 19.0,
+    "pads_needed": 5,
+    "boiloff_t": 275.78880000000004,
+    "mars_isru_kw": 1085.0001267523512,
+    "notes": []
+   },
+   {
+    "year": 2036,
+    "mars_ships": 0,
+    "lunar_landings": 9,
+    "tanker_launches": 99,
+    "commercial_leo": 29,
+    "crew_flights": 0,
+    "launches": 137,
+    "propellant_kt": 719.25,
+    "methane_kt": 156.35869565217394,
+    "oxygen_kt": 562.891304347826,
+    "ships_built": 16,
+    "boosters_built": 3,
+    "engines_built": 195,
+    "peak_launches_per_month": 11.416666666666666,
+    "pads_needed": 3,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2037,
+    "mars_ships": 8,
+    "lunar_landings": 4,
+    "tanker_launches": 100,
+    "commercial_leo": 34,
+    "crew_flights": 0,
+    "launches": 146,
+    "propellant_kt": 766.5,
+    "methane_kt": 166.63043478260872,
+    "oxygen_kt": 599.8695652173913,
+    "ships_built": 19,
+    "boosters_built": 3,
+    "engines_built": 213,
+    "peak_launches_per_month": 22.833333333333332,
+    "pads_needed": 6,
+    "boiloff_t": 367.7184,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2038,
+    "mars_ships": 0,
+    "lunar_landings": 4,
+    "tanker_launches": 44,
+    "commercial_leo": 38,
+    "crew_flights": 0,
+    "launches": 86,
+    "propellant_kt": 451.5,
+    "methane_kt": 98.15217391304348,
+    "oxygen_kt": 353.3478260869565,
+    "ships_built": 9,
+    "boosters_built": 2,
+    "engines_built": 120,
+    "peak_launches_per_month": 7.166666666666667,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2039,
+    "mars_ships": 10,
+    "lunar_landings": 4,
+    "tanker_launches": 114,
+    "commercial_leo": 42,
+    "crew_flights": 0,
+    "launches": 170,
+    "propellant_kt": 892.5,
+    "methane_kt": 194.0217391304348,
+    "oxygen_kt": 698.4782608695652,
+    "ships_built": 22,
+    "boosters_built": 4,
+    "engines_built": 264,
+    "peak_launches_per_month": 27.5,
+    "pads_needed": 7,
+    "boiloff_t": 459.648,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2040,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2041,
+    "mars_ships": 17,
+    "lunar_landings": 6,
+    "tanker_launches": 155,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 223,
+    "propellant_kt": 1170.75,
+    "methane_kt": 254.5108695652174,
+    "oxygen_kt": 916.2391304347826,
+    "ships_built": 33,
+    "boosters_built": 5,
+    "engines_built": 363,
+    "peak_launches_per_month": 41.25,
+    "pads_needed": 11,
+    "boiloff_t": 781.4016,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2042,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2043,
+    "mars_ships": 17,
+    "lunar_landings": 6,
+    "tanker_launches": 155,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 223,
+    "propellant_kt": 1170.75,
+    "methane_kt": 254.5108695652174,
+    "oxygen_kt": 916.2391304347826,
+    "ships_built": 33,
+    "boosters_built": 5,
+    "engines_built": 363,
+    "peak_launches_per_month": 41.25,
+    "pads_needed": 11,
+    "boiloff_t": 781.4016,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2044,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2045,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2046,
+    "mars_ships": 18,
+    "lunar_landings": 6,
+    "tanker_launches": 162,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 231,
+    "propellant_kt": 1212.75,
+    "methane_kt": 263.6413043478261,
+    "oxygen_kt": 949.1086956521739,
+    "ships_built": 35,
+    "boosters_built": 5,
+    "engines_built": 375,
+    "peak_launches_per_month": 43.25,
+    "pads_needed": 11,
+    "boiloff_t": 827.3664,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2047,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2048,
+    "mars_ships": 18,
+    "lunar_landings": 6,
+    "tanker_launches": 162,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 231,
+    "propellant_kt": 1212.75,
+    "methane_kt": 263.6413043478261,
+    "oxygen_kt": 949.1086956521739,
+    "ships_built": 35,
+    "boosters_built": 5,
+    "engines_built": 375,
+    "peak_launches_per_month": 43.25,
+    "pads_needed": 11,
+    "boiloff_t": 827.3664,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2049,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2050,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 78,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 135,
+    "propellant_kt": 708.75,
+    "methane_kt": 154.07608695652175,
+    "oxygen_kt": 554.6739130434783,
+    "ships_built": 19,
+    "boosters_built": 3,
+    "engines_built": 213,
+    "peak_launches_per_month": 19.25,
+    "pads_needed": 5,
+    "boiloff_t": 275.78880000000004,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2051,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2052,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 78,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 135,
+    "propellant_kt": 708.75,
+    "methane_kt": 154.07608695652175,
+    "oxygen_kt": 554.6739130434783,
+    "ships_built": 19,
+    "boosters_built": 3,
+    "engines_built": 213,
+    "peak_launches_per_month": 19.25,
+    "pads_needed": 5,
+    "boiloff_t": 275.78880000000004,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2053,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2054,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 78,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 135,
+    "propellant_kt": 708.75,
+    "methane_kt": 154.07608695652175,
+    "oxygen_kt": 554.6739130434783,
+    "ships_built": 19,
+    "boosters_built": 3,
+    "engines_built": 213,
+    "peak_launches_per_month": 19.25,
+    "pads_needed": 5,
+    "boiloff_t": 275.78880000000004,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2055,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2056,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 78,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 135,
+    "propellant_kt": 708.75,
+    "methane_kt": 154.07608695652175,
+    "oxygen_kt": 554.6739130434783,
+    "ships_built": 19,
+    "boosters_built": 3,
+    "engines_built": 213,
+    "peak_launches_per_month": 19.25,
+    "pads_needed": 5,
+    "boiloff_t": 275.78880000000004,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2057,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2058,
+    "mars_ships": 6,
+    "lunar_landings": 6,
+    "tanker_launches": 78,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 135,
+    "propellant_kt": 708.75,
+    "methane_kt": 154.07608695652175,
+    "oxygen_kt": 554.6739130434783,
+    "ships_built": 19,
+    "boosters_built": 3,
+    "engines_built": 213,
+    "peak_launches_per_month": 19.25,
+    "pads_needed": 5,
+    "boiloff_t": 275.78880000000004,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2059,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   },
+   {
+    "year": 2060,
+    "mars_ships": 0,
+    "lunar_landings": 6,
+    "tanker_launches": 36,
+    "commercial_leo": 45,
+    "crew_flights": 0,
+    "launches": 87,
+    "propellant_kt": 456.75,
+    "methane_kt": 99.29347826086958,
+    "oxygen_kt": 357.45652173913044,
+    "ships_built": 11,
+    "boosters_built": 2,
+    "engines_built": 132,
+    "peak_launches_per_month": 7.25,
+    "pads_needed": 2,
+    "boiloff_t": 0.0,
+    "mars_isru_kw": 0.0,
+    "notes": []
+   }
+  ]
+ }
+}

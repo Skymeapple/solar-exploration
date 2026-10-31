@@ -24,7 +24,7 @@ dev = ["pytest>=7"]
 where = ["src"]
 
 [tool.setuptools.package-data]
-raptor_sim = ["components/design_point.json"]
+raptor_sim = ["components/design_point.json", "roadmap/overrides.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

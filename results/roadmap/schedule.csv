@@ -1,0 +1,43 @@
+id,name,phase,kind,start,finish,float_months,window,trl_now,trl_end,cost_mode_musd,p10_finish,p50_finish,p90_finish,criticality_mars_crew,owner,basis
+ENG-DEV,Raptor-class engine: component tests to full-duration hot fire,P0,tech,2026-11-01,2028-10-31,0.0,,3,6,1320.0,,,,0.53,Design engine components with drawings and BOMs,"model: PR #2 design at 295 bar passes all 53 checks and gates G0-G7; 1,935 kg, sea-level T/W 119, Isp 324 s SL; duration estimate"
+ENG-QUAL,Engine qualification and production line,P0,build,2028-10-31,2029-10-31,2.0,,6,8,600,,,,0.11,,estimate
+VAC-ENG,Vacuum engine variant,P0,tech,2028-10-31,2030-01-12,0.0,,4,7,360.0,,,,0.42,,"model: PR #1 gives 363 s against 380 s quoted, so the nozzle model needs work first"
+BOOSTER-DEV,"Booster structure, avionics, grid fins",P0,tech,2026-11-01,2029-05-02,8.0,,4,7,900,,,,0.07,,"model: PR #1 vehicle (3,650 t propellant, 33 engines, public Block 3 figures)"
+SHIP-DEV,Ship structure and heat shield,P0,tech,2026-11-01,2029-10-31,0.0,,4,7,1000,,,,0.23,,model: PR #1 vehicle; dry mass 100 t public vs 150 t that matches the 100 t payload
+LAUNCH-SITE,"Factory, launch pad and tank farm",P0,build,2026-11-01,2029-05-02,8.0,,,,1100,,,,0.00,,model: PR #3 business case development budget
+ORBITAL-1,Integrated stack and first orbital flight,P1,mission,2030-01-12,2030-10-13,0.0,,,,300,2031.3,2032.6,2034.9,0.80,,model: PR #3 assumes first orbital flight in 2031
+REUSE,"Booster catch and ship recovery, reflight",P1,tech,2030-10-13,2032-01-13,0.0,,5,8,500,2032.7,2034.2,2036.5,0.70,,estimate
+CADENCE,Second pad and weekly launch cadence,P1,build,2032-01-13,2033-01-12,0.0,,,,500,,,,0.68,,estimate
+PROP-XFER,Ship-to-ship propellant transfer in orbit,P1,tech,2030-10-13,2031-10-13,0.0,,4,7,350,2032.5,2034.0,2036.3,0.10,,estimate
+DEPOT,LEO depot with long-duration cryogenic storage,P1,tech,2031-10-13,2033-04-13,3.0,,3,7,600,,,,0.00,,estimate
+EDL-TEST,High-energy Earth entry test (Mars-class heating),P1,tech,2032-01-13,2032-07-13,8.0,,4,6,200,,,,0.12,,estimate
+CREW-SHIP,"Crew-rated ship: cabin, abort, life support integration",P1,tech,2029-10-31,2032-10-31,0.0,,4,7,1200,,,,0.03,Research and simulate crewed missions and return,estimate
+CREW-LEO,First crewed orbital flight,P1,mission,2032-10-31,2033-01-30,0.0,,,,250,2033.5,2035.1,2037.2,0.03,,estimate
+ECLSS-LD,Closed-loop life support for 900-day missions,P1,tech,2026-11-01,2030-11-01,40.0,,6,8,500,,,,0.00,,cited: ISS recovers 98% of water (iss_water); 900-day reliability is the gap
+LONG-DUR,Year-long crewed test of the Mars cabin in Earth or lunar orbit,P1,mission,2033-01-30,2034-04-01,13.0,,,,500,,,,0.03,Research and simulate crewed missions and return,estimate
+RAD-HEALTH,Radiation shelter and crew health countermeasures,P1,tech,2026-11-01,2030-11-01,54.0,,4,6,400,,,,0.00,Research and simulate crewed missions and return,estimate
+LUNAR-LANDER,"Lunar ship variant: landing engines, legs, no flaps",P2,tech,2029-10-31,2031-11-01,14.0,,5,7,600,,,,0.00,Research and simulate crewed lunar missions,cited scale: SpaceX HLS awards total about $4.2B (hls_total)
+LUNAR-CARGO-1,First lunar cargo landing,P2,mission,2033-01-12,2033-03-14,0.0,,,,300,2033.9,2035.6,2037.9,0.00,,"model: PR #3 lunar cargo, 100 t landed, about $96M at maturity; first flight costs more"
+LUNAR-CREW-1,First crewed lunar landing,P2,mission,2033-03-14,2033-04-13,0.0,,,,600,2034.2,2035.9,2038.2,0.00,Research and simulate crewed lunar missions,estimate
+SURF-POWER,"Surface fission power, 40 kWe class",P2,tech,2026-11-01,2030-11-01,5.0,,5,7,600,,,,0.17,,cited: NASA plans a reactor of at least 20 kW on the Moon by 2030 (lunar_fission); our share estimated
+LUNAR-ISRU,Lunar ice mining and oxygen production pilot,P2,tech,2033-03-14,2036-03-14,1.0,,4,7,700,,,,0.00,Design a lunar transit base and spaceport,estimate
+LUNAR-BASE-1,"Lunar transit base, phase 1: pad, habitat, power",P2,build,2033-04-13,2036-04-13,0.0,,,,3500,,,,0.00,Design a lunar transit base and spaceport,estimate
+LUNAR-SPACEPORT,Lunar spaceport: oxygen depot and refuelling service,P2,build,2036-04-13,2039-04-14,0.0,,,,3000,2040.5,2043.0,2046.3,0.00,Design a lunar transit base and spaceport,estimate
+MARS-ISRU-DEV,"Mars propellant plant: water mining, Sabatier, electrolysis",P3,tech,2026-11-01,2030-11-01,29.0,,4,6,800,,,,0.00,Plan human settlement on other planets,model: PR #1 needs 642 t of propellant made on Mars per returning ship
+MARS-POWER,"Mars surface power: lunar reactor design adapted, 0.5 MWe class",P3,tech,2030-11-01,2032-10-31,5.0,,5,7,500,,,,0.17,,estimate
+MARS-CARGO-1,First Mars cargo landings (2 ships),P3,mission,2033-04-11,2033-11-10,2.0,mars,,,600,2036.0,2038.1,2040.3,0.15,Plan and simulate Mars launch campaign,"model: PR #1, 100 t landed per ship with 546 t refilled in LEO, 4 tankers (7 at 150 t dry)"
+MARS-CARGO-2,Power and ISRU pilot plant to Mars,P3,mission,2033-04-11,2033-11-10,3.0,mars,,,800,,,,0.82,Plan and simulate Mars launch campaign,estimate
+ISRU-RUN,ISRU pilot makes its first full ship load,P3,ops,2033-11-10,2035-05-12,0.0,,6,8,200,,,,0.82,,estimate
+MSR-MAV,Sample ascent vehicle and sample handling,P3,tech,2026-11-01,2029-10-31,60.0,,4,6,600,,,,0.00,Research and simulate planetary sample return,cited comparison: NASA MSR at $8-11B (msr_cost)
+MSR-LAND,Sample return lander to Mars,P3,mission,2035-05-31,2035-12-30,20.0,mars,,,500,,,,0.00,Research and simulate planetary sample return,estimate
+MSR-COLLECT,Sample collection and ascent to Mars orbit,P3,ops,2035-12-30,2036-06-30,9.0,,,,100,,,,0.00,Research and simulate planetary sample return,estimate
+MSR-RETURN,Samples cruise to Earth and enter,P3,mission,2037-03-31,2037-12-30,9.0,mars_return,,,200,2040.1,2042.3,2046.5,0.00,Research and simulate planetary sample return,estimate
+MARS-CREW-1,"First crewed Mars landing (2 crew ships, 2 cargo ships)",P4,mission,2035-05-31,2035-12-30,0.0,mars,,,2500,2038.2,2042.4,2044.6,1.00,Research and simulate crewed missions and return,estimate
+MARS-STAY-1,First surface expedition (conjunction class),P4,ops,2035-12-30,2037-02-28,1.0,,,,400,,,,0.00,,estimate
+MARS-CREW-RETURN,First crew returns on Mars-made propellant,P4,mission,2037-03-31,2037-10-30,1.0,mars_return,,,200,2040.1,2044.2,2046.5,0.00,Research and simulate crewed missions and return,estimate
+MARS-BASE-1,"Mars outpost: permanent crew, greenhouse, scaled ISRU",P5,build,2036-04-13,2040-04-13,0.0,,,,5000,2043.2,2046.0,2049.6,0.00,Plan human settlement on other planets,estimate
+TRANSIT-NET,"Transit bases: cislunar depot, Mars orbit depot",P5,build,2039-04-14,2043-04-14,0.0,,,,5000,2044.4,2047.5,2051.4,0.00,Design transit bases across the solar system,estimate
+SETTLEMENT-100,"Mars settlement of 100 residents, local propellant and food",P5,build,2040-04-13,2048-04-13,0.0,,,,20000,2050.2,2054.4,2059.2,0.00,Plan human settlement on other planets,estimate
+OUTER-ROBOTIC-1,Refuelled-ship robotic mission to the Jupiter system,P6,mission,2033-07-30,2036-07-30,3.0,jupiter,,,1200,2037.9,2040.0,2043.6,0.00,Design transit bases across the solar system,estimate
+NUC-PROP,Megawatt-class nuclear electric propulsion,P6,tech,2030-11-01,2038-11-01,54.0,,3,7,4000,,,,0.00,,estimate
+OUTER-CREW-1,First crewed mission to the Jupiter system (Callisto),P6,mission,2043-05-29,2048-05-28,1.0,jupiter,,,25000,2050.3,2053.5,2058.0,0.00,Design transit bases across the solar system,estimate
