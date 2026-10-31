@@ -137,12 +137,28 @@ STEPS: list[Step] = [
     Step("LUNAR-ISRU", "Lunar ice mining and oxygen production pilot", "P2", "tech",
          (24, 36, 54), (400, 700, 1200), needs=("surface_power", "lunar_landing"), provides=("lunar_isru",), trl=(4, 7),
          owner="Design a lunar transit base and spaceport"),
-    Step("LUNAR-BASE-1", "Lunar transit base, phase 1: pad, habitat, power", "P2", "build",
-         (24, 36, 60), (2000, 3500, 6000), needs=("deep_space_crew", "surface_power", "lunar_landing"),
-         provides=("surface_habitat",), owner="Design a lunar transit base and spaceport"),
-    Step("LUNAR-SPACEPORT", "Lunar spaceport: oxygen depot and refuelling service", "P2", "build",
-         (24, 36, 60), (1500, 3000, 5000), needs=("lunar_isru", "depot", "surface_habitat"),
-         provides=("lunar_propellant",), owner="Design a lunar transit base and spaceport"),
+    Step("LUNAR-BASE-1", "Lunar base phases 1-2: outpost for 4-8 crew, oxygen plant", "P2", "build",
+         (36, 48, 72), (2000, 3500, 6000), needs=("deep_space_crew", "surface_power", "lunar_landing"),
+         provides=("surface_habitat",), owner="Design a lunar transit base and spaceport",
+         basis="model: PR #9 Shackleton-de Gerlache ridge; phases 1-2 land 240 t in 15 Earth launches; cost estimate"),
+    Step("LUNAR-SPACEPORT", "Lunar base phase 3: transit spaceport, 24 crew, 4 MW ISRU", "P2", "build",
+         (48, 72, 96), (1500, 3000, 5000), needs=("lunar_isru", "depot", "surface_habitat"),
+         provides=("lunar_propellant",), owner="Design a lunar transit base and spaceport",
+         basis="model: PR #9 phase 3 lands 611 t in 38 Earth launches, fission plus solar; cost estimate",
+         note="PR #9: lunar ice has about 6% of the carbon needed for methane, so the base sells oxygen, "
+              "not full methalox. Pads need about 28 m radius plus blast berms."),
+    Step("HYDROLOX-ENG", "Hydrogen-oxygen engine for all-lunar tankers", "P2", "tech",
+         (36, 48, 72), (600, 1000, 1600), provides=("hydrolox_engine",), trl=(3, 7),
+         owner="Design a lunar transit base and spaceport",
+         basis="model: PR #9 names it the biggest missing technology; RL10-class engines exist in industry, ours does not"),
+    Step("LUNAR-TANKER", "Lunar oxygen to LEO by hydrogen-oxygen tankers", "P2", "build",
+         (18, 24, 36), (1000, 1800, 3000), needs=("hydrolox_engine", "lunar_propellant", "depot"),
+         provides=("lunar_oxygen_leo",), owner="Design a lunar transit base and spaceport",
+         basis="model: PR #9 cuts Earth launches per Mars cargo mission from 4.3 to 1.7"),
+    Step("LUNAR-SETTLE", "Lunar base phase 4: settlement of about 100 residents", "P5", "build",
+         (96, 132, 180), (6000, 12000, 24000), needs=("lunar_propellant",), provides=("lunar_settlement",),
+         owner="Design a lunar transit base and spaceport",
+         basis="model: PR #9 phase 4 lands 1,193 t in 74 Earth launches, 1.5 MW critical power; cost estimate"),
 
     # ---------------- P3 Mars robotic --------------------------------------
     Step("MARS-ISRU-DEV", "Mars propellant plant: water mining, Sabatier, electrolysis", "P3", "tech",
@@ -207,7 +223,7 @@ STEPS: list[Step] = [
          benefits=("lunar_isru",),
          owner="Plan human settlement on other planets"),
     Step("TRANSIT-NET", "Transit hubs at Mars (Arcadia) and Phobos, full refuelling", "P5", "build",
-         (36, 48, 72), (3000, 5000, 9000), needs=("depot", "isru_proven"), benefits=("lunar_propellant",),
+         (36, 48, 72), (3000, 5000, 9000), needs=("depot", "isru_proven"), benefits=("lunar_propellant", "lunar_oxygen_leo"),
          provides=("transit_network",), owner="Design transit bases across the solar system",
          basis="model: PR #6 ranks Mars Arcadia, Phobos and Ceres as the top hubs; Mars outpost 1.8 MWe, "
                "299 t imported, 12 Earth launches; cost estimate",
@@ -225,7 +241,7 @@ STEPS: list[Step] = [
          note="Feasibility gate: crewed Jupiter missions may not close on radiation even with this step."),
     Step("SETTLEMENT-100", "Mars settlement of 100 residents, local propellant and food", "P5", "build",
          (60, 96, 144), (10000, 20000, 40000), needs=("mars_outpost", "crew_round_trip"),
-         provides=("settlement",), benefits=("transit_network",), owner="Plan human settlement on other planets"),
+         provides=("settlement",), benefits=("transit_network", "lunar_oxygen_leo", "lunar_settlement"), owner="Plan human settlement on other planets"),
 
     # ---------------- P6 Outer solar system ---------------------------------
     Step("OUTER-ROBOTIC-1", "Refuelled-ship robotic mission to the Jupiter system", "P6", "mission",
@@ -247,7 +263,7 @@ STEPS: list[Step] = [
 KEY_MILESTONES = [
     "MSR-RETURN", "ORBITAL-1", "REUSE", "PROP-XFER", "CREW-LEO", "LUNAR-CARGO-1", "LUNAR-CREW-1",
     "MARS-CARGO-1", "MARS-CREW-1", "MARS-CREW-RETURN", "LUNAR-SPACEPORT",
-    "MARS-BASE-1", "TRANSIT-NET", "OUTER-ROBOTIC-1", "CERES-HUB", "SETTLEMENT-100", "OUTER-CREW-1",
+    "LUNAR-TANKER", "MARS-BASE-1", "TRANSIT-NET", "OUTER-ROBOTIC-1", "CERES-HUB", "LUNAR-SETTLE", "SETTLEMENT-100", "OUTER-CREW-1",
 ]
 
 

@@ -62,8 +62,13 @@ MARS_SHIPS_PER_WINDOW = {
 }
 CREW_SHIPS = {"MARS-CREW-1": 2}
 LUNAR_LANDINGS_PER_YEAR = {
-    "LUNAR-CARGO-1": 1, "LUNAR-CREW-1": 1, "LUNAR-ISRU": 1, "LUNAR-BASE-1": 4, "LUNAR-SPACEPORT": 4,
+    "LUNAR-CARGO-1": 1, "LUNAR-CREW-1": 1, "LUNAR-ISRU": 1, "LUNAR-BASE-1": 1, "LUNAR-SPACEPORT": 2,
+    "LUNAR-SETTLE": 2,
 }
+# model: PR #9. Lunar oxygen refills on the surface cut Earth launches per lunar trip 9.6 -> 5.5;
+# lunar oxygen delivered to LEO by hydrogen-oxygen tankers cuts launches per Mars ship 4.3 -> 1.7.
+LUNAR_TRIP_FACTOR = (5.5 - 1) / (9.6 - 1)
+MARS_TANKER_FACTOR_LUNAR_O2 = (1.7 - 1) / (4.3 - 1)
 # Commercial Mars cargo per window after the first program landing (PR #3 base case ramp, model)
 COMMERCIAL_MARS_RAMP = (0, 1, 2, 3, 4, 5, 6)
 LEO_COMMERCIAL_RAMP = (2, 5, 9, 14, 19, 24, 29, 34, 38, 42, 45)  # PR #3 base, launches per year
@@ -154,12 +159,14 @@ def campaign(prog: Program, timing: dict[str, Timing], v: VehicleCase = VEHICLE_
             window_ships[round(w, 3)] += COMMERCIAL_MARS_RAMP[min(idx, len(COMMERCIAL_MARS_RAMP) - 1)]
         k += 1
 
+    lunar_o2 = timing["LUNAR-TANKER"].finish if "LUNAR-TANKER" in timing else float("inf")
     for w, ships in window_ships.items():
         if ships == 0:
             continue
         y = int(to_year(w))
         r = row(y)
-        tankers = ships * v.mars_tankers
+        per_ship = v.mars_tankers * (MARS_TANKER_FACTOR_LUNAR_O2 if w >= lunar_o2 else 1.0)
+        tankers = math.ceil(ships * per_ship)
         r.mars_ships += ships
         r.crew_flights += window_crew.get(w, 0)
         r.tanker_launches += tankers
@@ -172,7 +179,7 @@ def campaign(prog: Program, timing: dict[str, Timing], v: VehicleCase = VEHICLE_
         if returning:
             r.mars_isru_kw = max(r.mars_isru_kw, isru_power_kw(a, returning))
 
-    # Moon: landings per year while lunar steps run, then a steady 6 per year after the spaceport
+    # Moon: landings per year while lunar steps run (PR #9 phase cargo counts), then 6 per year after the spaceport
     for sid, n in LUNAR_LANDINGS_PER_YEAR.items():
         t = timing[sid]
         y0, y1 = int(to_year(t.start)), int(to_year(t.finish))
@@ -182,8 +189,8 @@ def campaign(prog: Program, timing: dict[str, Timing], v: VehicleCase = VEHICLE_
     for y in range(int(spaceport_done) + 1, end_year + 1):
         row(y).lunar_landings += 6
     for y, r in years.items():
-        # Lunar oxygen halves the tanker count once the spaceport runs (estimate).
-        tk = lunar_tk if y <= spaceport_done else math.ceil(lunar_tk / 2)
+        # Lunar oxygen cuts the Earth tankers per landing once the spaceport runs (PR #9).
+        tk = lunar_tk if y <= spaceport_done else math.ceil(lunar_tk * LUNAR_TRIP_FACTOR)
         r.tanker_launches += r.lunar_landings * tk
         r.ships_built += r.lunar_landings  # one-way landers until lunar refuelling is routine
     row(int(to_year(timing["LUNAR-CREW-1"].start))).crew_flights += 1
