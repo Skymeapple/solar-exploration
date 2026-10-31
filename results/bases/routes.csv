@@ -1,0 +1,13 @@
+site,route,cargo_t,direct_capacity_t,trip_days,route_dry150,cargo_t_dry150
+moon_south_pole,leo > moon_south_pole,150.0,254.7,5,leo > moon_south_pole,150.0
+mars_arcadia,leo > mars_arcadia,150.0,486.6,259,leo > mars_arcadia,150.0
+phobos,leo > phobos,150.0,242.2,259,leo > phobos,150.0
+deimos,leo > deimos,150.0,237.7,259,leo > deimos,150.0
+ceres,leo > phobos > ceres,150.0,-25.0,833,leo > phobos > ceres,150.0
+callisto,leo > phobos > ceres > callisto,91.2,-56.9,2286,leo > phobos > ceres > callisto,41.2
+ganymede,leo > phobos > ceres > callisto > ganymede,91.2,-67.4,2292,leo > phobos > ceres > callisto > ganymede,41.2
+europa,leo > phobos > ceres > callisto > europa,91.2,-74.0,2291,leo > phobos > ceres > callisto > europa,41.2
+titan,leo > phobos > titan,147.4,78.7,2649,leo > phobos > ceres > titan,150.0
+enceladus,leo > titan > enceladus,54.6,-76.3,2227,leo > titan > enceladus,4.6
+venus_clouds,leo > venus_clouds,150.0,690.7,146,leo > venus_clouds,150.0
+mercury_north_pole,leo > mercury_north_pole,0.0,-89.9,105,leo > mercury_north_pole,0.0

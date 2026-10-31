@@ -1,0 +1,13 @@
+site,onward_to,window_days,outpost_power_mwe,days_to_fill_ship,boiloff_t,meets_window,one_hop_destinations
+moon_south_pole,leo,365,2.71,404,1080.6,False,5
+mars_arcadia,leo,780,1.82,404,1080.6,True,4
+phobos,ceres,1161,2.69,404,1186.2,True,7
+deimos,leo,780,2.69,404,1080.6,True,7
+ceres,callisto,2747,2.16,404,3722.2,True,9
+callisto,leo,399,2.09,404,1080.6,False,7
+ganymede,leo,399,2.7,404,1080.6,False,6
+europa,leo,399,2.69,366,0.0,True,6
+titan,leo,378,2.95,366,0.0,True,4
+enceladus,leo,378,2.69,366,0.0,True,2
+venus_clouds,leo,584,1.84,404,1080.6,True,0
+mercury_north_pole,leo,116,2.53,404,1080.6,False,1
