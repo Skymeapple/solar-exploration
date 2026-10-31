@@ -19,12 +19,16 @@ START = date(2026, 11, 1)
 DAYS_PER_MONTH = 30.4375
 
 # Window openings in months from START and how long each stays open.
-MARS_ANCHOR = (date(2026, 11, 15) - START).days / DAYS_PER_MONTH  # estimate, see sources.py
+# Anchor: the 2028 window opens mid-November 2028 (model: PR #4 Lambert departure 2028-11-24,
+# PR #5 cheapest crew departures 2028-11-17 to 2029-01-28); earlier and later windows step by
+# the synodic period, good to about two months (real windows drift with Mars's eccentric orbit).
+MARS_ANCHOR = (date(2028, 11, 15) - START).days / DAYS_PER_MONTH - MARS_SYNODIC_D / DAYS_PER_MONTH
 WINDOWS = {
     # name: (first opening, period, open length), all months
-    "mars": (MARS_ANCHOR, MARS_SYNODIC_D / DAYS_PER_MONTH, 1.5),
-    # Conjunction-class return: leave Mars about 22 months after the Earth-side window opens.
-    "mars_return": (MARS_ANCHOR + 22.0, MARS_SYNODIC_D / DAYS_PER_MONTH, 1.5),
+    "mars": (MARS_ANCHOR, MARS_SYNODIC_D / DAYS_PER_MONTH, 2.0),
+    # Conjunction-class return: leave Mars about 22 months after the Earth-side window opens
+    # (PR #4 leaves Mars 2030-10-07, 22.7 months after its 2028-11-24 launch).
+    "mars_return": (MARS_ANCHOR + 22.0, MARS_SYNODIC_D / DAYS_PER_MONTH, 2.0),
     # Jupiter: opening near each opposition, anchor January 2027 (estimate).
     "jupiter": ((date(2027, 1, 10) - START).days / DAYS_PER_MONTH, JUPITER_SYNODIC_D / DAYS_PER_MONTH, 1.0),
 }

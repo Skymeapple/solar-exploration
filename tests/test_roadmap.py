@@ -1,5 +1,6 @@
 """Roadmap model checks: network, windows, Monte Carlo, logistics."""
 import random
+from datetime import date
 
 import pytest
 
@@ -30,12 +31,15 @@ def test_missing_capability_raises():
 
 def test_window_gating():
     first, period, length = WINDOWS["mars"]
-    assert next_window("mars", 0.0) == first
+    assert next_window("mars", first - 1.0) == first
     assert next_window("mars", first + 0.5) == first + 0.5
     assert next_window("mars", first + length + 0.1) == pytest.approx(first + period)
-    # Window dates near the known 2028-29 and 2031 opportunities
-    assert to_date(first + period).year in (2028, 2029)
-    assert to_date(first + 2 * period).year == 2031
+    # PR #4 launch (2028-11-24) and return departure (2030-10-07) fall inside windows
+    w = first + period
+    assert to_date(w) <= date(2028, 11, 24) <= to_date(w + length)
+    r = next_window("mars_return", w)
+    assert to_date(r) <= date(2030, 10, 7) <= to_date(r + WINDOWS["mars_return"][2])
+    assert to_date(first + 3 * period).year == 2033
 
 
 def test_predecessors_finish_before_start():
@@ -86,7 +90,7 @@ def test_sample_run_cost_at_least_low_bound():
 def test_logistics():
     a = L.LogisticsAssumptions()
     assert L.lunar_tankers(L.VEHICLE_MODEL, a) >= L.VEHICLE_MODEL.mars_tankers  # Moon landing needs more dv from LEO
-    assert 300 < L.isru_power_kw(a) < 800
+    assert 300 < L.isru_power_kw(a) < 800  # PR #6 energy, 18 months
     prog = build_program(apply(RECOMMENDED))
     tm = forward_pass(prog, mode_plan(prog)[0])
     rows = L.campaign(prog, tm)

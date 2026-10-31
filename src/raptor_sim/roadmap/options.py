@@ -54,13 +54,24 @@ def crew_on_partial_isru(steps: list[Step]) -> list[Step]:
                                               "deep_space_crew", "mars_landing"))
 
 
+def nuclear_crew_transit(steps: list[Step]) -> list[Step]:
+    """Make nuclear electric propulsion a gate for the first crew (PR #5: only a 10 MWe NEP ship keeps
+    a Mars mission under 600 mSv). NEP development starts now instead of after the lunar reactor."""
+    steps = _edit(steps, "NUC-PROP", needs=(), phase="P1")
+    for s in steps:
+        if s.id == "MARS-CREW-1":
+            steps = _edit(steps, "MARS-CREW-1", needs=s.needs + ("nuclear_propulsion",))
+    return steps
+
+
 OPTIONS = {
     "isru_with_first_cargo": ("ISRU pilot flies with the first cargo", isru_with_first_cargo),
     "no_depot_first_cargo": ("First Mars cargo refilled without a depot", no_depot_first_cargo),
     "second_engine_stand": ("Second engine test stand", second_engine_stand),
     "crew_on_partial_isru": ("Crew launches before ISRU makes a full load", crew_on_partial_isru),
+    "nuclear_crew_transit": ("Crew waits for nuclear electric propulsion (radiation limit)", nuclear_crew_transit),
 }
-RECOMMENDED = ("isru_with_first_cargo", "no_depot_first_cargo", "second_engine_stand")
+RECOMMENDED = ("isru_with_first_cargo", "no_depot_first_cargo", "second_engine_stand", "nuclear_crew_transit")
 
 
 def apply(keys, steps: list[Step] | None = None) -> list[Step]:

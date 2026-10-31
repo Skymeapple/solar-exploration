@@ -48,7 +48,7 @@ class LogisticsAssumptions:
     tanker_life: int = 20                # flights, PR #3 estimate
     engines_booster: int = 33
     engines_ship: int = 6
-    isru_kwh_per_kg: float = 10.0        # electric energy per kg CH4/LOX made on Mars, estimate (ideal 3.1)
+    isru_kwh_per_kg: float = 8.17        # model: PR #6 Mars Sabatier chain, 8.17 MWh per t (ideal 3.1)
     isru_return_prop_t: float = 642.0    # model: PR #1, return with 20 t
     isru_months: float = 18.0            # production time available per ship
     isru_duty: float = 0.9

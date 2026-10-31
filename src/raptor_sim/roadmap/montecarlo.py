@@ -154,7 +154,7 @@ def run_monte_carlo(prog: Program, n: int = 5000, seed: int = 2026,
         fc.update({k: 1 for k in r.fails})
     res.failure_rate = {k: fc[k] / n for k in prog.order if fc[k]}
     prob_years = prob_years or {
-        "ORBITAL-1": [2030, 2031, 2032], "LUNAR-CREW-1": [2033, 2034, 2035, 2036],
+        "MSR-RETURN": [2031, 2033, 2035], "ORBITAL-1": [2030, 2031, 2032], "LUNAR-CREW-1": [2033, 2034, 2035, 2036],
         "MARS-CARGO-1": [2034, 2036, 2038], "MARS-CREW-1": [2037, 2040, 2042, 2045],
         "SETTLEMENT-100": [2050, 2055, 2060], "OUTER-CREW-1": [2050, 2055, 2060],
     }
