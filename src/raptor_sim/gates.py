@@ -1,7 +1,10 @@
-"""Verification gates G0, G1, G2, G3 and G7 from the design procedure.
+"""Verification gates G0 to G7 from the design procedure.
 
-G4 to G6 (cooling, turbopump detail, engine system)
-need models that come later in the project; they are reported as not run.
+G4 (cooling), G5 (turbopumps) and G6 (engine system) come from the component
+models in `raptor_sim.components`. They run for the reference engine, whose
+converged component design point is saved in `components/design_point.json`;
+other engine designs (for example from the optimizer) report them as not run
+until their components have been designed.
 """
 
 from __future__ import annotations
@@ -118,18 +121,43 @@ def gate_g0(design: EngineDesign) -> GateResult:
     )
 
 
-def run_all_gates(design: EngineDesign | None = None, assumptions: CycleAssumptions | None = None):
+_COMPONENT_GATES = (("G4", "G4 Cooling"), ("G5", "G5 Turbopumps"), ("G6", "G6 Engine system"))
+
+
+def component_gates(design: EngineDesign) -> list[GateResult]:
+    """G4 to G6 from the saved component design point, if it belongs to this engine design."""
+    from .components import design_io
+
+    if not design_io.DESIGN_POINT.exists():
+        return [GateResult(name, None, "no component design point saved") for _g, name in _COMPONENT_GATES]
+    ci = design_io.load()
+    if ci.engine != design:
+        return [GateResult(name, None, "components designed for the reference engine only") for _g, name in _COMPONENT_GATES]
+    from .components.assembly import build_engine
+    from .components.verification import all_checks
+
+    b = build_engine(ci)
+    checks = all_checks(b)
+    out = []
+    for g, name in _COMPONENT_GATES:
+        mine = [c for c in checks if c.gate == g]
+        bad = [c for c in mine if not c.passed]
+        detail = f"{len(mine) - len(bad)}/{len(mine)} checks pass"
+        if g == "G6":
+            detail += f"; dry mass {b.mass:,.0f} kg, sea-level thrust-to-weight {b.thrust_to_weight:.0f}"
+        if bad:
+            detail += "; failing: " + ", ".join(f"{c.id} {c.description}" for c in bad)
+        out.append(GateResult(name, not bad, detail))
+    return out
+
+
+def run_all_gates(design: EngineDesign | None = None, assumptions: CycleAssumptions | None = None,
+                  components: bool = True):
     design = design or EngineDesign()
     perf = size_engine(design)
     cycle = solve_cycle(perf, assumptions)
-    results = [
-        gate_g0(design),
-        gate_g1(design),
-        gate_g2(cycle),
-        gate_g3(perf),
-        GateResult("G4 Cooling", None, "regenerative cooling model not built yet"),
-        GateResult("G5 Turbopumps", None, "pump detail model not built yet"),
-        GateResult("G6 Engine system", None, "mass model not built yet"),
-        gate_g7(perf),
+    comp = component_gates(design) if components else [
+        GateResult(name, None, "component gates skipped") for _g, name in _COMPONENT_GATES
     ]
+    results = [gate_g0(design), gate_g1(design), gate_g2(cycle), gate_g3(perf), *comp, gate_g7(perf)]
     return perf, cycle, results

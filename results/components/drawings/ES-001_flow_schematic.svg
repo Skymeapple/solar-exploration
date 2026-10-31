@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420.0mm" height="297.0mm" viewBox="0 0 420.0 297.0">
+<rect width="100%" height="100%" fill="white"/>
+<rect x="5.0" y="5.0" width="410.0" height="287.0" fill="none" stroke="#1a1a1a" stroke-width="0.6"/>
+<rect x="30.00" y="49.00" width="50.00" height="18.00" fill="#dbeafe" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="55.00" y="57.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">LOX inlet</text>
+<text x="55.00" y="61.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">6 bar, 90 K</text>
+<rect x="300.00" y="49.00" width="50.00" height="18.00" fill="#ffedd5" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="325.00" y="57.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">CH4 inlet</text>
+<text x="325.00" y="61.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">6 bar, 112 K</text>
+<rect x="30.00" y="105.00" width="60.00" height="22.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="60.00" y="115.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">LOX pump + kick stage</text>
+<text x="60.00" y="119.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">726 bar, 12,050 rpm</text>
+<rect x="290.00" y="105.00" width="70.00" height="22.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="325.00" y="115.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">CH4 pump + kick stage</text>
+<text x="325.00" y="119.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">1113 bar, 29,244 rpm</text>
+<rect x="30.00" y="165.00" width="60.00" height="22.00" fill="#ccfbf1" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="60.00" y="175.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Ox-rich preburner</text>
+<text x="60.00" y="179.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">617 bar, 800 K</text>
+<rect x="290.00" y="165.00" width="70.00" height="22.00" fill="#fef3c7" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="325.00" y="175.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Fuel-rich preburner</text>
+<text x="325.00" y="179.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">721 bar, 1000 K</text>
+<rect x="30.00" y="209.00" width="60.00" height="18.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="60.00" y="217.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Ox turbine</text>
+<text x="60.00" y="221.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">0.86 η, PR 1.66</text>
+<rect x="290.00" y="209.00" width="70.00" height="18.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="325.00" y="217.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Fuel turbine</text>
+<text x="325.00" y="221.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">0.85 η, PR 1.94</text>
+<rect x="160.00" y="215.00" width="80.00" height="22.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="200.00" y="225.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Main injector</text>
+<text x="200.00" y="229.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">360 bar manifold</text>
+<rect x="160.00" y="244.00" width="80.00" height="28.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="200.00" y="257.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Thrust chamber</text>
+<text x="200.00" y="261.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Pc 300 bar, 2,256 kN SL</text>
+<rect x="175.00" y="127.00" width="50.00" height="30.00" fill="#fee2e2" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="200.00" y="141.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Cooling jacket</text>
+<text x="200.00" y="145.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">241 bar drop, 82 MW</text>
+<line x1="60.00" y1="205.00" x2="60.00" y2="187.00" stroke="#1a1a1a" stroke-width="0.3" stroke-dasharray="2,1"/>
+<line x1="325.00" y1="205.00" x2="325.00" y2="187.00" stroke="#1a1a1a" stroke-width="0.3" stroke-dasharray="2,1"/>
+<polyline points="55.00,67.00 55.00,105.00" fill="none" stroke="#1f6fd1" stroke-width="1.1"/>
+<text x="56.50" y="103.50" font-size="2.2" fill="#1f6fd1" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L01 ø248</text>
+<polygon points="52.00,88.00 58.00,84.00 58.00,88.00 52.00,84.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="59.00" y="90.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V06</text>
+<polyline points="325.00,67.00 325.00,105.00" fill="none" stroke="#c2410c" stroke-width="1.1"/>
+<text x="326.50" y="103.50" font-size="2.2" fill="#c2410c" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L02 ø215</text>
+<polygon points="322.00,88.00 328.00,84.00 328.00,88.00 322.00,84.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="329.00" y="90.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V07</text>
+<polyline points="50.00,127.00 50.00,165.00" fill="none" stroke="#1f6fd1" stroke-width="1.1"/>
+<text x="51.50" y="163.50" font-size="2.2" fill="#1f6fd1" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L03 ø150</text>
+<polygon points="47.00,148.00 53.00,144.00 53.00,148.00 47.00,144.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="54.00" y="150.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V01</text>
+<polyline points="80.00,127.00 80.00,147.00 300.00,147.00 300.00,165.00" fill="none" stroke="#1f6fd1" stroke-width="1.1"/>
+<text x="301.50" y="145.50" font-size="2.2" fill="#1f6fd1" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L04 ø46</text>
+<polygon points="297.00,158.00 303.00,154.00 303.00,158.00 297.00,154.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="304.00" y="160.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V02</text>
+<polyline points="355.00,116.00 380.00,116.00 380.00,137.00 225.00,137.00" fill="none" stroke="#c2410c" stroke-width="1.1"/>
+<text x="381.50" y="135.50" font-size="2.2" fill="#c2410c" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L05 ø132</text>
+<polygon points="299.50,139.00 305.50,135.00 305.50,139.00 299.50,135.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="306.50" y="141.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V03</text>
+<polyline points="200.00,157.00 200.00,172.00 290.00,172.00" fill="none" stroke="#d97706" stroke-width="1.1"/>
+<text x="201.50" y="170.50" font-size="2.2" fill="#d97706" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L06 ø113</text>
+<polygon points="242.00,174.00 248.00,170.00 248.00,174.00 242.00,170.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="249.00" y="176.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V05</text>
+<polyline points="290.00,121.00 110.00,121.00 110.00,172.00 90.00,172.00" fill="none" stroke="#c2410c" stroke-width="1.1"/>
+<text x="111.50" y="170.50" font-size="2.2" fill="#c2410c" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L07 ø34</text>
+<polygon points="97.00,174.00 103.00,170.00 103.00,174.00 97.00,170.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="104.00" y="176.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V04</text>
+<polyline points="90.00,221.00 125.00,221.00 160.00,221.00" fill="none" stroke="#0e7490" stroke-width="1.1"/>
+<text x="126.50" y="219.50" font-size="2.2" fill="#0e7490" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L08 ø240</text>
+<polyline points="290.00,221.00 265.00,221.00 240.00,221.00" fill="none" stroke="#b45309" stroke-width="1.1"/>
+<text x="266.50" y="219.50" font-size="2.2" fill="#b45309" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L09 ø192</text>
+<line x1="200.00" y1="237.00" x2="200.00" y2="244.00" stroke="#1a1a1a" stroke-width="1.0"/>
+<line x1="100.00" y1="242.00" x2="110.00" y2="242.00" stroke="#1f6fd1" stroke-width="1.1"/>
+<text x="112.00" y="243.00" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">LOX</text>
+<line x1="100.00" y1="247.00" x2="110.00" y2="247.00" stroke="#c2410c" stroke-width="1.1"/>
+<text x="112.00" y="248.00" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">LCH4</text>
+<line x1="100.00" y1="252.00" x2="110.00" y2="252.00" stroke="#d97706" stroke-width="1.1"/>
+<text x="112.00" y="253.00" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">CH4 (supercritical)</text>
+<line x1="100.00" y1="257.00" x2="110.00" y2="257.00" stroke="#0e7490" stroke-width="1.1"/>
+<text x="112.00" y="258.00" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">ox-rich gas</text>
+<line x1="100.00" y1="262.00" x2="110.00" y2="262.00" stroke="#b45309" stroke-width="1.1"/>
+<text x="112.00" y="263.00" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">fuel-rich gas</text>
+<rect x="260.00" y="253.00" width="150.00" height="34.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="260.00" y1="265.00" x2="410.00" y2="265.00" stroke="#1a1a1a" stroke-width="0.3"/>
+<line x1="260.00" y1="276.00" x2="410.00" y2="276.00" stroke="#1a1a1a" stroke-width="0.3"/>
+<line x1="360.00" y1="287.00" x2="360.00" y2="265.00" stroke="#1a1a1a" stroke-width="0.3"/>
+<text x="263.00" y="261.00" font-size="4.2" fill="#1a1a1a" text-anchor="start" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Engine flow schematic</text>
+<text x="263.00" y="272.50" font-size="2.8" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Material: -</text>
+<text x="263.00" y="283.50" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Raptor-class engine study, raptor_sim. PRELIMINARY: not for manufacture</text>
+<text x="363.00" y="272.50" font-size="3.2" fill="#1a1a1a" text-anchor="start" font-weight="bold" font-family="Helvetica, Arial, sans-serif">DWG ES-001</text>
+<text x="363.00" y="283.50" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Scale NTS   2026-10-31</text>
+<text x="10.00" y="272.00" font-size="2.6" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">NOTES</text>
+<text x="10.00" y="276.00" font-size="2.6" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">1. Full-flow staged combustion. All fuel and all oxygen pass through a preburner.</text>
+<text x="10.00" y="280.00" font-size="2.6" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">2. Pressures and temperatures at the design point from the component iteration.</text>
+<text x="10.00" y="284.00" font-size="2.6" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">3. Valve tags as in the BOM (VA-7xx).</text>
+</svg>

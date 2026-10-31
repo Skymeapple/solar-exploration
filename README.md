@@ -16,12 +16,14 @@ The work follows a four-step plan:
 
 ## Quick start
 
-RocketCEA compiles NASA CEA, so it needs a Fortran compiler (`gfortran`).
+RocketCEA compiles NASA CEA, so it needs a Fortran compiler (`gfortran`). CoolProp gives real-fluid
+methane properties for the cooling model; ezdxf writes the DXF drawings.
 
 ```bash
 pip install -e ".[dev]"
 python -m raptor_sim          # gate report for the reference design
 python scripts/run_study.py   # optimizer + Mars study, writes results/
+python scripts/run_component_design.py   # components, drawings, BOM, verification -> results/components/
 pytest
 ```
 
@@ -85,3 +87,33 @@ Full tables are in [`results/summary.md`](results/summary.md).
 - [SpaceX Raptor, Wikipedia](https://en.wikipedia.org/wiki/SpaceX_Raptor)
 - [SpaceX Starship, Wikipedia](https://en.wikipedia.org/wiki/SpaceX_Starship)
 - [Raptor 1 vs Raptor 2, Everyday Astronaut](https://everydayastronaut.com/spacex-raptor-engine-comparison/)
+
+## Component design (step 5)
+
+`raptor_sim.components` designs every major part of the reference engine, checks each one on its
+own, then checks how they fit together, and iterates until the fixable problems are gone.
+Results are in [`results/components/`](results/components/):
+[`verification.md`](results/components/verification.md) (all checks, pressure ladder, iteration log,
+sensitivity, vehicle impact), [`bom.md`](results/components/bom.md) / `bom.csv`, `design_data.json`,
+and `drawings/` (SVG and DXF).
+
+| Module | Content |
+| --- | --- |
+| `components/materials.py` | Material table (GRCop-42, IN718, oxygen-compatible superalloy, 316L, Ti-6Al-4V, Monel K-500, A-286) with strength at temperature and safety factors |
+| `components/chamber.py` | Chamber from L*, conical convergent with throat arcs, Rao 80% bell nozzle |
+| `components/cooling.py` | Regenerative cooling march: Bartz gas side, Gnielinski with CoolProp methane, fin ribs, film cooling, hot-wall, rib and closeout stresses |
+| `components/injector.py` | Gas-gas coaxial main injector: orifice sizing, ring layout, face plate and dome |
+| `components/turbopump.py` | Pumps from suction specific speed and tip speed, Gulich efficiency; turbines from u/c0, blade stress; shafts; mass estimate |
+| `components/preburner.py` | Fuel-rich and oxygen-rich preburners from residence time, wall sizing |
+| `components/feed.py` | Lines, hot-gas ducts and valves: sizes, walls, pressure drops, masses |
+| `components/assembly.py` | Builds the whole engine, rolls up mass, makes the BOM |
+| `components/verification.py` | Component checks, pressure ladder (subsystem), whole-engine checks, mapped to gates G4 to G6 |
+| `components/iterate.py` | Find failures, apply fix rules (including an Optuna search of the cooling-channel layout), rebuild, repeat |
+| `components/drawings.py` | Thrust chamber section, channel sections, injector face, turbopump layouts, flow schematic |
+
+The converged design point is saved in `src/raptor_sim/components/design_point.json`, so the
+report rebuilds in seconds; `--iterate` re-runs the whole iteration from the first guess.
+
+What the iteration changed and what is still open is summarised at the top of
+`results/components/verification.md`. Values derived from the models are marked *sized*;
+scaling rules and allowances are marked *estimate*.

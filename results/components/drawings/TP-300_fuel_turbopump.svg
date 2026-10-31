@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297.0mm" height="210.0mm" viewBox="0 0 297.0 210.0">
+<rect width="100%" height="100%" fill="white"/>
+<rect x="5.0" y="5.0" width="287.0" height="200.0" fill="none" stroke="#1a1a1a" stroke-width="0.6"/>
+<polygon points="30.00,127.13 41.48,127.13 41.48,120.44 30.00,120.44" fill="#e5e7eb" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="30.00" y="117.44" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">inducer</text>
+<polygon points="45.48,124.64 50.62,124.64 50.62,108.56 48.56,108.56 45.48,120.35" fill="#e5e7eb" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="45.48" y="105.56" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">stage 1</text>
+<polygon points="61.34,124.64 66.49,124.64 66.49,108.56 64.43,108.56 61.34,120.35" fill="#e5e7eb" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="61.34" y="105.56" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">stage 2</text>
+<rect x="92.21" y="111.68" width="8.42" height="18.32" fill="#d1d5db" stroke="#1a1a1a" stroke-width="0.4"/>
+<rect x="92.21" y="110.26" width="8.42" height="1.42" fill="#fca5a5" stroke="#1a1a1a" stroke-width="0.4"/>
+<text x="92.21" y="107.26" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">turbine</text>
+<rect x="25.00" y="126.27" width="85.63" height="3.73" fill="#9ca3af" stroke="#1a1a1a" stroke-width="0.3"/>
+<line x1="20.00" y1="130.00" x2="120.63" y2="130.00" stroke="#1f5fa8" stroke-width="0.25" stroke-dasharray="6,2,1,2"/>
+<line x1="43.48" y1="119.28" x2="43.48" y2="130.00" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="43.48" y1="130.00" x2="42.79" y2="128.12" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="43.48" y1="130.00" x2="44.16" y2="128.12" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="43.48" y1="119.28" x2="43.48" y2="108.56" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="43.48" y1="108.56" x2="44.16" y2="110.43" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="43.48" y1="108.56" x2="42.79" y2="110.43" stroke="#1f5fa8" stroke-width="0.25"/>
+<text x="42.28" y="119.28" font-size="2.6" fill="#1f5fa8" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif" transform="rotate(-90.0 42.28 119.28)">R167</text>
+<line x1="89.21" y1="120.49" x2="89.21" y2="130.00" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="89.21" y1="130.00" x2="88.53" y2="128.12" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="89.21" y1="130.00" x2="89.90" y2="128.12" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="89.21" y1="120.49" x2="89.21" y2="110.97" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="89.21" y1="110.97" x2="89.90" y2="112.85" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="89.21" y1="110.97" x2="88.53" y2="112.85" stroke="#1f5fa8" stroke-width="0.25"/>
+<text x="88.01" y="120.49" font-size="2.6" fill="#1f5fa8" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif" transform="rotate(-90.0 88.01 120.49)">Rm 148</text>
+<line x1="67.82" y1="142.00" x2="25.00" y2="142.00" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="25.00" y1="142.00" x2="26.88" y2="141.31" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="25.00" y1="142.00" x2="26.88" y2="142.69" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="67.82" y1="142.00" x2="110.63" y2="142.00" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="110.63" y1="142.00" x2="108.75" y2="142.69" stroke="#1f5fa8" stroke-width="0.25"/>
+<line x1="110.63" y1="142.00" x2="108.75" y2="141.31" stroke="#1f5fa8" stroke-width="0.25"/>
+<text x="67.82" y="140.80" font-size="2.6" fill="#1f5fa8" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">667 rotor length (approx.)</text>
+<text x="20.00" y="20.00" font-size="2.7" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Speed 29,244 rpm, power 52.8 MW, torque 17.2 kN m, shaft ø58</text>
+<text x="20.00" y="25.00" font-size="2.7" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Pump: 153 kg/s, head 26,704 m, 2 stage(s), tip speed 512 m/s, η 0.796 predicted</text>
+<text x="20.00" y="30.00" font-size="2.7" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Inducer ø149, NPSH 120 m, S = 25,000 (US)</text>
+<text x="20.00" y="35.00" font-size="2.7" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Turbine: 190 kg/s, inlet 1000 K / 721 bar, PR 1.94, u/c0 0.55, η 0.846</text>
+<text x="20.00" y="40.00" font-size="2.7" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Blade height 11.1 mm, tip speed 471 m/s, root stress 76 MPa</text>
+<text x="20.00" y="45.00" font-size="2.7" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Estimated mass 639 kg (±50%)</text>
+<rect x="137.00" y="166.00" width="150.00" height="34.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="137.00" y1="178.00" x2="287.00" y2="178.00" stroke="#1a1a1a" stroke-width="0.3"/>
+<line x1="137.00" y1="189.00" x2="287.00" y2="189.00" stroke="#1a1a1a" stroke-width="0.3"/>
+<line x1="237.00" y1="200.00" x2="237.00" y2="178.00" stroke="#1a1a1a" stroke-width="0.3"/>
+<text x="140.00" y="174.00" font-size="4.2" fill="#1a1a1a" text-anchor="start" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Fuel turbopump layout (schematic)</text>
+<text x="140.00" y="185.50" font-size="2.8" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Material: Impeller Ti64, turbine IN718</text>
+<text x="140.00" y="196.50" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Raptor-class engine study, raptor_sim. PRELIMINARY: not for manufacture</text>
+<text x="240.00" y="185.50" font-size="3.2" fill="#1a1a1a" text-anchor="start" font-weight="bold" font-family="Helvetica, Arial, sans-serif">DWG TP-300</text>
+<text x="240.00" y="196.50" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Scale 1:7.8   2026-10-31</text>
+<text x="10.00" y="189.00" font-size="2.6" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">NOTES</text>
+<text x="10.00" y="193.00" font-size="2.6" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">1. Meridional half section, schematic proportions.</text>
+<text x="10.00" y="197.00" font-size="2.6" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">2. Housings, bearings and seals not drawn.</text>
+</svg>
