@@ -85,3 +85,29 @@ Full tables are in [`results/summary.md`](results/summary.md).
 - [SpaceX Raptor, Wikipedia](https://en.wikipedia.org/wiki/SpaceX_Raptor)
 - [SpaceX Starship, Wikipedia](https://en.wikipedia.org/wiki/SpaceX_Starship)
 - [Raptor 1 vs Raptor 2, Everyday Astronaut](https://everydayastronaut.com/spacex-raptor-engine-comparison/)
+
+## Crewed missions (`raptor_sim.crew`)
+
+Research models for flying crew to Mars and farther and bringing them home, with verification
+items CV1 to CV8 (all pass). Run `python scripts/run_crew_study.py`; results are in
+[`results/crew/summary.md`](results/crew/summary.md) and `results/crew/data.json`. Each module
+docstring tags every input as CITED (with source) or ESTIMATE.
+
+| Module | Content |
+| --- | --- |
+| `crew/orbits.py` | JPL approximate planet ephemeris, Kepler propagation, Lambert solver |
+| `crew/transfers.py` | Trip-time trade, conjunction and opposition round trips, entry speeds |
+| `crew/radiation.py` | GCR dose vs shielding and solar cycle, fitted to Curiosity RAD; SPE storm shelter; 600 mSv limit |
+| `crew/life_support.py` | Crew-day mass balance (BVAD), open vs ISS-class vs advanced loops, failure and reserve simulation |
+| `crew/entry.py` | 3-DOF entry, Sutton-Graves and radiative heating, entry corridors for capsule and ship |
+| `crew/aborts.py` | Abort coverage along the Mars transfer and wait times from the Mars surface |
+| `crew/gravity.py` | Bone loss in microgravity, spin habitat and tether sizing |
+| `crew/propulsion.py` | CH4/LOX vs nuclear thermal vs nuclear electric trades |
+| `crew/missions.py` | Mission cases: Moon reference, Mars (conjunction, opposition NTP, NEP), Ceres, Callisto |
+
+Main findings: a conjunction-class Mars mission (940 days) gives about 740 to 1,230 mSv, over NASA's
+600 mSv career limit; shorter transits (nuclear propulsion) or heavy hydrogen-rich shielding are needed
+to get under it. A refilled Starship-class ship has the delta-v for about 80 to 90 day transits, but the
+Mars entry speed then exceeds what we assumed survivable, so about 150 days is the practical minimum.
+Mid-corridor entries stay under 3.5 g everywhere studied. There is no cheap abort once on the way to
+Mars: returning early costs over 2 km/s at every point of the outbound coast.
