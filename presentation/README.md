@@ -1,10 +1,10 @@
 # Project summary presentation
 
-`Solar_Exploration_Project_Summary.pptx`: 30-slide deck summarising the project in four sections:
+`Solar_Exploration_Project_Summary.pptx`: 46-slide deck summarising the project in four sections:
 scientific research, master planning, commercial implementation and cutting-edge concepts.
 
 Every figure carries a label: CITED (public source), MODEL (computed by `raptor_sim`),
-ESTIMATE (planning assumption), CONCEPT (not simulated) or PLACEHOLDER (study still running).
+ESTIMATE (planning assumption) or CONCEPT (not simulated).
 
 ## Rebuilding
 
@@ -19,5 +19,7 @@ node render.js && node orbit.js
 node build.js ../Solar_Exploration_Project_Summary.pptx
 ```
 
-Version 1 (2026-10-31): engine, component, vehicle, business, sample return (PR #4), crewed missions (PR #5), transit bases (PR #6), the lunar base (PR #9), crewed lunar missions (PR #10), the master roadmap (PR #8) and settlement (PR #11) are in. The Mars launch campaign
-study is a placeholder and will be filled in when it finishes.
+Version 2 (2026-10-31): 46 slides covering all twelve workstreams: engine model, optimizer and vehicle (PR #1),
+components (PR #2), business case (PR #3), sample return (PR #4), crewed missions (PR #5), transit bases (PR #6),
+master roadmap (PR #8), lunar base (PR #9), crewed lunar missions (PR #10), settlement (PR #11) and the Mars
+launch campaign (PR #12).
