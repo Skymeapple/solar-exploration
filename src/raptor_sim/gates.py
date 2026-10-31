@@ -1,10 +1,11 @@
 """Verification gates G0 to G7 from the design procedure.
 
 G4 (cooling), G5 (turbopumps) and G6 (engine system) come from the component
-models in `raptor_sim.components`. They run for the reference engine, whose
-converged component design point is saved in `components/design_point.json`;
-other engine designs (for example from the optimizer) report them as not run
-until their components have been designed.
+models in `raptor_sim.components`. They run for the selected engine design, whose
+converged component design point is saved in `components/design_point.json`
+(295 bar after the chamber-pressure sweep: at 300 bar the cooling jacket and the
+methane pump do not close). Other engine designs (for example from the optimizer)
+report them as not run until their components have been designed.
 """
 
 from __future__ import annotations
@@ -132,7 +133,7 @@ def component_gates(design: EngineDesign) -> list[GateResult]:
         return [GateResult(name, None, "no component design point saved") for _g, name in _COMPONENT_GATES]
     ci = design_io.load()
     if ci.engine != design:
-        return [GateResult(name, None, "components designed for the reference engine only") for _g, name in _COMPONENT_GATES]
+        return [GateResult(name, None, "components designed for the selected design point only") for _g, name in _COMPONENT_GATES]
     from .components.assembly import build_engine
     from .components.verification import all_checks
 
@@ -151,9 +152,17 @@ def component_gates(design: EngineDesign) -> list[GateResult]:
     return out
 
 
+def selected_design() -> EngineDesign:
+    """The engine design the components were built for, or the 300 bar reference if none is saved."""
+    from .components import design_io
+
+    return design_io.load().engine if design_io.DESIGN_POINT.exists() else EngineDesign()
+
+
 def run_all_gates(design: EngineDesign | None = None, assumptions: CycleAssumptions | None = None,
                   components: bool = True):
-    design = design or EngineDesign()
+    """All gates for `design`; by default the selected design from the component design point."""
+    design = design or selected_design()
     perf = size_engine(design)
     cycle = solve_cycle(perf, assumptions)
     comp = component_gates(design) if components else [

@@ -103,11 +103,8 @@ def test_first_guess_fails_and_design_point_fixes_it(first_guess, design_point):
     assert len(final) < len(first)
     # Turbopumps, injector, preburners, lines and the pressure ladder all close.
     assert not [c for c in final if c.gate == "G5" or c.level == "subsystem"], [c.id for c in final]
-    # Known open issue: liner stresses in the cooling jacket are within 15% of the allowable
-    # but not below it (see results/components/verification.md).
-    for c in final:
-        if c.gate == "G4":
-            assert c.id in ("CL-2", "CL-3") and c.value < 1.15, c
+    # At the selected chamber pressure every check passes.
+    assert not final, [c.id for c in final]
 
 
 def test_pressure_ladder_closes_at_design_point(design_point):

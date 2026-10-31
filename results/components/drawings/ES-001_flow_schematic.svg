@@ -9,31 +9,31 @@
 <text x="325.00" y="61.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">6 bar, 112 K</text>
 <rect x="30.00" y="105.00" width="60.00" height="22.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
 <text x="60.00" y="115.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">LOX pump + kick stage</text>
-<text x="60.00" y="119.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">726 bar, 12,050 rpm</text>
+<text x="60.00" y="119.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">686 bar, 12,042 rpm</text>
 <rect x="290.00" y="105.00" width="70.00" height="22.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
 <text x="325.00" y="115.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">CH4 pump + kick stage</text>
-<text x="325.00" y="119.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">1113 bar, 29,244 rpm</text>
+<text x="325.00" y="119.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">921 bar, 29,226 rpm</text>
 <rect x="30.00" y="165.00" width="60.00" height="22.00" fill="#ccfbf1" stroke="#1a1a1a" stroke-width="0.5"/>
 <text x="60.00" y="175.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Ox-rich preburner</text>
-<text x="60.00" y="179.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">617 bar, 800 K</text>
+<text x="60.00" y="179.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">583 bar, 800 K</text>
 <rect x="290.00" y="165.00" width="70.00" height="22.00" fill="#fef3c7" stroke="#1a1a1a" stroke-width="0.5"/>
 <text x="325.00" y="175.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Fuel-rich preburner</text>
-<text x="325.00" y="179.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">721 bar, 1000 K</text>
+<text x="325.00" y="179.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">620 bar, 1000 K</text>
 <rect x="30.00" y="209.00" width="60.00" height="18.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
 <text x="60.00" y="217.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Ox turbine</text>
-<text x="60.00" y="221.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">0.86 η, PR 1.66</text>
+<text x="60.00" y="221.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">0.86 η, PR 1.59</text>
 <rect x="290.00" y="209.00" width="70.00" height="18.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
 <text x="325.00" y="217.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Fuel turbine</text>
-<text x="325.00" y="221.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">0.85 η, PR 1.94</text>
+<text x="325.00" y="221.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">0.86 η, PR 1.69</text>
 <rect x="160.00" y="215.00" width="80.00" height="22.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
 <text x="200.00" y="225.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Main injector</text>
-<text x="200.00" y="229.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">360 bar manifold</text>
+<text x="200.00" y="229.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">354 bar manifold</text>
 <rect x="160.00" y="244.00" width="80.00" height="28.00" fill="#f3f4f6" stroke="#1a1a1a" stroke-width="0.5"/>
 <text x="200.00" y="257.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Thrust chamber</text>
-<text x="200.00" y="261.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Pc 300 bar, 2,256 kN SL</text>
+<text x="200.00" y="261.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">Pc 295 bar, 2,256 kN SL</text>
 <rect x="175.00" y="127.00" width="50.00" height="30.00" fill="#fee2e2" stroke="#1a1a1a" stroke-width="0.5"/>
 <text x="200.00" y="141.00" font-size="3.0" fill="#1a1a1a" text-anchor="middle" font-weight="bold" font-family="Helvetica, Arial, sans-serif">Cooling jacket</text>
-<text x="200.00" y="145.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">241 bar drop, 82 MW</text>
+<text x="200.00" y="145.50" font-size="2.3" fill="#1a1a1a" text-anchor="middle" font-weight="normal" font-family="Helvetica, Arial, sans-serif">173 bar drop, 85 MW</text>
 <line x1="60.00" y1="205.00" x2="60.00" y2="187.00" stroke="#1a1a1a" stroke-width="0.3" stroke-dasharray="2,1"/>
 <line x1="325.00" y1="205.00" x2="325.00" y2="187.00" stroke="#1a1a1a" stroke-width="0.3" stroke-dasharray="2,1"/>
 <polyline points="55.00,67.00 55.00,105.00" fill="none" stroke="#1f6fd1" stroke-width="1.1"/>
@@ -57,7 +57,7 @@
 <polygon points="299.50,139.00 305.50,135.00 305.50,139.00 299.50,135.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
 <text x="306.50" y="141.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V03</text>
 <polyline points="200.00,157.00 200.00,172.00 290.00,172.00" fill="none" stroke="#d97706" stroke-width="1.1"/>
-<text x="201.50" y="170.50" font-size="2.2" fill="#d97706" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L06 ø113</text>
+<text x="201.50" y="170.50" font-size="2.2" fill="#d97706" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L06 ø115</text>
 <polygon points="242.00,174.00 248.00,170.00 248.00,174.00 242.00,170.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
 <text x="249.00" y="176.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V05</text>
 <polyline points="290.00,121.00 110.00,121.00 110.00,172.00 90.00,172.00" fill="none" stroke="#c2410c" stroke-width="1.1"/>
@@ -65,9 +65,9 @@
 <polygon points="97.00,174.00 103.00,170.00 103.00,174.00 97.00,170.00" fill="white" stroke="#1a1a1a" stroke-width="0.4"/>
 <text x="104.00" y="176.00" font-size="2.3" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">V04</text>
 <polyline points="90.00,221.00 125.00,221.00 160.00,221.00" fill="none" stroke="#0e7490" stroke-width="1.1"/>
-<text x="126.50" y="219.50" font-size="2.2" fill="#0e7490" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L08 ø240</text>
+<text x="126.50" y="219.50" font-size="2.2" fill="#0e7490" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L08 ø243</text>
 <polyline points="290.00,221.00 265.00,221.00 240.00,221.00" fill="none" stroke="#b45309" stroke-width="1.1"/>
-<text x="266.50" y="219.50" font-size="2.2" fill="#b45309" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L09 ø192</text>
+<text x="266.50" y="219.50" font-size="2.2" fill="#b45309" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">L09 ø195</text>
 <line x1="200.00" y1="237.00" x2="200.00" y2="244.00" stroke="#1a1a1a" stroke-width="1.0"/>
 <line x1="100.00" y1="242.00" x2="110.00" y2="242.00" stroke="#1f6fd1" stroke-width="1.1"/>
 <text x="112.00" y="243.00" font-size="2.4" fill="#1a1a1a" text-anchor="start" font-weight="normal" font-family="Helvetica, Arial, sans-serif">LOX</text>

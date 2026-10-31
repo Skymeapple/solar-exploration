@@ -1,0 +1,110 @@
+[
+  {
+    "pc_bar": 300.0,
+    "area_ratio": 35.3,
+    "mass_kg": 2344,
+    "thrust_to_weight": 98.2,
+    "passes": false,
+    "failing": [
+      "CL-3 Rib tensile stress / allowable (x = -0 mm)",
+      "SY-1 G2 cycle balance with all component-derived assumptions",
+      "SY-2 Dry mass vs public Raptor 2 figure (1630 kg, low confidence)",
+      "SY-3 Sea-level thrust-to-weight"
+    ],
+    "iterations": 6
+  },
+  {
+    "pc_bar": 298.0,
+    "area_ratio": 35.05,
+    "mass_kg": 2525,
+    "thrust_to_weight": 91.1,
+    "passes": false,
+    "failing": [
+      "CL-3 Rib tensile stress / allowable (x = 1552 mm)",
+      "SY-1 G2 cycle balance with all component-derived assumptions",
+      "SY-2 Dry mass vs public Raptor 2 figure (1630 kg, low confidence)",
+      "SY-3 Sea-level thrust-to-weight"
+    ],
+    "iterations": 12
+  },
+  {
+    "pc_bar": 295.0,
+    "area_ratio": 34.68,
+    "mass_kg": 1935,
+    "thrust_to_weight": 118.9,
+    "passes": true,
+    "failing": [],
+    "iterations": 4
+  },
+  {
+    "pc_bar": 290.0,
+    "area_ratio": 34.06,
+    "mass_kg": 1792,
+    "thrust_to_weight": 128.4,
+    "passes": true,
+    "failing": [],
+    "iterations": 3
+  },
+  {
+    "pc_bar": 285.0,
+    "area_ratio": 33.44,
+    "mass_kg": 1826,
+    "thrust_to_weight": 126.0,
+    "passes": true,
+    "failing": [],
+    "iterations": 5
+  },
+  {
+    "pc_bar": 280.0,
+    "area_ratio": 32.82,
+    "mass_kg": 1548,
+    "thrust_to_weight": 148.6,
+    "passes": true,
+    "failing": [],
+    "iterations": 4
+  },
+  {
+    "pc_bar": 280.0,
+    "area_ratio": 34.34,
+    "mass_kg": 1668,
+    "thrust_to_weight": 138.0,
+    "passes": false,
+    "failing": [
+      "TC-1 Nozzle exit diameter"
+    ],
+    "iterations": 4
+  },
+  {
+    "pc_bar": 260.0,
+    "area_ratio": 34.34,
+    "mass_kg": 1867,
+    "thrust_to_weight": 123.2,
+    "passes": false,
+    "failing": [
+      "TC-1 Nozzle exit diameter"
+    ],
+    "iterations": 4
+  },
+  {
+    "pc_bar": 240.0,
+    "area_ratio": 34.34,
+    "mass_kg": 1512,
+    "thrust_to_weight": 152.2,
+    "passes": false,
+    "failing": [
+      "TC-1 Nozzle exit diameter"
+    ],
+    "iterations": 3
+  },
+  {
+    "pc_bar": 220.0,
+    "area_ratio": 34.34,
+    "mass_kg": 1422,
+    "thrust_to_weight": 161.7,
+    "passes": false,
+    "failing": [
+      "TC-1 Nozzle exit diameter"
+    ],
+    "iterations": 3
+  }
+]

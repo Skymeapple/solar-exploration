@@ -161,6 +161,19 @@ def optimize_cooling(b: EngineBuild, n_trials: int = 200, seed: int = 7) -> tupl
     return ci, info
 
 
+def engine_at_pressure(pc: float, exit_diameter: float = 1.38, base=None):
+    """The engine design at chamber pressure `pc` (Pa) with the area ratio trimmed so the nozzle exit
+    stays at `exit_diameter` (m), inside the 1.40 m packaging limit. Lower pressure means a bigger
+    throat for the same thrust, so the area ratio has to come down to keep the exit the same size."""
+    from ..engine import EngineDesign, size_engine
+
+    d = replace(base or EngineDesign(), pc=pc)
+    for _ in range(3):
+        at = size_engine(d).throat_area
+        d = replace(d, eps=d.eps * exit_diameter**2 / (4 * d.eps * at / math.pi))
+    return d
+
+
 def _round_up(x: float, step: float) -> float:
     return math.ceil(x / step) * step
 

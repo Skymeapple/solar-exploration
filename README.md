@@ -114,6 +114,15 @@ and `drawings/` (SVG and DXF).
 The converged design point is saved in `src/raptor_sim/components/design_point.json`, so the
 report rebuilds in seconds; `--iterate` re-runs the whole iteration from the first guess.
 
+**Chamber pressure.** At the public 300 bar figure the design does not close: the cooling jacket
+needs about 240 bar of pressure drop, which pushes the methane pump past 1,000 bar, and the rib
+stress and engine mass fail with it. `scripts/sweep_chamber_pressure.py` re-runs the full iteration
+at each pressure, with the area ratio trimmed to keep the nozzle exit inside 1.40 m. 295 bar is the
+highest that passes all 53 checks (dry mass 1,935 kg, sea-level T/W 119, Isp 324 s after film
+cooling), so it is the selected design point and what `python -m raptor_sim` reports. 298 and
+300 bar fail. Margins are thin: a 20% higher gas-side heat flux, twice the channel roughness, or
+film cooling half as effective each still break the cooling jacket (see the sensitivity table).
+
 What the iteration changed and what is still open is summarised at the top of
 `results/components/verification.md`. Values derived from the models are marked *sized*;
 scaling rules and allowances are marked *estimate*.
