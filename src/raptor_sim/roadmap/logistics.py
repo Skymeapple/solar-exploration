@@ -57,7 +57,7 @@ class LogisticsAssumptions:
 # Ships flown per Mars window (mars) or per year (moon) while a step runs. Estimate;
 # the Mars campaign and lunar threads own the real manifests.
 MARS_SHIPS_PER_WINDOW = {
-    "MARS-CARGO-1": 2, "MARS-CARGO-2": 2, "MSR-LAND": 1, "MARS-CREW-1": 4,
+    "MARS-CARGO-1": 2, "MARS-CARGO-2": 2, "MARS-CREW-1": 4,  # sample return flies on a commercial launcher (PR #4)
     "MARS-BASE-1": 6, "SETTLEMENT-100": 12, "TRANSIT-NET": 1,
 }
 CREW_SHIPS = {"MARS-CREW-1": 2}

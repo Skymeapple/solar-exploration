@@ -1620,26 +1620,6 @@
  "logistics": {
   "Model vehicle (100 t dry, 155 t to LEO)": [
    {
-    "year": 2028,
-    "mars_ships": 1,
-    "lunar_landings": 0,
-    "tanker_launches": 4,
-    "commercial_leo": 0,
-    "crew_flights": 0,
-    "launches": 5,
-    "propellant_kt": 26.25,
-    "methane_kt": 5.7065217391304355,
-    "oxygen_kt": 20.543478260869563,
-    "ships_built": 2,
-    "boosters_built": 1,
-    "engines_built": 45,
-    "peak_launches_per_month": 1.25,
-    "pads_needed": 1,
-    "boiloff_t": 37.696,
-    "mars_isru_kw": 0.0,
-    "notes": []
-   },
-   {
     "year": 2030,
     "mars_ships": 0,
     "lunar_landings": 0,
@@ -2261,26 +2241,6 @@
    }
   ],
   "Conservative (150 t dry, 108 t to LEO)": [
-   {
-    "year": 2028,
-    "mars_ships": 1,
-    "lunar_landings": 0,
-    "tanker_launches": 7,
-    "commercial_leo": 0,
-    "crew_flights": 0,
-    "launches": 8,
-    "propellant_kt": 42.0,
-    "methane_kt": 9.130434782608697,
-    "oxygen_kt": 32.869565217391305,
-    "ships_built": 2,
-    "boosters_built": 1,
-    "engines_built": 45,
-    "peak_launches_per_month": 2.0,
-    "pads_needed": 1,
-    "boiloff_t": 45.9648,
-    "mars_isru_kw": 0.0,
-    "notes": []
-   },
    {
     "year": 2030,
     "mars_ships": 0,

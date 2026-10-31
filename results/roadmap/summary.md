@@ -206,7 +206,6 @@ Whole program to the first crewed Jupiter-system mission: P10 125,967, P50 140,9
 
 | Year | Mars ships | Lunar landings | Tankers | Commercial LEO | Launches | Propellant (kt) | Methane (kt) | Peak launches/month | Pads | Ships built | Engines built | Mars ISRU power (kW) |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2028 | 1 | 0 | 4 | 0 | 5 | 26 | 6 | 1.2 | 1 | 2 | 45 | 0 |
 | 2030 | 0 | 0 | 0 | 2 | 2 | 10 | 2 | 0.2 | 1 | 1 | 39 | 0 |
 | 2031 | 0 | 0 | 0 | 5 | 5 | 26 | 6 | 0.4 | 1 | 1 | 39 | 0 |
 | 2032 | 0 | 0 | 0 | 9 | 9 | 47 | 10 | 0.8 | 1 | 1 | 39 | 0 |
@@ -238,7 +237,6 @@ Whole program to the first crewed Jupiter-system mission: P10 125,967, P50 140,9
 
 | Year | Mars ships | Lunar landings | Tankers | Commercial LEO | Launches | Propellant (kt) | Methane (kt) | Peak launches/month | Pads | Ships built | Engines built | Mars ISRU power (kW) |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2028 | 1 | 0 | 7 | 0 | 8 | 42 | 9 | 2.0 | 1 | 2 | 45 | 0 |
 | 2030 | 0 | 0 | 0 | 2 | 2 | 10 | 2 | 0.2 | 1 | 1 | 39 | 0 |
 | 2031 | 0 | 0 | 0 | 5 | 5 | 26 | 6 | 0.4 | 1 | 1 | 39 | 0 |
 | 2032 | 0 | 0 | 0 | 9 | 9 | 47 | 10 | 0.8 | 1 | 1 | 39 | 0 |
