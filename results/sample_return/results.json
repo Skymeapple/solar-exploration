@@ -1,0 +1,214 @@
+{
+  "gates": [
+    {
+      "id": "SR-1",
+      "phase": "Transfer windows",
+      "passed": true,
+      "detail": "Lambert arc propagated independently lands 0.009 m from Earth; Hohmann-limit v_inf error 0.0015 %. Outbound 2028-11-24 -> 2029-09-22 (C3 9.1 km2/s2); return 2030-10-07 -> 2031-08-29 (v_inf 2.53 / 4.57 km/s)"
+    },
+    {
+      "id": "SR-2",
+      "phase": "Collection and sealing",
+      "passed": true,
+      "detail": "OS 14.6 kg with 360 g of samples; headspace kept 99.91 % after 726 days in vacuum; Earth air reaching a tube after 60 days = 5.1e-09 of its Martian gas"
+    },
+    {
+      "id": "SR-3",
+      "phase": "Mars ascent",
+      "passed": true,
+      "detail": "MAV 335 kg (stage-2 load 39.4 kg, pitch rate 1.285 deg/s) reaches 374 x 386 km; ideal dv 4208 m/s, losses 706 m/s; Monte Carlo (300 runs) share with periapsis >= 200 km: baseline, Isp 0.5 % 1-sigma: 98.7 %; mitigated, Isp 0.25 % 1-sigma: 99.3 %"
+    },
+    {
+      "id": "SR-4",
+      "phase": "Rendezvous and capture",
+      "passed": true,
+      "detail": "CW hop from 10 km flown nonlinearly misses by 11.3 m (0.11 %); capture in 100.00 % of 2000 runs; orbit-matching + approach dv p99 93 m/s"
+    },
+    {
+      "id": "SR-5",
+      "phase": "Earth return",
+      "passed": true,
+      "detail": "Trans-Earth burn 2026 m/s from 380 km; entry 11.98 km/s at 125 km (lowest in the window 11.84 km/s)"
+    },
+    {
+      "id": "SR-6",
+      "phase": "Earth entry",
+      "passed": true,
+      "detail": "Allen-Eggers check: decel 0.6 %, heat flux 1.7 %; nominal peak 515 W/cm2, 52 g, heat load 9.9 kJ/cm2; 3-sigma downrange 15.0 km"
+    },
+    {
+      "id": "SR-7",
+      "phase": "Landing impact",
+      "passed": true,
+      "detail": "Ground impact 29.6 m/s; mean crush load p99 310 g vs 400 g rating"
+    },
+    {
+      "id": "SR-8",
+      "phase": "Containment",
+      "passed": true,
+      "detail": "P(release) 6.6e-07 vs 1e-06; largest path: P3 break-the-chain (5.0e-07)"
+    }
+  ],
+  "outbound": {
+    "depart": "2028-11-24",
+    "arrive": "2029-09-22",
+    "c3": 9.072064407298019
+  },
+  "return": {
+    "depart": "2030-10-07",
+    "arrive": "2031-08-29",
+    "tei_dv": 2026.1736797335598,
+    "entry_speed": 11983.093305131257
+  },
+  "mav": {
+    "gross_kg": 335.40936576417516,
+    "stage2_prop_kg": 39.40936576417516,
+    "pitch_rate": 1.2846068822599566,
+    "ascent_mc": {
+      "runs": 300,
+      "periapsis_mean_km": 350.21357654029794,
+      "periapsis_3sigma_low_km": 237.12110242133713,
+      "apoapsis_mean_km": 416.3187194645551,
+      "sma_sigma_km": 36.3699145713369,
+      "fraction_above_requirement": 0.9933333333333333
+    },
+    "iterations": [
+      [
+        "baseline, Isp 0.5 % 1-sigma",
+        0.9866666666666667
+      ],
+      [
+        "mitigated, Isp 0.25 % 1-sigma",
+        0.9933333333333333
+      ]
+    ]
+  },
+  "rendezvous": {
+    "cw_miss_m": 11.293518185835238,
+    "dv_p99": 93.36314535295028,
+    "approach": {
+      "runs": 2000,
+      "p_capture": 1.0,
+      "dv_mean_m_s": 6.655564396546912,
+      "dv_p99_m_s": 9.569405769483842,
+      "final_miss_p99_m": 0.06953778131935709
+    }
+  },
+  "entry": {
+    "peak_heat_W_cm2": 515.0641195150048,
+    "peak_decel_g": 51.85481835808636,
+    "footprint": {
+      "runs": 300,
+      "downrange_3sigma_km": 14.98513901168992,
+      "impact_g_p99": 310.0680440620496,
+      "peak_heat_p99_W_cm2": 533.8292917220836
+    }
+  },
+  "containment": {
+    "P1 heat shield failure": 6.000000000000001e-08,
+    "P2 impact overload": 1.5803834103344593e-13,
+    "P3 break-the-chain": 5.000000000000001e-07,
+    "P4 recovery mishap": 1.0000000000000002e-07,
+    "total": 6.600001580383411e-07
+  },
+  "collection": {
+    "os_mass_kg": 14.61,
+    "sample_mass_kg": 0.36,
+    "headspace_retained": 0.9990546112949735,
+    "air_ingress_fraction": 5.144462243934017e-09,
+    "surface_sols": 1166.6666666666667
+  },
+  "targets": [
+    {
+      "name": "Moon",
+      "c3_depart": -2.0,
+      "vinf_arrive": 0.8,
+      "one_way_days": 4.5,
+      "ascent_dv": 1923.5492343987196,
+      "entry_speed": 11.0,
+      "entry_source": "flown mission [cited]",
+      "peak_heat_W_cm2": 404.7846781035459,
+      "peak_decel_g": 45.24266821083287,
+      "pp_category": "V unrestricted",
+      "heritage": "Apollo, Luna 16/20/24, Chang'e 5 and 6 (1,935 g from the far side, 2024) [cited]"
+    },
+    {
+      "name": "Mars",
+      "c3_depart": 8.671194815134248,
+      "vinf_arrive": 2.6488952289859955,
+      "one_way_days": 258.8657589178094,
+      "ascent_dv": 4200.0,
+      "entry_speed": 11.462678819287794,
+      "entry_source": "Hohmann return [estimate]",
+      "peak_heat_W_cm2": 454.55580957603127,
+      "peak_decel_g": 48.300140269689656,
+      "pp_category": "V restricted",
+      "heritage": "none flown; NASA-ESA MSR cancelled Jan 2026; Tianwen-3 targets 2028 launch, 2031 return [cited]"
+    },
+    {
+      "name": "Phobos",
+      "c3_depart": 8.671194815134248,
+      "vinf_arrive": 2.6488952289859955,
+      "one_way_days": 258.8657589178094,
+      "ascent_dv": 16.965536312851164,
+      "entry_speed": 11.462678819287794,
+      "entry_source": "Hohmann return [estimate]",
+      "peak_heat_W_cm2": 454.55580957603127,
+      "peak_decel_g": 48.300140269689656,
+      "pp_category": "V unrestricted [memory]",
+      "heritage": "JAXA MMX launched 20 Oct 2026, >=10 g, return 2031 [cited]"
+    },
+    {
+      "name": "Bennu",
+      "c3_depart": 0.7567427328917035,
+      "vinf_arrive": 0.8444692989650757,
+      "one_way_days": 200.15586851845995,
+      "ascent_dv": 0.2996937212065215,
+      "entry_speed": 12.0,
+      "entry_source": "flown mission [cited]",
+      "peak_heat_W_cm2": 517.102836815087,
+      "peak_decel_g": 51.983688264394694,
+      "pp_category": "V unrestricted",
+      "heritage": "OSIRIS-REx (121.6 g [memory], landed 24 Sep 2023 [cited]); Hayabusa2 at Ryugu (12 km/s entry [cited])"
+    },
+    {
+      "name": "67P/C-G",
+      "c3_depart": 53.51975708992753,
+      "vinf_arrive": 5.289687189700922,
+      "one_way_days": 608.1710257597617,
+      "ascent_dv": 1.2254458372363912,
+      "entry_speed": 12.9,
+      "entry_source": "flown mission [cited]",
+      "peak_heat_W_cm2": 634.8422779568793,
+      "peak_decel_g": 58.49492276911413,
+      "pp_category": "V unrestricted",
+      "heritage": "Stardust coma flyby (12.9 km/s entry, Jan 2006 [cited]); nucleus return only studied (CAESAR) [memory]"
+    },
+    {
+      "name": "Europa",
+      "c3_depart": 77.32196275115469,
+      "vinf_arrive": 5.643256265531482,
+      "one_way_days": 997.7233136321117,
+      "ascent_dv": 1639.477354041688,
+      "entry_speed": 14.143683171301932,
+      "entry_source": "Hohmann return [estimate]",
+      "peak_heat_W_cm2": 825.3237751294729,
+      "peak_decel_g": 68.2875065377547,
+      "pp_category": "V restricted",
+      "heritage": "none; lander concepts only [memory]"
+    },
+    {
+      "name": "Enceladus",
+      "c3_depart": 106.04256662396251,
+      "vinf_arrive": 5.438861333455998,
+      "one_way_days": 2222.8594800832166,
+      "ascent_dv": 188.95511125565466,
+      "entry_speed": 15.12495876103394,
+      "entry_source": "Hohmann return [estimate]",
+      "peak_heat_W_cm2": 1000.6831381371344,
+      "peak_decel_g": 76.61040346887711,
+      "pp_category": "V restricted",
+      "heritage": "none; plume fly-through capture studied [memory]"
+    }
+  ]
+}

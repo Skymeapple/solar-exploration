@@ -154,3 +154,32 @@ python scripts/run_roadmap.py            # writes results/roadmap/summary.md, sc
 
 When another study delivers numbers, put them in `src/raptor_sim/roadmap/overrides.json` (step id to
 field values) and re-run; the catalog estimate stays as the fallback.
+
+## Planetary sample return (`sample_return` package)
+
+An end-to-end model of a Mars sample return on the NASA-ESA MSR / Tianwen-3 pattern, with a
+verification gate for each phase, plus a comparison across the Moon, Phobos, an asteroid, a comet,
+Europa and Enceladus. It needs only NumPy and SciPy.
+
+```bash
+python -m sample_return            # runs every phase, prints gates SR-1..SR-8, writes results/sample_return/
+python scripts/plot_sample_return.py   # figures (needs matplotlib)
+pytest tests/test_sample_return.py
+```
+
+| Gate | Phase | Model | Independent check |
+| --- | --- | --- | --- |
+| SR-1 | Transfer windows | Lambert solver on JPL mean elements | arc re-propagated with a universal-Kepler propagator; Hohmann limit |
+| SR-2 | Collection and sealing | OS mass budget, molecular-flow leak model for tubes and containment vessel | headspace retained, Earth-air ingress |
+| SR-3 | Mars ascent | 2D two-stage solid MAV with drag, solved pitch program and stage-2 load, 300-run Monte Carlo | rocket-equation bookkeeping, public mass range |
+| SR-4 | Rendezvous and capture | Clohessy-Wiltshire hop chain with nav and burn errors | CW hop flown in nonlinear two-body |
+| SR-5 | Earth return | Trans-Earth burn and entry speed from the return window | entry-speed limit |
+| SR-6 | Earth entry | 3-DOF ballistic entry, US76 atmosphere, Sutton-Graves heating, footprint Monte Carlo | Allen-Eggers closed form; Stardust reference case |
+| SR-7 | Landing impact | terminal velocity and crush stroke | containment-vessel load rating |
+| SR-8 | Containment | planetary-protection fault tree | release probability below 1e-6 |
+
+All eight gates pass after one design iteration: the baseline ascent left 1.3 % of orbits below the
+200 km periapsis floor, and halving the solid motors' Isp uncertainty (motor-lot acceptance firing)
+brings it under 1 %. Results are in [`results/sample_return/summary.md`](results/sample_return/summary.md).
+Every number in the code is tagged [cited], [memory] or [estimate]; sources are in
+`src/sample_return/references.py`.
