@@ -1,0 +1,38 @@
+site,chain,chosen,local_fraction,energy_mwh_per_t,feed_t_per_t,practical,imported,passive_cryo
+moon_south_pole,sabatier,False,1.0,41.68,81.4,False,,False
+moon_south_pole,o2_water,True,0.783,9.39,15.7,True,CH4 0.217 t/t,False
+moon_south_pole,o2_regolith,False,0.783,12.35,2.0,True,CH4 0.217 t/t,False
+mars_arcadia,sabatier,True,1.0,8.17,1.0,True,,False
+mars_arcadia,imported_h2,False,0.945,8.1,0.0,True,H2 0.055 t/t,False
+mars_arcadia,o2_water,False,0.783,7.1,1.8,True,CH4 0.217 t/t,False
+mars_arcadia,o2_regolith,False,0.783,12.5,2.0,True,CH4 0.217 t/t,False
+phobos,sabatier,True,1.0,12.24,24.4,True,,False
+phobos,o2_water,False,0.783,9.83,44.1,False,CH4 0.217 t/t,False
+phobos,o2_regolith,False,0.783,12.51,2.0,True,CH4 0.217 t/t,False
+deimos,sabatier,True,1.0,12.24,24.4,True,,False
+deimos,o2_water,False,0.783,9.83,44.1,False,CH4 0.217 t/t,False
+deimos,o2_regolith,False,0.783,12.51,2.0,True,CH4 0.217 t/t,False
+ceres,sabatier,True,1.0,9.79,3.3,True,,False
+ceres,o2_water,False,0.783,8.61,4.4,True,CH4 0.217 t/t,False
+ceres,o2_regolith,False,0.783,12.41,2.0,True,CH4 0.217 t/t,False
+callisto,sabatier,True,1.0,9.46,17.5,True,,False
+callisto,o2_water,False,0.783,8.44,2.2,True,CH4 0.217 t/t,False
+callisto,o2_regolith,False,0.783,12.3,2.0,True,CH4 0.217 t/t,False
+ganymede,sabatier,False,1.0,9.97,33.5,False,,False
+ganymede,o2_water,True,0.783,7.04,1.8,True,CH4 0.217 t/t,False
+ganymede,o2_regolith,False,0.783,12.28,2.0,True,CH4 0.217 t/t,False
+europa,sabatier,False,1.0,14.54,81.9,False,,True
+europa,o2_water,True,0.783,6.96,0.9,True,CH4 0.217 t/t,True
+europa,o2_regolith,False,0.783,12.25,2.0,True,CH4 0.217 t/t,True
+titan,native_ch4,True,1.0,6.97,1.0,True,,True
+titan,o2_water,False,0.783,6.96,1.0,True,CH4 0.217 t/t,True
+titan,o2_regolith,False,0.783,12.25,2.0,True,CH4 0.217 t/t,True
+enceladus,sabatier,False,1.0,10.29,33.1,False,,True
+enceladus,o2_water,True,0.783,6.96,0.9,True,CH4 0.217 t/t,True
+enceladus,o2_regolith,False,0.783,12.25,2.0,True,CH4 0.217 t/t,True
+venus_clouds,sabatier,False,1.0,9.14,4882.3,False,,False
+venus_clouds,imported_h2,True,0.945,8.31,0.0,True,H2 0.055 t/t,False
+venus_clouds,o2_water,False,0.783,8.62,8812.2,False,CH4 0.217 t/t,False
+mercury_north_pole,sabatier,True,1.0,11.51,8.1,True,,False
+mercury_north_pole,o2_water,False,0.783,8.57,2.9,True,CH4 0.217 t/t,False
+mercury_north_pole,o2_regolith,False,0.783,12.53,2.0,True,CH4 0.217 t/t,False

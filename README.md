@@ -209,3 +209,18 @@ to get under it. A refilled Starship-class ship has the delta-v for about 80 to 
 Mars entry speed then exceeds what we assumed survivable, so about 150 days is the practical minimum.
 Mid-corridor entries stay under 3.5 g everywhere studied. There is no cheap abort once on the way to
 Mars: returning early costs over 2 km/s at every point of the outbound coast.
+
+## Transit bases across the solar system
+
+`raptor_sim.bases` extends the study from one Mars mission to a network of refuelling bases.
+Run `python scripts/run_bases.py`; tables land in [`results/bases/`](results/bases/summary.md).
+
+| Module | Content |
+| --- | --- |
+| `bases/sites.py` | 12 candidate sites (Moon pole, Mars, Phobos, Deimos, Ceres, Callisto, Ganymede, Europa, Titan, Enceladus, Venus aerostat, Mercury pole). Every input is tagged `cited`, `literature` or `estimate` with its source |
+| `bases/power.py` | Solar arrays with night storage versus fission (scaled from NASA FSP, 40 kWe under 6 t) versus RTG |
+| `bases/isru.py` | Propellant chains (Sabatier, Titan native methane, imported hydrogen, oxygen-only), energy and feedstock per tonne, element balance |
+| `bases/network.py` | Patched-conic delta-v between all sites, ship payload per hop with full tanks, stepping-stone routes through refuelling hubs |
+| `bases/logistics.py` | Outpost, base and city build-up, Earth launches with and without hubs, day-by-day depot refill simulation |
+| `bases/ranking.py` | Transit-hub and settlement rankings with a Monte Carlo weight-sensitivity check |
+| `bases/capabilities.py` | Site-by-capability matrix showing which technologies are reused where |
