@@ -2623,18 +2623,18 @@
   "starship_120": {
    "ship_dry_t": 120.0,
    "payload_t": 44.7362,
-   "tmi_capability": 7705.436141688879,
+   "tmi_capability": 6829.972402996846,
    "fastest_tof_days": 150,
    "fastest_entry_speed": 7499.173166482377,
-   "fastest_tof_no_entry_limit": 80
+   "fastest_tof_no_entry_limit": 90
   },
   "starship_150": {
    "ship_dry_t": 150.0,
    "payload_t": 44.7362,
-   "tmi_capability": 7170.315919635088,
+   "tmi_capability": 6294.852180943055,
    "fastest_tof_days": 150,
    "fastest_entry_speed": 7499.173166482377,
-   "fastest_tof_no_entry_limit": 90
+   "fastest_tof_no_entry_limit": 100
   },
   "nep": [
    {

@@ -27,9 +27,10 @@ class VehicleCase:
     mars_tankers: int
 
 
-# model: PR #12 campaign simulation gives 103 t to LEO (ascent losses, 14% booster return reserve)
-# and 9 tankers per Mars cargo ship; PR #1's ideal vehicle gave 155 t and 4 tankers.
-VEHICLE_CAMPAIGN = VehicleCase("Campaign vehicle (PR #12: 103 t to LEO, 9 tankers)", 103.0, 9 * 103.0 + 30.0, 9)
+# model: campaign simulation with the Mars ship changes (2026-11-01): tankers (standard ship) carry 100 t
+# to LEO; the Mars ship (4th engine, ablator) needs 806 t in LEO from 10 tankers. Before the changes
+# (2026-10-31) it was 103 t and 9 tankers; PR #1's ideal vehicle gave 155 t and 4 tankers.
+VEHICLE_CAMPAIGN = VehicleCase("Campaign vehicle (Mars ship changes: 100 t to LEO, 10 tankers)", 100.0, 806.0, 10)
 VEHICLE_IDEAL = VehicleCase("Ideal vehicle (PR #1: 155 t to LEO, 4 tankers)", 155.0, 546.0, 4)
 
 

@@ -100,6 +100,17 @@ def flight_cost_musd(k: int, cum_flights: float, s: Scenario, expended: bool = F
     return cost / 1e6
 
 
+def _mars_ship_extra_usd(cum_flights: float, s: Scenario) -> float:
+    from .costs import mars_ship_changes_usd
+
+    eng = engine_cost()
+    eng.t1_labour *= s.engine_cost_factor
+    eng.t1_material *= s.engine_cost_factor
+    eng.t1_purchased *= s.engine_cost_factor
+    unit = max(1, int(3 + cum_flights / 6))
+    return mars_ship_changes_usd(VehicleCost(eng, vehicle_unit=unit, engine_unit=unit * 39))
+
+
 @dataclass
 class YearRow:
     year: int
@@ -148,6 +159,7 @@ def project(s: Scenario = BASE) -> list[YearRow]:
         expended = lunar + mars
         r.flights = reusable_flights + expended + sci
         cf = flight_cost_musd(k, cum_flights, s) if k >= 0 else 0.0
+        mars_extra = _mars_ship_extra_usd(cum_flights, s) if mars else 0.0
         cfx = flight_cost_musd(k, cum_flights, s, expended=True) if k >= 0 else 0.0
         cum_flights += r.flights
 
@@ -162,7 +174,7 @@ def project(s: Scenario = BASE) -> list[YearRow]:
         r.cost = {
             "development": s.dev_musd.get(y, 0.0) * s.dev_cost_factor,
             "flight operations": (reusable_flights + sci) * cf,
-            "expended ships": expended * cfx,
+            "expended ships": expended * cfx + mars * mars_extra / 1e6,
             "anomaly reserve": ANOMALY_RESERVE * ((reusable_flights + sci) * cf + expended * cfx),
             "mission operations": (mars * I.MISSION_OPS_MARS_USD + lunar * I.MISSION_OPS_MOON_USD) / 1e6,
             "station logistics delivery": 0.6 * r.revenue["LEO station logistics"],
@@ -274,7 +286,8 @@ ROUNDS = [  # estimate; sized so base-case cash stays positive with a buffer of 
     Round("Series B", 2028, 900, 1_800, "Full engine hot fire at rated chamber pressure"),
     Round("Series C", 2029, 1_800, 4_000, "Engine qualification; booster structural test article"),
     Round("Series D", 2030, 2_500, 7_500, "Integrated stack on pad; anchor government contract signed"),
-    Round("Series E / strategic", 2032, 1_500, 14_000, "Booster and ship recovered and reflown"),
+    # Re-sized 2026-11-01 for the roadmap schedule (first orbit 2032.6) and the campaign tanker count.
+    Round("Series E / strategic", 2032, 2_000, 12_000, "First orbital flight (roadmap P50 2032.6) and booster catch attempts"),
 ]
 CONTINGENT_DEBT_MUSD = 3_000  # asset-backed fleet debt held in reserve for the bear case (estimate)
 

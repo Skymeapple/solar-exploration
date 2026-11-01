@@ -43,20 +43,22 @@ EARTH_RETURN_TO_LEO_DV = 150.0  # m/s, estimate: aerocapture into LEO plus circu
 class Ship:
     """Starship-class upper stage. Defaults reproduce raptor_sim.mission.vehicle_performance."""
 
-    dry_t: float = 100.0  # public Block 1 figure; 150 t closes the LEO-payload gap
+    dry_t: float = 107.6  # raptor_sim.mission.Vehicle: 100 t public + 4th sea-level engine + ablator (campaign fixes)
     propellant_t: float = 1_600.0  # public
     isp_space: float = 362.7  # s, RVac from the engine model
     isp_surface: float = 348.0  # s, sea-level engines in vacuum, from the engine model
     max_payload_t: float = 150.0  # estimate: structural limit
-    payload_to_leo_t: float = 155.5  # t, from the vehicle model (for tanker counts)
+    payload_to_leo_t: float = 130.7  # t, standard (tanker) ship from the vehicle model, 14% booster reserve
 
     @classmethod
-    def from_engine_model(cls, dry_t: float = 100.0) -> "Ship":
+    def from_engine_model(cls, dry_t: float = 107.6) -> "Ship":
+        """Long-haul ship of dry mass ``dry_t``; tanker counts use the standard (tanker) ship."""
         from ..mission import Vehicle, vehicle_performance
 
-        v = Vehicle(ship_dry_t=dry_t)
+        v = Vehicle(ship_dry_t=dry_t, ship_sl_engines=4)
         p = vehicle_performance(v)
-        return cls(dry_t, v.ship_propellant_t, p.rvac_isp, p.sl_vac_isp, payload_to_leo_t=p.payload_to_leo_t)
+        tanker = vehicle_performance(Vehicle())
+        return cls(dry_t, v.ship_propellant_t, p.rvac_isp, p.sl_vac_isp, payload_to_leo_t=tanker.payload_to_leo_t)
 
     def payload(self, dv_space: float, dv_surface: float) -> float:
         """Payload the propellant could push over the hop with full tanks, before the

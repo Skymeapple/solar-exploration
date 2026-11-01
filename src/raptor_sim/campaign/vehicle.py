@@ -138,6 +138,12 @@ class Stack:
                 + self.ship_ablator_mass + self.ship_dry_growth)
 
 
+def tanker_stack(stack: Stack) -> Stack:
+    """The same stack flying a tanker: tankers stay in Earth orbit, so they keep the public
+    three sea-level engines and the tile heat shield (no Mars changes)."""
+    return replace(stack, ship_sl_engines=3, ship_ablator_mass=0.0)
+
+
 def ascent_cd(mach: float) -> float:
     """Drag coefficient of the stacked vehicle, nose first, at zero angle of attack. [est]
 

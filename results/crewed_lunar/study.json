@@ -1852,8 +1852,8 @@
    "name": "A. NRHO staging (Orion + refilled lander)",
    "feasible": false,
    "propellant_t": 1621.3830717617495,
-   "tankers": 11,
-   "launches": 13,
+   "tankers": 13,
+   "launches": 15,
    "burns": [
     {
      "name": "trans-lunar injection",
@@ -4209,8 +4209,8 @@
    "name": "C. Direct crewed ship (no Orion)",
    "feasible": false,
    "propellant_t": 2043.7852769639098,
-   "tankers": 14,
-   "launches": 16,
+   "tankers": 16,
+   "launches": 18,
    "burns": [
     {
      "name": "trans-lunar injection",
@@ -6401,36 +6401,36 @@
   {
    "dry_t": 80,
    "prop_t": 1110.7995147419517,
-   "tankers_155": 8,
-   "tankers_105": 11,
-   "feasible": true
-  },
-  {
-   "dry_t": 100,
-   "prop_t": 1364.3570722066154,
    "tankers_155": 9,
    "tankers_105": 14,
    "feasible": true
   },
   {
+   "dry_t": 100,
+   "prop_t": 1364.3570722066154,
+   "tankers_155": 11,
+   "tankers_105": 18,
+   "feasible": true
+  },
+  {
    "dry_t": 120,
    "prop_t": 1621.3830717617495,
-   "tankers_155": 11,
-   "tankers_105": 16,
+   "tankers_155": 13,
+   "tankers_105": 21,
    "feasible": false
   },
   {
    "dry_t": 140,
    "prop_t": 1882.420364321758,
-   "tankers_155": 13,
-   "tankers_105": 19,
+   "tankers_155": 15,
+   "tankers_105": 24,
    "feasible": false
   },
   {
    "dry_t": 160,
    "prop_t": 2147.321727745701,
-   "tankers_155": 15,
-   "tankers_105": 21,
+   "tankers_155": 17,
+   "tankers_105": 28,
    "feasible": false
   }
  ],
@@ -6443,7 +6443,7 @@
    "sortie_propellant_t": 350.6717922748142,
    "from_moon_t": 111.71480216171945,
    "from_earth_t": 238.95699011309478,
-   "earth_launches_per_sortie": 6.791296234318467,
+   "earth_launches_per_sortie": 7.923178940038211,
    "ice_regolith_t": 2246.281197199128,
    "notes": [
     "Lunar ice gives oxygen and hydrogen, not carbon, so methane comes from Earth.",
@@ -6458,7 +6458,7 @@
    "sortie_propellant_t": 1299.1064043345855,
    "from_moon_t": 1016.6919686096758,
    "from_earth_t": 282.4144357249097,
-   "earth_launches_per_sortie": 8.026382040332916,
+   "earth_launches_per_sortie": 9.364112380388402,
    "ice_regolith_t": 20442.913635788962,
    "notes": [
     "All oxygen for the next round trip made on the Moon; all methane landed as cargo.",

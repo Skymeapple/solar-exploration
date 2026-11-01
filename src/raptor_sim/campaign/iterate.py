@@ -55,6 +55,11 @@ def propose(rep: CampaignReport) -> tuple[Design, list[str]]:
     if "O2" in failing:
         d = replace(d, q_limit_throttle=33e3)
         changes.append("O2: add a booster throttle bucket holding dynamic pressure near 33 kPa")
+    if "O1" in failing and "O4" not in failing and d.booster_adaptive_draw < 0.04:
+        new = round(d.booster_adaptive_draw + 0.01, 3)
+        changes.append(f"O1: adaptive booster cut-off may draw {new:.0%} of booster propellant from the return reserve "
+                       "on a short launch (booster possibly expended)")
+        d = replace(d, booster_adaptive_draw=new)
     if "O4" in failing:
         why = n.get("booster_failures", {})
         p5 = float(np.percentile(s["booster_margin"], 5)) if len(s["booster_margin"]) else -1.0

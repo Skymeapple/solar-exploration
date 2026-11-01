@@ -56,7 +56,7 @@ Plan (most likely durations, no failures): ENG-DEV → VAC-ENG → ORBITAL-1 →
 | NUC-PROP Megawatt-class nuclear electric propulsion | 19% |
 | SHIP-DEV Ship structure and heat shield | 19% |
 | SURF-POWER Surface fission power, 40 kWe class | 12% |
-| MARS-POWER Mars surface power, about 1 MW: solar arrays plus 360 kW fission | 12% |
+| MARS-POWER Mars surface power, about 1 MW: solar arrays plus 380 kW fission | 12% |
 | MARS-CARGO-1 First Mars cargo landings (2 ships) | 11% |
 | EDL-TEST High-energy Earth entry test (Mars-class heating) | 10% |
 | ENG-QUAL Engine qualification and production line | 9% |
@@ -147,7 +147,7 @@ Whole program, all steps including Earth-side cost to Mars self-sufficiency: P10
 | LUNAR-ISRU Lunar ice mining and oxygen production pilot | 4 → 7 | 2036-03-14 | 30% |
 | HYDROLOX-ENG Hydrogen-oxygen engine for all-lunar tankers | 3 → 7 | 2030-11-01 | 40% |
 | MARS-ISRU-DEV Mars propellant plant: water mining, Sabatier, electrolysis | 4 → 6 | 2030-11-01 | 20% |
-| MARS-POWER Mars surface power, about 1 MW: solar arrays plus 360 kW fission | 5 → 7 | 2032-10-31 | 20% |
+| MARS-POWER Mars surface power, about 1 MW: solar arrays plus 380 kW fission | 5 → 7 | 2032-10-31 | 20% |
 | SHIP-MARS-MOD Mars ship changes: 4th sea-level engine, ablative shield, steep thin-air entry | 5 → 7 | 2031-05-02 | 20% |
 | ISRU-RUN ISRU pilot makes its first full ship load | 6 → 8 | 2035-03-24 | 20% |
 | MSR-MAV Sample return lander, 335 kg ascent rocket, Earth entry capsule | 4 → 6 | 2028-08-31 | 20% |
@@ -209,36 +209,36 @@ Whole program, all steps including Earth-side cost to Mars self-sufficiency: P10
 | settlement | SETTLEMENT-100 | 2055-08-14 | MARS-SELF | - |
 | self_sufficiency | MARS-SELF | 2093-08-13 | - | - |
 
-## Launch campaign: Campaign vehicle (PR #12: 103 t to LEO, 9 tankers)
+## Launch campaign: Campaign vehicle (Mars ship changes: 100 t to LEO, 10 tankers)
 
 | Year | Mars ships | Lunar landings | Tankers | Commercial LEO | Launches | Propellant (kt) | Methane (kt) | Peak launches/month | Pads | Ships built | Engines built | Mars ISRU power (kW) |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 2030 | 0 | 0 | 0 | 2 | 2 | 10 | 2 | 0.2 | 1 | 1 | 39 | 0 |
 | 2031 | 0 | 0 | 0 | 5 | 5 | 26 | 6 | 0.4 | 1 | 1 | 39 | 0 |
 | 2032 | 0 | 0 | 0 | 9 | 9 | 47 | 10 | 0.8 | 1 | 1 | 39 | 0 |
-| 2033 | 4 | 4 | 100 | 14 | 122 | 640 | 139 | 16.8 | 5 | 14 | 183 | 0 |
-| 2034 | 0 | 2 | 32 | 19 | 53 | 278 | 60 | 4.4 | 2 | 5 | 96 | 0 |
-| 2035 | 6 | 2 | 86 | 24 | 118 | 620 | 135 | 19.8 | 5 | 14 | 183 | 1,266 |
-| 2036 | 0 | 2 | 32 | 29 | 63 | 331 | 72 | 5.2 | 2 | 6 | 102 | 0 |
-| 2037 | 3 | 3 | 75 | 34 | 115 | 604 | 131 | 14.6 | 4 | 12 | 171 | 0 |
-| 2038 | 0 | 2 | 32 | 38 | 72 | 378 | 82 | 6.0 | 2 | 6 | 102 | 0 |
-| 2039 | 9 | 2 | 113 | 42 | 166 | 872 | 189 | 28.8 | 8 | 19 | 246 | 0 |
-| 2040 | 0 | 2 | 32 | 45 | 79 | 415 | 90 | 6.6 | 2 | 6 | 102 | 0 |
-| 2041 | 4 | 2 | 68 | 45 | 119 | 625 | 136 | 16.6 | 5 | 12 | 171 | 0 |
-| 2042 | 0 | 2 | 32 | 45 | 79 | 415 | 90 | 6.6 | 2 | 6 | 102 | 0 |
-| 2043 | 5 | 4 | 109 | 45 | 163 | 856 | 186 | 21.9 | 6 | 17 | 234 | 0 |
-| 2044 | 0 | 8 | 72 | 45 | 125 | 656 | 143 | 10.4 | 3 | 14 | 183 | 0 |
-| 2045 | 18 | 8 | 107 | 45 | 178 | 934 | 203 | 14.8 | 4 | 34 | 336 | 0 |
-| 2046 | 0 | 8 | 72 | 45 | 125 | 656 | 143 | 10.4 | 3 | 14 | 183 | 0 |
-| 2047 | 0 | 8 | 72 | 45 | 125 | 656 | 143 | 10.4 | 3 | 14 | 183 | 0 |
-| 2048 | 18 | 8 | 107 | 45 | 178 | 934 | 203 | 14.8 | 4 | 34 | 336 | 0 |
-| 2049 | 0 | 8 | 72 | 45 | 125 | 656 | 143 | 10.4 | 3 | 14 | 183 | 0 |
-| 2050 | 18 | 8 | 107 | 45 | 178 | 934 | 203 | 14.8 | 4 | 34 | 336 | 0 |
-| 2051 | 0 | 8 | 72 | 45 | 125 | 656 | 143 | 10.4 | 3 | 14 | 183 | 0 |
-| 2052 | 18 | 8 | 107 | 45 | 178 | 934 | 203 | 14.8 | 4 | 34 | 336 | 0 |
-| 2053 | 0 | 8 | 72 | 45 | 125 | 656 | 143 | 10.4 | 3 | 14 | 183 | 0 |
-| 2054 | 18 | 8 | 107 | 45 | 178 | 934 | 203 | 14.8 | 4 | 34 | 336 | 0 |
-| 2055 | 0 | 6 | 54 | 45 | 105 | 551 | 120 | 8.8 | 3 | 11 | 165 | 0 |
+| 2033 | 4 | 4 | 96 | 14 | 118 | 620 | 135 | 17.2 | 5 | 14 | 183 | 0 |
+| 2034 | 0 | 2 | 28 | 19 | 49 | 257 | 56 | 4.1 | 2 | 5 | 63 | 0 |
+| 2035 | 6 | 2 | 88 | 24 | 120 | 630 | 137 | 21.0 | 6 | 14 | 183 | 1,266 |
+| 2036 | 0 | 2 | 28 | 29 | 59 | 310 | 67 | 4.9 | 2 | 5 | 96 | 0 |
+| 2037 | 3 | 3 | 72 | 34 | 112 | 588 | 128 | 14.8 | 4 | 12 | 171 | 0 |
+| 2038 | 0 | 2 | 28 | 38 | 68 | 357 | 78 | 5.7 | 2 | 6 | 102 | 0 |
+| 2039 | 9 | 2 | 118 | 42 | 171 | 898 | 195 | 30.8 | 8 | 19 | 246 | 0 |
+| 2040 | 0 | 2 | 28 | 45 | 75 | 394 | 86 | 6.2 | 2 | 6 | 102 | 0 |
+| 2041 | 4 | 2 | 68 | 45 | 119 | 625 | 136 | 17.2 | 5 | 12 | 171 | 0 |
+| 2042 | 0 | 2 | 28 | 45 | 75 | 394 | 86 | 6.2 | 2 | 6 | 102 | 0 |
+| 2043 | 5 | 4 | 106 | 45 | 160 | 840 | 183 | 22.5 | 6 | 17 | 234 | 0 |
+| 2044 | 0 | 8 | 64 | 45 | 117 | 614 | 134 | 9.8 | 3 | 14 | 183 | 0 |
+| 2045 | 18 | 8 | 103 | 45 | 174 | 914 | 199 | 14.5 | 4 | 34 | 336 | 0 |
+| 2046 | 0 | 8 | 64 | 45 | 117 | 614 | 134 | 9.8 | 3 | 14 | 183 | 0 |
+| 2047 | 0 | 8 | 64 | 45 | 117 | 614 | 134 | 9.8 | 3 | 14 | 183 | 0 |
+| 2048 | 18 | 8 | 103 | 45 | 174 | 914 | 199 | 14.5 | 4 | 34 | 336 | 0 |
+| 2049 | 0 | 8 | 64 | 45 | 117 | 614 | 134 | 9.8 | 3 | 14 | 183 | 0 |
+| 2050 | 18 | 8 | 103 | 45 | 174 | 914 | 199 | 14.5 | 4 | 34 | 336 | 0 |
+| 2051 | 0 | 8 | 64 | 45 | 117 | 614 | 134 | 9.8 | 3 | 14 | 183 | 0 |
+| 2052 | 18 | 8 | 103 | 45 | 174 | 914 | 199 | 14.5 | 4 | 34 | 336 | 0 |
+| 2053 | 0 | 8 | 64 | 45 | 117 | 614 | 134 | 9.8 | 3 | 14 | 183 | 0 |
+| 2054 | 18 | 8 | 103 | 45 | 174 | 914 | 199 | 14.5 | 4 | 34 | 336 | 0 |
+| 2055 | 0 | 6 | 48 | 45 | 99 | 520 | 113 | 8.2 | 3 | 11 | 132 | 0 |
 
 ## Launch campaign: Ideal vehicle (PR #1: 155 t to LEO, 4 tankers)
 

@@ -139,12 +139,15 @@ def main() -> None:
     md.append("")
 
     # 5. Sensitivities for architecture A
-    md += ["## 5. Sensitivity of architecture A", "",
-           "Tanker launches for two vehicle cases: the model as built (155 t to LEO) and with ship dry mass "
-           "150 t (105 t to LEO, close to SpaceX's stated 100 t).", "",
-           "| Lander dry mass | Propellant in LEO | Closes? | Tankers (155 t/flight) | Tankers (105 t/flight) |",
-           "| --- | --- | --- | --- | --- |"]
     heavy = Vehicle(ship_dry_t=150.0)
+    from raptor_sim.mission import vehicle_performance
+    p_std = vehicle_performance(Vehicle()).payload_to_leo_t
+    p_heavy = vehicle_performance(heavy).payload_to_leo_t
+    md += ["## 5. Sensitivity of architecture A", "",
+           f"Tanker launches for two vehicle cases: the model as built ({p_std:.0f} t to LEO) and with ship dry mass "
+           f"150 t ({p_heavy:.0f} t to LEO).", "",
+           f"| Lander dry mass | Propellant in LEO | Closes? | Tankers ({p_std:.0f} t/flight) | Tankers ({p_heavy:.0f} t/flight) |",
+           "| --- | --- | --- | --- | --- |"]
     sweep = []
     for dry in (80, 100, 120, 140, 160):
         aa = replace(arch.LunarAssumptions(), hls_dry_t=float(dry))

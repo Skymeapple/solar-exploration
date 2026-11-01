@@ -38,7 +38,7 @@ MARKET_CITED = {
 
 # --- Engineering figures from this repository (model) ----------------------
 MODEL = {
-    "engine_mass_kg": 2_320.0,           # model: PR #2 BOM
+    "engine_mass_kg": 1_935.0,           # model: PR #2 BOM at the 295 bar design point (was 2,320 kg at 300 bar)
     "payload_leo_model_t": 155.0,        # model: PR #1 vehicle, 100 t ship dry
     "payload_leo_stated_t": 100.0,       # cited by PR #1 summary as SpaceX Block 3 statement
     "mars_prop_in_leo_t": 546.0,         # model: PR #1 Mars study
@@ -55,6 +55,41 @@ MODEL = {
     "ship_isp_vac_s": 362.7,             # model: PR #1
     "mars_dv_from_leo_ms": 3_951.0 + 700.0,  # model: TMI + landing
 }
+# ^ PR #1 ideal-vehicle values; _apply_campaign() below replaces the Mars and payload ones.
+
+# --- Mars campaign numbers (model, PR #12 campaign with the Mars ship changes) -------------
+# The Mars ship carries a 4th sea-level engine and a 6 t ablative heat shield; tankers fly the
+# standard ship. The campaign simulation (results/campaign/campaign.json, written by
+# scripts/run_campaign.py) replaces the PR #1 ideal-vehicle numbers above when it is present.
+CAMPAIGN_FILE = __import__("pathlib").Path(__file__).resolve().parents[3] / "results" / "campaign" / "campaign.json"
+MARS_SHIP_DRY_T = 109.8    # model: campaign Stack, 4 SL engines + ablator (checked by tests/test_econ.py)
+TANKER_SHIP_DRY_T = 101.8  # model: campaign tanker_stack, public 3 + 3 engines at 1,935 kg
+ABLATOR_USD_T1 = 15e6      # estimate: 6 t of PICA-class windward ablator at ~$2,500/kg
+MODEL_SOURCE = "PR #1 ideal vehicle"
+
+
+def _apply_campaign() -> None:
+    global MODEL_SOURCE
+    import json
+    import math
+
+    try:
+        n = json.loads(CAMPAIGN_FILE.read_text())["numbers"]
+    except (OSError, KeyError, ValueError):
+        return
+    ve = 345.8 * 9.80665  # sea-level engine vacuum Isp after film cooling, campaign EngineData [model]
+    m_end = (MARS_SHIP_DRY_T + MODEL["mars_payload_t"]) * 1e3
+    landing_dv = ve * math.log((m_end + n["mars_entry"]["landing_propellant_used_t"] * 1e3) / m_end)
+    MODEL.update(
+        payload_leo_model_t=n["payload_capability_t"],
+        mars_prop_in_leo_t=n["leo_required_t"],
+        mars_tankers=int(round(n["tankers_median"])),
+        tanker_delivery_t=n["tanker_delivery_t"],
+        mars_dv_from_leo_ms=n["transfer"]["tmi_impulsive"] + n["tmi_gravity_loss"] + landing_dv,
+        ship_dry_t=TANKER_SHIP_DRY_T,
+    )
+    MODEL_SOURCE = f"Mars campaign simulation ({CAMPAIGN_FILE.name})"
+
 
 # --- Engine manufacturing (estimate) ---------------------------------------
 # Raw-material price per kg (powder or forging stock) and buy-to-fly ratio.
@@ -105,3 +140,5 @@ ENGINE_UNIT_INDEX = 2_000            # engine unit number at maturity
 MISSION_OPS_MARS_USD = 40e6          # cruise operations, surface ops for one cargo landing
 MISSION_OPS_MOON_USD = 15e6
 LUNAR_DV_FROM_LEO_MS = 3_200 + 900 + 2_000  # TLI + lunar orbit insertion + landing, estimate
+
+_apply_campaign()

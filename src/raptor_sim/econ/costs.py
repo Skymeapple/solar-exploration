@@ -154,8 +154,14 @@ def lunar_tankers(m: dict | None = None, payload_t: float | None = None) -> tupl
     mars = mass_ratio(m["mars_dv_from_leo_ms"], isp) - 1
     moon = mass_ratio(I.LUNAR_DV_FROM_LEO_MS, isp) - 1
     prop = m["mars_prop_in_leo_t"] * moon / mars
-    per_tanker = m["mars_prop_in_leo_t"] / m["mars_tankers"]
+    # Campaign delivery per tanker when known (the Mars ship's own residual is not tanker propellant).
+    per_tanker = m.get("tanker_delivery_t") or m["mars_prop_in_leo_t"] / m["mars_tankers"]
     return prop, math.ceil(prop / per_tanker)
+
+
+def mars_ship_changes_usd(vc: "VehicleCost") -> float:
+    """Extra build cost of a Mars ship over a tanker: one more sea-level engine and the ablator (estimate)."""
+    return vc.engine_price() + wright(I.ABLATOR_USD_T1, vc.vehicle_unit, I.LEARNING_VEHICLE)
 
 
 @dataclass
@@ -178,9 +184,11 @@ def missions(vc: VehicleCost, payload_leo_t: float) -> list[Mission]:
     m = vc.m
     out = [Mission("LEO launch, reusable", 1, 0, payload_leo_t, reuse, {"flight": reuse})]
     nt = m["mars_tankers"]
-    mars_cost = nt * reuse + expend + I.MISSION_OPS_MARS_USD
+    mars_ship_extra = mars_ship_changes_usd(vc)
+    mars_cost = nt * reuse + expend + mars_ship_extra + I.MISSION_OPS_MARS_USD
     out.append(Mission("Mars cargo, 100 t landed", nt + 1, 1, m["mars_payload_t"], mars_cost,
                        {"tanker flights": nt * reuse, "cargo ship (stays on Mars)": expend,
+                        "Mars ship changes (4th engine, ablator)": mars_ship_extra,
                         "mission operations": I.MISSION_OPS_MARS_USD}))
     prop, lt = lunar_tankers(m)
     moon_cost = lt * reuse + expend + I.MISSION_OPS_MOON_USD

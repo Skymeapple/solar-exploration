@@ -75,8 +75,8 @@
   {
    "id": "L10",
    "name": "Baseline tanker launches vs mission.py",
-   "value": 3.3159276360015575,
-   "target": "ceil equals 4",
+   "value": 5.755663808277413,
+   "target": "ceil equals 6",
    "passed": true,
    "note": ""
   }
@@ -723,70 +723,70 @@
   "scenarios": [
    {
     "name": "A. Earth only, LEO refill (baseline)",
-    "earth_launches": 4.3159276360015575,
+    "earth_launches": 6.755663808277413,
     "lunar_water_t": 0.0,
     "lunar_oxygen_t": 0.0,
-    "notes": "546 t propellant in LEO"
+    "notes": "782 t propellant in LEO"
    },
    {
     "name": "B. NRHO departure, lunar LOX + Earth CH4 via the surface",
-    "earth_launches": 8.090402076244398,
-    "lunar_water_t": 317.045554689384,
-    "lunar_oxygen_t": 281.5836178201579,
-    "notes": "352 t Earth propellant to reach NRHO, 133 t refilled at NRHO, 0.22 shuttle trips, 78 t CH4 landed on the Moon"
+    "earth_launches": 13.8398730178924,
+    "lunar_water_t": 559.3314274578323,
+    "lunar_oxygen_t": 496.76951647656495,
+    "notes": "365 t Earth propellant to reach NRHO, 234 t refilled at NRHO, 0.40 shuttle trips, 138 t CH4 landed on the Moon"
    },
    {
     "name": "C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4",
-    "earth_launches": 1.7208538339133819,
-    "lunar_water_t": 1298.1765842142015,
-    "lunar_oxygen_t": 1152.973929915472,
-    "notes": "403 t lunar LOX and 112 t Earth CH4 in LEO; 1.0 LEO tanker trips"
+    "earth_launches": 2.2512312626690028,
+    "lunar_water_t": 1894.466710148867,
+    "lunar_oxygen_t": 1682.5682687972173,
+    "notes": "589 t lunar LOX and 164 t Earth CH4 in LEO; 1.5 LEO tanker trips"
    }
   ],
   "scenarios_150t_dry": [
    {
     "name": "A. Earth only, LEO refill (baseline)",
-    "earth_launches": 7.180932614430858,
+    "earth_launches": 12.655359396255944,
     "lunar_water_t": 0.0,
     "lunar_oxygen_t": 0.0,
-    "notes": "682 t propellant in LEO"
+    "notes": "971 t propellant in LEO"
    },
    {
     "name": "B. NRHO departure, lunar LOX + Earth CH4 via the surface",
-    "earth_launches": 15.694926465257772,
-    "lunar_water_t": 396.30694336173,
-    "lunar_oxygen_t": 351.9795222751973,
-    "notes": "439 t Earth propellant to reach NRHO, 166 t refilled at NRHO, 0.28 shuttle trips, 98 t CH4 landed on the Moon"
+    "earth_launches": 30.459203760355535,
+    "lunar_water_t": 694.0256979047409,
+    "lunar_oxygen_t": 616.3980664155346,
+    "notes": "453 t Earth propellant to reach NRHO, 291 t refilled at NRHO, 0.49 shuttle trips, 171 t CH4 landed on the Moon"
    },
    {
     "name": "C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4",
-    "earth_launches": 2.343681003137143,
-    "lunar_water_t": 1641.6065130207498,
-    "lunar_oxygen_t": 1457.9907970209267,
-    "notes": "510 t lunar LOX and 142 t Earth CH4 in LEO; 1.3 LEO tanker trips"
+    "earth_launches": 3.5337737817947703,
+    "lunar_water_t": 2368.8706597613645,
+    "lunar_oxygen_t": 2103.909550717837,
+    "notes": "736 t lunar LOX and 205 t Earth CH4 in LEO; 1.8 LEO tanker trips"
    }
   ],
   "sorties": [
    {
     "name": "Earth propellant only",
-    "earth_launches": 9.802302023289728,
+    "earth_launches": 11.469680613184268,
     "lunar_o2_t": 0.0,
     "notes": "1399 t loaded in LEO"
    },
    {
     "name": "Lunar LOX on the surface, ascent CH4 carried down",
-    "earth_launches": 5.6104720072258525,
+    "earth_launches": 6.48381199190448,
     "lunar_o2_t": 103.47025012602381,
     "notes": "747 t in LEO, 132 t loaded on the Moon"
    },
    {
     "name": "Full lunar methalox (needs lunar carbon, see isru)",
-    "earth_launches": 4.682292965566216,
+    "earth_launches": 5.379812368588214,
     "lunar_o2_t": 103.47025012602381,
     "notes": "602 t in LEO"
    }
   ],
-  "launches_per_t_to_lunar_surface": 0.06421081069729788
+  "launches_per_t_to_lunar_surface": 0.07447970908982525
  },
  "buildup": [
   {
@@ -800,7 +800,7 @@
    "power_t": 1.7380328848243347,
    "landed": 17.738032884824335,
    "landings": 1,
-   "launches": 1.1389734717099
+   "launches": 1.3211235290874703
   },
   {
    "phase": "1. Outpost (4 crew, rotating)",
@@ -813,7 +813,7 @@
    "power_t": 13.904263078594678,
    "landed": 99.16623019377035,
    "landings": 1,
-   "launches": 6.367544034536853
+   "launches": 7.38587197636666
   },
   {
    "phase": "2. Propellant plant",
@@ -826,7 +826,7 @@
    "power_t": 60.046458536661774,
    "landed": 141.49257940971557,
    "landings": 2,
-   "launches": 9.085353231549634
+   "launches": 10.538326152804615
   },
   {
    "phase": "3. Transit spaceport",
@@ -839,7 +839,7 @@
    "power_t": 164.3001574489406,
    "landed": 610.9319413334047,
    "landings": 7,
-   "launches": 39.22843523389194
+   "launches": 45.50203326419417
   },
   {
    "phase": "4. Settlement (about 100 residents)",
@@ -852,7 +852,7 @@
    "power_t": 474.32887066647174,
    "landed": 1193.3851980597826,
    "landings": 12,
-   "launches": 76.62823104157404
+   "launches": 88.8829823835961
   }
  ],
  "reuse": [

@@ -4,14 +4,14 @@
 
 | Gate | Result | Detail |
 | --- | --- | --- |
-| G0 Requirements | PASS | 100 t to Mars needs 546 t of propellant in LEO (4 tanker launches); return with 20 t needs 642 t made on Mars |
-| G1 Thermochemistry | PASS | Tc CEA 3762 K vs Cantera 3766 K (0.10%); MW 22.63 vs 22.64 g/mol (0.04%) |
-| G2 Cycle balance | PASS | fuel preburner 569 bar, pump 34.3 MW; ox preburner 772 bar, pump 56.9 MW |
-| G3 Performance | PASS | Isp SL 326.7 s (0.10%), vac 348.0 s (0.29%); exit pressure 0.95 bar, separation margin 2.34 |
-| G4 Cooling | not run | regenerative cooling model not built yet |
-| G5 Turbopumps | not run | pump detail model not built yet |
-| G6 Engine system | not run | mass model not built yet |
-| G7 Benchmark | PASS | largest error Vacuum specific impulse, sea-level nozzle 0.29%; sanity check: flow 704 kg/s vs quoted 650 (8%) |
+| G0 Requirements | PASS | 100 t to Mars needs 782 t of propellant in LEO (6 tanker launches); return with 20 t needs 682 t made on Mars |
+| G1 Thermochemistry | PASS | Tc CEA 3760 K vs Cantera 3764 K (0.10%); MW 22.62 vs 22.63 g/mol (0.04%) |
+| G2 Cycle balance | PASS | fuel preburner 551 bar, pump 33.3 MW; ox preburner 710 bar, pump 52.4 MW |
+| G3 Performance | PASS | Isp SL 326.3 s (0.23%), vac 348.2 s (0.34%); exit pressure 0.92 bar, separation margin 2.28 |
+| G4 Cooling | PASS | 5/5 checks pass |
+| G5 Turbopumps | PASS | 18/18 checks pass |
+| G6 Engine system | PASS | 2/2 checks pass; dry mass 1,935 kg, sea-level thrust-to-weight 119 |
+| G7 Benchmark | PASS | largest error Main chamber pressure 1.67%; sanity check: flow 705 kg/s vs quoted 650 (8%) |
 
 ## Optimizer (300 designs, 187 passed every gate)
 
@@ -40,24 +40,24 @@ Why designs failed:
 
 | Quantity | Reference engine | Optimized engine |
 | --- | --- | --- |
-| Payload to LEO, reusable (t) | 155 | 158 |
-| Liftoff thrust-to-weight | 1.31 | 1.31 |
+| Payload to LEO, reusable (t) | 131 | 133 |
+| Liftoff thrust-to-weight | 1.32 | 1.32 |
 | Vacuum engine Isp (s) | 362.7 | 362.3 |
 | Trans-Mars injection from LEO (m/s) | 3951 | 3951 |
 | Transfer time, minimum energy (days) | 259 | 259 |
-| Propellant in LEO to land 100 t on Mars (t) | 546 | 546 |
-| Tanker launches needed | 4 | 4 |
+| Propellant in LEO to land 100 t on Mars (t) | 782 | 781 |
+| Tanker launches needed | 6 | 6 |
 | Mars surface to Earth transfer (m/s) | 6401 | 6401 |
-| Propellant made on Mars for return with 20 t (t) | 642 | 638 |
+| Propellant made on Mars for return with 20 t (t) | 683 | 678 |
 | Mission closes | yes | yes |
 
 ## Sensitivity: ship dry mass
 
 | Ship dry mass (t) | Payload to LEO (t) | Tanker launches |
 | --- | --- | --- |
-| 100 | 158 | 4 |
-| 125 | 133 | 5 |
-| 150 | 108 | 7 |
-| 175 | 83 | 9 |
+| 100 | 133 | 6 |
+| 125 | 108 | 8 |
+| 150 | 83 | 12 |
+| 175 | 58 | 18 |
 
 SpaceX states about 100 t to LEO for Block 3. Raptor Vacuum is quoted at 380 s.

@@ -16,6 +16,13 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass, field
 
+
+def _mission_landing_dv() -> float:
+    """Mars landing delta-v shared with raptor_sim.mission (campaign-calibrated, 1,540 m/s)."""
+    from ..mission import MissionAssumptions
+
+    return MissionAssumptions().dv_mars_landing
+
 AU = 1.495978707e11
 SOLAR_CONSTANT = 1361.0  # W/m^2 at 1 AU (literature: Kopp & Lean 2011)
 
@@ -135,7 +142,7 @@ SITES: dict[str, Site] = {
         Site(
             "mars_arcadia", "Mars, Arcadia Planitia (mid-latitude ice)", "mars", "sun",
             radius_m=3.3895e6, gm=4.282837e13, pressure_bar=0.006, aero=True,
-            ascent_dv=4_100.0, landing_dv=700.0, low_orbit_alt_m=300e3,
+            ascent_dv=4_100.0, landing_dv=_mission_landing_dv(), low_orbit_alt_m=300e3,
             t_min_k=150, t_max_k=270, night_h=12.3, day_fraction=0.5, solar_attenuation=0.55,
             rad_gcr_msv_d=0.67,
             resources=Resources(0.5, "atmosphere", nitrogen=True, metals=0.8),

@@ -24,7 +24,7 @@ import math
 from dataclasses import dataclass, replace
 
 from ..constants import G0
-from ..mission import MissionAssumptions, Vehicle, mars_mission, vehicle_performance
+from ..mission import MissionAssumptions, Vehicle, mars_mission, mars_ship, vehicle_performance
 from . import depot, orbits
 from .provenance import Value
 
@@ -98,7 +98,7 @@ def scenario_a(c: Context) -> MarsScenario:
 
 def scenario_b(c: Context) -> MarsScenario:
     cargo = c.m.mars_cargo_requirement_t
-    end = c.v.ship_dry_t + cargo
+    end = mars_ship(c.v).ship_dry_t + cargo
     # NRHO -> Mars, then landing; the ship arrives at NRHO dry except what it refills.
     mars_legs = [(orbits.mars_departure("NRHO"), c.ve_vac), (c.m.dv_mars_landing, c.ve_sl)]
     prop_nrho = prop_for(end, *mars_legs)

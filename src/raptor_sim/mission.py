@@ -54,11 +54,15 @@ class MissionAssumptions:
     dv_to_leo: float = 9_400.0  # m/s including gravity and drag losses, assumption
     leo_altitude: float = 300e3  # m
     tmi_margin: float = 1.10  # covers non-Hohmann windows and finite burns
-    dv_mars_landing: float = 700.0  # m/s after aerocapture and entry, assumption
+    # Mars retropropulsion after entry. Was 700 m/s (assumption); the Mars campaign's 6-DOF-lite EDL
+    # simulation (raptor_sim.campaign) needs about 1,540 m/s equivalent: 121 t burned nominal by the
+    # 109.8 t Mars ship with 100 t cargo at the steeper -12.4 deg entry (135 t loaded).
+    dv_mars_landing: float = 1_540.0  # m/s, model (campaign P6, 2026-11-01)
+    mars_entry_fpa_deg: float = -12.4  # entry flight-path angle at 125 km, steepened for thin-air robustness (campaign R6)
     dv_mars_ascent_to_lmo: float = 4_100.0  # m/s Mars surface to low orbit incl. losses, assumption
     lmo_altitude: float = 300e3  # m
     dv_earth_return_entry: float = 0.0  # direct entry at Earth, no capture burn
-    booster_landing_reserve: float = 0.08  # fraction of booster propellant kept for return, assumption
+    booster_landing_reserve: float = 0.14  # fraction kept for return; campaign booster-return sim needs 14% (was 8%)
     ship_landing_reserve_t: float = 30.0  # t kept by every ship for landing, assumption
     mars_cargo_requirement_t: float = 100.0  # G0 requirement: cargo landed on Mars
 
@@ -71,11 +75,28 @@ class Vehicle:
     booster_dry_t: float = 275.0  # public
     booster_engines: int = 33  # public
     ship_propellant_t: float = 1_600.0  # public
+    # Standard ship: what tankers and lunar ships fly. The Mars cargo ship adds the campaign
+    # design changes on top of this, see mars_ship().
     ship_dry_t: float = 100.0  # Block 1 public; Block 3 not stated
     ship_sl_engines: int = 3  # public
     ship_vac_engines: int = 3  # public
     vac_eps: float = 80.0  # Raptor Vacuum area ratio, public (low confidence)
     engine: EngineDesign = field(default_factory=EngineDesign)
+
+
+# Mars cargo ship changes from the Mars campaign (PR #12), now part of the main design:
+# a 4th sea-level engine so the ship lands with one engine out (risk R7, +1.63 t at the public
+# engine mass) and an ablative windward heat shield for the 12.3 km/s Earth return (risk R9, +6 t).
+# Tankers and lunar ships keep the standard ship (raptor_sim.campaign.vehicle.tanker_stack).
+MARS_SHIP_ADDED_ENGINES = 1
+MARS_SHIP_ADDED_DRY_T = 1.63 + 6.0
+
+
+def mars_ship(v: "Vehicle | None" = None) -> "Vehicle":
+    """The Mars cargo ship: the standard ship ``v`` plus the campaign design changes."""
+    v = v or Vehicle()
+    return replace(v, ship_dry_t=v.ship_dry_t + MARS_SHIP_ADDED_DRY_T,
+                   ship_sl_engines=v.ship_sl_engines + MARS_SHIP_ADDED_ENGINES)
 
 
 @dataclass(frozen=True)
@@ -139,9 +160,13 @@ def mars_mission(
     m: MissionAssumptions | None = None,
     return_payload_t: float = 20.0,
 ) -> MarsResult:
-    v = v or Vehicle()
+    """Mars cargo mission. ``v`` is the standard ship: the tankers fly it as is, and the cargo
+    ship is ``mars_ship(v)`` (4th sea-level engine and ablator)."""
+    base = v or Vehicle()
     m = m or MissionAssumptions()
+    v = mars_ship(base)
     perf = vehicle_performance(v, m)
+    tanker_payload = vehicle_performance(base, m).payload_to_leo_t
     ve_rvac = perf.rvac_isp * G0  # trans-Mars and trans-Earth burns
     ve_sl = perf.sl_vac_isp * G0  # landing and ascent on the sea-level engines
 
@@ -159,7 +184,7 @@ def mars_mission(
     # Tankers: each is a ship that delivers its LEO payload as propellant. The
     # cargo ship reaches orbit holding its landing reserve; the rest is refilled.
     to_fill = max(prop_needed - m.ship_landing_reserve_t, 0.0)
-    tankers = math.ceil(to_fill / perf.payload_to_leo_t) if perf.payload_to_leo_t > 0 else 10**6
+    tankers = math.ceil(to_fill / tanker_payload) if tanker_payload > 0 else 10**6
 
     # Return: Mars surface to low orbit, then a burn onto the Earth transfer.
     tei = burn_from_orbit(vinf_arr, MU_MARS, R_MARS + m.lmo_altitude)

@@ -2,12 +2,7 @@
  {
   "round": 0,
   "failing": [
-   "O4",
-   "O8",
-   "O9",
-   "O11",
-   "O12",
-   "O13"
+   "O8"
   ],
   "objectives": {
    "O1": {
@@ -16,187 +11,22 @@
     "passed": true
    },
    "O2": {
-    "value": 28.57858437466778,
+    "value": 28.649555130884732,
     "limit": 35.0,
     "passed": true
    },
    "O3": {
-    "value": 0.41118671795168743,
+    "value": 0.41365965274476074,
     "limit": 15.0,
     "passed": true
    },
    "O4": {
-    "value": 0.0,
+    "value": 1.0,
     "limit": 0.99,
-    "passed": false
+    "passed": true
    },
    "O8": {
-    "value": 0.0,
-    "limit": 0.99,
-    "passed": false
-   },
-   "O9": {
-    "value": 0.0,
-    "limit": 0.6,
-    "passed": false
-   },
-   "O6": {
-    "value": 573.4004527563987,
-    "limit": 1600.0,
-    "passed": true
-   },
-   "O5": {
-    "value": 1.0,
-    "limit": 0.95,
-    "passed": true
-   },
-   "O7": {
-    "value": 3.7945321105207714,
-    "limit": 30.0,
-    "passed": true
-   },
-   "O10": {
-    "value": 701.318359375,
-    "limit": 1600.0,
-    "passed": true
-   },
-   "O11": {
-    "value": 0.0,
-    "limit": 0.95,
-    "passed": false
-   },
-   "O12": {
-    "value": 0.0,
-    "limit": 0.99,
-    "passed": false
-   },
-   "O13": {
-    "value": 0.0,
-    "limit": 0.9,
-    "passed": false
-   }
-  },
-  "changes": [
-   "O4: booster return reserve 8% -> 10% of loaded propellant",
-   "O8: Mars landing propellant 60 t -> 70 t (failures {'crash': 60, 'propellant': 60, 'touchdown speed': 60})",
-   "O12: ablative windward heat shield on the return ship (+6 t) instead of a braking burn",
-   "O11: arrays capped at 40,000 m2; add 330 kWe of fission power so dust storms cannot stop production"
-  ]
- },
- {
-  "round": 1,
-  "failing": [
-   "O4",
-   "O8",
-   "O9",
-   "O11",
-   "O12",
-   "O13"
-  ],
-  "objectives": {
-   "O1": {
-    "value": 1.0,
-    "limit": 0.99,
-    "passed": true
-   },
-   "O2": {
-    "value": 28.57858437466778,
-    "limit": 35.0,
-    "passed": true
-   },
-   "O3": {
-    "value": 0.41118671795168743,
-    "limit": 15.0,
-    "passed": true
-   },
-   "O4": {
-    "value": 0.23333333333333334,
-    "limit": 0.99,
-    "passed": false
-   },
-   "O8": {
-    "value": 0.0,
-    "limit": 0.99,
-    "passed": false
-   },
-   "O9": {
-    "value": 0.0,
-    "limit": 0.6,
-    "passed": false
-   },
-   "O6": {
-    "value": 609.6854182302557,
-    "limit": 1600.0,
-    "passed": true
-   },
-   "O5": {
-    "value": 1.0,
-    "limit": 0.95,
-    "passed": true
-   },
-   "O7": {
-    "value": 4.577351746916192,
-    "limit": 30.0,
-    "passed": true
-   },
-   "O10": {
-    "value": 733.544921875,
-    "limit": 1600.0,
-    "passed": true
-   },
-   "O11": {
-    "value": 0.94,
-    "limit": 0.95,
-    "passed": false
-   },
-   "O12": {
-    "value": 0.9833333333333333,
-    "limit": 0.99,
-    "passed": false
-   },
-   "O13": {
-    "value": 0.0,
-    "limit": 0.9,
-    "passed": false
-   }
-  },
-  "changes": [
-   "O4: booster return reserve 10% -> 12% of loaded propellant",
-   "O8: Mars landing propellant 70 t -> 85 t (failures {'crash': 60, 'propellant': 60, 'touchdown speed': 60})",
-   "O12: retarget Earth entry angle -6.0 -> -5.9 deg (corridor centre)",
-   "O11: arrays capped at 40,000 m2; add 360 kWe of fission power so dust storms cannot stop production"
-  ]
- },
- {
-  "round": 2,
-  "failing": [
-   "O4",
-   "O8",
-   "O13"
-  ],
-  "objectives": {
-   "O1": {
-    "value": 1.0,
-    "limit": 0.99,
-    "passed": true
-   },
-   "O2": {
-    "value": 28.810115007444438,
-    "limit": 35.0,
-    "passed": true
-   },
-   "O3": {
-    "value": 0.41345229798499256,
-    "limit": 15.0,
-    "passed": true
-   },
-   "O4": {
-    "value": 0.8333333333333334,
-    "limit": 0.99,
-    "passed": false
-   },
-   "O8": {
-    "value": 0.5166666666666667,
+    "value": 0.9666666666666667,
     "limit": 0.99,
     "passed": false
    },
@@ -206,12 +36,164 @@
     "passed": true
    },
    "O6": {
-    "value": 653.6904905738086,
+    "value": 765.6521011814662,
     "limit": 1600.0,
     "passed": true
    },
    "O5": {
+    "value": 0.9875,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O7": {
+    "value": 3.7945321105207714,
+    "limit": 30.0,
+    "passed": true
+   },
+   "O10": {
+    "value": 750.7568359375,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O11": {
+    "value": 0.9966666666666667,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O12": {
     "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O13": {
+    "value": 0.9514013888888889,
+    "limit": 0.9,
+    "passed": true
+   }
+  },
+  "changes": [
+   "O8: Mars landing propellant 115 t -> 135 t (failures {'crash': 2, 'propellant': 2, 'touchdown speed': 2})"
+  ]
+ },
+ {
+  "round": 1,
+  "failing": [
+   "O1"
+  ],
+  "objectives": {
+   "O1": {
+    "value": 0.975,
+    "limit": 0.99,
+    "passed": false
+   },
+   "O2": {
+    "value": 28.649555130884732,
+    "limit": 35.0,
+    "passed": true
+   },
+   "O3": {
+    "value": 0.41365965274476074,
+    "limit": 15.0,
+    "passed": true
+   },
+   "O4": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O8": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O9": {
+    "value": 3.3000000000000007,
+    "limit": 0.6,
+    "passed": true
+   },
+   "O6": {
+    "value": 834.2947131565605,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O5": {
+    "value": 0.9875,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O7": {
+    "value": 4.577351746916192,
+    "limit": 30.0,
+    "passed": true
+   },
+   "O10": {
+    "value": 750.7568359375,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O11": {
+    "value": 0.99,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O12": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O13": {
+    "value": 0.9531843750000001,
+    "limit": 0.9,
+    "passed": true
+   }
+  },
+  "changes": [
+   "O1: adaptive booster cut-off may draw 1% of booster propellant from the return reserve on a short launch (booster possibly expended)"
+  ]
+ },
+ {
+  "round": 2,
+  "failing": [
+   "O1"
+  ],
+  "objectives": {
+   "O1": {
+    "value": 0.95,
+    "limit": 0.99,
+    "passed": false
+   },
+   "O2": {
+    "value": 28.649555130884732,
+    "limit": 35.0,
+    "passed": true
+   },
+   "O3": {
+    "value": 0.41365965274476074,
+    "limit": 15.0,
+    "passed": true
+   },
+   "O4": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O8": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O9": {
+    "value": 3.3000000000000007,
+    "limit": 0.6,
+    "passed": true
+   },
+   "O6": {
+    "value": 834.2947131565605,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O5": {
+    "value": 0.97,
     "limit": 0.95,
     "passed": true
    },
@@ -221,7 +203,7 @@
     "passed": true
    },
    "O10": {
-    "value": 733.544921875,
+    "value": 750.7568359375,
     "limit": 1600.0,
     "passed": true
    },
@@ -236,21 +218,18 @@
     "passed": true
    },
    "O13": {
-    "value": 0.5132222222222222,
+    "value": 0.9153566666666666,
     "limit": 0.9,
-    "passed": false
+    "passed": true
    }
   },
   "changes": [
-   "O4: booster return reserve 12% -> 14% of loaded propellant",
-   "O8: Mars landing propellant 85 t -> 100 t (failures {'crash': 26, 'propellant': 29, 'touchdown speed': 26})"
+   "O1: adaptive booster cut-off may draw 2% of booster propellant from the return reserve on a short launch (booster possibly expended)"
   ]
  },
  {
   "round": 3,
-  "failing": [
-   "O8"
-  ],
+  "failing": [],
   "objectives": {
    "O1": {
     "value": 1.0,
@@ -258,12 +237,12 @@
     "passed": true
    },
    "O2": {
-    "value": 28.586899624837745,
+    "value": 28.649555130884732,
     "limit": 35.0,
     "passed": true
    },
    "O3": {
-    "value": 0.411268151436168,
+    "value": 0.41365965274476074,
     "limit": 15.0,
     "passed": true
    },
@@ -273,9 +252,9 @@
     "passed": true
    },
    "O8": {
-    "value": 0.9833333333333333,
+    "value": 1.0,
     "limit": 0.99,
-    "passed": false
+    "passed": true
    },
    "O9": {
     "value": 3.3000000000000007,
@@ -283,12 +262,12 @@
     "passed": true
    },
    "O6": {
-    "value": 701.2114550769214,
+    "value": 834.2947131565605,
     "limit": 1600.0,
     "passed": true
    },
    "O5": {
-    "value": 1.0,
+    "value": 0.9875,
     "limit": 0.95,
     "passed": true
    },
@@ -298,7 +277,7 @@
     "passed": true
    },
    "O10": {
-    "value": 733.544921875,
+    "value": 750.7568359375,
     "limit": 1600.0,
     "passed": true
    },
@@ -313,81 +292,7 @@
     "passed": true
    },
    "O13": {
-    "value": 0.9636666666666666,
-    "limit": 0.9,
-    "passed": true
-   }
-  },
-  "changes": [
-   "O8: Mars landing propellant 100 t -> 115 t (failures {'crash': 1, 'propellant': 1, 'touchdown speed': 1})"
-  ]
- },
- {
-  "round": 4,
-  "failing": [],
-  "objectives": {
-   "O1": {
-    "value": 1.0,
-    "limit": 0.99,
-    "passed": true
-   },
-   "O2": {
-    "value": 28.586899624837745,
-    "limit": 35.0,
-    "passed": true
-   },
-   "O3": {
-    "value": 0.411268151436168,
-    "limit": 15.0,
-    "passed": true
-   },
-   "O4": {
-    "value": 1.0,
-    "limit": 0.99,
-    "passed": true
-   },
-   "O8": {
-    "value": 1.0,
-    "limit": 0.99,
-    "passed": true
-   },
-   "O9": {
-    "value": 3.3000000000000007,
-    "limit": 0.6,
-    "passed": true
-   },
-   "O6": {
-    "value": 751.3483235429525,
-    "limit": 1600.0,
-    "passed": true
-   },
-   "O5": {
-    "value": 0.9925,
-    "limit": 0.95,
-    "passed": true
-   },
-   "O7": {
-    "value": 3.6796337301733857,
-    "limit": 30.0,
-    "passed": true
-   },
-   "O10": {
-    "value": 733.544921875,
-    "limit": 1600.0,
-    "passed": true
-   },
-   "O11": {
-    "value": 0.9933333333333333,
-    "limit": 0.95,
-    "passed": true
-   },
-   "O12": {
-    "value": 1.0,
-    "limit": 0.99,
-    "passed": true
-   },
-   "O13": {
-    "value": 0.9858833333333333,
+    "value": 0.96775,
     "limit": 0.9,
     "passed": true
    }
@@ -395,22 +300,22 @@
   "changes": []
  },
  {
-  "round": 5,
+  "round": 4,
   "failing": [],
   "verification": true,
   "objectives": {
    "O1": {
-    "value": 0.9966666666666667,
+    "value": 0.99,
     "limit": 0.99,
     "passed": true
    },
    "O2": {
-    "value": 28.586899624837745,
+    "value": 28.649555130884732,
     "limit": 35.0,
     "passed": true
    },
    "O3": {
-    "value": 0.411268151436168,
+    "value": 0.41365965274476074,
     "limit": 15.0,
     "passed": true
    },
@@ -430,12 +335,12 @@
     "passed": true
    },
    "O6": {
-    "value": 751.3483235429525,
+    "value": 834.2947131565605,
     "limit": 1600.0,
     "passed": true
    },
    "O5": {
-    "value": 0.9975,
+    "value": 0.984,
     "limit": 0.95,
     "passed": true
    },
@@ -445,12 +350,12 @@
     "passed": true
    },
    "O10": {
-    "value": 733.544921875,
+    "value": 750.7568359375,
     "limit": 1600.0,
     "passed": true
    },
    "O11": {
-    "value": 0.987,
+    "value": 0.989,
     "limit": 0.95,
     "passed": true
    },
@@ -460,7 +365,7 @@
     "passed": true
    },
    "O13": {
-    "value": 0.9779798892500001,
+    "value": 0.9602327592000001,
     "limit": 0.9,
     "passed": true
    }

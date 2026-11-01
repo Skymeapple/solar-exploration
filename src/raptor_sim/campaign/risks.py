@@ -16,6 +16,7 @@ from .ascent import Dispersion, best_kick, booster_return, fly_ascent
 from .bodies import MU_EARTH, R_EARTH
 from .burns import finite_departure, impulsive_departure, propellant_for
 from .campaign import Design, evaluate, make_stack, return_requirement, tmi_requirement
+from .vehicle import tanker_stack
 from .entry import EntryGuidance, EntryVehicle, fly_entry
 from .interplanetary import transfer
 from .mars_ops import isru_monte_carlo
@@ -67,12 +68,13 @@ def run_risks(d: Design, base: dict) -> list[Risk]:
                     "Abort to a sub-orbital disposal", f"orbit reached: {a1.reached_orbit}, residual {a1.ship_residual/1e3:.1f} t "
                     f"(nominal {base['cargo_residual_t']:.1f} t)", bool(a1.reached_orbit and a1.ship_residual >= 0)))
 
-    # Delivery samples for refill risks
+    # Delivery samples for refill risks (tankers fly the standard ship)
+    tkick, _ = best_kick(tanker_stack(st), d.tanker_landing_reserve)
     rng = np.random.default_rng(4)
     deliv = []
     for _ in range(60):
         ds = Dispersion(isp=rng.normal(1, 0.003), thrust=rng.normal(1, 0.01), ship_dry=rng.normal(1, 0.02))
-        t = fly_ascent(st, 0.0, kick, ds)
+        t = fly_ascent(tanker_stack(st), 0.0, tkick, ds)
         deliv.append(t.ship_residual - d.tanker_landing_reserve)
     deliv = np.array(deliv)
     req = _req_fn(st, d, best.vinf_depart)
@@ -146,8 +148,9 @@ def run_risks(d: Design, base: dict) -> list[Risk]:
     p_fix, fpa_fix, lp_fix = best
     out.append(Risk("R6", "P6", "Mars atmosphere density varies 35% (1-sigma) instead of 15%, e.g. during a dust storm",
                     "medium", "crash or propellant exhausted on landing",
-                    f"Steepen the entry to {fpa_fix:.1f} deg with the final correction and carry "
-                    f"{(lp_fix - d.landing_propellant)/1e3:.0f} t more landing propellant when orbiters report thin air",
+                    (f"Steepen the entry to {fpa_fix:.1f} deg with the final correction and carry "
+                     if fpa_fix != d.mars_entry_fpa else f"Keep the {fpa_fix:.1f} deg baseline entry (already steepened) and carry ")
+                    + f"{(lp_fix - d.landing_propellant)/1e3:.0f} t more landing propellant when orbiters report thin air",
                     f"P(EDL) {p_bad:.3f} at {d.mars_entry_fpa} deg with {d.landing_propellant/1e3:.0f} t",
                     f"P(EDL) {p_fix:.3f} at {fpa_fix:.1f} deg with {lp_fix/1e3:.0f} t", p_fix >= 0.99))
 
@@ -204,7 +207,11 @@ def stress_cases(d: Design, n_mc: int = 90) -> list[dict]:
     ]
     out = []
     for name, dd in cases:
-        rep = evaluate(dd, n_mc=n_mc, quick=True, seed=31)
+        try:
+            rep = evaluate(dd, n_mc=n_mc, quick=True, seed=31)
+        except AttributeError:  # nominal cargo ascent never staged: the case fails outright
+            out.append({"case": name, "failing": ["O1 (nominal ascent fails)"], "tankers_median": None, "p_mission": 0.0})
+            continue
         out.append({"case": name, "failing": [f"{o.id} ({o.text})" for o in rep.failing()],
                     "tankers_median": rep.numbers["tankers_median"], "p_mission": rep.numbers["p_mission"],
                     "leo_required_t": rep.numbers["leo_required_t"], "isru_load_t": rep.numbers["isru_load_t"]})
@@ -216,13 +223,17 @@ def sensitivity(d: Design) -> list[dict]:
     def chain(dd: Design) -> dict:
         st = make_stack(dd)
         kick, _ = best_kick(st, dd.tanker_landing_reserve)
-        tank = fly_ascent(st, 0.0, kick)
+        tkick, _ = best_kick(tanker_stack(st), dd.tanker_landing_reserve)
+        tank = fly_ascent(tanker_stack(st), 0.0, tkick)
         cargo = fly_ascent(st, dd.cargo, kick)
         deliver = (tank.ship_residual - dd.tanker_landing_reserve) * (1 - dd.refill.transfer_loss)
         from datetime import date
         best = transfer("earth", "mars", date(2028, 12, 2), 320)
         req = tmi_requirement(st, dd, best.vinf_depart)[0]
         rr = return_requirement(st, dd, 2333.0, 5345.0)
+        if not (tank.reached_orbit and cargo.reached_orbit) or deliver <= 0:
+            return {"tanker_delivery_t": float("nan"), "tankers": None, "leo_required_t": req / 1e3,
+                    "isru_load_t": rr["isru_load"] / 1e3, "note": "ascent does not reach orbit"}
         return {"tanker_delivery_t": deliver / 1e3, "tankers": math.ceil(max(0, req - cargo.ship_residual) / deliver),
                 "leo_required_t": req / 1e3, "isru_load_t": rr["isru_load"] / 1e3}
 

@@ -32,7 +32,7 @@ from .entry import ENTRY_INTERFACE, EntryGuidance, EntryVehicle, corridor, entry
 from .interplanetary import porkchop, tcm_monte_carlo
 from .mars_ops import IsruPlant, isru_monte_carlo, mars_ascent
 from .refill import RefillPlan, refill_monte_carlo
-from .vehicle import Stack
+from .vehicle import Stack, tanker_stack
 
 
 @dataclass(frozen=True)
@@ -47,6 +47,10 @@ class Design:
 
     # Vehicle levers
     booster_reserve_fraction: float = 0.14  # converged in the 2026-10-31 iteration (was the mission.py 8%)
+    # Adaptive booster cut-off: on a launch that is running short (low engine thrust), the booster may burn
+    # up to this fraction of its propellant out of the return reserve, Falcon 9 style. The booster may
+    # then be lost (an asset loss, counted separately); the Mars ship still reaches orbit.
+    booster_adaptive_draw: float = 0.0
     q_limit_throttle: float = 0.0
     tanker_landing_reserve: float = 30e3  # kg each tanker keeps to land again [est]
     ship_dry_growth: float = 0.0
@@ -207,8 +211,10 @@ def evaluate(d: Design, n_mc: int = 300, seed: int = 11, quick: bool = False) ->
         obj.append(Objective(id_, phase, text, float(value), float(limit), unit, bool(passed), note))
 
     # ---------------- P1 ascent
-    kick, cap = best_kick(stack, d.tanker_landing_reserve)
-    tanker = fly_ascent(stack, 0.0, kick)
+    kick, _ = best_kick(stack, d.tanker_landing_reserve)  # Mars ship (4 sea-level engines, ablator)
+    tst = tanker_stack(stack)  # tankers fly the standard ship
+    tkick, cap = best_kick(tst, d.tanker_landing_reserve)
+    tanker = fly_ascent(tst, 0.0, tkick)
     cargo = fly_ascent(stack, d.cargo, kick, keep_trace=True)
     deliver_nom = tanker.ship_residual - d.tanker_landing_reserve
     num.update(kick_deg=kick, payload_capability_t=cap / 1e3, tanker_delivery_t=deliver_nom / 1e3,
@@ -220,18 +226,27 @@ def evaluate(d: Design, n_mc: int = 300, seed: int = 11, quick: bool = False) ->
                max_ship_g=cargo.max_ship_g)
     smp["ascent_trace"] = cargo.trace
     n_asc = max(30, n_mc // 3) if quick else n_mc
-    deliveries, cargo_ok = [], []
+    deliveries, cargo_ok, n_drawn = [], [], 0
     disps = [ascent_dispersions(rng) for _ in range(n_asc)]
     for ds in disps:
-        t = fly_ascent(stack, 0.0, kick, ds)
+        t = fly_ascent(tst, 0.0, tkick, ds)
         deliveries.append(t.ship_residual - d.tanker_landing_reserve if t.reached_orbit else 0.0)
         c = fly_ascent(stack, d.cargo, kick, ds)
-        cargo_ok.append(c.reached_orbit and c.ship_residual >= 0)
+        ok = c.reached_orbit and c.ship_residual >= 0
+        if not ok and d.booster_adaptive_draw > 0:
+            drawn = replace(stack, booster_reserve_fraction=stack.booster_reserve_fraction - d.booster_adaptive_draw)
+            c = fly_ascent(drawn, d.cargo, kick, ds)
+            ok = c.reached_orbit and c.ship_residual >= 0
+            n_drawn += 1
+        cargo_ok.append(ok)
     deliveries = np.array(deliveries)
+    num["booster_reserve_draws_fraction"] = n_drawn / len(disps)
     smp["tanker_delivery_t"] = deliveries / 1e3
     p_cargo = float(np.mean(cargo_ok))
     add("O1", "P1 ascent", "Mars ship reaches 300 km orbit with 100 t cargo (Monte Carlo)", p_cargo, 0.99, "probability",
-        p_cargo >= 0.99, f"nominal residual {cargo.ship_residual/1e3:.1f} t")
+        p_cargo >= 0.99, f"nominal residual {cargo.ship_residual/1e3:.1f} t"
+        + (f"; {n_drawn / len(disps):.1%} of launches draw up to {d.booster_adaptive_draw:.0%} from the booster reserve"
+           if d.booster_adaptive_draw > 0 else ""))
     add("O2", "P1 ascent", "Maximum dynamic pressure", cargo.max_q_kpa, 35.0, "kPa", cargo.max_q_kpa <= 35.0,
         "limit is an estimate (Falcon 9 class ~32 kPa)")
     trim = max_q_trim(stack, cargo)

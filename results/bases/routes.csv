@@ -1,6 +1,6 @@
 site,route,cargo_t,direct_capacity_t,trip_days,route_dry150,cargo_t_dry150
 moon_south_pole,leo > moon_south_pole,150.0,254.7,5,leo > moon_south_pole,150.0
-mars_arcadia,leo > mars_arcadia,150.0,486.6,259,leo > mars_arcadia,150.0
+mars_arcadia,leo > mars_arcadia,150.0,324.6,259,leo > mars_arcadia,150.0
 phobos,leo > phobos,150.0,242.2,259,leo > phobos,150.0
 deimos,leo > deimos,150.0,237.7,259,leo > deimos,150.0
 ceres,leo > phobos > ceres,150.0,-25.0,833,leo > phobos > ceres,150.0

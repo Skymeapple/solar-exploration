@@ -172,10 +172,13 @@ def write_summary(d, rep, history, risks, stress, sens):
         L.append(f"| {r.id} | {r.phase} | {r.risk} | {r.mitigation} | {r.unmitigated} | {r.mitigated} | {'yes' if r.verified else 'NO'} |")
     L += ["", "## Stress cases (whole campaign re-run, no redesign)", "", "| Case | Objectives that fail | Tankers (median) | P(mission) |", "| --- | --- | --- | --- |"]
     for s in stress:
-        L.append(f"| {s['case']} | {'; '.join(s['failing']) or 'none'} | {s['tankers_median']:.0f} | {s['p_mission']:.3f} |")
+        L.append(f"| {s['case']} | {'; '.join(s['failing']) or 'none'} | {s['tankers_median'] if s['tankers_median'] is None else round(s['tankers_median'])} | {s['p_mission']:.3f} |")
     L += ["", "## Sensitivity (deterministic, one change at a time)", "", "| Case | Tanker delivery (t) | Tankers | LEO propellant (t) | Mars propellant (t) |", "| --- | --- | --- | --- | --- |"]
     for s in sens:
-        L.append(f"| {s['case']} | {s['tanker_delivery_t']:.0f} | {s['tankers']} | {s['leo_required_t']:.0f} | {s['isru_load_t']:.0f} |")
+        if s.get("note"):
+            L.append(f"| {s['case']} | {s['note']} | - | {s['leo_required_t']:.0f} | {s['isru_load_t']:.0f} |")
+        else:
+            L.append(f"| {s['case']} | {s['tanker_delivery_t']:.0f} | {s['tankers']} | {s['leo_required_t']:.0f} | {s['isru_load_t']:.0f} |")
     L += ["", "![phases](phases.png)", "", "![monte carlo](monte_carlo.png)", "", "![porkchop](porkchop_2028.png)", ""]
     (OUT / "summary.md").write_text("\n".join(L))
 

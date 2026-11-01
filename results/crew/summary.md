@@ -144,8 +144,8 @@ Tethered pair (150 t crew ship + 150 t counterweight, 0.38 g at 4 rpm): tether 4
 | 1000d | 33.8% | 18.6% | 12.0% |
 
 ## Propulsion trades
-- Starship-class crew ship, dry 120 t, crew payload 45 t: TMI capability 7,705 m/s after full LEO refilling. Fastest transit 150 days if Mars entry is capped at 7.5 km/s; 80 days if any entry speed were survivable.
-- Starship-class crew ship, dry 150 t, crew payload 45 t: TMI capability 7,170 m/s after full LEO refilling. Fastest transit 150 days if Mars entry is capped at 7.5 km/s; 90 days if any entry speed were survivable.
+- Starship-class crew ship, dry 120 t, crew payload 45 t: TMI capability 6,830 m/s after full LEO refilling. Fastest transit 150 days if Mars entry is capped at 7.5 km/s; 90 days if any entry speed were survivable.
+- Starship-class crew ship, dry 150 t, crew payload 45 t: TMI capability 6,295 m/s after full LEO refilling. Fastest transit 150 days if Mars entry is capped at 7.5 km/s; 100 days if any entry speed were survivable.
 
 Single stage, 100 t payload, initial mass in t:
 

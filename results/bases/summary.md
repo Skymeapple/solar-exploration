@@ -25,7 +25,7 @@ Full refuelling hubs (ISRU makes the whole methane/oxygen load): leo, mars_arcad
 | Site | Route | Cargo t | Direct capacity t | Trip days | Cargo t at 150 t dry |
 |---|---|---|---|---|---|
 | moon_south_pole | leo > moon_south_pole | 150.0 | 254.7 | 5 | 150.0 |
-| mars_arcadia | leo > mars_arcadia | 150.0 | 486.6 | 259 | 150.0 |
+| mars_arcadia | leo > mars_arcadia | 150.0 | 324.6 | 259 | 150.0 |
 | phobos | leo > phobos | 150.0 | 242.2 | 259 | 150.0 |
 | deimos | leo > deimos | 150.0 | 237.7 | 259 | 150.0 |
 | ceres | leo > phobos > ceres | 150.0 | -25.0 | 833 | 150.0 |
@@ -75,36 +75,36 @@ Full refuelling hubs (ISRU makes the whole methane/oxygen load): leo, mars_arcad
 
 | Site | Phase | MWe | Imported t | Earth launches | Without hubs |
 |---|---|---|---|---|---|
-| moon_south_pole | outpost | 2.08 | 308 | 18 | 18 |
-| moon_south_pole | base | 13.35 | 1172 | 70 | 70 |
-| moon_south_pole | city | 83.0 | 7474 | 448 | 448 |
-| mars_arcadia | outpost | 1.82 | 299 | 12 | 12 |
-| mars_arcadia | base | 11.72 | 1134 | 45 | 45 |
-| mars_arcadia | city | 74.85 | 7196 | 288 | 288 |
-| phobos | outpost | 2.69 | 326 | 20 | 20 |
-| phobos | base | 17.18 | 1255 | 75 | 75 |
-| phobos | city | 102.15 | 8048 | 483 | 483 |
-| deimos | outpost | 2.69 | 326 | 20 | 20 |
-| deimos | base | 17.18 | 1255 | 75 | 75 |
-| deimos | city | 102.15 | 8048 | 483 | 483 |
-| ceres | outpost | 2.16 | 310 | 19 | n/a |
-| ceres | base | 13.89 | 1184 | 71 | n/a |
-| ceres | city | 85.68 | 7538 | 452 | n/a |
-| callisto | outpost | 2.09 | 308 | 24 | n/a |
-| callisto | base | 13.44 | 1174 | 90 | n/a |
-| callisto | city | 83.47 | 7502 | 576 | n/a |
-| ganymede | outpost | 1.57 | 291 | 22 | n/a |
-| ganymede | base | 10.2 | 1098 | 84 | n/a |
-| ganymede | city | 67.24 | 7007 | 538 | n/a |
-| europa | outpost | 1.56 | 290 | 22 | n/a |
-| europa | base | 10.1 | 1095 | 84 | n/a |
-| europa | city | 66.74 | 7016 | 539 | n/a |
-| titan | outpost | 1.56 | 270 | 16 | 41 |
-| titan | base | 10.1 | 1075 | 66 | 164 |
-| titan | city | 66.77 | 7001 | 427 | 1,067 |
-| enceladus | outpost | 1.56 | 290 | 53 | n/a |
-| enceladus | base | 10.1 | 1095 | 201 | n/a |
-| enceladus | city | 66.73 | 7023 | 1,286 | n/a |
+| moon_south_pole | outpost | 2.08 | 308 | 21 | 21 |
+| moon_south_pole | base | 13.35 | 1172 | 78 | 78 |
+| moon_south_pole | city | 83.0 | 7474 | 498 | 498 |
+| mars_arcadia | outpost | 1.82 | 299 | 18 | 18 |
+| mars_arcadia | base | 11.72 | 1134 | 68 | 68 |
+| mars_arcadia | city | 74.85 | 7196 | 432 | 432 |
+| phobos | outpost | 2.69 | 326 | 22 | 22 |
+| phobos | base | 17.18 | 1255 | 84 | 84 |
+| phobos | city | 102.15 | 8048 | 537 | 537 |
+| deimos | outpost | 2.69 | 326 | 24 | 24 |
+| deimos | base | 17.18 | 1255 | 92 | 92 |
+| deimos | city | 102.15 | 8048 | 590 | 590 |
+| ceres | outpost | 2.16 | 310 | 21 | n/a |
+| ceres | base | 13.89 | 1184 | 79 | n/a |
+| ceres | city | 85.68 | 7538 | 503 | n/a |
+| callisto | outpost | 2.09 | 308 | 27 | n/a |
+| callisto | base | 13.44 | 1174 | 103 | n/a |
+| callisto | city | 83.47 | 7502 | 658 | n/a |
+| ganymede | outpost | 1.57 | 291 | 26 | n/a |
+| ganymede | base | 10.2 | 1098 | 96 | n/a |
+| ganymede | city | 67.24 | 7007 | 615 | n/a |
+| europa | outpost | 1.56 | 290 | 25 | n/a |
+| europa | base | 10.1 | 1095 | 96 | n/a |
+| europa | city | 66.74 | 7016 | 616 | n/a |
+| titan | outpost | 1.56 | 270 | 18 | 48 |
+| titan | base | 10.1 | 1075 | 73 | 191 |
+| titan | city | 66.77 | 7001 | 475 | 1,245 |
+| enceladus | outpost | 1.56 | 290 | 64 | n/a |
+| enceladus | base | 10.1 | 1095 | 241 | n/a |
+| enceladus | city | 66.73 | 7023 | 1,543 | n/a |
 | venus_clouds | outpost | 1.84 | 280 | 9 | 9 |
 | venus_clouds | base | 11.9 | 1118 | 37 | 37 |
 | venus_clouds | city | 75.75 | 7271 | 242 | 242 |

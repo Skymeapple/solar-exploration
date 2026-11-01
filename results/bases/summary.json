@@ -5,7 +5,7 @@
     "isp_space": 362.70789736816494,
     "isp_surface": 348.0151379478614,
     "max_payload_t": 150.0,
-    "payload_to_leo_t": 155.47300788214127
+    "payload_to_leo_t": 130.71271439976502
   },
   "hubs": [
     "leo",
@@ -31,7 +31,7 @@
       "site": "mars_arcadia",
       "route": "leo > mars_arcadia",
       "cargo_t": 150.0,
-      "direct_capacity_t": 486.6,
+      "direct_capacity_t": 324.6,
       "trip_days": 259,
       "route_dry150": "leo > mars_arcadia",
       "cargo_t_dry150": 150.0
@@ -204,7 +204,7 @@
       "site": "moon_south_pole",
       "hub_rank": 5,
       "hub_score": 0.534,
-      "hub_mean_rank_mc": 4.79,
+      "hub_mean_rank_mc": 4.78,
       "hub_p_top3": 0.06,
       "hub_rank_dry150": 5,
       "settlement_rank": 5,
@@ -222,7 +222,7 @@
       "site": "callisto",
       "hub_rank": 6,
       "hub_score": 0.49,
-      "hub_mean_rank_mc": 5.53,
+      "hub_mean_rank_mc": 5.52,
       "hub_p_top3": 0.0,
       "hub_rank_dry150": 6,
       "settlement_rank": 9,
@@ -239,7 +239,7 @@
     {
       "site": "ganymede",
       "hub_rank": 7,
-      "hub_score": 0.405,
+      "hub_score": 0.401,
       "hub_mean_rank_mc": 7.01,
       "hub_p_top3": 0.0,
       "hub_rank_dry150": 7,
@@ -250,15 +250,15 @@
       "c_trip": 0.12,
       "c_energy": 0.99,
       "c_radiation": 0.01,
-      "c_launch": 0.37,
+      "c_launch": 0.33,
       "c_gateway": 0.0,
       "c_settlement": 0.39
     },
     {
       "site": "europa",
       "hub_rank": 8,
-      "hub_score": 0.351,
-      "hub_mean_rank_mc": 8.28,
+      "hub_score": 0.319,
+      "hub_mean_rank_mc": 8.42,
       "hub_p_top3": 0.0,
       "hub_rank_dry150": 8,
       "settlement_rank": 12,
@@ -268,15 +268,15 @@
       "c_trip": 0.12,
       "c_energy": 1.0,
       "c_radiation": 0.0,
-      "c_launch": 0.28,
+      "c_launch": 0.25,
       "c_gateway": 0.0,
       "c_settlement": 0.32
     },
     {
       "site": "titan",
       "hub_rank": 9,
-      "hub_score": 0.318,
-      "hub_mean_rank_mc": 8.63,
+      "hub_score": 0.309,
+      "hub_mean_rank_mc": 8.5,
       "hub_p_top3": 0.0,
       "hub_rank_dry150": 9,
       "settlement_rank": 3,
@@ -293,7 +293,7 @@
     {
       "site": "enceladus",
       "hub_rank": 10,
-      "hub_score": 0.199,
+      "hub_score": 0.159,
       "hub_mean_rank_mc": 10.0,
       "hub_p_top3": 0.0,
       "hub_rank_dry150": 10,
@@ -304,7 +304,7 @@
       "c_trip": 0.13,
       "c_energy": 1.0,
       "c_radiation": 0.21,
-      "c_launch": 0.15,
+      "c_launch": 0.12,
       "c_gateway": 0.0,
       "c_settlement": 0.41
     },
