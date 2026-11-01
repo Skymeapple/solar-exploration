@@ -53,6 +53,21 @@ Full tables are in [`results/summary.md`](results/summary.md).
 - The model puts 155 t into LEO, while SpaceX states about 100 t for Block 3. A ship dry mass near
   150 t instead of 100 t closes that gap and raises the tanker count to 7.
 
+## Lunar transit base study (`raptor_sim.lunar_base`)
+
+A feasibility model for a permanent south-pole base that serves as a transit hub and grows into a
+settlement: site choice, power through the lunar night, polar-ice ISRU, regolith construction, landing
+pads and plume ejecta, depots and tankers, and whether Moon-made propellant reduces Earth launches.
+Every input is tagged cited, computed or estimated (`results/lunar_base/provenance.csv`), and checks
+L1 to L10 compare the models with published figures or conservation laws.
+
+```bash
+python scripts/run_lunar_base.py --plots   # writes results/lunar_base/
+```
+
+Headline results are in [`results/lunar_base/summary.md`](results/lunar_base/summary.md).
+`lunar_base.orbits` is the project's shared lunar delta-v table.
+
 ## What the model does
 
 | Module | Content |
