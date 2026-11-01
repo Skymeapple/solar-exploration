@@ -6469,16 +6469,16 @@
   "D_hydrolox": {
    "variant": "hydrolox",
    "lander_dry_t": 25.0,
-   "isp": 450.0,
-   "sortie_propellant_t": 79.8365531887946,
-   "from_moon_t": 79.8365531887946,
+   "isp": 460.2,
+   "sortie_propellant_t": 76.6383626411795,
+   "from_moon_t": 76.6383626411795,
    "from_earth_t": 0.0,
    "earth_launches_per_sortie": 0.0,
-   "ice_regolith_t": 1959.9461256324885,
+   "ice_regolith_t": 1654.8456430578005,
    "notes": [
-    "Water splits 8:1 oxygen to hydrogen by mass; at mixture ratio 5.5 hydrogen is the limit and 30 t oxygen is left over."
+    "Water splits 8:1 oxygen to hydrogen by mass; at mixture ratio 6.4 hydrogen is the limit and 16 t oxygen is left over."
    ],
-   "liftoff_mass_t": 105.8365531887946
+   "liftoff_mass_t": 102.6383626411795
   }
  },
  "surface": [

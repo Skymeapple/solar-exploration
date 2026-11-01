@@ -35,7 +35,7 @@ SPEC: dict[str, Value] = {
     "cooler_w_per_w_20k": Value(120.0, "W/W", "estimated", "reverse-Brayton cryocooler at 20 K"),
     "tanker_dry_t": Value(100.0, "t", "estimated", "Starship-class ship, Block 1 public dry mass, matches mission.Vehicle"),
     "tanker_prop_t": Value(1_600.0, "t", "cited", "Starship Block 3 ship propellant, https://en.wikipedia.org/wiki/SpaceX_Starship"),
-    "hydrolox_isp": Value(450.0, "s", "computed", "replaced at run time by thermo model when CEA is available"),
+    "hydrolox_isp": Value(450.6, "s", "computed", "HL-250 expander design point, raptor_sim.hydrolox (bias-corrected)"),
 }
 
 
@@ -65,8 +65,20 @@ def depot(prop: str, mass_t: float, location: str) -> DepotResult:
     return DepotResult(location, prop, mass_t, heat, 100 * boil_kg_month / (mass_t * 1e3), heat * spec / 1e3)
 
 
-def hydrolox_isp(mr: float = 6.0, pc: float = 100e5, eps: float = 100.0, eta: float = 0.946) -> float:
-    """Vacuum Isp of a hydrogen-oxygen tug engine from NASA CEA, with the project's calibrated efficiency."""
+def hydrolox_isp(mr: float | None = None, pc: float | None = None, eps: float | None = None, eta: float | None = None) -> float:
+    """Vacuum Isp of the lunar hydrogen-oxygen tanker engine.
+
+    Default: the HL-250 closed-expander design point from raptor_sim.hydrolox
+    (verified against RS-25, RL10 and Vinci, gates H1-H7), bias-corrected.
+    Passing any argument gives the earlier estimate instead: NASA CEA with the
+    methane engine's 0.946 efficiency (100 bar, area ratio 100, MR 6 by default),
+    which the hydrogen model shows does not transfer to hydrogen engines.
+    """
+    if mr is None and pc is None and eps is None and eta is None:
+        from ..hydrolox import study_isp
+
+        return study_isp("HL-250")
+    mr, pc, eps, eta = mr or 6.0, pc or 100e5, eps or 100.0, eta or 0.946
     try:
         from rocketcea.cea_obj import CEA_Obj
 

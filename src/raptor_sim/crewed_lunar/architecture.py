@@ -47,10 +47,10 @@ class LunarAssumptions:
     landing_thruster_twr: float = 1.6  # estimated: landing thrusters' max thrust / lunar weight at touchdown
     landing_thruster_isp: float = 320.0  # estimated: gaseous methane/oxygen thrusters
     landing_thruster_throttle_min: float = 0.2  # estimated
-    hydrolox_isp: float = 450.0  # estimated, BE-7 class (Blue Origin does not publish it)
-    hydrolox_mixture_ratio: float = 5.5  # estimated
+    hydrolox_isp: float = 460.2  # model: HL-44 expander design point, raptor_sim.hydrolox (BE-7 class, cited 460 s)
+    hydrolox_mixture_ratio: float = 6.39  # model: HL-44 design point
     hydrolox_dry_t: float = 25.0  # estimated: reusable hydrogen lander, larger tanks than Blue Moon MK2 (16 t, cited)
-    hydrolox_thrust_n: float = 3 * 44_000.0 * 3  # estimated: nine BE-7-class engines
+    hydrolox_thrust_n: float = 9 * 44_000.0  # nine HL-44 engines (raptor_sim.hydrolox)
     methane_mixture_ratio: float = 3.6  # our engine
     return_staging_dv: float | None = None  # m/s, LLO to NRHO; None = nominal cited 705, set 1,550 for anytime abort
 

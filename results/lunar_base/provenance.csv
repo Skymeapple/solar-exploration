@@ -62,7 +62,7 @@ depot.cooler_w_per_w_90k,15,W/W,estimated,reverse-Brayton cryocooler at 90 K
 depot.cooler_w_per_w_20k,120,W/W,estimated,reverse-Brayton cryocooler at 20 K
 depot.tanker_dry_t,100,t,estimated,"Starship-class ship, Block 1 public dry mass, matches mission.Vehicle"
 depot.tanker_prop_t,1600,t,cited,"Starship Block 3 ship propellant, https://en.wikipedia.org/wiki/SpaceX_Starship"
-depot.hydrolox_isp,450,s,computed,replaced at run time by thermo model when CEA is available
+depot.hydrolox_isp,450.6,s,computed,"HL-250 expander design point, raptor_sim.hydrolox (bias-corrected)"
 mars_benefit.aerocapture_dv,100,m/s,estimated,perigee raise and trim after aerocapture into LEO
 mars_benefit.h2_tanker_dry_t,60,t,estimated,reusable hydrogen-oxygen tanker with heat shield
 mars_benefit.h2_tanker_prop_t,600,t,estimated,LH2 tanks are bulky; 600 t at MR 6

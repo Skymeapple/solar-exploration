@@ -46,7 +46,7 @@ class Design:
     mars_departure_search_start: date = date(2030, 8, 1)
 
     # Vehicle levers
-    booster_reserve_fraction: float = 0.08  # starts at the mission.py assumption
+    booster_reserve_fraction: float = 0.14  # converged in the 2026-10-31 iteration (was the mission.py 8%)
     q_limit_throttle: float = 0.0
     tanker_landing_reserve: float = 30e3  # kg each tanker keeps to land again [est]
     ship_dry_growth: float = 0.0
@@ -65,22 +65,23 @@ class Design:
     unusable_fraction: float = 0.01  # [est] residuals that cannot be burned
 
     # Mars entry and landing
-    landing_propellant: float = 60e3  # kg loaded for landing (starts at the mission.py-equivalent of 700 m/s)
-    mars_entry_fpa: float = -12.0  # deg target at 125 km
+    landing_propellant: float = 115e3  # kg loaded for landing, converged 2026-10-31 (mission.py's 700 m/s was 60 t)
+    mars_entry_fpa: float = -12.4  # deg target at 125 km; steepened from -12.0 (campaign risk R6: thin-air robustness)
     v_srp: float = 1_000.0  # m/s retropropulsion ignition speed
     mars_peak_g_limit: float = 5.0  # [est] cargo; crew would be 4 g
     tps_limit_w_cm2: float = 100.0  # [est] ceramic tile system, stagnation-point convective
     max_arrival_vinf: float = 4_000.0  # m/s, keeps Mars entry speed below ~6.4 km/s
 
     # ISRU
-    isru: IsruPlant = field(default_factory=IsruPlant)
+    # Converged plant (40,000 m2 arrays) with fission sized for a certain global dust storm (campaign R8: 380 kWe).
+    isru: IsruPlant = field(default_factory=lambda: IsruPlant(solar_array_m2=40_000.0, nuclear_kwe=380.0))
 
     # Earth return
     earth_braking_dv: float = 0.0  # m/s burn just before Earth entry to lower entry speed
-    return_tps_upgrade: bool = False  # ablative windward TPS on the return ship
+    return_tps_upgrade: bool = True  # ablative windward TPS, now part of the ship (Stack.ship_ablator_mass), campaign R9
     return_tps_limit_w_cm2: float = 400.0  # [est] PICA-class ablator rating used for the upgrade (Stardust-class entries exceed 1,000 W/cm2 [public])
     return_tps_mass: float = 6e3  # kg added by the upgrade [est]
-    earth_entry_fpa: float = -6.0
+    earth_entry_fpa: float = -5.9  # corridor centre from the 2026-10-31 iteration
     earth_peak_g_limit: float = 5.0  # [est] crew-rated return
     earth_landing_reserve: float = 30e3  # kg [est]
 
@@ -114,7 +115,8 @@ class CampaignReport:
 
 def make_stack(d: Design) -> Stack:
     st = Stack(booster_reserve_fraction=d.booster_reserve_fraction, q_limit_throttle=d.q_limit_throttle,
-               ship_dry_growth=d.ship_dry_growth)
+               ship_dry_growth=d.ship_dry_growth,
+               ship_ablator_mass=d.return_tps_mass if d.return_tps_upgrade else 0.0)
     if d.isp_factor != 1.0:
         st = replace(st, engine=st.engine.scaled(d.isp_factor))
     return st
@@ -156,7 +158,7 @@ def tmi_requirement(stack: Stack, d: Design, vinf: float) -> tuple[float, float,
 def return_requirement(stack: Stack, d: Design, vinf_dep: float, vinf_arr: float) -> dict:
     """ISRU propellant needed on Mars for ascent, trans-Earth injection, corrections, braking and landing."""
     e = stack.engine
-    extra = d.return_tps_mass if d.return_tps_upgrade else 0.0
+    extra = 0.0  # the ablator is carried the whole mission, so it is in stack.ship_dry
     m_final = stack.ship_dry + extra + d.return_payload + d.earth_landing_reserve
     brake = propellant_for(d.earth_braking_dv, m_final, e.rvac_isp)
     tcm = propellant_for(d.tcm_budget, m_final + brake, e.rvac_isp)
@@ -392,7 +394,7 @@ def evaluate(d: Design, n_mc: int = 300, seed: int = 11, quick: bool = False) ->
         f"{need/1e3:.0f} t needed in {stay} days; 5th percentile production {np.percentile(isr.produced_kg, 5)/1e3:.0f} t")
 
     # ---------------- P9 Earth entry
-    extra = d.return_tps_mass if d.return_tps_upgrade else 0.0
+    extra = 0.0  # ablator already in stack.ship_dry
     rveh = EntryVehicle(mass=stack.ship_dry + extra + d.return_payload + d.earth_landing_reserve)
     v_ei = earth_entry_speed(d, ret.vinf_arrive)
     tps = d.return_tps_limit_w_cm2 if d.return_tps_upgrade else d.tps_limit_w_cm2

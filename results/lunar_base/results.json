@@ -697,23 +697,23 @@
    },
    {
     "name": "Hydrolox tanker to NRHO (all lunar)",
-    "isp_s": 442.9776859037321,
+    "isp_s": 450.6,
     "dv_up": 2535.0,
     "dv_down": 2665.0,
-    "delivered_t": 257.4147698377614,
-    "burned_t": 342.5852301622386,
-    "gear_ratio": 0.42902461639626904,
+    "delivered_t": 262.2115761703672,
+    "burned_t": 337.7884238296328,
+    "gear_ratio": 0.4370192936172787,
     "imported_fuel_burned_t": 0.0,
     "imported_fuel_per_t_lunar_ox_delivered": 0.0
    },
    {
     "name": "Hydrolox tanker to EML1 (all lunar)",
-    "isp_s": 442.9776859037321,
+    "isp_s": 450.6,
     "dv_up": 2520.0,
     "dv_down": 2520.0,
-    "delivered_t": 262.3260360810628,
-    "burned_t": 337.6739639189372,
-    "gear_ratio": 0.43721006013510466,
+    "delivered_t": 267.0162230575218,
+    "burned_t": 332.9837769424782,
+    "gear_ratio": 0.44502703842920305,
     "imported_fuel_burned_t": 0.0,
     "imported_fuel_per_t_lunar_ox_delivered": 0.0
    }
@@ -738,8 +738,8 @@
    {
     "name": "C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4",
     "earth_launches": 1.7208538339133819,
-    "lunar_water_t": 1329.4187414373612,
-    "lunar_oxygen_t": 1180.7216132665988,
+    "lunar_water_t": 1298.1765842142015,
+    "lunar_oxygen_t": 1152.973929915472,
     "notes": "403 t lunar LOX and 112 t Earth CH4 in LEO; 1.0 LEO tanker trips"
    }
   ],
@@ -761,8 +761,8 @@
    {
     "name": "C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4",
     "earth_launches": 2.343681003137143,
-    "lunar_water_t": 1681.1137182823527,
-    "lunar_oxygen_t": 1493.0790725793863,
+    "lunar_water_t": 1641.6065130207498,
+    "lunar_oxygen_t": 1457.9907970209267,
     "notes": "510 t lunar LOX and 142 t Earth CH4 in LEO; 1.3 LEO tanker trips"
    }
   ],
@@ -859,7 +859,7 @@
   {
    "capability": "NASA CEA combustion chemistry",
    "source": "raptor_sim.thermo (PR #1)",
-   "lunar use": "hydrogen-oxygen Isp for lunar tankers (depot.hydrolox_isp) with the calibrated 0.946 efficiency",
+   "lunar use": "CEA chemistry reused by the hydrogen engine model (raptor_sim.hydrolox)",
    "status": "reused in code"
   },
   {
@@ -966,9 +966,9 @@
   },
   {
    "capability": "Hydrogen-oxygen engine design",
-   "source": "none yet",
-   "lunar use": "all-lunar tankers need it; thermo already handles LH2, the cycle and component models do not",
-   "status": "gap"
+   "source": "raptor_sim.hydrolox",
+   "lunar use": "HL-250 expander tanker engine (450.6 s) and HL-44 lander engine (460.2 s), gates H1-H7",
+   "status": "reused in code"
   },
   {
    "capability": "Terrain-exact illumination from LOLA",

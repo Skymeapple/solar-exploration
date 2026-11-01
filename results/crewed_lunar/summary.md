@@ -107,12 +107,12 @@ A Starship tanker refilled in LEO delivers 422 t to NRHO and aerobrakes home; fi
 | --- | --- | --- | --- | --- | --- |
 | Methane lander, lunar oxygen for ascent | 351 t | 112 t | 239 t | 6.8 | 2,246 t |
 | Methane lander, lunar oxygen for the whole round trip | 1,299 t | 1,017 t | 282 t | 8.0 | 20,443 t |
-| Hydrogen lander, all propellant from ice | 80 t | 80 t | 0 t | 0.0 | 1,960 t |
+| Hydrogen lander, all propellant from ice | 77 t | 77 t | 0 t | 0.0 | 1,655 t |
 
 Notes:
 - Lunar ice gives oxygen and hydrogen, not carbon, so methane comes from Earth.
 - Descent propellant (208 t) is loaded in NRHO; only ascent oxygen (112 t) is made on the Moon; ascent methane (31 t) is landed as cargo.
-- Water splits 8:1 oxygen to hydrogen by mass; at mixture ratio 5.5 hydrogen is the limit and 30 t oxygen is left over.
+- Water splits 8:1 oxygen to hydrogen by mass; at mixture ratio 6.4 hydrogen is the limit and 16 t oxygen is left over.
 - Regolith tonnage assumes all water is recovered; the lunar base thread sizes the real plant.
 - Crew still reach NRHO on Orion (one SLS) or a crew ship; this table counts only lander propellant.
 

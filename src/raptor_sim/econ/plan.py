@@ -17,7 +17,11 @@ MARS_WINDOWS = {2028, 2031, 2033, 2035, 2037, 2039, 2041}  # about every 26 mont
 @dataclass
 class Scenario:
     name: str
-    first_orbital_year: int = 2031
+    # Schedule from the master roadmap (PR #8) P50: first orbital flight 2032.6, first Mars cargo
+    # landing 2038.3, i.e. launched in the 2037 window. Fractional years: the first year of operation
+    # counts only the months after first flight.
+    first_orbital_year: float = 2032.6
+    first_mars_window: int = 2037
     dev_cost_factor: float = 1.0
     price_factor: float = 1.0
     flight_rate_factor: float = 1.0
@@ -31,8 +35,10 @@ class Scenario:
     tax_rate: float = 0.21
 
     # Non-recurring development, $M by year (estimate): engine, vehicle, pads and factory, lunar/Mars variants
+    # Pre-flight years (2027-2032) sum to $7,344M, the roadmap's P50 cost to first orbital flight
+    # (PR #8); the shape is the original 2031 plan stretched by one more year of engine and ship work.
     dev_musd: dict = field(default_factory=lambda: {
-        2027: 300, 2028: 800, 2029: 1300, 2030: 1600, 2031: 1500, 2032: 1100,
+        2027: 300, 2028: 800, 2029: 1200, 2030: 1600, 2031: 1744, 2032: 1700,
         2033: 800, 2034: 600, 2035: 500, 2036: 400, 2037: 350, 2038: 300,
         2039: 300, 2040: 300, 2041: 300})
     # Government development and propulsion contracts, $M (estimate; HLS-class awards are cited as scale)
@@ -48,9 +54,9 @@ class Scenario:
 
 
 BASE = Scenario("Base")
-BEAR = replace(BASE, name="Bear", first_orbital_year=2033, dev_cost_factor=1.5, price_factor=0.8,
+BEAR = replace(BASE, name="Bear", first_orbital_year=2034.9, first_mars_window=2039, dev_cost_factor=1.5, price_factor=0.8,
                flight_rate_factor=0.6, reuse_factor=0.5, mars_price_factor=0.7, mars_demand_factor=0.5)
-BULL = replace(BASE, name="Bull", first_orbital_year=2030, dev_cost_factor=0.85, price_factor=1.1,
+BULL = replace(BASE, name="Bull", first_orbital_year=2031.4, first_mars_window=2035, dev_cost_factor=0.85, price_factor=1.1,
                flight_rate_factor=1.3, reuse_factor=1.0, mars_price_factor=1.2, mars_demand_factor=1.5)
 SCENARIOS = [BEAR, BASE, BULL]
 
@@ -128,11 +134,13 @@ def project(s: Scenario = BASE) -> list[YearRow]:
     window_index = 0
     for y in YEARS:
         r = YearRow(y)
-        k = y - s.first_orbital_year
-        leo = _ramp(s.leo_ramp, k) * s.flight_rate_factor
+        t_op = y + 1 - s.first_orbital_year  # years of operation by the end of year y
+        k = math.ceil(t_op) - 1 if t_op > 0 else -1
+        frac = min(t_op, 1.0) if t_op > 0 else 0.0  # part of the first year after first flight
+        leo = _ramp(s.leo_ramp, k) * s.flight_rate_factor * frac
         lunar = round(_ramp(s.lunar_ramp, k) * s.flight_rate_factor)
         mars = 0
-        if y in MARS_WINDOWS and k >= 0:
+        if y in MARS_WINDOWS and k >= 0 and y >= s.first_mars_window:
             mars = round(_ramp(s.mars_per_window, window_index) * s.mars_demand_factor)
             window_index += 1
         sci = round(_ramp(s.science_ramp, k))
@@ -149,7 +157,7 @@ def project(s: Scenario = BASE) -> list[YearRow]:
             "Lunar cargo": lunar * lunar_price_musd(k, s),
             "Mars cargo": mars * mars_price_musd(window_index - 1, s) if mars else 0.0,
             "Science missions": sci * SCIENCE_PRICE_MUSD * s.price_factor,
-            "LEO station logistics": _ramp(s.station_musd_ramp, k) * s.price_factor,
+            "LEO station logistics": _ramp(s.station_musd_ramp, k) * s.price_factor * frac,
         }
         r.cost = {
             "development": s.dev_musd.get(y, 0.0) * s.dev_cost_factor,
@@ -223,7 +231,8 @@ def value(s: Scenario = BASE) -> Valuation:
 
 
 TORNADO = [
-    ("First orbital flight 2 years late", {"first_orbital_year": 2033}, {"first_orbital_year": 2029}),
+    ("Schedule at roadmap P90 / P10", {"first_orbital_year": 2034.9, "first_mars_window": 2039},
+     {"first_orbital_year": 2031.4, "first_mars_window": 2035}),
     ("Development cost +/-30%", {"dev_cost_factor": 1.3}, {"dev_cost_factor": 0.7}),
     ("Launch and mission prices +/-20%", {"price_factor": 0.8}, {"price_factor": 1.2}),
     ("Flight rate +/-30%", {"flight_rate_factor": 0.7}, {"flight_rate_factor": 1.3}),

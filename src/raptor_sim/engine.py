@@ -64,13 +64,19 @@ class EnginePerformance:
         }
 
 
-def size_engine(design: EngineDesign, p_ambient: float = P_SEA_LEVEL) -> EnginePerformance:
-    """Size the throat for the required thrust and compute delivered performance."""
-    gas = thermo.chamber(design.pc, design.mixture_ratio)
+def size_engine(design: EngineDesign, p_ambient: float = P_SEA_LEVEL, chem=None) -> EnginePerformance:
+    """Size the throat for the required thrust and compute delivered performance.
+
+    `chem` is the propellant chemistry: any object with the `chamber`, `ideal_isp`
+    and `exit_pressure` functions of `raptor_sim.thermo` (methane/oxygen, the
+    default). `raptor_sim.hydrolox.thermo` gives hydrogen/oxygen.
+    """
+    thermo_ = chem or thermo
+    gas = thermo_.chamber(design.pc, design.mixture_ratio)
     eta = design.eta_cstar * design.eta_cf
 
     cstar = design.eta_cstar * gas.cstar_ideal
-    isp_vac = eta * thermo.ideal_isp(design.pc, design.mixture_ratio, design.eps)
+    isp_vac = eta * thermo_.ideal_isp(design.pc, design.mixture_ratio, design.eps)
     # Ambient back-pressure acting on the exit area: F = F_vac - pa * Ae,
     # and Ae / mdot = eps * cstar / pc.
     isp_sl = isp_vac - p_ambient * design.eps * cstar / (design.pc * G0)
@@ -80,7 +86,7 @@ def size_engine(design: EngineDesign, p_ambient: float = P_SEA_LEVEL) -> EngineP
     mdot = design.thrust_sl / (isp_sl * G0)
     throat_area = mdot * cstar / design.pc
     exit_area = throat_area * design.eps
-    pe = thermo.exit_pressure(design.pc, design.mixture_ratio, design.eps)
+    pe = thermo_.exit_pressure(design.pc, design.mixture_ratio, design.eps)
 
     return EnginePerformance(
         design=design,

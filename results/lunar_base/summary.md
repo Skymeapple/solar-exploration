@@ -146,8 +146,8 @@ Surface GCR dose 500 mSv/yr (Chang'e 4). 2.3 m of regolith meets 50 mSv/yr with 
 | --- | --- | --- | --- | --- |
 | Methalox Starship-class tanker to NRHO | 348 | 591 | 0.37 | 0.47 |
 | Methalox Starship-class tanker to EML1 | 348 | 603 | 0.38 | 0.46 |
-| Hydrolox tanker to NRHO (all lunar) | 443 | 257 | 0.43 | 0.00 |
-| Hydrolox tanker to EML1 (all lunar) | 443 | 262 | 0.44 | 0.00 |
+| Hydrolox tanker to NRHO (all lunar) | 451 | 262 | 0.44 | 0.00 |
+| Hydrolox tanker to EML1 (all lunar) | 451 | 267 | 0.45 | 0.00 |
 
 ## Does lunar propellant reduce Earth launches?
 
@@ -157,7 +157,7 @@ Mars cargo mission, 100 t landed:
 | --- | --- | --- | --- |
 | A. Earth only, LEO refill (baseline) | 4.3 | 0 | 546 t propellant in LEO |
 | B. NRHO departure, lunar LOX + Earth CH4 via the surface | 8.1 | 317 | 352 t Earth propellant to reach NRHO, 133 t refilled at NRHO, 0.22 shuttle trips, 78 t CH4 landed on the Moon |
-| C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4 | 1.7 | 1,329 | 403 t lunar LOX and 112 t Earth CH4 in LEO; 1.0 LEO tanker trips |
+| C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4 | 1.7 | 1,298 | 403 t lunar LOX and 112 t Earth CH4 in LEO; 1.0 LEO tanker trips |
 
 Same with a 150 t ship dry mass (matches SpaceX's stated 100 t to LEO):
 
@@ -165,7 +165,7 @@ Same with a 150 t ship dry mass (matches SpaceX's stated 100 t to LEO):
 | --- | --- | --- |
 | A. Earth only, LEO refill (baseline) | 7.2 | 0 |
 | B. NRHO departure, lunar LOX + Earth CH4 via the surface | 15.7 | 396 |
-| C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4 | 2.3 | 1,681 |
+| C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4 | 2.3 | 1,642 |
 
 Lunar sortie (Starship-class lander, 20 t payload, LEO to NRHO to surface to NRHO):
 
@@ -191,7 +191,7 @@ Total: 2,063 t landed, 132 Earth launches for cargo (crew flights not included).
 
 | Capability | Source | Use | Status |
 | --- | --- | --- | --- |
-| NASA CEA combustion chemistry | raptor_sim.thermo (PR #1) | hydrogen-oxygen Isp for lunar tankers (depot.hydrolox_isp) with the calibrated 0.946 efficiency | reused in code |
+| NASA CEA combustion chemistry | raptor_sim.thermo (PR #1) | CEA chemistry reused by the hydrogen engine model (raptor_sim.hydrolox) | reused in code |
 | Engine sizing and nozzle exit state | raptor_sim.engine (PR #1) | exit Mach of the Raptor-class nozzle for the plume and pad model | reused in code |
 | Two-stage vehicle performance | raptor_sim.mission.vehicle_performance (PR #1) | payload to LEO and Isp values behind every Earth-launch count | reused in code |
 | Patched-conic transfers and Mars mission | raptor_sim.mission (PR #1) | Mars v-infinity, LEO refill baseline (scenario A) | reused in code |
@@ -209,7 +209,7 @@ Total: 2,063 t landed, 132 Earth launches for cargo (crew flights not included).
 | Plume-surface interaction and pad sizing | lunar_base.plume | pads at any airless body (Phobos, Ceres, Mercury); Mars needs an atmosphere term | new here |
 | Depot boil-off and shuttle gear ratio | lunar_base.depot | LEO, NRHO, Mars orbit depots | new here |
 | Earth-launch accounting for off-world propellant | lunar_base.mars_benefit | decides where off-world propellant pays | new here |
-| Hydrogen-oxygen engine design | none yet | all-lunar tankers need it; thermo already handles LH2, the cycle and component models do not | gap |
+| Hydrogen-oxygen engine design | raptor_sim.hydrolox | HL-250 expander tanker engine (450.6 s) and HL-44 lander engine (460.2 s), gates H1-H7 | reused in code |
 | Terrain-exact illumination from LOLA | none yet | replace the synthetic horizon in site.illumination_series | gap |
 | Aerocapture into LEO for returning tankers | partly raptor_sim.crew.entry | scenario C assumes it at 100 m/s trim | gap |
 

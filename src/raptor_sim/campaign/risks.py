@@ -151,18 +151,19 @@ def run_risks(d: Design, base: dict) -> list[Risk]:
                     f"P(EDL) {p_bad:.3f} at {d.mars_entry_fpa} deg with {d.landing_propellant/1e3:.0f} t",
                     f"P(EDL) {p_fix:.3f} at {fpa_fix:.1f} deg with {lp_fix/1e3:.0f} t", p_fix >= 0.99))
 
-    # R7 landing engine out
-    r_bad = fly_entry("mars", vinf_arr, d.mars_entry_fpa, veh, guid, engine=st.engine, landing_engines=2,
+    # R7 landing engine out. The design now carries a fourth sea-level engine (Stack.ship_sl_engines);
+    # "without" is the public three-engine ship (one engine's mass lighter) with one out.
+    n_sl = st.ship_sl_engines
+    veh3 = EntryVehicle(mass=veh.mass - max(n_sl - 3, 0) * st.engine.mass)
+    r_bad = fly_entry("mars", vinf_arr, d.mars_entry_fpa, veh3, guid, engine=st.engine, landing_engines=2,
                       landing_propellant=d.landing_propellant)
-    # Mitigation: a fourth sea-level engine, so one failure still leaves three. Adds one engine mass.
-    veh4 = EntryVehicle(mass=veh.mass + st.engine.mass)
-    r_fix = fly_entry("mars", vinf_arr, d.mars_entry_fpa, veh4, guid, engine=st.engine, landing_engines=3,
+    r_fix = fly_entry("mars", vinf_arr, d.mars_entry_fpa, veh, guid, engine=st.engine, landing_engines=n_sl - 1,
                       landing_propellant=d.landing_propellant)
-    out.append(Risk("R7", "P6", "One of three landing engines fails to light", "medium", "ship crashes",
-                    f"Design change: a fourth sea-level engine (+{st.engine.mass/1e3:.1f} t) so one failure leaves three",
+    out.append(Risk("R7", "P6", "One landing engine fails to light", "medium", "ship crashes",
+                    f"Design change (in baseline): {n_sl} sea-level engines (+{st.engine.mass/1e3:.1f} t each beyond 3), so one failure leaves {n_sl - 1}",
                     f"3 engines, one out: crashed={r_bad.crashed}, used {r_bad.landing_propellant/1e3:.0f} t, "
                     f"impact {r_bad.touchdown_speed:.0f} m/s",
-                    f"4 engines, one out: crashed={r_fix.crashed}, used {r_fix.landing_propellant/1e3:.0f} t of "
+                    f"{n_sl} engines, one out: crashed={r_fix.crashed}, used {r_fix.landing_propellant/1e3:.0f} t of "
                     f"{d.landing_propellant/1e3:.0f} t, touchdown {r_fix.touchdown_speed:.1f} m/s",
                     bool(not r_fix.crashed and r_fix.landing_propellant <= d.landing_propellant)))
 

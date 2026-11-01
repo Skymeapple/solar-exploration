@@ -1,0 +1,133 @@
+{
+  "calibration": {
+    "eta_cstar": 0.99,
+    "eta_cf": 0.9872788259810208,
+    "expander_heat_factor": 0.4101675940207364
+  },
+  "design_points": {
+    "HL-44": {
+      "name": "HL-44",
+      "cycle": "expander",
+      "use": "crewed lunar hydrogen lander (9 engines), raptor_sim.crewed_lunar",
+      "thrust_vac_kN": 44.0,
+      "chamber_pressure_bar": 71.24171163858644,
+      "mixture_ratio": 6.39351563947889,
+      "area_ratio": 249.18086482304355,
+      "isp_vac_s": 468.4979295586797,
+      "isp_vac_for_studies_s": 460.19251973435667,
+      "exit_diameter_m": 0.9800709228452348,
+      "throat_diameter_m": 0.06208692631989007,
+      "mdot_kg_s": 9.576886158983369,
+      "mass_kg_est": 82.36453201970443,
+      "thrust_to_weight_est": 54.47431348276828,
+      "trial": {
+        "number": 68,
+        "pc_bar": 71.24171163858644,
+        "mixture_ratio": 6.39351563947889,
+        "eps": 249.18086482304355,
+        "feasible": true,
+        "reason": "",
+        "isp_vac": 468.4979295586797,
+        "exit_diameter": 0.9800709228452348,
+        "power_margin": 0.17441406250000013,
+        "pump_discharge_bar": 165.2585087675444,
+        "turbine_inlet_K": 316.57129164676235
+      }
+    },
+    "HL-250 (expander)": {
+      "name": "HL-250 (expander)",
+      "cycle": "expander",
+      "use": "lunar hydrogen tanker / shuttle, raptor_sim.lunar_base.depot",
+      "thrust_vac_kN": 250.0,
+      "chamber_pressure_bar": 48.51534170109531,
+      "mixture_ratio": 6.270039776257902,
+      "area_ratio": 119.55431199125297,
+      "isp_vac_s": 458.7762948083075,
+      "isp_vac_for_studies_s": 450.6432276042396,
+      "exit_diameter_m": 1.982279160987811,
+      "throat_diameter_m": 0.18129348318934232,
+      "mdot_kg_s": 55.567180808895145,
+      "mass_kg_est": 467.98029556650243,
+      "thrust_to_weight_est": 54.47431348276828,
+      "trial": {
+        "number": 79,
+        "pc_bar": 48.51534170109531,
+        "mixture_ratio": 6.270039776257902,
+        "eps": 119.55431199125297,
+        "feasible": true,
+        "reason": "",
+        "isp_vac": 458.7762948083075,
+        "exit_diameter": 1.982279160987811,
+        "power_margin": 0.19296875000000013,
+        "pump_discharge_bar": 111.78727357531915,
+        "turbine_inlet_K": 216.00808787486477
+      }
+    },
+    "HL-250 (staged combustion)": {
+      "name": "HL-250 (staged combustion)",
+      "cycle": "staged",
+      "use": "alternative for the lunar tanker",
+      "thrust_vac_kN": 250.0,
+      "chamber_pressure_bar": 178.6234563261759,
+      "mixture_ratio": 5.340914425460423,
+      "area_ratio": 149.69013834765167,
+      "isp_vac_s": 464.1099934879424,
+      "isp_vac_for_studies_s": 464.1099934879424,
+      "exit_diameter_m": 1.1707226939087028,
+      "throat_diameter_m": 0.09568799223766569,
+      "mdot_kg_s": 54.928585210717976,
+      "mass_kg_est": 348.5081175954366,
+      "thrust_to_weight_est": 73.14867010943338,
+      "trial": {
+        "number": 73,
+        "pc_bar": 178.6234563261759,
+        "mixture_ratio": 5.340914425460423,
+        "eps": 149.69013834765167,
+        "feasible": true,
+        "reason": "",
+        "isp_vac": 464.1099934879424,
+        "exit_diameter": 1.1707226939087028,
+        "power_margin": NaN,
+        "pump_discharge_bar": 365.8304183755067,
+        "turbine_inlet_K": NaN
+      }
+    }
+  },
+  "gates": [
+    {
+      "gate": "H1 Thermochemistry",
+      "passed": true,
+      "detail": "RS-25D (109%): Tc 3604 vs 3609 K (0.13%), MW 0.05%; RL10B-2: Tc 3417 vs 3422 K (0.13%), MW 0.05%"
+    },
+    {
+      "gate": "H2 Cycle balance",
+      "passed": true,
+      "detail": "RS-25 fuel pump discharge 45.0 MPa vs 45.0 (0.1%), preburner 347 bar, pumps 73 MW; RL10B-2 closes True (turbine 220 K, PR 1.59); RL10C-1 closes True (turbine 193 K, PR 1.69); RL10A-4-2 closes True (turbine 194 K, PR 1.69); Vinci expander wall 57.7 bar vs flown 60 bar (3.8%)"
+    },
+    {
+      "gate": "H3 Performance",
+      "passed": true,
+      "detail": "RS-25 sea level 372.9 vs 366.0 s (1.9%); vacuum is the calibration point; RL10B-2 470.3 vs 465.5 s (1.0%); RL10C-1 461.7 vs 449.7 s (2.7%); RL10A-4-2 455.6 vs 451.0 s (1.0%); Vinci 468.6 vs 457.2 s (2.5%)"
+    },
+    {
+      "gate": "H4 Design margins",
+      "passed": true,
+      "detail": "HL-44 heat margin 17%, turbine 317 K; HL-250 (expander) heat margin 19%, turbine 216 K; HL-250 (staged combustion) fuel pump 366 bar"
+    },
+    {
+      "gate": "H5 Turbopumps",
+      "passed": null,
+      "detail": "component-level pump model exists for methane only (PR #2); not run"
+    },
+    {
+      "gate": "H6 Engine mass",
+      "passed": null,
+      "detail": "estimate only: thrust-to-weight of RL10C-1 (expander) or RS-25 (staged)"
+    },
+    {
+      "gate": "H7 Benchmark",
+      "passed": true,
+      "detail": "HL-44 468.5 s vs BE-7 460.0 s (1.8%); HL-250 (expander) 458.8 s vs Vinci 457.2 s (0.3%); HL-250 (staged combustion) 464.1 s vs RS-25 452.3 s (2.6%)"
+    }
+  ]
+}

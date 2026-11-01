@@ -12,7 +12,7 @@ from __future__ import annotations
 CAPABILITIES: tuple[dict[str, str], ...] = (
     # From the engine and vehicle work (PR #1)
     {"capability": "NASA CEA combustion chemistry", "source": "raptor_sim.thermo (PR #1)",
-     "lunar use": "hydrogen-oxygen Isp for lunar tankers (depot.hydrolox_isp) with the calibrated 0.946 efficiency",
+     "lunar use": "CEA chemistry reused by the hydrogen engine model (raptor_sim.hydrolox)",
      "status": "reused in code"},
     {"capability": "Engine sizing and nozzle exit state", "source": "raptor_sim.engine (PR #1)",
      "lunar use": "exit Mach of the Raptor-class nozzle for the plume and pad model", "status": "reused in code"},
@@ -59,10 +59,10 @@ CAPABILITIES: tuple[dict[str, str], ...] = (
      "lunar use": "LEO, NRHO, Mars orbit depots", "status": "new here"},
     {"capability": "Earth-launch accounting for off-world propellant", "source": "lunar_base.mars_benefit",
      "lunar use": "decides where off-world propellant pays", "status": "new here"},
+    {"capability": "Hydrogen-oxygen engine design", "source": "raptor_sim.hydrolox",
+     "lunar use": "HL-250 expander tanker engine (450.6 s) and HL-44 lander engine (460.2 s), gates H1-H7",
+     "status": "reused in code"},
     # Gaps
-    {"capability": "Hydrogen-oxygen engine design", "source": "none yet",
-     "lunar use": "all-lunar tankers need it; thermo already handles LH2, the cycle and component models do not",
-     "status": "gap"},
     {"capability": "Terrain-exact illumination from LOLA", "source": "none yet",
      "lunar use": "replace the synthetic horizon in site.illumination_series", "status": "gap"},
     {"capability": "Aerocapture into LEO for returning tankers", "source": "partly raptor_sim.crew.entry",

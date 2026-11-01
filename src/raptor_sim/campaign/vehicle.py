@@ -109,7 +109,8 @@ class Stack:
     ship_propellant: float = 1_600e3  # [public]
     ship_dry_base: float = 100e3  # [public] Block 1 figure; Block 3 not published
     ship_dry_growth: float = 0.0  # kg added by the iteration loop if mass grows
-    ship_sl_engines: int = 3  # [public]
+    ship_sl_engines: int = 4  # design change (campaign risk R7): public ship has 3; a 4th lets the ship land with one out
+    ship_ablator_mass: float = 6e3  # kg, design change (campaign R9): ablative windward heat shield for 12.3 km/s Earth return [est]
     ship_vac_engines: int = 3  # [public]
     diameter: float = 9.0  # m [public]
     stack_length: float = 124.0  # m [public] Block 3, approximate
@@ -131,7 +132,10 @@ class Stack:
     @property
     def ship_dry(self) -> float:
         n = self.ship_sl_engines + self.ship_vac_engines
-        return self.ship_dry_base + n * self._engine_mass_delta() + self.ship_dry_growth
+        # The public dry mass includes 3 + 3 engines; engines beyond that add a whole engine.
+        added_engines = max(self.ship_sl_engines - 3, 0) + max(self.ship_vac_engines - 3, 0)
+        return (self.ship_dry_base + added_engines * PUBLIC_ENGINE_MASS + n * self._engine_mass_delta()
+                + self.ship_ablator_mass + self.ship_dry_growth)
 
 
 def ascent_cd(mach: float) -> float:
