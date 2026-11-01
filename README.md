@@ -239,3 +239,26 @@ Run `python scripts/run_bases.py`; tables land in [`results/bases/`](results/bas
 | `bases/logistics.py` | Outpost, base and city build-up, Earth launches with and without hubs, day-by-day depot refill simulation |
 | `bases/ranking.py` | Transit-hub and settlement rankings with a Monte Carlo weight-sensitivity check |
 | `bases/capabilities.py` | Site-by-capability matrix showing which technologies are reused where |
+
+## Human settlement study
+
+`src/raptor_sim/settlement/` models the human side of permanent settlement (Mars first, then the
+Moon, Ceres, Callisto, Titan and free-space stations). It needs only numpy and scipy.
+
+```bash
+python scripts/run_settlement_study.py   # writes results/settlement/ (about 10 minutes; --quick for CI)
+pytest tests/test_settlement.py
+```
+
+| Module | Content |
+| --- | --- |
+| `inputs.py` | Every input with a basis tag: cited (with source), model, estimate or unknown |
+| `population.py` | Individual-based demography and gene-drop genetics; checked against Wright-Fisher theory |
+| `life_support.py` | O2, water and food mass balance per resident at outpost, ISRU and bioregenerative stages |
+| `energy.py` | Power per resident, CH4/LOX plant energy, solar vs fission mass by site |
+| `radiation.py` | Tour and lifetime dose from measured surface rates, regolith shielding, cancer-risk band |
+| `health.py` | Partial-gravity bone loss under three hypotheses; medical demand vs population; light time |
+| `growth.py` | Settlement growth vs resupply per launch window; self-sufficiency and Earth-cutoff tests |
+| `capabilities.py` | Which capabilities are reused, adapted or replaced at each site |
+
+Results: [`results/settlement/summary.md`](results/settlement/summary.md).

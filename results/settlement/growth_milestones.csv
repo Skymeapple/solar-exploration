@@ -1,0 +1,9 @@
+scenario,year_pop_1000,year_pop_10000,year_pop_100000,year_pop_1000000,year_f_local_90,year_f_local_98,final_population,final_year,peak_power_mw,peak_population,max_unmet_share
+baseline (N_half 10k),14.9,19.2,36.3,76.9,32.0,53.4,1216958.293395,83.3,26363.740047,1216958.293395,0.0
+fast industry (N_half 1k),12.8,17.1,21.4,40.6,17.1,19.2,3586783.510814,83.3,77484.255451,3586783.510814,0.0
+slow industry (N_half 100k),14.9,21.4,,,,,17845.210342,83.3,504.519001,18186.456827,0.011163
+small fleet (cap 100),14.9,,,,,,1501.837581,83.3,43.63499,1502.630005,0.010259
+Earth cutoff after 10 windows (~21 yr),14.9,19.2,,,,,0.0,83.3,484.498822,17258.369069,0.577263
+Earth cutoff after 15 windows (~32 yr),14.9,19.2,,,32.0,,0.0,83.3,1817.652031,79060.173461,0.577263
+Earth cutoff after 30 windows (~64 yr),14.9,19.2,36.3,,32.0,53.4,771056.270563,83.3,16632.785265,771056.270563,0.005266
+"slow industry, cutoff after 30 windows",14.9,21.4,,,,,0.0,83.3,504.519001,18186.456827,0.577263
