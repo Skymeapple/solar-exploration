@@ -1,0 +1,991 @@
+{
+ "checks": [
+  {
+   "id": "L1",
+   "name": "Surface to NRHO delta-v vs NASA",
+   "value": 2535.0,
+   "target": "within 5% of 2610 m/s",
+   "passed": true,
+   "note": "LLO-staged sum of shared legs"
+  },
+  {
+   "id": "L2",
+   "name": "Mars departure from LEO matches mission.py",
+   "value": 3950.6372426015837,
+   "target": "within 0.1% of 3951 m/s",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "id": "L3",
+   "name": "Connecting Ridge lit fraction (19 yr)",
+   "value": 0.9565000000557201,
+   "target": "within 0.5% of 0.9565",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "id": "L4",
+   "name": "Connecting Ridge longest dark spell (19 yr)",
+   "value": 4.333333333333333,
+   "target": "3 to 5 days (Glaser 2014)",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "id": "L5",
+   "name": "Solar + RFC outpost, unmet critical energy (2 yr)",
+   "value": 1.0680345496894006e-13,
+   "target": "< 1 kWh",
+   "passed": true,
+   "note": "6849 kWh storage, 57 kW array"
+  },
+  {
+   "id": "L6",
+   "name": "Ice sublimation power vs Kornuta 2019 Table 1",
+   "value": 0.056016493038701265,
+   "target": "both cases within 10%",
+   "passed": true,
+   "note": "4 wt%: 566 vs 580 kW; 30 wt%: 391 vs 370 kW"
+  },
+  {
+   "id": "L7",
+   "name": "Total plant power vs Kornuta 2019 (2.8 MW)",
+   "value": 2820.067016404556,
+   "target": "within 15% of 2,800 kW",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "id": "L8",
+   "name": "Plume ground force / thrust",
+   "value": 0.9999999087501923,
+   "target": "within 2% of 1",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "id": "L9",
+   "name": "Shaded surface LOX depot boil-off",
+   "value": 0.07504763487668784,
+   "target": "< 1% per month",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "id": "L10",
+   "name": "Baseline tanker launches vs mission.py",
+   "value": 3.3159276360015575,
+   "target": "ceil equals 4",
+   "passed": true,
+   "note": ""
+  }
+ ],
+ "orbits": {
+  "legs": [
+   {
+    "leg": "LEO->TLI",
+    "dv": 3108,
+    "kind": "computed"
+   },
+   {
+    "leg": "TLI->NRHO",
+    "dv": 500.0,
+    "kind": "estimated"
+   },
+   {
+    "leg": "NRHO->TEI",
+    "dv": 500.0,
+    "kind": "estimated"
+   },
+   {
+    "leg": "NRHO->LLO",
+    "dv": 705.0,
+    "kind": "cited"
+   },
+   {
+    "leg": "LLO->NRHO",
+    "dv": 705.0,
+    "kind": "cited"
+   },
+   {
+    "leg": "TLI->LLO",
+    "dv": 824,
+    "kind": "computed"
+   },
+   {
+    "leg": "LLO->surface",
+    "dv": 1960.0,
+    "kind": "computed"
+   },
+   {
+    "leg": "surface->LLO",
+    "dv": 1830.0,
+    "kind": "computed"
+   },
+   {
+    "leg": "surface->NRHO (NASA)",
+    "dv": 2610.0,
+    "kind": "cited"
+   },
+   {
+    "leg": "LLO->Earth perigee",
+    "dv": 824,
+    "kind": "computed"
+   },
+   {
+    "leg": "EML1->surface",
+    "dv": 2520.0,
+    "kind": "estimated"
+   },
+   {
+    "leg": "surface->EML1",
+    "dv": 2520.0,
+    "kind": "estimated"
+   },
+   {
+    "leg": "LEO->EML1",
+    "dv": 3770.0,
+    "kind": "estimated"
+   }
+  ],
+  "mars_departure": [
+   {
+    "origin": "LEO",
+    "dv": 3950.6372426015837
+   },
+   {
+    "origin": "EML1",
+    "dv": 1262.167319601649
+   },
+   {
+    "origin": "NRHO",
+    "dv": 1081.6317422597926
+   },
+   {
+    "origin": "LLO",
+    "dv": 1438.0317422597927
+   }
+  ]
+ },
+ "sites": [
+  {
+   "site": "Connecting Ridge (Shackleton to de Gerlache)",
+   "power": 0.9565,
+   "night": 0.7333333333333334,
+   "ice": 0.7408182206817179,
+   "terrain": 0.6,
+   "comms": 0.55,
+   "total": 0.7613212218370962
+  },
+  {
+   "site": "de Gerlache rim, point C",
+   "power": 0.85,
+   "night": 0.6,
+   "ice": 0.8187307530779818,
+   "terrain": 0.4666666666666667,
+   "comms": 0.55,
+   "total": 0.7088493549361621
+  },
+  {
+   "site": "Shackleton rim, point D",
+   "power": 0.86,
+   "night": 0.5333333333333333,
+   "ice": 0.8187307530779818,
+   "terrain": 0.4666666666666667,
+   "comms": 0.45,
+   "total": 0.6835160216028288
+  },
+  {
+   "site": "Peary crater rim (north pole)",
+   "power": 0.89,
+   "night": 0.6,
+   "ice": 0.0820849986238988,
+   "terrain": 0.6,
+   "comms": 0.5,
+   "total": 0.5425212496559747
+  },
+  {
+   "site": "Malapert massif, M1",
+   "power": 0.74,
+   "night": 0.4,
+   "ice": 0.22313016014842982,
+   "terrain": 0.33333333333333337,
+   "comms": 0.95,
+   "total": 0.5336158733704408
+  }
+ ],
+ "power": {
+  "architectures": [
+   {
+    "load": 40.0,
+    "arch": "fission (no spare)",
+    "solar": 0.0,
+    "fission": 40.0,
+    "storage": 0.0,
+    "mass": 10.046
+   },
+   {
+    "load": 40.0,
+    "arch": "solar + rfc",
+    "solar": 56.68973216339576,
+    "fission": 0.0,
+    "storage": 6848.763203888892,
+    "mass": 13.904263078594678
+   },
+   {
+    "load": 40.0,
+    "arch": "fission (n+1)",
+    "solar": 0.0,
+    "fission": 80.0,
+    "storage": 0.0,
+    "mass": 20.092
+   },
+   {
+    "load": 40.0,
+    "arch": "solar + liion",
+    "solar": 97.38896223119,
+    "fission": 0.0,
+    "storage": 4857.078877777044,
+    "mass": 43.721956055848366
+   },
+   {
+    "load": 100.0,
+    "arch": "fission (no spare)",
+    "solar": 0.0,
+    "fission": 120.0,
+    "storage": 0.0,
+    "mass": 30.138
+   },
+   {
+    "load": 100.0,
+    "arch": "solar + rfc",
+    "solar": 141.72433040848938,
+    "fission": 0.0,
+    "storage": 17121.908009722258,
+    "mass": 34.76065769648674
+   },
+   {
+    "load": 100.0,
+    "arch": "fission (n+1)",
+    "solar": 0.0,
+    "fission": 160.0,
+    "storage": 0.0,
+    "mass": 40.184
+   },
+   {
+    "load": 100.0,
+    "arch": "solar + liion",
+    "solar": 243.472405577975,
+    "fission": 0.0,
+    "storage": 12142.697194442599,
+    "mass": 109.30489013962082
+   },
+   {
+    "load": 300.0,
+    "arch": "fission (no spare)",
+    "solar": 0.0,
+    "fission": 320.0,
+    "storage": 0.0,
+    "mass": 21.333333333333332
+   },
+   {
+    "load": 300.0,
+    "arch": "fission (n+1)",
+    "solar": 0.0,
+    "fission": 360.0,
+    "storage": 0.0,
+    "mass": 24.0
+   },
+   {
+    "load": 300.0,
+    "arch": "solar + rfc",
+    "solar": 425.1729912254682,
+    "fission": 0.0,
+    "storage": 51365.724029166544,
+    "mass": 104.28197308945985
+   },
+   {
+    "load": 300.0,
+    "arch": "solar + liion",
+    "solar": 730.417216733925,
+    "fission": 0.0,
+    "storage": 36428.09158332782,
+    "mass": 327.9146704188626
+   }
+  ],
+  "isru_trade": [
+   {
+    "option": "ISRU on fission",
+    "power_mass_t": 163.47133333333335,
+    "capacity_factor": 1.0,
+    "mass_per_effective_kw_kg": 81.73566666666667
+   },
+   {
+    "option": "ISRU on solar (1.00x array)",
+    "power_mass_t": 96.80466666666668,
+    "capacity_factor": 0.9564999999871452,
+    "mass_per_effective_kw_kg": 50.603589476198465
+   },
+   {
+    "option": "ISRU on solar (1.10x array)",
+    "power_mass_t": 103.47133333333333,
+    "capacity_factor": 0.9586174001434515,
+    "mass_per_effective_kw_kg": 53.9690461063243
+   },
+   {
+    "option": "ISRU on solar (1.25x array)",
+    "power_mass_t": 113.47133333333333,
+    "capacity_factor": 0.9606975315110629,
+    "mass_per_effective_kw_kg": 59.05674242487978
+   }
+  ],
+  "dark_spells_days_max": 4.5
+ },
+ "isru": {
+  "plants": [
+   {
+    "product": "water",
+    "ice_wt_pct": 1.0,
+    "water_t_yr": 1000.0,
+    "o2_t_yr": 0.0,
+    "h2_t_yr": 0.0,
+    "propellant_t_yr": 0.0,
+    "imported_ch4_t_yr": 0.0,
+    "thermal_kw": 477.8860280382728,
+    "electric_kw": 11.407711613050424,
+    "total_kw": 489.2937396513232,
+    "regolith_kt_yr": 120.48192771084338,
+    "area_km2_yr": 0.1606425702811245,
+    "plant_mass_t": 22.232343491283082
+   },
+   {
+    "product": "water",
+    "ice_wt_pct": 5.6000000000000005,
+    "water_t_yr": 1000.0,
+    "o2_t_yr": 0.0,
+    "h2_t_yr": 0.0,
+    "propellant_t_yr": 0.0,
+    "imported_ch4_t_yr": 0.0,
+    "thermal_kw": 207.31936486047059,
+    "electric_kw": 11.407711613050424,
+    "total_kw": 218.727076473521,
+    "regolith_kt_yr": 21.514629948364888,
+    "area_km2_yr": 0.028686173264486515,
+    "plant_mass_t": 15.468176911838025
+   },
+   {
+    "product": "water",
+    "ice_wt_pct": 30.0,
+    "water_t_yr": 1000.0,
+    "o2_t_yr": 0.0,
+    "h2_t_yr": 0.0,
+    "propellant_t_yr": 0.0,
+    "imported_ch4_t_yr": 0.0,
+    "thermal_kw": 159.4800418058447,
+    "electric_kw": 11.407711613050424,
+    "total_kw": 170.88775341889513,
+    "regolith_kt_yr": 4.016064257028113,
+    "area_km2_yr": 0.005354752342704151,
+    "plant_mass_t": 14.272193835472379
+   },
+   {
+    "product": "hydrolox",
+    "ice_wt_pct": 1.0,
+    "water_t_yr": 1277.2066643034384,
+    "o2_t_yr": 1134.3495214462955,
+    "h2_t_yr": 142.85714285714286,
+    "propellant_t_yr": 1000.0000000000001,
+    "imported_ch4_t_yr": 0.0,
+    "thermal_kw": 610.3592197879818,
+    "electric_kw": 1186.3624357591939,
+    "total_kw": 1796.7216555471757,
+    "regolith_kt_yr": 153.88032100041428,
+    "area_km2_yr": 0.2051737613338857,
+    "plant_mass_t": 57.69010803171378
+   },
+   {
+    "product": "hydrolox",
+    "ice_wt_pct": 5.6000000000000005,
+    "water_t_yr": 1277.2066643034384,
+    "o2_t_yr": 1134.3495214462955,
+    "h2_t_yr": 142.85714285714286,
+    "propellant_t_yr": 1000.0000000000001,
+    "imported_ch4_t_yr": 0.0,
+    "thermal_kw": 264.7896744389491,
+    "electric_kw": 1186.3624357591939,
+    "total_kw": 1451.152110198143,
+    "regolith_kt_yr": 27.478628750073977,
+    "area_km2_yr": 0.0366381716667653,
+    "plant_mass_t": 49.05086939798796
+   },
+   {
+    "product": "hydrolox",
+    "ice_wt_pct": 30.0,
+    "water_t_yr": 1277.2066643034384,
+    "o2_t_yr": 1134.3495214462955,
+    "h2_t_yr": 142.85714285714286,
+    "propellant_t_yr": 1000.0000000000001,
+    "imported_ch4_t_yr": 0.0,
+    "thermal_kw": 203.68897221781577,
+    "electric_kw": 1186.3624357591939,
+    "total_kw": 1390.0514079770096,
+    "regolith_kt_yr": 5.1293440333471425,
+    "area_km2_yr": 0.00683912537779619,
+    "plant_mass_t": 47.523351842459626
+   },
+   {
+    "product": "methalox",
+    "ice_wt_pct": 1.0,
+    "water_t_yr": 1125.9374999999998,
+    "o2_t_yr": 999.9999999999997,
+    "h2_t_yr": 125.93749999999996,
+    "propellant_t_yr": 1277.7777777777774,
+    "imported_ch4_t_yr": 277.77777777777766,
+    "thermal_kw": 538.0697996943427,
+    "electric_kw": 890.1801501743747,
+    "total_kw": 1428.2499498687175,
+    "regolith_kt_yr": 135.65512048192767,
+    "area_km2_yr": 0.18087349397590355,
+    "plant_mass_t": 46.96562374671794
+   },
+   {
+    "product": "methalox",
+    "ice_wt_pct": 5.6000000000000005,
+    "water_t_yr": 1125.9374999999998,
+    "o2_t_yr": 999.9999999999997,
+    "h2_t_yr": 125.93749999999996,
+    "propellant_t_yr": 1277.7777777777774,
+    "imported_ch4_t_yr": 277.77777777777766,
+    "thermal_kw": 233.428647372586,
+    "electric_kw": 890.1801501743747,
+    "total_kw": 1123.6087975469607,
+    "regolith_kt_yr": 24.22412865748709,
+    "area_km2_yr": 0.032298838209982784,
+    "plant_mass_t": 39.34959493867402
+   },
+   {
+    "product": "methalox",
+    "ice_wt_pct": 30.0,
+    "water_t_yr": 1125.9374999999998,
+    "o2_t_yr": 999.9999999999997,
+    "h2_t_yr": 125.93749999999996,
+    "propellant_t_yr": 1277.7777777777774,
+    "imported_ch4_t_yr": 277.77777777777766,
+    "thermal_kw": 179.56455957076818,
+    "electric_kw": 890.1801501743747,
+    "total_kw": 1069.744709745143,
+    "regolith_kt_yr": 4.52183734939759,
+    "area_km2_yr": 0.006029116465863452,
+    "plant_mass_t": 38.00299274362857
+   }
+  ],
+  "kornuta_check": {
+   "4%": {
+    "model_kw": 565.5749069329889,
+    "kornuta_kw": 580.0,
+    "error": -0.024870850115536358
+   },
+   "30%": {
+    "model_kw": 390.72610242431944,
+    "kornuta_kw": 370.0,
+    "error": 0.056016493038701265
+   },
+   "total": {
+    "model_kw": 2820.067016404556,
+    "kornuta_kw": 2800.0,
+    "error": 0.007166791573055775
+   }
+  },
+  "lunar_carbon_coverage": 0.05833175113636365,
+  "mre_kw_per_1000t_o2": 1711.1567419575633
+ },
+ "plume": {
+  "pads": [
+   {
+    "lander": "Apollo LM (calibration)",
+    "peak_kpa": 9.25453592010434,
+    "pad_radius_m": 10.0,
+    "fines_radius_m": 5.5455726554103135,
+    "disturbed_radius_m": 75.0,
+    "erosion_vs_apollo": 1.0,
+    "sinter_mwh": 46.07669225265031,
+    "sinter_days_200kw": 9.599310885968814,
+    "berm_m": 3.6203889641520606,
+    "berm_t": 12632.652159361689
+   },
+   {
+    "lander": "Starship-class, 1 Raptor deep-throttled",
+    "peak_kpa": 86.0411263180529,
+    "pad_radius_m": 15.634445932081022,
+    "fines_radius_m": 34.78985908415732,
+    "disturbed_radius_m": 456.122730419653,
+    "erosion_vs_apollo": 118.6543982216882,
+    "sinter_mwh": 112.62797721514751,
+    "sinter_days_200kw": 23.4641619198224,
+    "berm_m": 3.6203889641520606,
+    "berm_t": 13818.95208554019
+   },
+   {
+    "lander": "Starship-class, 3 Raptors",
+    "peak_kpa": 32.29210290499732,
+    "pad_radius_m": 15.649396004777518,
+    "fines_radius_m": 34.78985908415732,
+    "disturbed_radius_m": 456.122730419653,
+    "erosion_vs_apollo": 118.53242197765391,
+    "sinter_mwh": 112.84347592866759,
+    "sinter_days_200kw": 23.50905748513908,
+    "berm_m": 3.6203889641520606,
+    "berm_t": 13822.099736675724
+   },
+   {
+    "lander": "Starship-class, high landing thrusters",
+    "peak_kpa": 0.6799132276568353,
+    "pad_radius_m": 10.0,
+    "fines_radius_m": 26.41004790690542,
+    "disturbed_radius_m": 456.122730419653,
+    "erosion_vs_apollo": 9.842398774445028,
+    "sinter_mwh": 46.07669225265031,
+    "sinter_days_200kw": 9.599310885968814,
+    "berm_m": 3.6203889641520606,
+    "berm_t": 12632.652159361689
+   },
+   {
+    "lander": "Lunar tanker, 100 t, 4 small engines",
+    "peak_kpa": 18.225643850524204,
+    "pad_radius_m": 13.48783496698777,
+    "fines_radius_m": 21.13984323045885,
+    "disturbed_radius_m": 277.587453824102,
+    "erosion_vs_apollo": 35.02801474400705,
+    "sinter_mwh": 83.82349820820957,
+    "sinter_days_200kw": 17.463228793376995,
+    "berm_m": 3.6203889641520606,
+    "berm_t": 13366.995591481944
+   },
+   {
+    "lander": "Liftoff: Starship-class tanker, 1,700 t, 3 Raptors, T/W 1.3",
+    "peak_kpa": 264.3168422964596,
+    "pad_radius_m": 27.984683431485195,
+    "fines_radius_m": 99.8785304185078,
+    "disturbed_radius_m": 1304.9563053620261,
+    "erosion_vs_apollo": 1114.8762448616922,
+    "sinter_mwh": 360.84616273969993,
+    "sinter_days_200kw": 75.17628390410415,
+    "berm_m": 3.6203889641520606,
+    "berm_t": 16419.22299246482
+   }
+  ],
+  "ejecta_range_km": [
+   {
+    "v": 100,
+    "a1": 0.21554202411733325,
+    "a3": 0.6455703799139381
+   },
+   {
+    "v": 300,
+    "a1": 1.9966417202206632,
+    "a3": 5.9797131139541975
+   },
+   {
+    "v": 1000,
+    "a1": 33.2522125484424,
+    "a3": 99.43772665522216
+   },
+   {
+    "v": 1500,
+    "a1": 237.3935259748778,
+    "a3": 695.9412324603436
+   },
+   {
+    "v": 2000,
+    "a1": null,
+    "a3": null
+   }
+  ]
+ },
+ "construction": {
+  "surface_dose_msv_yr": 500.02725,
+  "cover_m": 2.301005347280828,
+  "habitats": [
+   {
+    "hab": "Outpost module (inflatable, 4 crew)",
+    "cover": 2.301005347280828,
+    "mass": 1255.0371779904508,
+    "days": 62.75185889952254
+   },
+   {
+    "hab": "Settlement block (16 crew)",
+    "cover": 2.301005347280828,
+    "mass": 4219.7730948970375,
+    "days": 210.98865474485189
+   }
+  ]
+ },
+ "depot": {
+  "depots": [
+   {
+    "location": "surface_shaded",
+    "prop": "LOX",
+    "mass_t": 1250.0,
+    "heat_leak_w": 77.08886105678293,
+    "boiloff_pct_per_month": 0.07504763487668784,
+    "zbo_power_kw": 1.156332915851744
+   },
+   {
+    "location": "orbit",
+    "prop": "LOX",
+    "mass_t": 1250.0,
+    "heat_leak_w": 205.57029615142116,
+    "boiloff_pct_per_month": 0.20012702633783427,
+    "zbo_power_kw": 3.0835544422713173
+   },
+   {
+    "location": "surface_shaded",
+    "prop": "LCH4",
+    "mass_t": 350.0,
+    "heat_leak_w": 63.97364331953993,
+    "boiloff_pct_per_month": 0.09289618122366808,
+    "zbo_power_kw": 0.9596046497930989
+   },
+   {
+    "location": "orbit",
+    "prop": "LCH4",
+    "mass_t": 350.0,
+    "heat_leak_w": 170.59638218543984,
+    "boiloff_pct_per_month": 0.2477231499297815,
+    "zbo_power_kw": 2.5589457327815976
+   },
+   {
+    "location": "surface_shaded",
+    "prop": "LH2",
+    "mass_t": 150.0,
+    "heat_leak_w": 119.65955528521998,
+    "boiloff_pct_per_month": 0.46361370298847554,
+    "zbo_power_kw": 14.359146634226397
+   },
+   {
+    "location": "orbit",
+    "prop": "LH2",
+    "mass_t": 150.0,
+    "heat_leak_w": 319.09214742725334,
+    "boiloff_pct_per_month": 1.2363032079692684,
+    "zbo_power_kw": 38.291057691270396
+   }
+  ],
+  "shuttles": [
+   {
+    "name": "Methalox Starship-class tanker to NRHO",
+    "isp_s": 348.0151379478614,
+    "dv_up": 2535.0,
+    "dv_down": 2665.0,
+    "delivered_t": 590.5064325664118,
+    "burned_t": 1009.4935674335882,
+    "gear_ratio": 0.3690665203540074,
+    "imported_fuel_burned_t": 219.45512335512788,
+    "imported_fuel_per_t_lunar_ox_delivered": 0.4748718462285781
+   },
+   {
+    "name": "Methalox Starship-class tanker to EML1",
+    "isp_s": 348.0151379478614,
+    "dv_up": 2520.0,
+    "dv_down": 2520.0,
+    "delivered_t": 603.1512725853964,
+    "burned_t": 996.8487274146036,
+    "gear_ratio": 0.3769695453658728,
+    "imported_fuel_burned_t": 216.70624509013123,
+    "imported_fuel_per_t_lunar_ox_delivered": 0.4590928293907055
+   },
+   {
+    "name": "Hydrolox tanker to NRHO (all lunar)",
+    "isp_s": 442.9776859037321,
+    "dv_up": 2535.0,
+    "dv_down": 2665.0,
+    "delivered_t": 257.4147698377614,
+    "burned_t": 342.5852301622386,
+    "gear_ratio": 0.42902461639626904,
+    "imported_fuel_burned_t": 0.0,
+    "imported_fuel_per_t_lunar_ox_delivered": 0.0
+   },
+   {
+    "name": "Hydrolox tanker to EML1 (all lunar)",
+    "isp_s": 442.9776859037321,
+    "dv_up": 2520.0,
+    "dv_down": 2520.0,
+    "delivered_t": 262.3260360810628,
+    "burned_t": 337.6739639189372,
+    "gear_ratio": 0.43721006013510466,
+    "imported_fuel_burned_t": 0.0,
+    "imported_fuel_per_t_lunar_ox_delivered": 0.0
+   }
+  ]
+ },
+ "mars": {
+  "scenarios": [
+   {
+    "name": "A. Earth only, LEO refill (baseline)",
+    "earth_launches": 4.3159276360015575,
+    "lunar_water_t": 0.0,
+    "lunar_oxygen_t": 0.0,
+    "notes": "546 t propellant in LEO"
+   },
+   {
+    "name": "B. NRHO departure, lunar LOX + Earth CH4 via the surface",
+    "earth_launches": 8.090402076244398,
+    "lunar_water_t": 317.045554689384,
+    "lunar_oxygen_t": 281.5836178201579,
+    "notes": "352 t Earth propellant to reach NRHO, 133 t refilled at NRHO, 0.22 shuttle trips, 78 t CH4 landed on the Moon"
+   },
+   {
+    "name": "C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4",
+    "earth_launches": 1.7208538339133819,
+    "lunar_water_t": 1329.4187414373612,
+    "lunar_oxygen_t": 1180.7216132665988,
+    "notes": "403 t lunar LOX and 112 t Earth CH4 in LEO; 1.0 LEO tanker trips"
+   }
+  ],
+  "scenarios_150t_dry": [
+   {
+    "name": "A. Earth only, LEO refill (baseline)",
+    "earth_launches": 7.180932614430858,
+    "lunar_water_t": 0.0,
+    "lunar_oxygen_t": 0.0,
+    "notes": "682 t propellant in LEO"
+   },
+   {
+    "name": "B. NRHO departure, lunar LOX + Earth CH4 via the surface",
+    "earth_launches": 15.694926465257772,
+    "lunar_water_t": 396.30694336173,
+    "lunar_oxygen_t": 351.9795222751973,
+    "notes": "439 t Earth propellant to reach NRHO, 166 t refilled at NRHO, 0.28 shuttle trips, 98 t CH4 landed on the Moon"
+   },
+   {
+    "name": "C. LEO refill, lunar LOX by hydrolox tankers + Earth CH4",
+    "earth_launches": 2.343681003137143,
+    "lunar_water_t": 1681.1137182823527,
+    "lunar_oxygen_t": 1493.0790725793863,
+    "notes": "510 t lunar LOX and 142 t Earth CH4 in LEO; 1.3 LEO tanker trips"
+   }
+  ],
+  "sorties": [
+   {
+    "name": "Earth propellant only",
+    "earth_launches": 9.802302023289728,
+    "lunar_o2_t": 0.0,
+    "notes": "1399 t loaded in LEO"
+   },
+   {
+    "name": "Lunar LOX on the surface, ascent CH4 carried down",
+    "earth_launches": 5.6104720072258525,
+    "lunar_o2_t": 103.47025012602381,
+    "notes": "747 t in LEO, 132 t loaded on the Moon"
+   },
+   {
+    "name": "Full lunar methalox (needs lunar carbon, see isru)",
+    "earth_launches": 4.682292965566216,
+    "lunar_o2_t": 103.47025012602381,
+    "notes": "602 t in LEO"
+   }
+  ],
+  "launches_per_t_to_lunar_surface": 0.06421081069729788
+ },
+ "buildup": [
+  {
+   "phase": "0. Robotic prospecting",
+   "years": "years 1-3",
+   "crew": 0,
+   "critical_kw": 5.0,
+   "isru_kw": 0.0,
+   "water": 0.0,
+   "power": "solar + rfc",
+   "power_t": 1.7380328848243347,
+   "landed": 17.738032884824335,
+   "landings": 1,
+   "launches": 1.1389734717099
+  },
+  {
+   "phase": "1. Outpost (4 crew, rotating)",
+   "years": "years 3-6",
+   "crew": 4,
+   "critical_kw": 40.0,
+   "isru_kw": 0.0,
+   "water": 0.0,
+   "power": "solar + rfc",
+   "power_t": 13.904263078594678,
+   "landed": 99.16623019377035,
+   "landings": 1,
+   "launches": 6.367544034536853
+  },
+  {
+   "phase": "2. Propellant plant",
+   "years": "years 5-9",
+   "crew": 8,
+   "critical_kw": 100.0,
+   "isru_kw": 758.5740252052509,
+   "water": 638.6033321517191,
+   "power": "solar + rfc + solar for ISRU",
+   "power_t": 60.046458536661774,
+   "landed": 141.49257940971557,
+   "landings": 2,
+   "launches": 9.085353231549634
+  },
+  {
+   "phase": "3. Transit spaceport",
+   "years": "years 8-14",
+   "crew": 24,
+   "critical_kw": 300.0,
+   "isru_kw": 4209.004723468219,
+   "water": 3680.3508286068763,
+   "power": "fission (n+1) + solar for ISRU",
+   "power_t": 164.3001574489406,
+   "landed": 610.9319413334047,
+   "landings": 7,
+   "launches": 39.22843523389194
+  },
+  {
+   "phase": "4. Settlement (about 100 residents)",
+   "years": "years 14-25",
+   "crew": 100,
+   "critical_kw": 1500.0,
+   "isru_kw": 11109.866119994153,
+   "water": 9763.84582151719,
+   "power": "fission (n+1) + solar for ISRU",
+   "power_t": 474.32887066647174,
+   "landed": 1193.3851980597826,
+   "landings": 12,
+   "launches": 76.62823104157404
+  }
+ ],
+ "reuse": [
+  {
+   "capability": "NASA CEA combustion chemistry",
+   "source": "raptor_sim.thermo (PR #1)",
+   "lunar use": "hydrogen-oxygen Isp for lunar tankers (depot.hydrolox_isp) with the calibrated 0.946 efficiency",
+   "status": "reused in code"
+  },
+  {
+   "capability": "Engine sizing and nozzle exit state",
+   "source": "raptor_sim.engine (PR #1)",
+   "lunar use": "exit Mach of the Raptor-class nozzle for the plume and pad model",
+   "status": "reused in code"
+  },
+  {
+   "capability": "Two-stage vehicle performance",
+   "source": "raptor_sim.mission.vehicle_performance (PR #1)",
+   "lunar use": "payload to LEO and Isp values behind every Earth-launch count",
+   "status": "reused in code"
+  },
+  {
+   "capability": "Patched-conic transfers and Mars mission",
+   "source": "raptor_sim.mission (PR #1)",
+   "lunar use": "Mars v-infinity, LEO refill baseline (scenario A)",
+   "status": "reused in code"
+  },
+  {
+   "capability": "Design optimizer (Optuna)",
+   "source": "raptor_sim.optimize (PR #1)",
+   "lunar use": "can search pad layout, plant size and power mix against the checks",
+   "status": "reusable by design"
+  },
+  {
+   "capability": "Verification gates G0-G7",
+   "source": "procedure document, raptor_sim.gates (PR #1)",
+   "lunar use": "same pass/fail style for checks L1-L10",
+   "status": "reused in code"
+  },
+  {
+   "capability": "Turbopump and cooling models, materials",
+   "source": "raptor_sim.components (PR #2)",
+   "lunar use": "throttle range for a lunar landing engine (deep throttling sets the plume load); cryocooler and pump sizing for depots",
+   "status": "reusable by design"
+  },
+  {
+   "capability": "BOM, drawings and cost roll-up",
+   "source": "raptor_sim.components, raptor_sim.econ",
+   "lunar use": "cost of lunar plant, pads and tankers per tonne; spare-parts manifest for on-site engine swaps",
+   "status": "reusable by design"
+  },
+  {
+   "capability": "Powered descent and ascent simulation",
+   "source": "raptor_sim.crewed_lunar (crewed lunar thread)",
+   "lunar use": "replaces the LLO-surface placeholders in orbits.LEGS; hover time for the erosion index",
+   "status": "reusable by design"
+  },
+  {
+   "capability": "Life support and radiation",
+   "source": "raptor_sim.crew (crewed missions thread)",
+   "lunar use": "habitat critical load, consumables, dose budget for regolith cover",
+   "status": "reusable by design"
+  },
+  {
+   "capability": "Solar-system base network and ranking",
+   "source": "raptor_sim.bases (transit bases thread)",
+   "lunar use": "the Moon as one node; can import lunar_base ISRU and orbits for its moon_south_pole entry",
+   "status": "reusable by design"
+  },
+  {
+   "capability": "Mission economics and financing",
+   "source": "raptor_sim.econ (business thread)",
+   "lunar use": "price of lunar propellant at NRHO and LEO versus Earth-launched propellant",
+   "status": "reusable by design"
+  },
+  {
+   "capability": "Shared lunar delta-v table with provenance",
+   "source": "lunar_base.orbits",
+   "lunar use": "single source for all lunar legs; departures to Mars from EML1, NRHO, LLO",
+   "status": "new here"
+  },
+  {
+   "capability": "Polar ice ISRU plant sizing",
+   "source": "lunar_base.isru",
+   "lunar use": "water, hydrolox or lunar LOX for methalox, energy chain calibrated to Kornuta 2019",
+   "status": "new here"
+  },
+  {
+   "capability": "Hourly power balance with storage sizing",
+   "source": "lunar_base.power",
+   "lunar use": "any site with an illumination series (Mars dust storms, Mercury poles, Ceres)",
+   "status": "new here"
+  },
+  {
+   "capability": "Plume-surface interaction and pad sizing",
+   "source": "lunar_base.plume",
+   "lunar use": "pads at any airless body (Phobos, Ceres, Mercury); Mars needs an atmosphere term",
+   "status": "new here"
+  },
+  {
+   "capability": "Depot boil-off and shuttle gear ratio",
+   "source": "lunar_base.depot",
+   "lunar use": "LEO, NRHO, Mars orbit depots",
+   "status": "new here"
+  },
+  {
+   "capability": "Earth-launch accounting for off-world propellant",
+   "source": "lunar_base.mars_benefit",
+   "lunar use": "decides where off-world propellant pays",
+   "status": "new here"
+  },
+  {
+   "capability": "Hydrogen-oxygen engine design",
+   "source": "none yet",
+   "lunar use": "all-lunar tankers need it; thermo already handles LH2, the cycle and component models do not",
+   "status": "gap"
+  },
+  {
+   "capability": "Terrain-exact illumination from LOLA",
+   "source": "none yet",
+   "lunar use": "replace the synthetic horizon in site.illumination_series",
+   "status": "gap"
+  },
+  {
+   "capability": "Aerocapture into LEO for returning tankers",
+   "source": "partly raptor_sim.crew.entry",
+   "lunar use": "scenario C assumes it at 100 m/s trim",
+   "status": "gap"
+  }
+ ],
+ "provenance_counts": {
+  "cited": 27,
+  "computed": 10,
+  "estimated": 73
+ }
+}
