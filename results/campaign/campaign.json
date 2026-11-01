@@ -1,0 +1,489 @@
+{
+ "design": {
+  "cargo": 100000.0,
+  "return_payload": 20000.0,
+  "earth_departure_search_start": "2028-09-01",
+  "mars_departure_search_start": "2030-08-01",
+  "booster_reserve_fraction": 0.14,
+  "booster_adaptive_draw": 0.02,
+  "q_limit_throttle": 0.0,
+  "tanker_landing_reserve": 30000.0,
+  "ship_dry_growth": 0.0,
+  "isp_factor": 1.0,
+  "launch_period_dv_margin": 100.0,
+  "refill": {
+   "pads": 2,
+   "pad_turnaround_days": 12.0,
+   "launch_success": 0.97,
+   "failure_standdown_days": 30.0,
+   "scrub_probability": 0.15,
+   "transfer_loss": 0.02,
+   "boiloff_per_day": 0.001,
+   "lead_days": 75,
+   "max_tankers": 20
+  },
+  "leo_propellant_margin": 0.02,
+  "tcm_budget": 30.0,
+  "cruise_boiloff_per_day": 0.0003,
+  "unusable_fraction": 0.01,
+  "landing_propellant": 135000.0,
+  "mars_entry_fpa": -12.4,
+  "v_srp": 1000.0,
+  "mars_peak_g_limit": 5.0,
+  "tps_limit_w_cm2": 100.0,
+  "max_arrival_vinf": 4000.0,
+  "isru": {
+   "electrolysis_kwh_per_kg_h2o": 6.300000000000001,
+   "water_mining_kwh_per_kg": 1.0,
+   "co2_capture_kwh_per_kg": 0.2,
+   "liquefaction_kwh_per_kg": 0.8,
+   "mixture_ratio": 3.6,
+   "solar_array_m2": 40000.0,
+   "solar_efficiency": 0.2,
+   "insolation_kwh_m2_sol": 2.5,
+   "storage_efficiency": 0.9,
+   "dust_degradation_per_sol": 0.0005,
+   "nuclear_kwe": 380.0,
+   "availability": 0.9,
+   "commissioning_sols": 60
+  },
+  "earth_braking_dv": 0.0,
+  "return_tps_upgrade": true,
+  "return_tps_limit_w_cm2": 400.0,
+  "return_tps_mass": 6000.0,
+  "earth_entry_fpa": -5.9,
+  "earth_peak_g_limit": 5.0,
+  "earth_landing_reserve": 30000.0
+ },
+ "objectives": [
+  {
+   "id": "O1",
+   "phase": "P1 ascent",
+   "text": "Mars ship reaches 300 km orbit with 100 t cargo (Monte Carlo)",
+   "value": 0.99,
+   "limit": 0.99,
+   "unit": "probability",
+   "passed": true,
+   "note": "nominal residual 22.4 t; 2.7% of launches draw up to 2% from the booster reserve"
+  },
+  {
+   "id": "O2",
+   "phase": "P1 ascent",
+   "text": "Maximum dynamic pressure",
+   "value": 28.649555130884732,
+   "limit": 35.0,
+   "unit": "kPa",
+   "passed": true,
+   "note": "limit is an estimate (Falcon 9 class ~32 kPa)"
+  },
+  {
+   "id": "O3",
+   "phase": "P1 ascent",
+   "text": "Gimbal angle to trim a 60 m/s crosswind at max-Q (control authority)",
+   "value": 0.41365965274476074,
+   "limit": 15.0,
+   "unit": "deg",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "id": "O4",
+   "phase": "P2 booster return",
+   "text": "Booster lands at the launch site with propellant left (Monte Carlo)",
+   "value": 1.0,
+   "limit": 0.99,
+   "unit": "probability",
+   "passed": true,
+   "note": "nominal margin 12.1% of reserve, miss 3108 m; touchdown limit 3 m/s, miss limit 5 km (no terminal divert in L1); failures {}"
+  },
+  {
+   "id": "O8",
+   "phase": "P6 Mars EDL",
+   "text": "Entry, descent and landing succeed under dispersions (Monte Carlo)",
+   "value": 1.0,
+   "limit": 0.99,
+   "unit": "probability",
+   "passed": true,
+   "note": "landing propellant used p99 128.5 t of 135 t loaded; failures {}"
+  },
+  {
+   "id": "O9",
+   "phase": "P6 Mars EDL",
+   "text": "Entry corridor width (g and heating limits, no skip-out)",
+   "value": 3.3000000000000007,
+   "limit": 0.6,
+   "unit": "deg",
+   "passed": true,
+   "note": "corridor (-13.5, -10.2); 0.6 deg = +/-3 sigma of the 0.1 deg delivery error"
+  },
+  {
+   "id": "O6",
+   "phase": "P4 TMI",
+   "text": "Propellant needed in LEO fits the ship tanks (worst day of launch period)",
+   "value": 834.2947131565605,
+   "limit": 1600.0,
+   "unit": "t",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "id": "O5",
+   "phase": "P3 refilling",
+   "text": "Ship is full and departs inside the launch period (Monte Carlo)",
+   "value": 0.984,
+   "limit": 0.95,
+   "unit": "probability",
+   "passed": true,
+   "note": "median 10 tanker launches, 95th pct 11"
+  },
+  {
+   "id": "O7",
+   "phase": "P5 cruise",
+   "text": "Trajectory correction delta-v, 99th percentile",
+   "value": 4.426592080822735,
+   "limit": 30.0,
+   "unit": "m/s",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "id": "O10",
+   "phase": "P8 Mars ascent",
+   "text": "Return propellant made on Mars fits the tanks",
+   "value": 750.7568359375,
+   "limit": 1600.0,
+   "unit": "t",
+   "passed": true,
+   "note": "ascent 3997 m/s, TEI 1937 m/s"
+  },
+  {
+   "id": "O11",
+   "phase": "P7 ISRU",
+   "text": "Return propellant produced before the return window (Monte Carlo, dust storms)",
+   "value": 0.989,
+   "limit": 0.95,
+   "unit": "probability",
+   "passed": true,
+   "note": "751 t needed in 383 days; 5th percentile production 783 t"
+  },
+  {
+   "id": "O12",
+   "phase": "P9 Earth entry",
+   "text": "Earth entry within heating and g limits (Monte Carlo)",
+   "value": 0.9966666666666667,
+   "limit": 0.99,
+   "unit": "probability",
+   "passed": true,
+   "note": "nominal 12.30 km/s, 152 W/cm2 vs 400, 3.3 g, corridor (-6.2, -5.6), failures {'g': 1}"
+  },
+  {
+   "id": "O13",
+   "phase": "Overall",
+   "text": "End-to-end mission success (product of phase probabilities)",
+   "value": 0.9602327592000001,
+   "limit": 0.9,
+   "unit": "probability",
+   "passed": true,
+   "note": "booster loss is an asset loss and is tracked by O4, not here"
+  }
+ ],
+ "numbers": {
+  "kick_deg": 1.0326102403792015,
+  "payload_capability_t": 99.63126289604281,
+  "tanker_delivery_t": 95.7177394349478,
+  "cargo_residual_t": 22.387498036005244,
+  "max_q_kpa": 28.649555130884732,
+  "max_q_mach": 1.3414209472970484,
+  "max_q_alt_km": 10.987277317764237,
+  "meco_time_s": 135.5,
+  "meco_alt_km": 55.268376338830215,
+  "meco_speed": 1432.7752969880837,
+  "meco_gamma_deg": 35.34174491126185,
+  "seco_time_s": 469.5,
+  "orbit_km": [
+   299.97099324778935,
+   357.8595333147291
+  ],
+  "gravity_loss": 2312.356447598257,
+  "drag_loss": 10.080051151896122,
+  "ideal_dv": 9750.550574349136,
+  "max_booster_g": 3.0812545035386414,
+  "max_ship_g": 4.000000000000001,
+  "booster_reserve_draws_fraction": 0.02666666666666667,
+  "trim": {
+   "wind_ms": 60.0,
+   "alpha_deg": 8.615641701666206,
+   "gimbal_required_deg": 0.41365965274476074,
+   "gimbal_limit_deg": 15.0
+  },
+  "booster_return": {
+   "boostback_s": 26.47890433933369,
+   "propellant_used": 440390.65710704034,
+   "reserve": 501086.4034122316,
+   "touchdown_speed": 0.9620971640601047,
+   "miss_distance_m": 3107.949154499374,
+   "max_descent_q_kpa": 164.74626448192768,
+   "landing_burn_s": 46.42000000000149,
+   "margin_fraction": 0.1211283042043716
+  },
+  "booster_failures": {},
+  "transfer": {
+   "depart": "2028-12-02",
+   "arrive": "2029-10-18",
+   "c3_km2s2": 8.932055985428162,
+   "vinf_arrive": 3301.46765464688,
+   "tof_days": 320,
+   "tmi_impulsive": 3603.0032782978324
+  },
+  "launch_period": [
+   "2028-11-08",
+   "2028-12-24"
+  ],
+  "mars_entry": {
+   "v_entry": 5939.029521685923,
+   "peak_g": 3.521557662887713,
+   "peak_heat": 48.38300963383903,
+   "landing_propellant_used_t": 121.46864726850754,
+   "corridor_deg": [
+    -13.5,
+    -10.2
+   ],
+   "ballistic_coefficient": 638.4573044234262,
+   "srp_ignition_alt_km": 14.842769598780665
+  },
+  "mars_landing_prop_p99_t": 128.4555684355682,
+  "mars_edl_failures": {},
+  "leo_required_t": 805.8709054767944,
+  "tmi_propellant_t": 641.2635069256688,
+  "tmi_gravity_loss": 22.088279784511997,
+  "leo_required_worst_in_period_t": 834.2947131565605,
+  "refill_p_on_time": 0.984,
+  "tankers_median": 10.0,
+  "tankers_p95": 11.0,
+  "nominal_tankers": 9,
+  "boiloff_mean_t": 41.10081826969406,
+  "return_transfer": {
+   "depart": "2030-11-05",
+   "arrive": "2031-09-21",
+   "vinf_depart": 2332.7369017599685,
+   "vinf_arrive": 5344.702607009554,
+   "tof_days": 320
+  },
+  "surface_stay_days": 383,
+  "isru_load_t": 750.7568359375,
+  "tei_dv": 1936.6223067619733,
+  "mars_ascent_dv": 3996.8872441746175,
+  "mars_ascent_gravity_loss": 222.69151688011215,
+  "isru_p_success": 0.989,
+  "isru_kwh_per_kg": 7.571739130434784,
+  "isru_mean_power_kw": 1191.0300081103,
+  "isru_produced_p5_t": 782.9534595479734,
+  "earth_corridor_deg": [
+   -6.2,
+   -5.6
+  ],
+  "earth_entry": {
+   "v_entry": 12303.746955307693,
+   "peak_g": 3.255833538182425,
+   "peak_heat": 152.16485758212423,
+   "tps_limit": 400.0,
+   "passes": 1,
+   "failures": {
+    "g": 1
+   }
+  },
+  "p_mission": 0.9602327592000001
+ },
+ "risks": [
+  {
+   "id": "R1",
+   "phase": "P1/P2",
+   "risk": "One booster engine fails 30 s after liftoff",
+   "likelihood": "medium",
+   "consequence": "loss of mission and booster",
+   "mitigation": "Engine-out capability: the other 32 engines burn longer; return reserve sized with margin",
+   "unmitigated": "No engine-out capability: abort, mission lost",
+   "mitigated": "orbit reached: True, ship residual 15.9 t; booster return margin 9.5% of reserve",
+   "verified": true
+  },
+  {
+   "id": "R2",
+   "phase": "P1",
+   "risk": "One ship sea-level engine fails 60 s after staging",
+   "likelihood": "medium",
+   "consequence": "ship short of orbit",
+   "mitigation": "Remaining five engines burn longer; cargo ship reaches orbit with less residual and takes one more tanker",
+   "unmitigated": "Abort to a sub-orbital disposal",
+   "mitigated": "orbit reached: True, residual 24.5 t (nominal 22.4 t)",
+   "verified": true
+  },
+  {
+   "id": "R3",
+   "phase": "P3",
+   "risk": "Tanker flights less reliable (90%) and slower to turn around (20 days)",
+   "likelihood": "high",
+   "consequence": "ship not full when the launch period closes: 26-month slip",
+   "mitigation": "Third pad, campaign starts 40 days earlier, sunshade on the waiting ship",
+   "unmitigated": "P(on time) 0.522",
+   "mitigated": "P(on time) 0.981",
+   "verified": true
+  },
+  {
+   "id": "R4",
+   "phase": "P3",
+   "risk": "Boil-off in LEO three times the estimate (0.3%/day)",
+   "likelihood": "medium",
+   "consequence": "propellant lost faster than tankers deliver it",
+   "mitigation": "Sunshade and insulation on the waiting ship (0.03%/day) [est]",
+   "unmitigated": "P(on time) 0.967",
+   "mitigated": "P(on time) 0.990",
+   "verified": true
+  },
+  {
+   "id": "R5",
+   "phase": "P4",
+   "risk": "One vacuum engine fails at the start of trans-Mars injection",
+   "likelihood": "low",
+   "consequence": "longer burn, larger gravity loss, landing propellant eaten",
+   "mitigation": "Fly on two vacuum engines (or add the three sea-level engines) and spend the 2% LEO margin",
+   "unmitigated": "2 RVac: 652 t burned vs 651 t nominal (gravity loss 25 m/s)",
+   "mitigated": "2 RVac + 3 SL: 662 t; margin available 155 t",
+   "verified": true
+  },
+  {
+   "id": "R6",
+   "phase": "P6",
+   "risk": "Mars atmosphere density varies 35% (1-sigma) instead of 15%, e.g. during a dust storm",
+   "likelihood": "medium",
+   "consequence": "crash or propellant exhausted on landing",
+   "mitigation": "Keep the -12.4 deg baseline entry (already steepened) and carry 20 t more landing propellant when orbiters report thin air",
+   "unmitigated": "P(EDL) 0.980 at -12.4 deg with 135 t",
+   "mitigated": "P(EDL) 0.993 at -12.4 deg with 155 t",
+   "verified": true
+  },
+  {
+   "id": "R7",
+   "phase": "P6",
+   "risk": "One landing engine fails to light",
+   "likelihood": "medium",
+   "consequence": "ship crashes",
+   "mitigation": "Design change (in baseline): 4 sea-level engines (+1.9 t each beyond 3), so one failure leaves 3",
+   "unmitigated": "3 engines, one out: crashed=True, used 135 t, impact 459 m/s",
+   "mitigated": "4 engines, one out: crashed=False, used 121 t of 135 t, touchdown 0.7 m/s",
+   "verified": true
+  },
+  {
+   "id": "R8",
+   "phase": "P7",
+   "risk": "Global dust storm during the surface stay (sunlight ~30% for 60-120 sols)",
+   "likelihood": "medium",
+   "consequence": "return propellant not ready: return slips 26 months",
+   "mitigation": "Fission power sized for a certain storm: 400 kWe (baseline 380 kWe) beside 40,000 m2 of arrays",
+   "unmitigated": "solar only: P(ready) 0.000",
+   "mitigated": "with 400 kWe fission: P(ready) 0.990",
+   "verified": true
+  },
+  {
+   "id": "R9",
+   "phase": "P9",
+   "risk": "Earth entry at ~12.3 km/s overheats the tile heat shield",
+   "likelihood": "high (certain without change)",
+   "consequence": "loss of ship and payload",
+   "mitigation": "Ablative windward heat shield on the return ship (+6 t) [est rating 400 W/cm2]",
+   "unmitigated": "peak 152 W/cm2 vs tile limit 100 W/cm2",
+   "mitigated": "peak 152 W/cm2 vs ablator limit 400 W/cm2",
+   "verified": true
+  }
+ ],
+ "stress": [
+  {
+   "case": "Isp 1% low on every engine",
+   "failing": [
+    "O1 (nominal ascent fails)"
+   ],
+   "tankers_median": null,
+   "p_mission": 0.0
+  },
+  {
+   "case": "Ship dry mass +10 t",
+   "failing": [
+    "O1 (Mars ship reaches 300 km orbit with 100 t cargo (Monte Carlo))",
+    "O8 (Entry, descent and landing succeed under dispersions (Monte Carlo))",
+    "O5 (Ship is full and departs inside the launch period (Monte Carlo))",
+    "O11 (Return propellant produced before the return window (Monte Carlo, dust storms))",
+    "O13 (End-to-end mission success (product of phase probabilities))"
+   ],
+   "tankers_median": 11.0,
+   "p_mission": 0.8413684074074074,
+   "leo_required_t": 822.2875789447338,
+   "isru_load_t": 795.80078125
+  },
+  {
+   "case": "Booster reserve held at 12%",
+   "failing": [],
+   "tankers_median": 9.0,
+   "p_mission": 0.9801,
+   "leo_required_t": 805.8709054767944,
+   "isru_load_t": 750.7568359375
+  }
+ ],
+ "sensitivity": [
+  {
+   "case": "baseline",
+   "tanker_delivery_t": 93.80338464624884,
+   "tankers": 9,
+   "leo_required_t": 805.8709054767944,
+   "isru_load_t": 761.376953125
+  },
+  {
+   "case": "Isp -1%",
+   "tanker_delivery_t": null,
+   "tankers": null,
+   "leo_required_t": 812.2144676020964,
+   "isru_load_t": 766.50390625,
+   "note": "ascent does not reach orbit"
+  },
+  {
+   "case": "Isp +1%",
+   "tanker_delivery_t": 100.00363942784752,
+   "tankers": 8,
+   "leo_required_t": 790.4540379555029,
+   "isru_load_t": 745.6298828125
+  },
+  {
+   "case": "Ship dry +10 t",
+   "tanker_delivery_t": 84.93485013024903,
+   "tankers": 10,
+   "leo_required_t": 822.2875789447338,
+   "isru_load_t": 795.80078125
+  },
+  {
+   "case": "Ship dry -10 t",
+   "tanker_delivery_t": 102.6770166635538,
+   "tankers": 8,
+   "leo_required_t": 784.3831588972406,
+   "isru_load_t": 715.6005859375
+  },
+  {
+   "case": "Booster reserve +2 pts",
+   "tanker_delivery_t": 85.11137421199376,
+   "tankers": 10,
+   "leo_required_t": 805.8709054767944,
+   "isru_load_t": 761.376953125
+  },
+  {
+   "case": "Landing propellant +20 t",
+   "tanker_delivery_t": 93.80338464624884,
+   "tankers": 10,
+   "leo_required_t": 868.4010433660034,
+   "isru_load_t": 761.376953125
+  },
+  {
+   "case": "Cargo +20 t",
+   "tanker_delivery_t": 93.80338464624884,
+   "tankers": 9,
+   "leo_required_t": 843.7910356888874,
+   "isru_load_t": 761.376953125
+  }
+ ]
+}

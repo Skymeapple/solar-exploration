@@ -1,0 +1,54 @@
+name,value,unit,basis,source,note
+dose_mars_surface,0.64,mSv/day,cited,rad_mars,"GCR dose equivalent, Gale crater, solar maximum-ish 2012-13"
+dose_cruise,1.84,mSv/day,cited,rad_cruise,"inside MSL cruise stage, light shielding"
+dose_moon_surface,1.369,mSv/day,cited,lnd_moon,"Chang'e 4, far side, 2019"
+dose_earth_background,2.4,mSv/yr,cited,unscear,
+career_limit,600,mSv,cited,nasa_std_3001,"astronaut occupational limit, not a public standard"
+risk_per_sv,0.055,1/Sv,cited,icrp103,low-LET basis; heavy-ion GCR quality is the main unknown
+risk_child_multiplier,2.5,x,estimate,icrp103,ICRP age tables show 2-3x higher risk per Sv for exposure in childhood
+shield_lambda,150,g/cm2,estimate,,penetrating-component e-folding length in regolith; run at 100 and 250 as a range
+gcr_quality_uncertainty,3,x,unknown,,range factor on GCR risk; NASA's own model carries roughly this spread
+o2_per_person,0.82,kg/day,cited,bvad,"cited (approx), nominal crew member"
+co2_per_person,1.04,kg/day,cited,bvad,cited (approx)
+drink_water,2.5,kg/day,cited,bvad,"cited (approx), drinking plus food rehydration"
+hygiene_water,5,kg/day,estimate,bvad,BVAD ranges 1-25 kg/day; a settlement with laundry and showers sits mid-range
+food_dry,0.62,kg/day,cited,bvad,"cited (approx), dry food solids"
+food_packaged,1.8,kg/day,estimate,bvad,as shipped incl. residual water and packaging
+metabolic_heat,137,W,cited,bvad,"cited (approx), nominal average"
+water_recovery_iss,0.98,-,cited,iss_water,
+o2_recovery_sabatier,0.5,-,estimate,,Sabatier is hydrogen-limited to about half the O2 in CO2
+o2_recovery_bosch,0.95,-,estimate,,"Bosch or methane pyrolysis loop, not yet flown at scale"
+leak_per_person,0.1,kg/day,estimate,,cabin air leakage plus airlock losses per resident
+crop_area_per_person,45,m2,cited,wheeler,"full diet, high light, mixed crops"
+ppfd,600,umol/m2/s,estimate,wheeler,high-light crop setpoint
+photoperiod_h,16,h/day,estimate,,
+led_efficacy,2.8,umol/J,cited,led,best fixtures ~3.0; 2.8 allows for ageing
+hvac_cop,3,-,estimate,,heat rejection coefficient of performance for crop heat
+eclss_power_per_person,1,kWe,estimate,,"air, water, thermal per resident"
+habitat_power_per_person,2,kWe,estimate,,"lighting, heating, computing, medical"
+industry_power_per_person,10,kWe,unknown,,manufacturing from local ore; Earth industry is ~1-3 kW/person primary
+solar_const,1361,W/m2,cited,solar_const,
+pv_efficiency,0.3,-,estimate,,space-grade multijunction; thin-film locally made later ~0.15
+pv_specific_mass,1.5,kg/m2,estimate,,"array, structure, wiring, ground mounted"
+battery_specific_energy,0.2,kWh/kg,estimate,,Li-ion at pack level
+fission_unit_kwe,40,kWe,cited,fsp,
+fission_unit_mass,6000,kg,estimate,fsp,FSP target is under 6 t; treat as upper bound
+electrolysis_kwh_per_kg_h2,50,kWh/kg,estimate,,~80% of HHV 39.4 kWh/kg
+water_mining_kwh_per_kg,1,kWh/kg,estimate,,heat and lift buried ice; regolith-bound water costs 5-10x more
+liquefaction_kwh_per_kg,0.5,kWh/kg,estimate,,cryocooler work for CH4 and O2
+ship_cargo_mars,100,t,model,raptor_sim.mission,"G0 requirement, met with 4 tankers"
+return_propellant_isru,642,t,model,raptor_sim.mission,Mars-made propellant to return a ship with 20 t
+people_per_ship,100,persons,cited,spacex_mars,stated aspiration; habitability unproven
+mass_per_passenger,1,t,estimate,,"person, seat, consumables for ~6 months, personal kit"
+bone_loss_0g,0.0125,1/month,cited,bone_loss,"1.0-1.5 %/month at weight-bearing sites, 4-6 month missions"
+exercise_effectiveness,0.5,-,estimate,bone_loss,ARED-era crews lose less; 0.5 is a middle reading
+physicians_per_1000,2.5,per 1000,estimate,,high-income Earth average 2.5-4
+appendicitis_rate,0.001,1/person-yr,cited,appendicitis,
+surgical_emergency_rate,0.005,1/person-yr,estimate,,all emergency surgery incl. trauma and obstetrics
+life_expectancy,80,yr,estimate,,high-income Earth today; unknown under partial gravity
+tfr_target,2.5,births/woman,estimate,,policy lever
+smith_min_founders,14000,persons,cited,smith2014,"range 14,000-44,000 with no later gene flow"
+moore_min_founders,150,persons,cited,marin2017,"Moore 2003, 150-180, with strict mating rules"
+ne_short_term,50,Ne,cited,franklin,
+ne_long_term,500,Ne,cited,franklin,
+dunbar,150,persons,cited,dunbar,

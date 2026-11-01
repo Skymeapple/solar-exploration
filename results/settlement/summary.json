@@ -1,0 +1,156 @@
+{
+  "checks": [
+    {
+      "name": "V1 genetics vs Wright-Fisher theory",
+      "passed": true,
+      "detail": "H_t/H_0 simulated 0.8191 vs analytic 0.8183"
+    },
+    {
+      "name": "V2 life-support mass balance closes",
+      "passed": true,
+      "detail": "demand = recycled + local + imported for O2, water, food at every stage"
+    },
+    {
+      "name": "V3 propellant stoichiometry",
+      "passed": true,
+      "detail": "6.54 kWh/kg, water 0.489 kg/kg, O2 surplus 0.087 kg/kg"
+    },
+    {
+      "name": "V4 unshielded Mars dose equals RAD",
+      "passed": true,
+      "detail": "0.640 mSv/day vs 0.64 measured"
+    },
+    {
+      "name": "V5 synodic period from orbits",
+      "passed": true,
+      "detail": "779.9 days vs 779.9 published"
+    },
+    {
+      "name": "V6 light-time range",
+      "passed": true,
+      "detail": "4.4-21.0 min one way (published 3-22 min; circular orbits)"
+    }
+  ],
+  "growth_milestones": [
+    {
+      "scenario": "baseline (N_half 10k)",
+      "year_pop_1000": 14.9,
+      "year_pop_10000": 19.2,
+      "year_pop_100000": 36.3,
+      "year_pop_1000000": 76.9,
+      "year_f_local_90": 32.0,
+      "year_f_local_98": 53.4,
+      "final_population": 1216958.2933945835,
+      "final_year": 83.3,
+      "peak_power_mw": 26363.740047061012,
+      "peak_population": 1216958.2933945835,
+      "max_unmet_share": 0.0
+    },
+    {
+      "scenario": "fast industry (N_half 1k)",
+      "year_pop_1000": 12.8,
+      "year_pop_10000": 17.1,
+      "year_pop_100000": 21.4,
+      "year_pop_1000000": 40.6,
+      "year_f_local_90": 17.1,
+      "year_f_local_98": 19.2,
+      "final_population": 3586783.5108136963,
+      "final_year": 83.3,
+      "peak_power_mw": 77484.2554513876,
+      "peak_population": 3586783.5108136963,
+      "max_unmet_share": 0.0
+    },
+    {
+      "scenario": "slow industry (N_half 100k)",
+      "year_pop_1000": 14.9,
+      "year_pop_10000": 21.4,
+      "year_pop_100000": null,
+      "year_pop_1000000": null,
+      "year_f_local_90": null,
+      "year_f_local_98": null,
+      "final_population": 17845.21034174535,
+      "final_year": 83.3,
+      "peak_power_mw": 504.519001104892,
+      "peak_population": 18186.45682708112,
+      "max_unmet_share": 0.01116309489007879
+    },
+    {
+      "scenario": "small fleet (cap 100)",
+      "year_pop_1000": 14.9,
+      "year_pop_10000": null,
+      "year_pop_100000": null,
+      "year_pop_1000000": null,
+      "year_f_local_90": null,
+      "year_f_local_98": null,
+      "final_population": 1501.8375813145783,
+      "final_year": 83.3,
+      "peak_power_mw": 43.63499049349657,
+      "peak_population": 1502.6300050991824,
+      "max_unmet_share": 0.010259007397985067
+    },
+    {
+      "scenario": "Earth cutoff after 10 windows (~21 yr)",
+      "year_pop_1000": 14.9,
+      "year_pop_10000": 19.2,
+      "year_pop_100000": null,
+      "year_pop_1000000": null,
+      "year_f_local_90": null,
+      "year_f_local_98": null,
+      "final_population": 2.2737811103106572e-20,
+      "final_year": 83.3,
+      "peak_power_mw": 484.49882232169455,
+      "peak_population": 17258.36906891965,
+      "max_unmet_share": 0.5772626663643429
+    },
+    {
+      "scenario": "Earth cutoff after 15 windows (~32 yr)",
+      "year_pop_1000": 14.9,
+      "year_pop_10000": 19.2,
+      "year_pop_100000": null,
+      "year_pop_1000000": null,
+      "year_f_local_90": 32.0,
+      "year_f_local_98": null,
+      "final_population": 8.994688807861804e-21,
+      "final_year": 83.3,
+      "peak_power_mw": 1817.6520313411897,
+      "peak_population": 79060.17346055189,
+      "max_unmet_share": 0.5772626663643429
+    },
+    {
+      "scenario": "Earth cutoff after 30 windows (~64 yr)",
+      "year_pop_1000": 14.9,
+      "year_pop_10000": 19.2,
+      "year_pop_100000": 36.3,
+      "year_pop_1000000": null,
+      "year_f_local_90": 32.0,
+      "year_f_local_98": 53.4,
+      "final_population": 771056.2705629913,
+      "final_year": 83.3,
+      "peak_power_mw": 16632.78526500167,
+      "peak_population": 771056.2705629913,
+      "max_unmet_share": 0.005265871612085211
+    },
+    {
+      "scenario": "slow industry, cutoff after 30 windows",
+      "year_pop_1000": 14.9,
+      "year_pop_10000": 21.4,
+      "year_pop_100000": null,
+      "year_pop_1000000": null,
+      "year_f_local_90": null,
+      "year_f_local_98": null,
+      "final_population": 1.4083655513273343e-14,
+      "final_year": 83.3,
+      "peak_power_mw": 504.519001104892,
+      "peak_population": 18186.45682708112,
+      "max_unmet_share": 0.5772626663643429
+    }
+  ],
+  "reuse_scores": {
+    "Mars": 0.9666666666666667,
+    "Moon (south pole)": 0.7666666666666667,
+    "Ceres": 0.8,
+    "Callisto": 0.7333333333333333,
+    "Titan": 0.6666666666666666,
+    "Free-space station": 0.6
+  }
+}

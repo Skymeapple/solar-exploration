@@ -1,0 +1,314 @@
+{
+  "engine_t1_usd": 2197681.1,
+  "engine_unit_usd": {
+    "1": 2197681.1,
+    "10": 1494850.487757355,
+    "100": 1051700.3176714387,
+    "1000": 765149.6276071905,
+    "4000": 641505.3426863498
+  },
+  "booster_usd": 35338446.380383044,
+  "ship_usd": 21419169.049229518,
+  "flight_breakdown_usd": {
+    "booster amortisation": 706768.9276076609,
+    "booster refurbishment": 706768.9276076609,
+    "ship amortisation": 1070958.452461476,
+    "ship refurbishment": 1070958.452461476,
+    "propellant": 949565.2173913044,
+    "launch operations": 3000000.0
+  },
+  "missions": [
+    {
+      "mission": "LEO launch, reusable (100 t)",
+      "flights": 1,
+      "cost_musd": 7.505019977529578,
+      "usd_per_kg": 75.05019977529578
+    },
+    {
+      "mission": "Mars cargo, 100 t landed",
+      "flights": 11,
+      "cost_musd": 149.98089708566974,
+      "usd_per_kg": 1499.8089708566972
+    },
+    {
+      "mission": "Lunar cargo, 100 t landed",
+      "flights": 13,
+      "cost_musd": 131.84251185219108,
+      "usd_per_kg": 1318.4251185219107
+    }
+  ],
+  "scenarios": {
+    "Bear": {
+      "npv_musd": -8201.139127106668,
+      "irr": -0.15024573605452757,
+      "terminal_musd": 2730.1880662140857,
+      "trough_musd": -13803.852828066609,
+      "trough_year": 2039,
+      "payback_year": null,
+      "revenue_2041": 1841.1999999999998,
+      "fcf_2041": 238.56012229055113,
+      "cash_with_rounds": [
+        [
+          2027,
+          -40.80000000000001
+        ],
+        [
+          2028,
+          -338.2000000000001
+        ],
+        [
+          2029,
+          -293.00000000000006
+        ],
+        [
+          2030,
+          -86.00000000000006
+        ],
+        [
+          2031,
+          -2514.0
+        ],
+        [
+          2032,
+          -2795.0
+        ],
+        [
+          2033,
+          -3741.0
+        ],
+        [
+          2034,
+          -4497.911037965843
+        ],
+        [
+          2035,
+          -5184.359746466402
+        ],
+        [
+          2036,
+          -5717.965097241838
+        ],
+        [
+          2037,
+          -6007.53479195005
+        ],
+        [
+          2038,
+          -6115.041885813083
+        ],
+        [
+          2039,
+          -6173.852828066609
+        ],
+        [
+          2040,
+          -6041.925996500426
+        ],
+        [
+          2041,
+          -5803.365874209874
+        ]
+      ]
+    },
+    "Base": {
+      "npv_musd": 3150.12117748509,
+      "irr": 0.17410836942494934,
+      "terminal_musd": 28103.83386468024,
+      "trough_musd": -7216.754816841909,
+      "trough_year": 2034,
+      "payback_year": 2041,
+      "revenue_2041": 5320.0,
+      "fcf_2041": 2455.6748037099237,
+      "cash_with_rounds": [
+        [
+          2027,
+          109.19999999999999
+        ],
+        [
+          2028,
+          211.8
+        ],
+        [
+          2029,
+          857.0
+        ],
+        [
+          2030,
+          1864.0
+        ],
+        [
+          2031,
+          308.0
+        ],
+        [
+          2032,
+          899.7221584609074
+        ],
+        [
+          2033,
+          533.2249278391969
+        ],
+        [
+          2034,
+          413.24518315809155
+        ],
+        [
+          2035,
+          815.4215331589062
+        ],
+        [
+          2036,
+          1513.2900975028797
+        ],
+        [
+          2037,
+          2408.8607935631608
+        ],
+        [
+          2038,
+          3574.06365985964
+        ],
+        [
+          2039,
+          5692.421657861995
+        ],
+        [
+          2040,
+          7262.6952311575005
+        ],
+        [
+          2041,
+          9718.370034867425
+        ]
+      ]
+    },
+    "Bull": {
+      "npv_musd": 11895.954095374773,
+      "irr": 0.2886337751573932,
+      "terminal_musd": 50962.79888745375,
+      "trough_musd": -5326.563790809473,
+      "trough_year": 2032,
+      "payback_year": 2037,
+      "revenue_2041": 8652.25,
+      "fcf_2041": 4453.060096961977,
+      "cash_with_rounds": [
+        [
+          2027,
+          154.2
+        ],
+        [
+          2028,
+          376.8
+        ],
+        [
+          2029,
+          1202.0
+        ],
+        [
+          2030,
+          2449.0
+        ],
+        [
+          2031,
+          1208.6426089987513
+        ],
+        [
+          2032,
+          2303.4362091905277
+        ],
+        [
+          2033,
+          2380.0231649486313
+        ],
+        [
+          2034,
+          3190.8906125143762
+        ],
+        [
+          2035,
+          4481.697211262375
+        ],
+        [
+          2036,
+          5999.341524786378
+        ],
+        [
+          2037,
+          9135.397084172157
+        ],
+        [
+          2038,
+          10829.79528187789
+        ],
+        [
+          2039,
+          14621.371177188154
+        ],
+        [
+          2040,
+          16646.15645714882
+        ],
+        [
+          2041,
+          21099.216554110797
+        ]
+      ]
+    }
+  },
+  "tornado": [
+    {
+      "driver": "Discount rate 15% / 10%",
+      "downside_musd": -3033.7531686989682,
+      "upside_musd": 4051.2540244845977
+    },
+    {
+      "driver": "Schedule at roadmap P90 / P10",
+      "downside_musd": -2316.599475112653,
+      "upside_musd": 1952.6861157019612
+    },
+    {
+      "driver": "Launch and mission prices +/-20%",
+      "downside_musd": -1034.2903901111304,
+      "upside_musd": 1799.3209237711462
+    },
+    {
+      "driver": "Development cost +/-30%",
+      "downside_musd": -780.6834555985383,
+      "upside_musd": 1802.9574224617472
+    },
+    {
+      "driver": "Mars demand half / 1.5x",
+      "downside_musd": -1112.7174794958246,
+      "upside_musd": 1282.3586659431357
+    },
+    {
+      "driver": "Mars price +/-30%",
+      "downside_musd": -910.8225676778384,
+      "upside_musd": 910.8225676778384
+    },
+    {
+      "driver": "Flight rate +/-30%",
+      "downside_musd": -422.665431215386,
+      "upside_musd": 1213.1654721316327
+    },
+    {
+      "driver": "Reuse life half / as planned",
+      "downside_musd": -177.77255354694535,
+      "upside_musd": 0.0
+    },
+    {
+      "driver": "Engine unit cost +/-40%",
+      "downside_musd": -79.85230907619552,
+      "upside_musd": 94.87037272580847
+    }
+  ],
+  "sources": {
+    "space_economy": "https://www.spacefoundation.org/2025/07/22/the-space-report-2025-q2/",
+    "hls_option_b": "https://www.nasa.gov/humans-in-space/nasa-awards-spacex-second-contract-option-for-artemis-moon-landing",
+    "hls_total": "https://www.teslarati.com/spacex-nasa-finalize-second-starship-moon-landing-contract",
+    "falcon9_price": "https://keeptrack.space/deep-dive/how-much-does-a-falcon-9-launch-cost",
+    "cld_budget": "https://aerospaceamerica.aiaa.org/proposed-fiscal-2027-funding-could-support-two-commercial-space-stations-developers-say/",
+    "msr_cost": "https://spacepolicyonline.com/news/nasa-wants-new-ideas-fast-on-how-to-return-samples-from-mars-affordably/",
+    "stoke_round": "https://www.geekwire.com/2025/stoke-space-reportedly-raising-funding-nova-rocket/"
+  }
+}

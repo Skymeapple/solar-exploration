@@ -1,0 +1,43 @@
+part_number,name,assembly,mass_kg,material_usd,labour_usd,purchased_usd,t1_usd
+RC-110,"Combustion chamber and throat liner, milled coolant channels",100 Thrust chamber,273.9,123232,131448,0,254680
+RC-120,Nozzle channel-wall liner,100 Thrust chamber,31.6,5537,15187,0,20724
+RC-130,Structural closeout jacket,100 Thrust chamber,70.8,12390,33984,0,46374
+RC-140,Coolant inlet manifold (nozzle exit),100 Thrust chamber,31.7,5554,15235,0,20790
+RC-150,Coolant outlet manifold (chamber),100 Thrust chamber,9.2,1615,4430,0,6046
+IN-210,Injector face plate,200 Main injector,3.7,649,5936,0,6585
+IN-220,Coaxial element ox post,200 Main injector,6.6,2486,10608,0,13094
+IN-230,Oxygen-rich gas dome,200 Main injector,15.1,5666,24176,0,29842
+IN-240,Fuel-rich gas manifold ring and body,200 Main injector,13.8,1450,22096,0,23546
+TP-301,Impellers and inducer,300 Fuel turbopump,12.2,1822,48600,0,50422
+TP-302,Turbine disc and blades,300 Fuel turbopump,8.2,1435,32800,0,34235
+TP-303,Shaft,300 Fuel turbopump,12.0,2095,47880,0,49975
+TP-304,Pump housing,300 Fuel turbopump,217.1,37998,69482,0,107479
+TP-305,Turbine housing,300 Fuel turbopump,48.3,8452,15456,0,23908
+TP-306,Bearings seals flanges,300 Fuel turbopump,119.1,0,0,47640,47640
+TP-401,Impellers and inducer,400 Oxidizer turbopump,47.3,5317,189040,0,194357
+TP-402,Turbine disc and blades,400 Oxidizer turbopump,16.8,6308,67280,0,73588
+TP-403,Shaft,400 Oxidizer turbopump,29.3,10991,117240,0,128231
+TP-404,Pump housing,400 Oxidizer turbopump,256.6,96240,82125,0,178365
+TP-405,Turbine housing,400 Oxidizer turbopump,88.5,33195,28326,0,61521
+TP-406,Kick stage,400 Oxidizer turbopump,5.8,654,23240,0,23894
+TP-407,Bearings seals flanges,400 Oxidizer turbopump,177.8,0,0,71100,71100
+PB-510,Fuel-rich preburner,500 Preburners,12.4,2179,11952,0,14131
+PB-520,Oxygen-rich preburner,500 Preburners,13.7,5152,13190,0,18343
+FL-601,"LOX inlet duct, vehicle interface to oxidizer pump",600 Lines and ducts,7.3,184,3523,0,3707
+FL-602,"Methane inlet duct, vehicle interface to fuel pump",600 Lines and ducts,6.4,159,3053,0,3212
+FL-603,Oxidizer pump discharge to oxygen-rich preburner,600 Lines and ducts,18.6,1628,8933,0,10561
+FL-604,Oxidizer pump discharge to fuel-rich preburner,600 Lines and ducts,4.3,376,2064,0,2440
+FL-605,Fuel pump discharge to cooling-jacket inlet manifold,600 Lines and ducts,75.2,13155,36082,0,49236
+FL-606,Cooling-jacket outlet to fuel-rich preburner,600 Lines and ducts,16.6,2914,7992,0,10906
+FL-607,Fuel pump kick stage to oxygen-rich preburner,600 Lines and ducts,2.1,375,1027,0,1402
+FL-608,Oxidizer turbine exhaust to main injector (oxygen-rich gas),600 Lines and ducts,19.8,7418,9494,0,16912
+FL-609,Fuel turbine exhaust to main injector (fuel-rich gas),600 Lines and ducts,22.4,3922,10757,0,14679
+VA-701,"Main oxidizer valve (MOV), oxygen-rich preburner LOX supply",700 Valves,51.2,0,0,41000,41000
+VA-702,Fuel-rich preburner oxidizer valve (FPOV),700 Valves,8.5,0,0,6768,6768
+VA-703,"Main fuel valve (MFV), cooling-jacket supply",700 Valves,46.0,0,0,36832,36832
+VA-704,Oxygen-rich preburner fuel valve (OPFV),700 Valves,6.4,0,0,5112,5112
+VA-705,"Coolant control valve (CCV), jacket outlet",700 Valves,32.7,0,0,26144,26144
+GM-810,Gimbal block and thrust structure,800 Engine systems,45.0,4050,28800,0,32850
+EC-820,Engine controller and harness,800 Engine systems,35.0,0,0,150000,150000
+IG-830,Spark-torch igniters (main chamber and preburners),800 Engine systems,6.0,0,0,30000,30000
+SN-840,Pressure and temperature sensors,800 Engine systems,10.0,2250,4800,0,7050

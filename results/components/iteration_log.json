@@ -1,0 +1,77 @@
+[
+  {
+    "iteration": 1,
+    "failures": [
+      "CL-1a Peak hot-wall temperature, GRCop-42 (x = -29 mm): 956 vs 808 K",
+      "CL-1b Peak hot-wall temperature, IN718 (x = 235 mm): 1.73e+03 vs 902 K",
+      "CL-2 Hot-wall pressure bending stress / allowable (x = 222 mm): 5.63 vs 1 -",
+      "CL-4 Coolant pressure drop vs cycle budget: 1.51e+03 vs 59 bar",
+      "TP-O2 Impeller diameter (3 stage(s), 8,215 rpm): 0.507 vs 0.36 m",
+      "PB-F2 Wall temperature (with streaks): 1.1e+03 vs 950 K",
+      "SS-1 Fuel pump -> L05 -> cooling jacket -> L06 -> CCV -> fuel-rich preburner: -1.46e+03 vs 0 bar",
+      "SS-2 Oxidizer pump -> L03 -> MOV -> oxygen-rich preburner: -12.6 vs 0 bar",
+      "SS-4 Fuel pump -> L07 -> OPFV -> oxygen-rich preburner: -128 vs 0 bar",
+      "SS-5 Oxidizer turbine exit -> L08 -> main injector oxygen-rich manifold: -10.1 vs 0 bar",
+      "SS-6 Fuel turbine exit -> L09 -> main injector fuel-rich manifold: -9.08 vs 0 bar",
+      "SY-2 Dry mass vs public Raptor 2 figure (1630 kg, low confidence): 1.39 vs 0.3 -",
+      "SY-3 Sea-level thrust-to-weight: 59 vs 100 -"
+    ],
+    "actions": [
+      "cooling layout re-optimized (97/200 feasible trials): 200 channels at throat, hot wall 0.93 mm, film factor 0.46, copper to area ratio 24.6; jacket drop 155 bar, cycle budget set to 0.58 Pc",
+      "liquid line and valve loss allowance set to 0.055 Pc",
+      "fuel kick stage added: the oxygen-rich preburner needs more pressure than the main fuel pump gives",
+      "hot-gas duct loss allowance set to 0.040 Pc",
+      "pump inlet pressure requirement raised to 5 bar (vehicle requirement)",
+      "fuel pump efficiency in the cycle set from 0.75 to 0.80 (component prediction 0.834 less 0.03)",
+      "fuel turbine efficiency in the cycle set from 0.75 to 0.81 (component prediction 0.849 less 0.03)",
+      "ox pump efficiency in the cycle set from 0.75 to 0.79 (component prediction 0.823 less 0.03)",
+      "ox turbine efficiency in the cycle set from 0.75 to 0.80 (component prediction 0.837 less 0.03)",
+      "fuel-rich preburner given a propellant-cooled liner (wall too hot)"
+    ],
+    "mass": 3899.8006922160826,
+    "pressure_drop_bar": 1510.6094331692923
+  },
+  {
+    "iteration": 2,
+    "failures": [
+      "CL-2 Hot-wall pressure bending stress / allowable (x = 23 mm): 1.01 vs 1 -",
+      "CL-3 Rib tensile stress / allowable (x = 1150 mm): 1.07 vs 1 -",
+      "TP-F4 Pump efficiency predicted vs assumed in cycle: 0.798 vs 0.8 -",
+      "TP-O2 Impeller diameter (3 stage(s), 10,189 rpm): 0.392 vs 0.36 m",
+      "SY-2 Dry mass vs public Raptor 2 figure (1630 kg, low confidence): 0.591 vs 0.3 -",
+      "SY-3 Sea-level thrust-to-weight: 88.7 vs 100 -"
+    ],
+    "actions": [
+      "cooling layout re-optimized (90/200 feasible trials): 200 channels at throat, hot wall 0.95 mm, film factor 0.46, copper to area ratio 27.1; jacket drop 164 bar, cycle budget set to 0.62 Pc",
+      "pump inlet pressure requirement raised to 6 bar (vehicle requirement)",
+      "fuel pump efficiency in the cycle set from 0.80 to 0.76 (component prediction 0.798 less 0.03)",
+      "ox pump efficiency in the cycle set from 0.79 to 0.82 (component prediction 0.855 less 0.03)",
+      "ox turbine efficiency in the cycle set from 0.80 to 0.82 (component prediction 0.850 less 0.03)"
+    ],
+    "mass": 2592.709096834667,
+    "pressure_drop_bar": 151.8326304505186
+  },
+  {
+    "iteration": 3,
+    "failures": [
+      "CL-1a Peak hot-wall temperature, GRCop-42 (x = -5 mm): 810 vs 808 K",
+      "CL-3 Rib tensile stress / allowable (x = -0 mm): 1.05 vs 1 -",
+      "SS-3 Oxidizer pump -> L04 -> FPOV -> fuel-rich preburner: -38.8 vs 0 bar"
+    ],
+    "actions": [
+      "cooling layout re-optimized (30/200 feasible trials): 200 channels at throat, hot wall 0.96 mm, film factor 0.41, copper to area ratio 32.0; jacket drop 173 bar, cycle budget set to 0.65 Pc",
+      "oxidizer kick stage added: the fuel-rich preburner now runs above the oxidizer pump discharge",
+      "fuel pump efficiency in the cycle set from 0.76 to 0.78 (component prediction 0.816 less 0.03)",
+      "ox pump efficiency in the cycle set from 0.82 to 0.84 (component prediction 0.875 less 0.03)"
+    ],
+    "mass": 1928.738278491705,
+    "pressure_drop_bar": 163.70600533069955
+  },
+  {
+    "iteration": 4,
+    "failures": [],
+    "actions": [],
+    "mass": 1935.2777698071657,
+    "pressure_drop_bar": 172.7284886295399
+  }
+]

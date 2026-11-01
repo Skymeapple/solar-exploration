@@ -1,0 +1,4 @@
+stage,water_recovery,o2_recovery,food_local,demand_kg,import_kg,closure,balances_close
+outpost,0.98,0.5,0.0,3704.73075,870.39075,0.76506,True
+isru,0.98,0.5,0.1,3704.73075,591.705,0.840284,True
+bioregen,0.98,0.95,0.9,3704.73075,65.745,0.982254,True

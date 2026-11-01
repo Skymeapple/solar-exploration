@@ -1,0 +1,375 @@
+[
+ {
+  "round": 0,
+  "failing": [
+   "O8"
+  ],
+  "objectives": {
+   "O1": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O2": {
+    "value": 28.649555130884732,
+    "limit": 35.0,
+    "passed": true
+   },
+   "O3": {
+    "value": 0.41365965274476074,
+    "limit": 15.0,
+    "passed": true
+   },
+   "O4": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O8": {
+    "value": 0.9666666666666667,
+    "limit": 0.99,
+    "passed": false
+   },
+   "O9": {
+    "value": 3.3000000000000007,
+    "limit": 0.6,
+    "passed": true
+   },
+   "O6": {
+    "value": 765.6521011814662,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O5": {
+    "value": 0.9875,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O7": {
+    "value": 3.7945321105207714,
+    "limit": 30.0,
+    "passed": true
+   },
+   "O10": {
+    "value": 750.7568359375,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O11": {
+    "value": 0.9966666666666667,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O12": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O13": {
+    "value": 0.9514013888888889,
+    "limit": 0.9,
+    "passed": true
+   }
+  },
+  "changes": [
+   "O8: Mars landing propellant 115 t -> 135 t (failures {'crash': 2, 'propellant': 2, 'touchdown speed': 2})"
+  ]
+ },
+ {
+  "round": 1,
+  "failing": [
+   "O1"
+  ],
+  "objectives": {
+   "O1": {
+    "value": 0.975,
+    "limit": 0.99,
+    "passed": false
+   },
+   "O2": {
+    "value": 28.649555130884732,
+    "limit": 35.0,
+    "passed": true
+   },
+   "O3": {
+    "value": 0.41365965274476074,
+    "limit": 15.0,
+    "passed": true
+   },
+   "O4": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O8": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O9": {
+    "value": 3.3000000000000007,
+    "limit": 0.6,
+    "passed": true
+   },
+   "O6": {
+    "value": 834.2947131565605,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O5": {
+    "value": 0.9875,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O7": {
+    "value": 4.577351746916192,
+    "limit": 30.0,
+    "passed": true
+   },
+   "O10": {
+    "value": 750.7568359375,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O11": {
+    "value": 0.99,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O12": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O13": {
+    "value": 0.9531843750000001,
+    "limit": 0.9,
+    "passed": true
+   }
+  },
+  "changes": [
+   "O1: adaptive booster cut-off may draw 1% of booster propellant from the return reserve on a short launch (booster possibly expended)"
+  ]
+ },
+ {
+  "round": 2,
+  "failing": [
+   "O1"
+  ],
+  "objectives": {
+   "O1": {
+    "value": 0.95,
+    "limit": 0.99,
+    "passed": false
+   },
+   "O2": {
+    "value": 28.649555130884732,
+    "limit": 35.0,
+    "passed": true
+   },
+   "O3": {
+    "value": 0.41365965274476074,
+    "limit": 15.0,
+    "passed": true
+   },
+   "O4": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O8": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O9": {
+    "value": 3.3000000000000007,
+    "limit": 0.6,
+    "passed": true
+   },
+   "O6": {
+    "value": 834.2947131565605,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O5": {
+    "value": 0.97,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O7": {
+    "value": 4.429912883227691,
+    "limit": 30.0,
+    "passed": true
+   },
+   "O10": {
+    "value": 750.7568359375,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O11": {
+    "value": 0.9933333333333333,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O12": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O13": {
+    "value": 0.9153566666666666,
+    "limit": 0.9,
+    "passed": true
+   }
+  },
+  "changes": [
+   "O1: adaptive booster cut-off may draw 2% of booster propellant from the return reserve on a short launch (booster possibly expended)"
+  ]
+ },
+ {
+  "round": 3,
+  "failing": [],
+  "objectives": {
+   "O1": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O2": {
+    "value": 28.649555130884732,
+    "limit": 35.0,
+    "passed": true
+   },
+   "O3": {
+    "value": 0.41365965274476074,
+    "limit": 15.0,
+    "passed": true
+   },
+   "O4": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O8": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O9": {
+    "value": 3.3000000000000007,
+    "limit": 0.6,
+    "passed": true
+   },
+   "O6": {
+    "value": 834.2947131565605,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O5": {
+    "value": 0.9875,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O7": {
+    "value": 3.87358994319799,
+    "limit": 30.0,
+    "passed": true
+   },
+   "O10": {
+    "value": 750.7568359375,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O11": {
+    "value": 0.98,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O12": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O13": {
+    "value": 0.96775,
+    "limit": 0.9,
+    "passed": true
+   }
+  },
+  "changes": []
+ },
+ {
+  "round": 4,
+  "failing": [],
+  "verification": true,
+  "objectives": {
+   "O1": {
+    "value": 0.99,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O2": {
+    "value": 28.649555130884732,
+    "limit": 35.0,
+    "passed": true
+   },
+   "O3": {
+    "value": 0.41365965274476074,
+    "limit": 15.0,
+    "passed": true
+   },
+   "O4": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O8": {
+    "value": 1.0,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O9": {
+    "value": 3.3000000000000007,
+    "limit": 0.6,
+    "passed": true
+   },
+   "O6": {
+    "value": 834.2947131565605,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O5": {
+    "value": 0.984,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O7": {
+    "value": 4.426592080822735,
+    "limit": 30.0,
+    "passed": true
+   },
+   "O10": {
+    "value": 750.7568359375,
+    "limit": 1600.0,
+    "passed": true
+   },
+   "O11": {
+    "value": 0.989,
+    "limit": 0.95,
+    "passed": true
+   },
+   "O12": {
+    "value": 0.9966666666666667,
+    "limit": 0.99,
+    "passed": true
+   },
+   "O13": {
+    "value": 0.9602327592000001,
+    "limit": 0.9,
+    "passed": true
+   }
+  },
+  "changes": []
+ }
+]

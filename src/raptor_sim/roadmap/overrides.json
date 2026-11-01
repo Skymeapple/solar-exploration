@@ -1,0 +1,19 @@
+{
+  "_comment": "Numbers delivered by other project threads replace catalog estimates here. Keys are step ids; fields are any Step field (dur, cost, trl, p_success, basis, note). Leave a step out to keep the catalog estimate.",
+  "_2026-11-01": "Gap-closure thread: hydrogen-oxygen engine model built (raptor_sim.hydrolox); Mars ship changes in the main design and re-verified (raptor_sim.campaign); business case re-run on this roadmap.",
+  "HYDROLOX-ENG": {
+    "basis": "model: raptor_sim.hydrolox (gates H1-H4, H7 pass against RS-25, RL10 and Vinci). HL-250 closed-expander tanker engine 451 s (48.5 bar, area ratio 120) and HL-44 lander engine 460 s; expander needs no preburner. Hardware duration and cost stay estimates.",
+    "note": "The methane engine's efficiency calibration does not carry over (RS-25 Isp 3% low with it); hydrogen efficiencies are fitted to RS-25 alone. Expander wall: about 53 bar at 250 kN, so larger tanker engines need staged combustion (HL-250 SC: 464 s at 179 bar)."
+  },
+  "SHIP-MARS-MOD": {
+    "basis": "model: in the main design since 2026-11-01 (campaign Stack: 4 sea-level engines, 6 t ablator, -12.4 deg entry; mission.Vehicle 107.6 t dry). Campaign re-verified 13/13 with 135 t landing propellant and an adaptive booster cut-off; hardware duration and cost stay estimates.",
+    "note": "Margins are thin: a 1% Isp shortfall stops the 100 t Mars ship reaching orbit; ship dry mass +10 t fails five objectives."
+  },
+  "MARS-POWER": {
+    "name": "Mars surface power, about 1 MW: solar arrays plus 380 kW fission",
+    "basis": "model: campaign (2026-11-01) needs 751 t of return propellant in 383 days: 40,000 m2 of solar plus 380 kWe fission (400 kWe for a certain global dust storm)"
+  },
+  "MARS-CARGO-1": {
+    "basis": "model: campaign with the Mars ship changes (2026-11-01): Mars ship plus 10 tankers (11 at 95%), 100 t to LEO per tanker launch, 806 t in LEO; landing burns 121 t of 135 t; 13/13 objectives pass, 96% mission success in simulation (0.8 held for a first attempt)"
+  }
+}
