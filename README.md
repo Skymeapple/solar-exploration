@@ -14,6 +14,13 @@ The work follows a four-step plan:
 4. **Vehicle and Mars mission check** (done): a Starship-class two-stage vehicle built around the
    engine, Earth to Mars transfer, LEO refilling and the Mars return with propellant made on Mars.
 
+5. **Mars launch campaign** (`raptor_sim.campaign`): every phase of the first Mars mission simulated
+   and checked against an objective (ascent, booster return, tanker refilling, trans-Mars injection,
+   cruise corrections, Mars entry and landing, propellant production on Mars, Mars ascent, Earth return),
+   with Monte Carlo dispersions, a risk register whose mitigations are re-flown in simulation, and a
+   rule-based iteration loop that changes the design until every objective passes.
+   Results: [`results/campaign/summary.md`](results/campaign/summary.md).
+
 ## Quick start
 
 RocketCEA compiles NASA CEA, so it needs a Fortran compiler (`gfortran`). CoolProp gives real-fluid
@@ -24,6 +31,8 @@ pip install -e ".[dev]"
 python -m raptor_sim          # gate report for the reference design
 python scripts/run_study.py   # optimizer + Mars study, writes results/
 python scripts/run_component_design.py   # components, drawings, BOM, verification -> results/components/
+
+python scripts/run_campaign.py  # Mars campaign iteration + verification, writes results/campaign/ (~15 min)
 pytest
 ```
 
@@ -81,6 +90,7 @@ Headline results are in [`results/lunar_base/summary.md`](results/lunar_base/sum
 | `benchmarks.py` | Public Raptor and Starship figures with their sources and confidence |
 | `optimize.py` | Design search with Optuna, gate constraints, and a per-trial log |
 | `mission.py` | Two-stage vehicle sizing, patched-conic Earth to Mars transfer, refilling and return |
+| `campaign/` | Mission campaign: planar 3-DOF flight integrator, ascent and booster return, JPL ephemerides and Lambert windows, entry with lift guidance and retropropulsion, ISRU, refilling Monte Carlo, objectives, risks, iteration |
 
 ## Known limits
 
